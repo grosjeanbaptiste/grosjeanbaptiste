@@ -8,6 +8,7 @@ spending his free time in Hossegor
 during the day and master's degree student in Computer Science at 
 [UMons](https://www.umons.be/) at night.
 ## You can find me here
+***  If you want to contact me personnaly, try to find me on LinkedIn, my GitHub profile link is on there
 
 <a href="https://github.com/BGGBGIBS"><img 
 src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="30" 
