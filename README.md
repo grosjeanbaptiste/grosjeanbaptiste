@@ -5,10 +5,11 @@ Life is nothing serious, you just have to do what you need to do.
 spending his free time in Hossegor
  - Full Stack Web Developer Intern at 
 [TechnofuturTIC](https://www.technofuturtic.be/) 
-during the day and master's degree student in Computer Science at 
-[UMons](https://www.umons.be/) at night.
+by day and master's degree student in Computer Science at 
+[UMons](https://www.umons.be/) by night.
+- Currently looking for an opportunity as a developer
 ## You can find me here
-***  If you want to contact me personnaly, try to find me on LinkedIn; my GitHub profile link is available there
+***  If you want to contact me personnaly, try to find me on LinkedIn; my GitHub profile link is available there.
 
 <a href="https://github.com/BGGBGIBS"><img 
 src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="30" 
@@ -27,6 +28,7 @@ height="30">
 - Dart
 - JavaScript
 - TypeScript
+- Shell
 - Latex
 ### Tools
 - Gradle
@@ -34,6 +36,7 @@ height="30">
 - PNPM
 - HomeBrew
 - Chocolatey
+- GPT
 ### Database
 - SQL Server
 ### Backend 
