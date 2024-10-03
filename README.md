@@ -1,21 +1,14 @@
-# Dear vsitor,  welcome on my GitHub profile
-Life is nothing serious, you just have to do what you need to do.
+# Dear vsitor,  welcome on my GitLab profile
 ## About me
- - I'm a belgian man living in Bruxelles, working in Charleroi and 
+ - I'm a belgian man living in Bruxelles, working in Brugge and 
 spending his free time in Hossegor
- - Full Stack Web Developer Intern at 
-[TechnofuturTIC](https://www.technofuturtic.be/) 
-by day and master's degree student in Computer Science at 
-[UMons](https://www.umons.be/) by night.
-- Currently looking for an opportunity as a developer
+ - IT at 
+[EMVI](https://www.emvi.ai/) 
+during the day and master's degree student in Computer Science at 
+[UMons](https://www.umons.be/) at night.
 ## You can find me here
-***  If you want to contact me personnaly, try to find me on LinkedIn; my GitHub profile link is available there.
 
-<a href="https://github.com/BGGBGIBS"><img 
-src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="30" 
-height="30">
-</a>
-<a href="https://gitlab.com/BGGBGIBS"><img 
+<a href="https://github.com/grosjeanbaptiste"><img 
 src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="30" 
 height="30">
 </a>
@@ -28,21 +21,15 @@ height="30">
 - Dart
 - JavaScript
 - TypeScript
-- Shell
-- Latex
 ### Tools
 - Gradle
 - NPM
-- PNPM
 - HomeBrew
-- Chocolatey
-- GPT
 ### Database
 - SQL Server
 ### Backend 
 - .NET
-- Node
-- Express
+- Node / Express / Nest
 ### Frontend
 - Flutter
 - Angular
