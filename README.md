@@ -49,7 +49,7 @@ height="30">
 - I love to spend time with my family and schedule my life's possibilities
 
 
-![Licence](https://img.shields.io/badge/Licence-Baptiste Grosjean-black)
+![Licence](https://img.shields.io/badge/Licence-Baptiste_Grosjean-black)
 ![Languages](https://img.shields.io/badge/Languages-French,_English,_Dutch-orange)
 ![Languages](https://img.shields.io/badge/Platforms-Android,_iOS,_MacOS,_Linux,_Web-blue)
 
