@@ -1,6 +1,6 @@
 # Welcome to Baptiste Grosjean's GitHub Profile
 
-![Profile Picture](https://avatars.githubusercontent.com/u/83280831?v=4)
+<img src="https://avatars.githubusercontent.com/u/83280831?v=4" alt="Profile Picture" width="150" height="150"/>
 
 ## 👨‍💻 About Me
 - **Name**: Baptiste Grosjean
@@ -9,9 +9,8 @@
 - **Portfolio**: [My Portfolio](https://my-way-bg.vercel.app/about/way)
 
 ## 🔗 Connect with Me
-[![GitHub](https://cdn-icons-png.flaticon.com/512/25/25231.png)](https://github.com/grosjeanbaptiste) 
-[![LinkedIn](https://cdn-icons-png.flaticon.com/512/174/174857.png)](https://www.linkedin.com/in/grosjeanbaptiste) 
-[![Email](https://cdn-icons-png.flaticon.com/512/732/732200.png)](mailto:grosjeanbaptisteit@outlook.com)
+<a href="https://www.linkedin.com/in/grosjeanbaptiste"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="20" height="20"></a>
+<a href="mailto:grosjeanbaptisteit@outlook.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="20" height="20"></a>
 
 ## 🛠️ Skills
 
