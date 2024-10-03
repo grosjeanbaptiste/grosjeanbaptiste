@@ -33,9 +33,15 @@
 
 ### 🗃️ Databases
 - ![SQL Server Icon](https://img.icons8.com/color/20/000000/microsoft-sql-server.png) [SQL Server](https://www.microsoft.com/en-us/sql-server)
+- ![PostgreSQL Icon](https://img.icons8.com/color/20/000000/postgresql.png) [PostgreSQL](https://www.postgresql.org)
+- [BaseX](http://basex.org/)
+
+### ☁️ Cloud Services
+- ![Azure Icon](https://img.icons8.com/color/20/000000/azure-1.png) [Azure](https://azure.microsoft.com)
+- ![AWS Icon](https://img.icons8.com/color/20/000000/amazon-web-services.png) [AWS](https://aws.amazon.com)
 
 ### 🖥️ Backend
-- ![.NET Icon](https://img.icons8.com/color/20/000000/net.png) [.NET](https://dotnet.microsoft.com/)
+- ![DOTNET Icon](https://img.icons8.com/color/20/000000/dotnet.png) [.NET](https://dotnet.microsoft.com/)
 - [Nest.js](https://nestjs.com/)
 - [Express.js](https://expressjs.com/)
 
@@ -51,9 +57,10 @@
 
 ## 🏆 Interests
 - 🏃‍♂️ Running 15km twice a week
-- 📊 Passionate about politics and economy
+- 🏄 Surfing on vacation
+- 📊 Passionate about business and economy
 - 💻 Excited for the future of AI in coding
-- 👨‍👩‍👧‍👦 Enjoys spending quality time with family and planning new adventures
+- 👨‍👩‍👧‍👦 Enjoys spending quality time with family and planning new projects
 
 ## 📫 Contact Information
 - **Email**: [grosjeanbaptisteit@outlook.com](mailto:grosjeanbaptisteit@outlook.com)
