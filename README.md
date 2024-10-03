@@ -14,46 +14,15 @@
 
 ## 🛠️ Skills
 
-### 💻 Programming Languages
-- ![SQL Icon](https://img.icons8.com/color/20/000000/sql.png) SQL
-- ![Java Icon](https://img.icons8.com/color/20/000000/java-coffee-cup-logo.png) Java
-- ![C# Icon](https://img.icons8.com/color/20/000000/c-sharp-logo.png) C#
-- ![Dart Icon](https://img.icons8.com/color/20/000000/dart.png) Dart
-- ![JavaScript Icon](https://img.icons8.com/color/20/000000/javascript.png) JavaScript
-- ![TypeScript Icon](https://img.icons8.com/color/20/000000/typescript.png) TypeScript
-- ![Python Icon](https://img.icons8.com/color/20/000000/python.png) Python
-- ![LaTeX Icon](https://img.icons8.com/color/20/000000/latex.png) LaTeX
-
-### 🛠️ Tools & Frameworks
-- ![Docker Icon](https://img.icons8.com/color/20/000000/docker.png) [Docker](https://www.docker.com)
-- ![NPM Icon](https://img.icons8.com/color/20/000000/npm.png) [NPM](https://www.npmjs.com/)
-- ![Gradle Icon](https://img.icons8.com/color/20/000000/gradle.png) [Gradle](https://gradle.org/)
-- ![NodeJS Icon](https://img.icons8.com/color/20/000000/nodejs.png) [Node.js](https://nodejs.org)
-- ![Flutter Icon](https://img.icons8.com/color/20/000000/flutter.png) [Flutter](https://flutter.dev)
-
-### 🗃️ Databases
-- ![SQL Server Icon](https://img.icons8.com/color/20/000000/microsoft-sql-server.png) [SQL Server](https://www.microsoft.com/en-us/sql-server)
-- ![PostgreSQL Icon](https://img.icons8.com/color/20/000000/postgresql.png) [PostgreSQL](https://www.postgresql.org)
-- [BaseX](http://basex.org/)
-
-### ☁️ Cloud Services
-- ![Azure Icon](https://img.icons8.com/color/20/000000/azure-1.png) [Azure](https://azure.microsoft.com)
-- ![AWS Icon](https://img.icons8.com/color/20/000000/amazon-web-services.png) [AWS](https://aws.amazon.com)
-
-### 🖥️ Backend
-- ![.NET Icon](https://img.icons8.com/color/20/000000/.net.png) [.NET](https://dotnet.microsoft.com/)
-- [Nest.js](https://nestjs.com/)
-- [Express.js](https://expressjs.com/)
-
-### 🌐 Frontend
-- ![Flutter Icon](https://img.icons8.com/color/20/000000/flutter.png) [Flutter](https://flutter.dev)
-- ![Angular Icon](https://img.icons8.com/color/20/000000/angularjs.png) [Angular](https://angular.io/)
-- ![React Icon](https://img.icons8.com/color/20/000000/react-native.png) [React](https://reactjs.org/)
-
-### 🖥️ IDEs
-- ![VSCode Icon](https://img.icons8.com/color/20/000000/visual-studio-code-2019.png) [VS Code](https://code.visualstudio.com/)
-- ![IntelliJ Icon](https://img.icons8.com/color/20/000000/intellij-idea.png) [IntelliJ IDEA](https://www.jetbrains.com/idea/)
-- ![Visual Studio Icon](https://img.icons8.com/color/20/000000/visual-studio.png) [Visual Studio](https://visualstudio.microsoft.com/)
+| **Category**               | **Technologies**                                                                 |
+|----------------------------|----------------------------------------------------------------------------------|
+| **Languages**               | ![SQL](https://img.icons8.com/color/20/000000/sql.png) SQL, ![Java](https://img.icons8.com/color/20/000000/java-coffee-cup-logo.png) Java, ![C#](https://img.icons8.com/color/20/000000/c-sharp-logo.png) C#, ![Dart](https://img.icons8.com/color/20/000000/dart.png) Dart, ![JavaScript](https://img.icons8.com/color/20/000000/javascript.png) JavaScript, ![TypeScript](https://img.icons8.com/color/20/000000/typescript.png) TypeScript, ![Python](https://img.icons8.com/color/20/000000/python.png) Python, ![LaTeX](https://img.icons8.com/color/20/000000/latex.png) LaTeX                       |
+| **Tools & Frameworks**      | ![Docker](https://img.icons8.com/color/20/000000/docker.png) Docker, ![NPM](https://img.icons8.com/color/20/000000/npm.png) NPM, ![Gradle](https://img.icons8.com/color/20/000000/gradle.png) Gradle, ![NodeJS](https://img.icons8.com/color/20/000000/nodejs.png) Node.js, ![Flutter](https://img.icons8.com/color/20/000000/flutter.png) Flutter                                            |
+| **Databases**               | ![SQL Server](https://img.icons8.com/color/20/000000/microsoft-sql-server.png) SQL Server, ![PostgreSQL](https://img.icons8.com/color/20/000000/postgresql.png) PostgreSQL, ![BaseX](https://img.icons8.com/color/20/000000/database.png) BaseX                                                   |
+| **Cloud Services**          | ![Azure](https://img.icons8.com/color/20/000000/azure-1.png) Azure, ![AWS](https://img.icons8.com/color/20/000000/amazon-web-services.png) AWS                                                                      |
+| **Backend**                 | ![.NET](https://img.icons8.com/color/20/000000/net.png) .NET, ![Nest.js](https://img.icons8.com/color/20/000000/nestjs.png) Nest.js, ![Express.js](https://img.icons8.com/color/20/000000/express.png) Express.js                                                       |
+| **Frontend**                | ![Flutter](https://img.icons8.com/color/20/000000/flutter.png) Flutter, ![Angular](https://img.icons8.com/color/20/000000/angularjs.png) Angular, ![React](https://img.icons8.com/color/20/000000/react-native.png) React                                                         |
+| **IDEs**                    | ![VSCode](https://img.icons8.com/color/20/000000/visual-studio-code-2019.png) VS Code, ![IntelliJ](https://img.icons8.com/color/20/000000/intellij-idea.png) IntelliJ IDEA, ![Visual Studio](https://img.icons8.com/color/20/000000/visual-studio.png) Visual Studio                                           |
 
 ## 🏆 Interests
 - 🏃‍♂️ Running 15km twice a week
