@@ -1,6 +1,13 @@
-# Welcome to Baptiste Grosjean's GitHub Profile
+<!-- Add a custom banner -->
+<p align="center">
+  <img src="https://your-banner-image-link.com/banner.png" alt="Baptiste Grosjean's GitHub Profile" width="100%">
+</p>
 
-<img src="https://avatars.githubusercontent.com/u/83280831?v=4" alt="Profile Picture" width="150" height="150"/>
+# 🙋‍♂️ Welcome to Baptiste Grosjean's GitHub Profile
+
+<!-- <p align="center">
+  <img src="https://avatars.githubusercontent.com/u/83280831?v=4" alt="Profile Picture" width="150" height="150" style="border-radius: 50%;">
+</p> -->
 
 ## 👨‍💻 About Me
 - **Name**: Baptiste Grosjean
@@ -8,21 +15,29 @@
 - **Occupation**: IT at [EMVI](https://www.emvi.ai/), Master's Degree Student in Computer Science at [UMons](https://www.umons.be/)
 - **Portfolio**: [My Portfolio](https://my-way-bg.vercel.app/about/way)
 
+<hr>
+
 ## 🔗 Connect with Me
-<a href="https://www.linkedin.com/in/grosjeanbaptiste"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="20" height="20"></a>
-<a href="mailto:grosjeanbaptisteit@outlook.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="20" height="20"></a>
+<p align="center">
+  <a href="https://www.linkedin.com/in/grosjeanbaptiste"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="30" height="30"></a>
+  <a href="mailto:grosjeanbaptisteit@outlook.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="30" height="30"></a>
+</p>
 
-## 🛠️ Skills
+<hr>
 
-| **Category**           | **Technologies**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Languages**          | ![SQL](https://img.icons8.com/color/20/000000/sql.png) SQL, ![Java](https://img.icons8.com/color/20/000000/java-coffee-cup-logo.png) Java, ![C#](https://img.icons8.com/color/20/000000/c-sharp-logo.png) C#, ![Dart](https://img.icons8.com/color/20/000000/dart.png) Dart, ![JavaScript](https://img.icons8.com/color/20/000000/javascript.png) JavaScript, ![TypeScript](https://img.icons8.com/color/20/000000/typescript.png) TypeScript, ![Python](https://img.icons8.com/color/20/000000/python.png) Python, ![LaTeX](https://img.icons8.com/color/20/000000/latex.png) LaTeX |
-| **Tools & Frameworks** | ![Docker](https://img.icons8.com/color/20/000000/docker.png) Docker, ![NPM](https://img.icons8.com/color/20/000000/npm.png) NPM, ![Gradle](https://img.icons8.com/color/20/000000/gradle.png) Gradle, ![NodeJS](https://img.icons8.com/color/20/000000/nodejs.png) Node.js, ![Flutter](https://img.icons8.com/color/20/000000/flutter.png) Flutter                                                                                                                                                                                                                                   |
-| **Databases**          | ![SQL Server](https://img.icons8.com/color/20/000000/microsoft-sql-server.png) SQL Server, ![PostgreSQL](https://img.icons8.com/color/20/000000/postgresql.png) PostgreSQL, ![BaseX](https://img.icons8.com/color/20/000000/database.png) BaseX                                                                                                                                                                                                                                                                                                                                      |
-| **Cloud Services**     | ![Azure](https://img.icons8.com/color/20/000000/azure-1.png) Azure, ![AWS](https://img.icons8.com/color/20/000000/amazon-web-services.png) AWS                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| **Backend**            | ![.NET](https://img.icons8.com/color/20/000000/net.png) .NET, ![Nest.js](https://img.icons8.com/color/20/000000/nestjs.png) Nest.js, ![Express.js](https://img.icons8.com/color/20/000000/express.png) Express.js                                                                                                                                                                                                                                                                                                                                                                    |
-| **Frontend**           | ![Flutter](https://img.icons8.com/color/20/000000/flutter.png) Flutter, ![Angular](https://img.icons8.com/color/20/000000/angularjs.png) Angular, ![React](https://img.icons8.com/color/20/000000/react-native.png) React                                                                                                                                                                                                                                                                                                                                                            |
-| **IDEs**               | ![VSCode](https://img.icons8.com/color/20/000000/visual-studio-code-2019.png) VS Code, ![IntelliJ](https://img.icons8.com/color/20/000000/intellij-idea.png) IntelliJ IDEA, ![Visual Studio](https://img.icons8.com/color/20/000000/visual-studio.png) Visual Studio                                                                                                                                                                                                                                                                                                                 |
+## 🛠️ My Skill Set
+
+| **Category**           | **Technologies**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Languages**          | ![SQL](https://img.shields.io/badge/SQL-blue?style=flat&logo=sql) ![Java](https://img.shields.io/badge/Java-orange?style=flat&logo=java) ![C#](https://img.shields.io/badge/C%23-blue?style=flat&logo=c-sharp) ![Dart](https://img.shields.io/badge/Dart-blue?style=flat&logo=dart) ![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=flat&logo=javascript) ![TypeScript](https://img.shields.io/badge/TypeScript-blue?style=flat&logo=typescript) ![Python](https://img.shields.io/badge/Python-blue?style=flat&logo=python) ![LaTeX](https://img.shields.io/badge/LaTeX-green?style=flat&logo=latex) |
+| **Tools & Frameworks** | ![Docker](https://img.shields.io/badge/Docker-blue?style=flat&logo=docker) ![NPM](https://img.shields.io/badge/NPM-red?style=flat&logo=npm) ![Gradle](https://img.shields.io/badge/Gradle-green?style=flat&logo=gradle) ![NodeJS](https://img.shields.io/badge/Node.js-green?style=flat&logo=node.js) ![Flutter](https://img.shields.io/badge/Flutter-blue?style=flat&logo=flutter)                                                                                                                                                                                                                                     |
+| **Databases**          | ![SQL Server](https://img.shields.io/badge/SQL%20Server-red?style=flat&logo=microsoft-sql-server) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-blue?style=flat&logo=postgresql) ![BaseX](https://img.shields.io/badge/BaseX-lightgrey?style=flat&logo=database)                                                                                                                                                                                                                                                                                                                                                |
+| **Cloud Services**     | ![Azure](https://img.shields.io/badge/Azure-blue?style=flat&logo=microsoft-azure) ![AWS](https://img.shields.io/badge/AWS-orange?style=flat&logo=amazon-aws)                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Backend**            | ![.NET](https://img.shields.io/badge/.NET-purple?style=flat&logo=.net) ![Nest.js](https://img.shields.io/badge/Nest.js-red?style=flat&logo=nestjs) ![Express.js](https://img.shields.io/badge/Express.js-black?style=flat&logo=express)                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Frontend**           | ![Flutter](https://img.shields.io/badge/Flutter-blue?style=flat&logo=flutter) ![Angular](https://img.shields.io/badge/Angular-red?style=flat&logo=angular) ![React](https://img.shields.io/badge/React-blue?style=flat&logo=react)                                                                                                                                                                                                                                                                                                                                                                                      |
+| **IDEs**               | ![VSCode](https://img.shields.io/badge/VS%20Code-blue?style=flat&logo=visual-studio-code) ![IntelliJ](https://img.shields.io/badge/IntelliJ%20IDEA-black?style=flat&logo=intellij-idea) ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-purple?style=flat&logo=visual-studio)                                                                                                                                                                                                                                                                                                                             |
+
+<hr>
 
 ## 🏆 Interests
 - 🏃‍♂️ Running 15km twice a week
@@ -31,10 +46,16 @@
 - 💻 Excited for the future of AI in coding
 - 👨‍👩‍👧‍👦 Enjoys spending quality time with family and planning new projects
 
-## 📫 Contact Information
-- **Email**: [grosjeanbaptisteit@outlook.com](mailto:grosjeanbaptisteit@outlook.com)
-- **Phone**: +32 496 28 97 05
+<hr>
 
-![Licence](https://img.shields.io/badge/Licence-Baptiste_Grosjean-black)
-![Languages](https://img.shields.io/badge/Languages-French,_English,_Dutch-orange)
-![Platforms](https://img.shields.io/badge/Platforms-Android,_iOS,_MacOS,_Linux,_Web-blue)
+## 📫 Contact Information
+<p align="center">
+  <a href="mailto:grosjeanbaptisteit@outlook.com"><img src="https://img.shields.io/badge/Email-Baptiste_Grosjean-blue?style=flat&logo=gmail"></a>  
+  <a href="tel:+32496289705"><img src="https://img.shields.io/badge/Phone-Baptiste_Grosjean-blue?style=flat&logo=phone"></a>
+</p>
+
+<p align="center">
+  ![Licence](https://img.shields.io/badge/Licence-Baptiste_Grosjean-black)
+  ![Languages](https://img.shields.io/badge/Languages-French,_English,_Dutch-orange)
+  ![Platforms](https://img.shields.io/badge/Platforms-Android,_iOS,_MacOS,_Linux,_Web-blue)
+</p>
