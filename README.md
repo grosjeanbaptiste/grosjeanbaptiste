@@ -1,4 +1,4 @@
-# Dear vsitor,  welcome on my GitLab profile
+# Dear vsitor,  welcome on my GitHub profile
 ## About me
  - I'm a belgian man living in Bruxelles, working in Brugge and 
 spending his free time in Hossegor
@@ -49,7 +49,7 @@ height="30">
 - I love to spend time with my family and schedule my life's possibilities
 
 
-![Licence](https://img.shields.io/badge/Licence-GIBS-black)
+![Licence](https://img.shields.io/badge/Licence-Baptiste Grosjean-black)
 ![Languages](https://img.shields.io/badge/Languages-French,_English,_Dutch-orange)
 ![Languages](https://img.shields.io/badge/Platforms-Android,_iOS,_MacOS,_Linux,_Web-blue)
 
