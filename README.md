@@ -41,7 +41,7 @@
 - ![AWS Icon](https://img.icons8.com/color/20/000000/amazon-web-services.png) [AWS](https://aws.amazon.com)
 
 ### 🖥️ Backend
-- ![DOTNET Icon](https://img.icons8.com/color/20/000000/dotnet.png) [.NET](https://dotnet.microsoft.com/)
+- ![.NET Icon](https://img.icons8.com/color/20/000000/.net.png) [.NET](https://dotnet.microsoft.com/)
 - [Nest.js](https://nestjs.com/)
 - [Express.js](https://expressjs.com/)
 
