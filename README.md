@@ -55,6 +55,10 @@
 </p>
 
 <p align="center">
+  <a href="https://registry.jsonresume.org/grosjeanbaptiste"><img src="https://img.shields.io/badge/Resume-JSONResume-blue"></a>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Licence-Baptiste_Grosjean-black">
   <img src="https://img.shields.io/badge/Languages-French,_English,_Dutch-orange">
   <img src="https://img.shields.io/badge/Platforms-Android,_iOS,_MacOS,_Linux,_Web-blue">
