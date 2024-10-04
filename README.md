@@ -56,6 +56,7 @@
 
 <p align="center">
   <a href="https://registry.jsonresume.org/grosjeanbaptiste"><img src="https://img.shields.io/badge/Resume-JSONResume-blue"></a>
+  <a href="https://registry.jsonresume.org/grosjeanbaptiste/dashboard"><img src="https://img.shields.io/badge/Dashboard-Profile-green"></a>
 </p>
 
 <p align="center">
