@@ -1,7 +1,7 @@
 <!-- Add a custom banner -->
-<p align="center">
+<!-- <p align="center">
   <img src="https://your-banner-image-link.com/banner.png" alt="Baptiste Grosjean's GitHub Profile" width="100%">
-</p>
+</p> -->
 
 # 🙋‍♂️ Welcome to Baptiste Grosjean's GitHub Profile
 
@@ -55,7 +55,7 @@
 </p>
 
 <p align="center">
-  ![Licence](https://img.shields.io/badge/Licence-Baptiste_Grosjean-black)
-  ![Languages](https://img.shields.io/badge/Languages-French,_English,_Dutch-orange)
-  ![Platforms](https://img.shields.io/badge/Platforms-Android,_iOS,_MacOS,_Linux,_Web-blue)
+  <img src="https://img.shields.io/badge/Licence-Baptiste_Grosjean-black">
+  <img src="https://img.shields.io/badge/Languages-French,_English,_Dutch-orange">
+  <img src="https://img.shields.io/badge/Platforms-Android,_iOS,_MacOS,_Linux,_Web-blue">
 </p>
