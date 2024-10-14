@@ -14,6 +14,8 @@
 - **Location**: Kraainem, Belgium
 - **Occupation**: IT at [EMVI](https://www.emvi.ai/), Master's Degree Student in Computer Science at [UMons](https://www.umons.be/)
 - **Portfolio**: [My Portfolio](https://my-way-bg.vercel.app/about/way)
+- **Registry**: [My Registry] (https://registry.jsonresume.org/grosjeanbaptiste/dashboard)
+- **JsonResume**: [My JsonResume] (https://registry.jsonresume.org/grosjeanbaptiste)
 
 <hr>
 
