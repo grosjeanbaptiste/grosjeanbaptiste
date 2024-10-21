@@ -4,6 +4,7 @@
 
 # 🙋‍♂️ Welcome to Baptiste Grosjean's GitHub Profile
 
+![Alt](https://repobeats.axiom.co/api/embed/601d142a2d9ac9943a6abc89ae573571f9c8f2ff.svg "Repobeats analytics image")
 <!-- <p align="center">
   <img src="https://avatars.githubusercontent.com/u/83280831?v=4" alt="Profile Picture" width="150" height="150" style="border-radius: 50%;">
 </p> -->
