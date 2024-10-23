@@ -5,6 +5,14 @@
 # 🙋‍♂️ Welcome to Baptiste Grosjean's GitHub Profile
 
 ![Alt](https://repobeats.axiom.co/api/embed/601d142a2d9ac9943a6abc89ae573571f9c8f2ff.svg "Repobeats analytics image")
+
+## GitHub Stats
+
+<a href="https://github.com/grosjeanbaptiste">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=grosjeanbaptiste&show_icons=true&theme=shades-of-purple&count_private=true" alt="GrosjeanBaptiste's GitHub Stats" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=grosjeanbaptiste&theme=shades-of-purple&layout=compact" 
+    alt="Grosjean Baptiste GitHub Top Languages" />
+</a>
 <!-- <p align="center">
   <img src="https://avatars.githubusercontent.com/u/83280831?v=4" alt="Profile Picture" width="150" height="150" style="border-radius: 50%;">
 </p> -->
