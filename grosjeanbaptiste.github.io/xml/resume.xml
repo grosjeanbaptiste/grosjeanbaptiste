@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resume>
+    <meta>
+        <_schema>https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json</_schema>
+        <version>v1.0.0</version>
+        <canonical>https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json</canonical>
+        <theme>grosjeanbaptiste</theme>
+    </meta>
+    <basics>
+        <name>Baptiste Grosjean</name>
+        <label>
+            <text lang="en">Computer Scientist | Student @UMons by night &amp; IT @EMVI by day</text>
+            <text lang="fr">Informaticien | Étudiant à l'UMons le soir &amp; IT @EMVI le jour</text>
+            <text lang="nl">Computerwetenschapper | Student aan UMons 's nachts &amp; IT bij EMVI overdag</text>
+        </label>
+        <image>../assets/images/profil.jpeg</image>
+        <email>grosjeanbaptisteit@outlook.com</email>
+        <phone>+32 496 28 97 05</phone>
+        <url>https://my-way-bg.vercel.app/about/way</url>
+        <summary>
+            <text lang="en">Computer Scientist | Student @UMons by night &amp; IT @EMVI by day</text>
+            <text lang="fr">Informaticien | Étudiant à l'UMons le soir &amp; IT @EMVI le jour</text>
+            <text lang="nl">Computerwetenschapper | Student aan UMons 's nachts &amp; IT bij EMVI overdag</text>
+        </summary>
+        <location>
+            <address>Avenue Baron Albert D'Huart</address>
+            <postalCode>1950</postalCode>
+            <city>Kraainem</city>
+            <countryCode>BE</countryCode>
+            <region>Belgium</region>
+        </location>
+        <profiles>
+            <network>LinkedIn</network>
+            <username>grosjeanbaptiste</username>
+            <url>https://www.linkedin.com/in/grosjeanbaptiste</url>
+        </profiles>
+        <profiles>
+            <network>GitHub</network>
+            <username>grosjeanbaptiste</username>
+            <url>https://github.com/grosjeanbaptiste</url>
+        </profiles>
+        <profiles>
+            <network>Npm</network>
+            <username>grosjeanbaptiste</username>
+            <url>https://npm.com/grosjeanbaptiste</url>
+        </profiles>
+    </basics>
+    <work>
+        <company>EMVI</company>
+        <location>Brugge, Flanders, Belgium</location>
+        <position>
+            <text lang="en">IT Specialist</text>
+            <text lang="fr">Spécialiste en informatique</text>
+            <text lang="nl">IT-specialist</text>
+        </position>
+        <url>https://www.emvi.ai</url>
+        <startDate>2024-10-01</startDate>
+        <summary>
+            <text lang="en">Working as an IT specialist at EMVI.</text>
+            <text lang="fr">Travaille comme spécialiste en informatique chez EMVI.</text>
+            <text lang="nl">Werkt als IT-specialist bij EMVI.</text>
+        </summary>
+    </work>
+    <work>
+        <company>Xtrada</company>
+        <location>Antwerp, Flanders, Belgium</location>
+        <position>
+            <text lang="en">Data Scientist</text>
+            <text lang="fr">Data Scientist</text>
+            <text lang="nl">Data Scientist</text>
+        </position>
+        <url>https://www.xtrada.be</url>
+        <startDate>2024-03-01</startDate>
+        <endDate>2024-09-22</endDate>
+        <summary>
+            <text lang="en">Use of Python libraries (Spacy, etc.) to extract named entities from text via NER model training and implementation in .NET. Model accuracy 87%.</text>
+            <text lang="fr">Utilisation des bibliothèques Python (Spacy, etc.) pour extraire des entités nommées à partir de textes via l'entraînement de modèles NER et leur implémentation en .NET. Précision du modèle 87%.</text>
+            <text lang="nl">Gebruik van Python-bibliotheken (Spacy, enz.) om entiteiten uit tekst te extraheren via NER-modeltraining en implementatie in .NET. Model nauwkeurigheid 87%.</text>
+        </summary>
+    </work>
+    <work>
+        <company>Xtrada</company>
+        <location>Antwerp, Flanders, Belgium</location>
+        <position>Software Crafter</position>
+        <url>https://www.xtrada.be</url>
+        <startDate>2023-08-21</startDate>
+        <endDate>2024-09-22</endDate>
+        <summary>Software modernization within the .Net stack following domain driven design and clean code principles. 
+
+Implementation of Azure ai services in .net solution.</summary>
+    </work>
+    <work>
+        <company>VhAuctions</company>
+        <location>Anvers, Région flamande, Belgique</location>
+        <position>.Net/React Software Crafter</position>
+        <url>https://www.vhauctions.be</url>
+        <startDate>2024-01-01</startDate>
+        <endDate>2024-08-07</endDate>
+    </work>
+    <work>
+        <company>Hackathon Citizens of Wallonia</company>
+        <location>Charleroi et périphérie</location>
+        <position>Software Crafter</position>
+        <url>https://www.cow.be</url>
+        <startDate>2024-03-15</startDate>
+        <endDate>2024-03-17</endDate>
+        <summary>EduCraft: solution allowing anyone to craft his own personnalized path to get new skills</summary>
+    </work>
+    <work>
+        <company>aXinco</company>
+        <location>Anvers, Région flamande, Belgique</location>
+        <position>.Net/Blazor Software Crafter</position>
+        <url>https://www.axinco.be</url>
+        <startDate>2023-09-01</startDate>
+        <endDate>2023-12-31</endDate>
+        <summary>Crafting Axinco Kwalitijd webapp in .Net / Blazor folowing DDD and clean code principles.</summary>
+    </work>
+    <work>
+        <company>Technofutur TIC</company>
+        <location>Charleroi, Wallonia, Belgique</location>
+        <position>Full Stack Developer Web Intern</position>
+        <url>https://www.technofutur-tic.be</url>
+        <startDate>2022-12-01</startDate>
+        <endDate>2023-06-30</endDate>
+        <summary>This qualifying training aimed to strengthen the technical skills acquired during my bachelor's degree program at EPHEC. 
+In addition, during the extension, we received an introduction to BUSINESS Intelligence and ETL processes (Data Warehousing) using Microsoft tools (SSIS, ...). 
+This comprehensive training covered various areas including SQL Server, Node.js, Express.js, React.js, and Angular.js, encompassing everything from database development to user interface and backend.</summary>
+    </work>
+    <work>
+        <company>Hackathon Citizens of Wallonia</company>
+        <location>Charleroi, Région wallonne, Belgique</location>
+        <position>Full Stack Developer Web Intern</position>
+        <url>https://www.cow.be</url>
+        <startDate>2023-03-29</startDate>
+        <endDate>2023-03-31</endDate>
+        <summary>OnlyTogether: solution allowing the vulnerable users always being accompagned</summary>
+    </work>
+    <work>
+        <company>EDITx: IT Challenges, IT Jobs, Education in IT for X</company>
+        <location>Région de Bruxelles-Capitale, Belgique</location>
+        <position>Full Stack Developer Web Intern</position>
+        <url>https://www.linkedin.com/company/editx/</url>
+        <startDate>2022-04-01</startDate>
+        <endDate>2022-04-30</endDate>
+        <summary></summary>
+    </work>
+    <work>
+        <company>Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</company>
+        <location>Région de Bruxelles-Capitale, Belgique</location>
+        <position>Student Job</position>
+        <url>https://www.laj.be</url>
+        <startDate>2022-03-30</startDate>
+        <endDate>2022-03-31</endDate>
+        <summary></summary>
+    </work>
+    <work>
+        <company>RESTOMAX</company>
+        <location>Région de Bruxelles-Capitale, Belgique</location>
+        <position>Full Stack Developer Web Intern</position>
+        <url>https://www.restomax.be</url>
+        <startDate>2021-11-01</startDate>
+        <endDate>2022-03-31</endDate>
+        <summary></summary>
+    </work>
+    <work>
+        <company>Quick Restaurant</company>
+        <location>Kraainem, Flemish Region, Belgium</location>
+        <position>Student Job</position>
+        <url>https://www.quick.be</url>
+        <startDate>2017-09-01</startDate>
+        <endDate>2017-09-30</endDate>
+        <summary></summary>
+    </work>
+    <volunteer>
+        <organization>UMons</organization>
+        <position>
+            <text lang="en">Student Representative</text>
+            <text lang="fr">Représentant Étudiant</text>
+            <text lang="nl">Studentenvertegenwoordiger</text>
+        </position>
+        <url>https://www.umons.be</url>
+        <startDate>2023-11-30</startDate>
+        <summary>
+            <text lang="en">Representing students at UMons.</text>
+            <text lang="fr">Représentation des étudiants à l'UMons.</text>
+            <text lang="nl">Vertegenwoordiging van studenten aan UMons.</text>
+        </summary>
+    </volunteer>
+    <volunteer>
+        <organization>UMons</organization>
+        <position>Buddy Tandemons</position>
+        <url>https://www.umons.be</url>
+        <startDate>2023-11-30</startDate>
+        <endDate></endDate>
+        <summary></summary>
+    </volunteer>
+    <volunteer>
+        <organization>EPHEC École Supérieure de Promotion Sociale</organization>
+        <position>Student Representative</position>
+        <url>https://www.ephec.be</url>
+        <startDate>2019-09-30</startDate>
+        <endDate>2022-10-15</endDate>
+        <summary></summary>
+    </volunteer>
+    <volunteer>
+        <organization>EPHEC École Supérieure de Promotion Sociale</organization>
+        <position>Tutor</position>
+        <url>https://www.ephec.be</url>
+        <startDate>2019-09-30</startDate>
+        <endDate>2022-10-15</endDate>
+        <summary></summary>
+    </volunteer>
+    <projects>
+        <name>
+            <text lang="en">EduCraft</text>
+            <text lang="fr">EduCraft</text>
+            <text lang="nl">EduCraft</text>
+        </name>
+        <startDate>2024-03-29</startDate>
+        <endDate>2024-03-31</endDate>
+        <summary>
+            <text lang="en">Education Manager</text>
+            <text lang="fr">Gestionnaire d'éducation</text>
+            <text lang="nl">Onderwijsbeheerder</text>
+        </summary>
+    </projects>
+    <projects>
+        <name>MyWay</name>
+        <description>Education manager for students.</description>
+        <highlights>UI/UX.</highlights>
+        <highlights>APIs integration.</highlights>
+        <keywords>JavaScript</keywords>
+        <keywords>API</keywords>
+        <keywords>UI/UX</keywords>
+        <startDate>2023-02-01</startDate>
+        <summary>Education manager for students.</summary>
+        <url>https://my-way-bg.vercel.app</url>
+        <roles>Founder</roles>
+        <entity>Freelance</entity>
+        <type>Web Application</type>
+    </projects>
+    <projects>
+        <name>VhAuctions NER Inventory Model</name>
+        <startDate>2024-03-01</startDate>
+        <endDate>2024-08-07</endDate>
+        <summary>Named Entity Recognition Machine Learning Model to extract Inventory Items from and audio transcription.</summary>
+    </projects>
+    <projects>
+        <name>VhAuctions</name>
+        <startDate>2024-01-01</startDate>
+        <endDate>2024-02-28</endDate>
+        <summary>Fleet manager for auctions.</summary>
+    </projects>
+    <projects>
+        <name>Kwalitijd</name>
+        <startDate>2023-09-01</startDate>
+        <endDate>2023-12-31</endDate>
+        <summary>Survey manager for sports clubs and federations.</summary>
+    </projects>
+    <projects>
+        <name>WebMenu</name>
+        <startDate>2021-11-01</startDate>
+        <endDate>2022-03-31</endDate>
+        <summary>QRCode based cash register for HoReCa establishments.</summary>
+    </projects>
+    <education>
+        <institution>UMons</institution>
+        <area>
+            <text lang="en">Computer Science</text>
+            <text lang="fr">Informatique</text>
+            <text lang="nl">Informatica</text>
+        </area>
+        <studyType>
+            <text lang="en">Master of Science - MS</text>
+            <text lang="fr">Master en Sciences - MS</text>
+            <text lang="nl">Master of Science - MS</text>
+        </studyType>
+        <startDate>2022-10-15</startDate>
+        <gpa></gpa>
+        <summary></summary>
+    </education>
+    <education>
+        <institution>Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</institution>
+        <area>Information Systems Management</area>
+        <studyType>Professional Bachelor's degree</studyType>
+        <startDate>2018-09-30</startDate>
+        <endDate>2022-10-15</endDate>
+        <gpa>Satisfaction </gpa>
+        <summary>WebMenu</summary>
+    </education>
+    <education>
+        <institution>Institut Saint-Louis Bruxelles</institution>
+        <area>7e Spéciale Mathématiques</area>
+        <studyType>Attestation</studyType>
+        <startDate>2019-09-30</startDate>
+        <endDate>2020-06-30</endDate>
+        <gpa>Attestation</gpa>
+    </education>
+    <education>
+        <institution>Université Saint-Louis - Bruxelles</institution>
+        <area>Political sciences</area>
+        <studyType>Bachelor of Arts - BA</studyType>
+        <startDate>2016-09-30</startDate>
+        <endDate>2019-06-30</endDate>
+        <gpa>29 credits earned in 2016-2017, contact me for more informations.</gpa>
+    </education>
+    <education>
+        <institution>Solvay Brussels School of Economics and Management</institution>
+        <area>Business Engineering</area>
+        <studyType>Bachelor of Science - BSc</studyType>
+        <startDate>2015-09-30</startDate>
+        <endDate>2016-06-30</endDate>
+        <gpa>Contact me for more informations.</gpa>
+    </education>
+    <education>
+        <institution>Université libre de Bruxelles</institution>
+        <area>Business Engineering</area>
+        <studyType>Bachelor of Science - BSc</studyType>
+        <startDate>2015-09-30</startDate>
+        <endDate>2016-06-30</endDate>
+        <gpa>Contact me for more informations.</gpa>
+    </education>
+    <education>
+        <institution>UCLouvain - Université catholique de Louvain</institution>
+        <area>Médecine et dentisterie</area>
+        <studyType>Cours préparatoires</studyType>
+        <startDate>2014-09-30</startDate>
+        <endDate>2015-06-30</endDate>
+        <gpa>Attestation </gpa>
+    </education>
+    <education>
+        <institution>Centre Scolaire Saint-Adrien - Val Duchesse</institution>
+        <area>General Studies Maths &amp; Modern languages</area>
+        <studyType>C.E.S.S.</studyType>
+        <startDate>2012-09-30</startDate>
+        <endDate>2015-06-30</endDate>
+        <gpa>Satis bene</gpa>
+    </education>
+    <education>
+        <institution>Lycée Mater Dei</institution>
+        <area>General studies Latin &amp; Greec</area>
+        <studyType></studyType>
+        <startDate>2009-09-30</startDate>
+        <endDate>2012-06-30</endDate>
+        <gpa></gpa>
+    </education>
+    <awards>
+        <title>TOEIC</title>
+        <date>2023-06-06</date>
+        <awarder>ETS</awarder>
+        <summary>730</summary>
+    </awards>
+    <skills>
+        <name>
+            <text lang="en">Hard Skills</text>
+            <text lang="fr">Compétences Techniques</text>
+            <text lang="nl">Technische Vaardigheden</text>
+        </name>
+        <level>
+            <text lang="en">Intermediate</text>
+            <text lang="fr">Intermédiaire</text>
+            <text lang="nl">Gemiddeld</text>
+        </level>
+        <keywords>SQL</keywords>
+        <keywords>C#</keywords>
+        <keywords>Java</keywords>
+        <keywords>Python</keywords>
+        <keywords>JS</keywords>
+        <keywords>TS</keywords>
+        <keywords>XML</keywords>
+        <keywords>JSON</keywords>
+        <keywords>HTML</keywords>
+        <keywords>CSS</keywords>
+        <keywords>Zsh</keywords>
+        <keywords>Dart</keywords>
+        <keywords>LaTeX</keywords>
+        <keywords>SQL Server</keywords>
+        <keywords>EF</keywords>
+        <keywords>.NET</keywords>
+        <keywords>Pandas</keywords>
+        <keywords>NumPy</keywords>
+        <keywords>Whisper</keywords>
+        <keywords>Spacy</keywords>
+        <keywords>Node.js</keywords>
+        <keywords>Express.js</keywords>
+        <keywords>Blazor</keywords>
+        <keywords>Angular.js</keywords>
+        <keywords>React.js</keywords>
+        <keywords>Flutter</keywords>
+        <keywords>Gradle</keywords>
+        <keywords>NPM</keywords>
+        <keywords>JWT</keywords>
+        <keywords>Auth0</keywords>
+        <keywords>SSH</keywords>
+        <keywords>Venv</keywords>
+        <keywords>Conda</keywords>
+        <keywords>Docker</keywords>
+        <keywords>UML</keywords>
+        <keywords>Merise</keywords>
+        <keywords>VisualParadigm</keywords>
+        <keywords>CleanCode</keywords>
+        <keywords>CleanArchitecture</keywords>
+        <keywords>DDD</keywords>
+        <keywords>CQRS</keywords>
+    </skills>
+    <skills>
+        <name>Learning</name>
+        <keywords>TDD</keywords>
+        <keywords>TensorFlow</keywords>
+        <keywords>Scikit-Learn</keywords>
+        <keywords>C</keywords>
+        <keywords>XQuery</keywords>
+        <keywords>Blockchain</keywords>
+    </skills>
+    <skills>
+        <name>SoftSkills</name>
+        <keywords>Adaptability</keywords>
+        <keywords>Resilience</keywords>
+        <keywords>Leadership</keywords>
+        <keywords>Creativity</keywords>
+        <keywords>Initiative</keywords>
+        <keywords>Analysis</keywords>
+        <keywords>Flexibility</keywords>
+        <keywords>Teamwork</keywords>
+        <keywords>Organization</keywords>
+        <keywords>Pragmatism</keywords>
+        <keywords>Resourcefulness</keywords>
+        <keywords>Thoroughness</keywords>
+    </skills>
+    <languages>
+        <language>French</language>
+        <fluency>
+            <text lang="en">Native Speaker</text>
+            <text lang="fr">Langue Maternelle</text>
+            <text lang="nl">Moedertaal</text>
+        </fluency>
+    </languages>
+    <languages>
+        <language>English</language>
+        <fluency>B1+/B2 (TOEIC 730/ ELAO)</fluency>
+    </languages>
+    <languages>
+        <language>Dutch</language>
+        <fluency>B1</fluency>
+    </languages>
+    <interests>
+        <name>
+            <text lang="en">Research and Development</text>
+            <text lang="fr">Recherche et Développement</text>
+            <text lang="nl">Onderzoek en Ontwikkeling</text>
+        </name>
+        <keywords>Innovations</keywords>
+        <keywords>Experimentation</keywords>
+        <keywords>POCs</keywords>
+    </interests>
+    <references>
+        <name>Tino Schuerewegen, Software developer at Xtrada</name>
+        <reference>I had the pleasure of working with Baptiste for a year, with the added joy of mentoring him on a project for three months. If there's one thing that stands out about Baptiste, it's his boundless energy. Whether it's 9 AM or 9 PM, he's always the most enthusiastic person in the room—sometimes even more enthusiastic than the coffee machine.
+
+Baptiste brings a contagious energy to any project he's part of. He’s outgoing, smart, and has an eagerness to learn that is truly admirable. Whether he's diving into a complex task or asking insightful questions, he's always in search of knowledge. His enthusiasm for learning, especially when it comes to leveraging tools like ChatGPT, is both impressive and a little intimidating. Seriously, if ChatGPT had a best friend, it would be Baptiste!
+
+He’s also incredibly hands-on, never shying away from rolling up his sleeves and getting deep into the work. His approach isn't just theoretical; he's all about practical, tangible results.
+
+In summary, if you're looking for someone who brings enthusiasm, intelligence, and a touch of humor to every task, Baptiste is your person. Working with him was not just productive, but genuinely enjoyable.</reference>
+    </references>
+    <references>
+        <name>Emiel Van Gysegem, Marketing and operations at Xtra Groep</name>
+        <reference>Hoewel we niet direct samenwerkten, had ik altijd een heel fijne connectie met Baptiste. In een mengelmoes van Engels, Nederlands en Frans deelden we vaak leuke gesprekken. Zijn enthousiasme en energie zijn echt aanstekelijk, en hij weet een prettige, informele sfeer te creëren in elke interactie. Baptiste is iemand die een positieve dynamiek met zich meebrengt.</reference>
+    </references>
+    <references>
+        <name>Steven Claus, CFO at Xtra Groep</name>
+        <reference>Baptiste is a full-stack software developer and is driven by an unwavering determination. This mindset permeates every aspect of his career. He has worked in various fields, allowing him to quickly adapt to any situation. These roles have honed both his technical and interpersonal skills, making him a versatile collaborator who significantly impacts every project he joins. Fueled by a constant desire to learn, he continually updates his knowledge through a master’s degree in computer science. This ongoing learning journey makes him a well-rounded IT professional in the field of computer science.</reference>
+    </references>
+    <references>
+        <name>Tjörven Janssens, software developer at Xtrada</name>
+        <reference>Baptiste is naast een software ontwikkelaar, graag bezig met data-analyse en is een expert in het gebruik van chat-gtp. Hij leert graag nieuwe dingen en doet dit ook snel. Hij is erg enthousiast in omgang en staat steeds klaar voor een vriendelijk woord of wat advies.</reference>
+    </references>
+    <references>
+        <name>Michael Culot, Sales manager at Xtrada</name>
+        <reference>Baptiste is a great and devoted developer who’s eager to keep learning new technologies and elevate his skill set. You would be amazed about not only his knowledge but also his warm open enthusiasm. Baptiste, you’re going to be doing great things in your life, just keep your vibrate spirit ✊</reference>
+    </references>
+</resume>
