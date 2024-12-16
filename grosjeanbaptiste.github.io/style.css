@@ -40,15 +40,16 @@ h3 {
 
 .container {
   display: flex;
-  min-height: 100vh;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .sidebar {
+  width: 25%;
   background-color: var(--background-color);
-  color: var(--body-color);
-  width: 30%;
   padding: 20px;
-  box-sizing: border-box;
+  border-radius: 8px;
 }
 
 .sidebar h1 {
@@ -170,6 +171,58 @@ h3 {
   border-left: 3px solid var(--third-color);
   color: #555;
   font-style: italic;
+}
+
+nav {
+  background-color: var(--background-color);
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  flex: 1;
+  text-align: center;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px;
+  color: var(--emphasis-color);
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: var(--third-color); /* Change background on hover */
+  color: white; /* Change text color on hover */
+}
+
+#cvButton {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure the button is on top */
+}
+
+#cvButton:hover {
+  background-color: var(--third-color);
 }
 
 @media (max-width: 768px) {

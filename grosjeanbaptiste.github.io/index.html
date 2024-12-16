@@ -6,14 +6,24 @@
   <title>Baptiste Grosjean - CV</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="style.css">
   <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
   </style>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
 <body>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#references">References</a></li>
+    </ul>
+  </nav>
 
   <div class="container">
     <aside class="sidebar">
@@ -140,12 +150,11 @@
         <canvas id="dailyLifeChart" width="200" height="200"></canvas>
       </div>
     </aside>
-    <main class="main-content">
+    <main class="main-content" id="cvContent">
       <section id="about">
         <h2>À propos</h2>
         <p>Computer Scientist | Student @UMons by night &amp; IT @EMVI by day</p>
       </section>
-
       <section id="experience">
         <h2>Expériences Professionnelles</h2>
         <div class="experience-item">
@@ -153,73 +162,85 @@
           <p class="date">2024-10-01 - </p>
           <p class="location">Brugge, Flanders, Belgium</p>
           <p></p>
-          <div class="experience-item">
-            <h3>Data Scientist chez Xtrada</h3>
-            <p class="date">2024-03-01 - 2024-09-22</p>
-            <p class="location">Antwerp, Flanders, Belgium</p>
-            <p>Use of python libraries (Spacy,...) to extract named entities from text via NER model training and
-              implementation in .Net
+        </div>
+        <div class="experience-item">
+          <h3>Data Scientist chez Xtrada</h3>
+          <p class="date">2024-03-01 - 2024-09-22</p>
+          <p class="location">Antwerp, Flanders, Belgium</p>
+          <p>Use of python libraries (Spacy,...) to extract named entities from text via NER model training and
+            implementation in .Net
 
-              Model rate 87%</p>
-            <div class="experience-item">
-              <h3>Software Crafter chez Xtrada</h3>
-              <p class="date">2023-08-21 - 2024-09-22</p>
-              <p class="location">Antwerp, Flanders, Belgium</p>
-              <p>Software modernization within the .Net stack following domain driven design and clean code principles.
+            Model rate 87%</p>
+        </div>
+        <div class="experience-item">
+          <h3>Software Crafter chez Xtrada</h3>
+          <p class="date">2023-08-21 - 2024-09-22</p>
+          <p class="location">Antwerp, Flanders, Belgium</p>
+          <p>Software modernization within the .Net stack following domain driven design and clean code principles.
 
-                Implementation of Azure ai services in .net solution.</p>
-              <div class="experience-item">
-                <h3>.Net/React Software Crafter chez VhAuctions</h3>
-                <p class="date">2024-01-01 - 2024-08-07</p>
-                <p class="location">Anvers, Région flamande, Belgique</p>
-                <p></p>
-                <div class="experience-item">
-                  <h3>Software Crafter chez Hackathon Citizens of Wallonia</h3>
-                  <p class="date">2024-03-15 - 2024-03-17</p>
-                  <p class="location">Charleroi et périphérie</p>
-                  <p>EduCraft: solution allowing anyone to craft his own personnalized path to get new skills</p>
-                  <div class="experience-item">
-                    <h3>.Net/Blazor Software Crafter chez aXinco</h3>
-                    <p class="date">2023-09-01 - 2023-12-31</p>
-                    <p class="location">Anvers, Région flamande, Belgique</p>
-                    <p>Crafting Axinco Kwalitijd webapp in .Net / Blazor folowing DDD and clean code principles.</p>
-                    <div class="experience-item">
-                      <h3>Full Stack Developer Web Intern chez Technofutur TIC</h3>
-                      <p class="date">2022-12-01 - 2023-06-30</p>
-                      <p class="location">Charleroi, Wallonia, Belgique</p>
-                      <p>This qualifying training aimed to strengthen the technical skills acquired during my
-                        bachelor&#x27;s degree program at EPHEC.
-                        In addition, during the extension, we received an introduction to BUSINESS Intelligence and ETL
-                        processes (Data Warehousing) using Microsoft tools (SSIS, ...).
-                        This comprehensive training covered various areas including SQL Server, Node.js, Express.js,
-                        React.js, and Angular.js, encompassing everything from database development to user interface
-                        and backend.</p>
-                      <div class="experience-item">
-                        <h3>Full Stack Developer Web Intern chez Hackathon Citizens of Wallonia</h3>
-                        <p class="date">2023-03-29 - 2023-03-31</p>
-                        <p class="location">Charleroi, Région wallonne, Belgique</p>
-                        <p>OnlyTogether: solution allowing the vulnerable users always being accompagned</p>
-                        <div class="experience-item">
-                          <h3>Full Stack Developer Web Intern chez EDITx: IT Challenges, IT Jobs, Education in IT for X
-                          </h3>
-                          <p class="date">2022-04-01 - 2022-04-30</p>
-                          <p class="location">Région de Bruxelles-Capitale, Belgique</p>
-                          <p></p>
-                          <div class="experience-item">
-                            <h3>Student Job chez Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</h3>
-                            <p class="date">2022-03-30 - 2022-03-31</p>
-                            <p class="location">Région de Bruxelles-Capitale, Belgique</p>
-                            <p></p>
-                            <div class="experience-item">
-                              <h3>Full Stack Developer Web Intern chez RESTOMAX</h3>
-                              <p class="date">2021-11-01 - 2022-03-31</p>
-                              <p class="location">Région de Bruxelles-Capitale, Belgique</p>
-                              <p></p>
-                              <div class="experience-item">
-                                <h3>Student Job chez Quick Restaurant</h3>
-                                <p class="date">2017-09-01 - 2017-09-30</p>
-                                <p class="location">Kraainem, Flemish Region, Belgium</p>
-                                <p></p>
+            Implementation of Azure ai services in .net solution.</p>
+        </div>
+        <div class="experience-item">
+          <h3>.Net/React Software Crafter chez VhAuctions</h3>
+          <p class="date">2024-01-01 - 2024-08-07</p>
+          <p class="location">Anvers, Région flamande, Belgique</p>
+          <p></p>
+        </div>
+        <div class="experience-item">
+          <h3>Software Crafter chez Hackathon Citizens of Wallonia</h3>
+          <p class="date">2024-03-15 - 2024-03-17</p>
+          <p class="location">Charleroi et périphérie</p>
+          <p>EduCraft: solution allowing anyone to craft his own personnalized path to get new skills</p>
+        </div>
+        <div class="experience-item">
+          <h3>.Net/Blazor Software Crafter chez aXinco</h3>
+          <p class="date">2023-09-01 - 2023-12-31</p>
+          <p class="location">Anvers, Région flamande, Belgique</p>
+          <p>Crafting Axinco Kwalitijd webapp in .Net / Blazor folowing DDD and clean code principles.</p>
+        </div>
+        <div class="experience-item">
+          <h3>Full Stack Developer Web Intern chez Technofutur TIC</h3>
+          <p class="date">2022-12-01 - 2023-06-30</p>
+          <p class="location">Charleroi, Wallonia, Belgique</p>
+          <p>This qualifying training aimed to strengthen the technical skills acquired during my
+            bachelor&#x27;s degree program at EPHEC.
+            In addition, during the extension, we received an introduction to BUSINESS Intelligence and ETL
+            processes (Data Warehousing) using Microsoft tools (SSIS, ...).
+            This comprehensive training covered various areas including SQL Server, Node.js, Express.js,
+            React.js, and Angular.js, encompassing everything from database development to user interface
+            and backend.</p>
+        </div>
+        <div class="experience-item">
+          <h3>Full Stack Developer Web Intern chez Hackathon Citizens of Wallonia</h3>
+          <p class="date">2023-03-29 - 2023-03-31</p>
+          <p class="location">Charleroi, Région wallonne, Belgique</p>
+          <p>OnlyTogether: solution allowing the vulnerable users always being accompagned</p>
+        </div>
+        <div class="experience-item">
+          <h3>Full Stack Developer Web Intern chez EDITx: IT Challenges, IT Jobs, Education in IT for X
+          </h3>
+          <p class="date">2022-04-01 - 2022-04-30</p>
+          <p class="location">Région de Bruxelles-Capitale, Belgique</p>
+          <p></p>
+        </div>
+        <div class="experience-item">
+          <h3>Student Job chez Les Auberges de Jeunesse - Wallonie &amp; Bruxelles</h3>
+          <p class="date">2022-03-30 - 2022-03-31</p>
+          <p class="location">Région de Bruxelles-Capitale, Belgique</p>
+          <p></p>
+        </div>
+        <div class="experience-item">
+          <h3>Full Stack Developer Web Intern chez RESTOMAX</h3>
+          <p class="date">2021-11-01 - 2022-03-31</p>
+          <p class="location">Région de Bruxelles-Capitale, Belgique</p>
+          <p></p>
+        </div>
+        <div class="experience-item">
+          <h3>Student Job chez Quick Restaurant</h3>
+          <p class="date">2017-09-01 - 2017-09-30</p>
+          <p class="location">Kraainem, Flemish Region, Belgium</p>
+          <p></p>
+        </div>
       </section>
 
       <section id="education">
@@ -406,9 +427,31 @@
             Baptiste, you’re going to be doing great things in your life, just keep your vibrate spirit ✊</blockquote>
         </div>
       </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out!</p>
+      </section>
     </main>
   </div>
 
+  <button id="cvButton">Preview and Download CV</button>
+
+  <script>
+    document.getElementById('cvButton').addEventListener('click', function() {
+      const element = document.getElementById('cvContent'); // Assuming you have an element with this ID
+      const opt = {
+        margin: 1,
+        filename: 'CV_Baptiste_Grosjean.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+
+      // Generate the PDF
+      html2pdf().from(element).set(opt).save();
+    });
+  </script>
 
   <script>
     var ctx = document.getElementById('dailyLifeChart').getContext('2d');
