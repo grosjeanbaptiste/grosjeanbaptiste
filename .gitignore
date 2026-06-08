@@ -1,0 +1,8 @@
+_site/
+node_modules/
+.DS_Store
+*.log
+.idea/
+.vscode/
+*.pdf
+cv.json

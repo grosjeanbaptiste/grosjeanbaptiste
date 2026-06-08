@@ -1,6 +1,6 @@
-FROM nginx:alpine
+FROM nginx:1.27-alpine
 
-COPY . /usr/share/nginx/html
+COPY grosjeanbaptiste.github.io/ /usr/share/nginx/html/
 
 EXPOSE 80
 

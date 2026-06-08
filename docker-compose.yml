@@ -2,7 +2,5 @@ services:
   web:
     build: .
     ports:
-      - "80:80"
-    volumes:
-      - ./site:/usr/share/nginx/html
-    restart: always
+      - "8080:80"
+    restart: unless-stopped

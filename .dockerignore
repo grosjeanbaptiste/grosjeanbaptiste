@@ -1,0 +1,16 @@
+.git
+.gitignore
+.dockerignore
+Dockerfile
+docker-compose.yml
+README.md
+node_modules
+_site
+**/node_modules
+**/.DS_Store
+jsonresume-theme-grosjeanbaptiste/package-lock.json
+jsonresume-theme-grosjeanbaptiste/package.json
+jsonresume-theme-grosjeanbaptiste/index.js
+jsonresume-theme-grosjeanbaptiste/resume.hbs
+jsonresume-theme-grosjeanbaptiste/.gitignore
+jsonresume-theme-grosjeanbaptiste/.npmignore
