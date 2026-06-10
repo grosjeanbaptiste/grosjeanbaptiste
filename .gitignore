@@ -5,4 +5,5 @@ node_modules/
 .idea/
 .vscode/
 *.pdf
+!grosjeanbaptiste.github.io/assets/cv/*.pdf
 cv.json
