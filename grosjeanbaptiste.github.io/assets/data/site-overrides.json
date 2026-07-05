@@ -1,0 +1,19 @@
+{
+  "_note": "Site-specific display overrides applied on top of resume.json without polluting the JSON Resume v1.0.0 schema. Loaded by scripts/lib/site-overrides.js.",
+  "hideOnHtml": {
+    "education": [
+      "Solvay Brussels School of Economics and Management",
+      "Université libre de Bruxelles"
+    ]
+  },
+  "hideOnPdf": {},
+  "displayOverrides": {
+    "education": [
+      {
+        "match": "Université Saint-Louis - Bruxelles",
+        "endDate": "2017-06-30",
+        "reason": "Displayed range trimmed to the year with credits acquired; full 2016-2019 range kept in resume.json."
+      }
+    ]
+  }
+}

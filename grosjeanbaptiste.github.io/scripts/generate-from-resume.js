@@ -22,6 +22,7 @@ const path = require('node:path');
 const { ROOT, TEMPLATE_PATH, LANGS, langOutFile } = require('./lib/config');
 const { MARKERS, replaceBetween } = require('./lib/markers');
 const { loadResume } = require('./lib/data');
+const { applyHtmlOverrides } = require('./lib/site-overrides');
 const { generateHead } = require('./lib/sections/head');
 const { generateNav } = require('./lib/sections/nav');
 const { generateSidebar } = require('./lib/sections/sidebar');
@@ -45,7 +46,9 @@ const template = fs.readFileSync(TEMPLATE_PATH, 'utf8');
 let wrote = 0;
 
 for (const lang of LANGS) {
-  const resume = loadResume(lang);
+  // HTML consumers see the resume with site-overrides applied (hidden entries
+  // removed, display fields patched). XML/JSON stay canonical below.
+  const resume = applyHtmlOverrides(loadResume(lang));
   let html = template.replace(/<html\s+lang="[^"]*">/, `<html lang="${lang}">`);
   html = replaceBetween(html, MARKERS['LLM-HEAD'], generateHead(resume, lang));
   html = replaceBetween(html, MARKERS.NAV, generateNav(lang));
