@@ -100,6 +100,7 @@ function renderContact(b, t, lang) {
   }
   lines.push(
     `  <p><i class="fas fa-code"></i> <a href="/assets/data/resume-${lang}.xml">${escapeHtml(t.xmlResume)}</a> <span class="muted-inline">(${escapeHtml(t.firefoxNote)})</span></p>`,
+    `  <p><i class="fas fa-code-branch"></i> <a href="https://registry.jsonresume.org/grosjeanbaptiste" rel="external noopener" target="_blank">${escapeHtml(t.jsonRegistry)}</a> <span class="muted-inline">(${escapeHtml(t.jsonRegistryNote)})</span></p>`,
   );
   return [
     '<section id="contact">',
