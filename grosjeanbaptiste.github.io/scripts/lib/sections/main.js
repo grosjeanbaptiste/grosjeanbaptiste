@@ -1,6 +1,7 @@
 const I18N = require('../i18n');
 const { escapeHtml, dateRangeHtml } = require('../format');
 const { profileIcon } = require('../profiles');
+const { icon } = require('../icons');
 const { indentLines } = require('../markers');
 
 const renderEmbeddedSkills = (skills) => {
@@ -86,21 +87,21 @@ function renderEducationItem(e, lang, projects, t) {
 function renderContact(b, t, lang) {
   const phoneDigits = (b.phone || '').replace(/[^+\d]/g, '');
   const lines = [
-    `  <p><i class="fas fa-envelope"></i> <a href="mailto:${escapeHtml(b.email)}">${escapeHtml(b.email)}</a></p>`,
+    `  <p>${icon('envelope')} <a href="mailto:${escapeHtml(b.email)}">${escapeHtml(b.email)}</a></p>`,
   ];
   if (phoneDigits) {
     lines.push(
-      `  <p><i class="fas fa-phone"></i> <a href="tel:${escapeHtml(phoneDigits)}">${escapeHtml(b.phone)}</a></p>`,
+      `  <p>${icon('phone')} <a href="tel:${escapeHtml(phoneDigits)}">${escapeHtml(b.phone)}</a></p>`,
     );
   }
   for (const p of b.profiles || []) {
     lines.push(
-      `  <p><i class="${profileIcon(p.network)}"></i> <a href="${escapeHtml(p.url)}" rel="me">${escapeHtml(p.network)}</a></p>`,
+      `  <p>${icon(profileIcon(p.network))} <a href="${escapeHtml(p.url)}" rel="me">${escapeHtml(p.network)}</a></p>`,
     );
   }
   lines.push(
-    `  <p><i class="fas fa-code"></i> <a href="/assets/data/resume-${lang}.xml">${escapeHtml(t.xmlResume)}</a> <span class="muted-inline">(${escapeHtml(t.firefoxNote)})</span></p>`,
-    `  <p><i class="fas fa-code-branch"></i> <a href="https://registry.jsonresume.org/grosjeanbaptiste" rel="external noopener" target="_blank">${escapeHtml(t.jsonRegistry)}</a> <span class="muted-inline">(${escapeHtml(t.jsonRegistryNote)})</span></p>`,
+    `  <p>${icon('code')} <a href="/assets/data/resume-${lang}.xml">${escapeHtml(t.xmlResume)}</a> <span class="muted-inline">(${escapeHtml(t.firefoxNote)})</span></p>`,
+    `  <p>${icon('code-branch')} <a href="https://registry.jsonresume.org/grosjeanbaptiste" rel="external noopener" target="_blank">${escapeHtml(t.jsonRegistry)}</a> <span class="muted-inline">(${escapeHtml(t.jsonRegistryNote)})</span></p>`,
   );
   return [
     '<section id="contact">',

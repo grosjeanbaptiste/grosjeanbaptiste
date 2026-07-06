@@ -1,6 +1,7 @@
 const I18N = require('../i18n');
 const { LANGS, langPath } = require('../config');
 const { escapeHtml } = require('../format');
+const { icon } = require('../icons');
 
 function generateNav(lang) {
   const t = I18N[lang];
@@ -22,7 +23,7 @@ function generateNav(lang) {
   return [
     '<nav>',
     `  <button class="menu-toggle" aria-label="${escapeHtml(t.menuLabel)}" id="menu-toggle">`,
-    '    <i class="fas fa-bars"></i>',
+    `    ${icon('bars')}`,
     '  </button>',
     '  <ul id="nav-menu">',
     navLinks,
@@ -31,7 +32,7 @@ function generateNav(lang) {
     langLinks,
     '  </div>',
     `  <button id="theme-toggle" aria-label="${escapeHtml(t.themeLabel)}" data-label-dark="${escapeHtml(t.darkMode)}" data-label-light="${escapeHtml(t.lightMode)}">`,
-    '    <i class="fas fa-moon"></i>',
+    `    ${icon('moon')}`,
     `    <span>${escapeHtml(t.darkMode)}</span>`,
     '  </button>',
     '</nav>',
