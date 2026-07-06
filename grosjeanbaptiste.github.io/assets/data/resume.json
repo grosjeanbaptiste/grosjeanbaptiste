@@ -3,7 +3,7 @@
     "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
     "version": "v1.0.0",
     "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json",
-    "theme": "grosjeanbaptiste",
+    "theme": "kendall",
     "dailyLife": {
       "items": [
         { "key": "sleep", "hours": 8, "color": "#F3890B" },
