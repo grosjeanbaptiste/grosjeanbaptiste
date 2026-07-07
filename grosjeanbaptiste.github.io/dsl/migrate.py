@@ -1,0 +1,405 @@
+#!/usr/bin/env python3
+"""One-shot migration: assets/data/resume.json (+ overlays + overrides)
+→ dsl/resume.grosjean skeleton.
+
+The output is intentionally not idempotent-diff-clean; the goal is a
+fast bootstrap that you then hand-review for idiomatic ordering and
+naming. Cross-refs (work → projects) are guessed by name match.
+"""
+
+from __future__ import annotations
+
+import json
+import re
+import sys
+from pathlib import Path
+
+_HERE = Path(__file__).resolve().parent
+DATA = _HERE.parent / "assets" / "data"
+DEFAULT_OUT = _HERE / "resume.grosjean"
+LANGS = ("fr", "nl", "es", "de", "zh")
+
+
+def _slug(text: str) -> str:
+    slug = re.sub(r"[^A-Za-z0-9]+", "_", text or "").strip("_")
+    if not slug:
+        slug = "Entry"
+    if slug[0].isdigit():
+        slug = "_" + slug
+    return slug
+
+
+def _q(value: str) -> str:
+    """Emit a DSL string literal — single-line if possible, else triple."""
+    if value is None:
+        return '""'
+    if "\n" in value:
+        # Triple-quoted, indented under the key.
+        return '"""\n' + value.rstrip() + '\n"""'
+    escaped = value.replace("\\", "\\\\").replace('"', '\\"')
+    return f'"{escaped}"'
+
+
+def _tr(canonical: str | None, overlays: dict[str, str | None]) -> str:
+    """Emit t{ en: "..." fr: "..." } for a translated field."""
+    variants = {"en": canonical}
+    for lang, val in overlays.items():
+        if val is not None:
+            variants[lang] = val
+    parts = []
+    for lang, text in variants.items():
+        parts.append(f"{lang}: {_q(text)}")
+    return "t{ " + ", ".join(parts) + " }"
+
+
+def _translated_or_plain(canonical: str | None, overlays: dict[str, str | None]) -> str:
+    has_translation = any(v is not None for v in overlays.values())
+    if canonical is None and not has_translation:
+        return ""
+    if not has_translation:
+        return _q(canonical or "")
+    return _tr(canonical, overlays)
+
+
+def _load(path: Path) -> dict:
+    return json.loads(path.read_text()) if path.exists() else {}
+
+
+def _dedupe_key(base: str, taken: set[str]) -> str:
+    if base not in taken:
+        taken.add(base)
+        return base
+    for i in range(2, 100):
+        candidate = f"{base}{i}"
+        if candidate not in taken:
+            taken.add(candidate)
+            return candidate
+    return base + "X"
+
+
+def _period(entry: dict) -> str | None:
+    start = entry.get("startDate")
+    end = entry.get("endDate")
+    if not start:
+        return None
+    start_short = start[:7]  # YYYY-MM
+    if not end or end == "Present":
+        return f"{start_short}..present"
+    end_short = end[:7]
+    return f"{start_short}..{end_short}"
+
+
+def _emit_basics(canonical: dict, overlays: dict[str, dict], out: list[str]) -> None:
+    b = canonical.get("basics", {})
+    if not b:
+        return
+    out.append("    basics {")
+    out.append(f"        name {_q(b.get('name', ''))}")
+    label_overlays = {lang: overlays.get(lang, {}).get("basics", {}).get("label") for lang in LANGS}
+    out.append(f"        label {_translated_or_plain(b.get('label'), label_overlays)}")
+    if b.get("image"):
+        out.append(f"        image {_q(b['image'])}")
+    if b.get("email"):
+        out.append(f"        email {_q(b['email'])}")
+    if b.get("phone"):
+        out.append(f"        phone {_q(b['phone'])}")
+    if b.get("url"):
+        out.append(f"        url {_q(b['url'])}")
+
+    loc = b.get("location") or {}
+    if loc:
+        out.append("        location {")
+        if loc.get("address"):
+            out.append(f"            address {_q(loc['address'])}")
+        if loc.get("postalCode"):
+            out.append(f"            postalCode {_q(loc['postalCode'])}")
+        if loc.get("city"):
+            out.append(f"            city {_q(loc['city'])}")
+        if loc.get("countryCode"):
+            out.append(f"            countryCode {_q(loc['countryCode'])}")
+        if loc.get("region"):
+            out.append(f"            region {_q(loc['region'])}")
+        out.append("        }")
+
+    for prof in b.get("profiles", []):
+        net = (prof.get("network") or "").lower().replace(" ", "_") or "link"
+        out.append(f"        profile {net} {_q(prof.get('url', ''))}")
+
+    summary_overlays = {lang: overlays.get(lang, {}).get("basics", {}).get("summary") for lang in LANGS}
+    summary = b.get("summary")
+    if summary or any(summary_overlays.values()):
+        out.append(f"        summary {_translated_or_plain(summary, summary_overlays)}")
+    out.append("    }\n")
+
+
+def _emit_work(canonical: dict, overlays: dict[str, dict], out: list[str]) -> None:
+    entries = canonical.get("work", [])
+    if not entries:
+        return
+    out.append("    work {")
+    taken: set[str] = set()
+    for idx, w in enumerate(entries):
+        key = _dedupe_key(_slug(w.get("position") or w.get("company") or "Job"), taken)
+        out.append(f"        {key} {{")
+        out.append(f"            position {_translated_or_plain(w.get('position'), {lang: (overlays.get(lang, {}).get('work') or [{}] * (idx + 1))[idx].get('position') for lang in LANGS})}")
+        if w.get("company"):
+            out.append(f"            at {_q(w['company'])}")
+        if w.get("url"):
+            out.append(f"            url {_q(w['url'])}")
+        if w.get("location"):
+            out.append(f"            location {_q(w['location'])}")
+        if (p := _period(w)):
+            out.append(f"            period {p}")
+        summary = w.get("summary")
+        s_overlays = {lang: (overlays.get(lang, {}).get("work") or [{}] * (idx + 1))[idx].get("summary") for lang in LANGS}
+        if summary or any(s_overlays.values()):
+            out.append(f"            summary {_translated_or_plain(summary, s_overlays)}")
+        if w.get("highlights"):
+            hl_items = ", ".join(_q(h) for h in w["highlights"])
+            out.append(f"            highlights [{hl_items}]")
+        if w.get("skills"):
+            uses = ", ".join(_bare_or_string(s) for s in w["skills"])
+            out.append(f"            uses [{uses}]")
+        if w.get("projects"):
+            names = []
+            for proj in w["projects"]:
+                if isinstance(proj, dict) and proj.get("name"):
+                    names.append(_slug(proj["name"]))
+                elif isinstance(proj, str):
+                    names.append(_slug(proj))
+            if names:
+                items = ", ".join(f"ref {n}" for n in names)
+                out.append(f"            projects [{items}]")
+        out.append("        }")
+    out.append("    }\n")
+
+
+def _bare_or_string(s: str) -> str:
+    if re.match(r"^[A-Za-z_][A-Za-z0-9_]*$", s):
+        return s
+    return _q(s)
+
+
+def _emit_education(canonical: dict, overlays: dict[str, dict], out: list[str]) -> None:
+    entries = canonical.get("education", [])
+    if not entries:
+        return
+    out.append("    education {")
+    taken: set[str] = set()
+    for idx, e in enumerate(entries):
+        key = _dedupe_key(_slug(e.get("institution") or "Edu"), taken)
+        out.append(f"        {key} {{")
+        if e.get("institution"):
+            out.append(f"            institution {_q(e['institution'])}")
+        if e.get("url"):
+            out.append(f"            url {_q(e['url'])}")
+        if e.get("studyType"):
+            out.append(f"            studyType {_q(e['studyType'])}")
+        if e.get("area"):
+            out.append(f"            area {_q(e['area'])}")
+        if (p := _period(e)):
+            out.append(f"            period {p}")
+        if e.get("gpa"):
+            out.append(f"            score {_q(e['gpa'])}")
+        note = e.get("summary")
+        n_overlays = {lang: (overlays.get(lang, {}).get("education") or [{}] * (idx + 1))[idx].get("summary") if idx < len(overlays.get(lang, {}).get("education") or []) else None for lang in LANGS}
+        if note or any(n_overlays.values()):
+            out.append(f"            note {_translated_or_plain(note, n_overlays)}")
+        if e.get("skills"):
+            uses = ", ".join(_bare_or_string(s) for s in e["skills"])
+            out.append(f"            uses [{uses}]")
+        out.append("        }")
+    out.append("    }\n")
+
+
+def _emit_projects(canonical: dict, overlays: dict[str, dict], out: list[str]) -> None:
+    entries = canonical.get("projects", [])
+    if not entries:
+        return
+    out.append("    projects {")
+    taken: set[str] = set()
+    for idx, p in enumerate(entries):
+        key = _dedupe_key(_slug(p.get("name") or "Project"), taken)
+        out.append(f"        {key} {{")
+        if p.get("name"):
+            out.append(f"            name {_q(p['name'])}")
+        desc = p.get("description")
+        d_overlays = {lang: (overlays.get(lang, {}).get("projects") or [{}] * (idx + 1))[idx].get("description") if idx < len(overlays.get(lang, {}).get("projects") or []) else None for lang in LANGS}
+        if desc or any(d_overlays.values()):
+            out.append(f"            description {_translated_or_plain(desc, d_overlays)}")
+        if p.get("keywords"):
+            kws = ", ".join(_bare_or_string(k) for k in p["keywords"])
+            out.append(f"            keywords [{kws}]")
+        if p.get("startDate"):
+            out.append(f"            startDate {p['startDate'][:7]}")
+        if p.get("endDate"):
+            out.append(f"            endDate {p['endDate'][:7]}")
+        if p.get("url"):
+            out.append(f"            url {_q(p['url'])}")
+        if p.get("type"):
+            out.append(f"            type {_q(p['type'])}")
+        if p.get("roles"):
+            roles = ", ".join(_bare_or_string(r) for r in p["roles"])
+            out.append(f"            roles [{roles}]")
+        if p.get("entity"):
+            out.append(f"            entity {_q(p['entity'])}")
+        out.append("        }")
+    out.append("    }\n")
+
+
+def _emit_references(canonical: dict, overlays: dict[str, dict], out: list[str]) -> None:
+    entries = canonical.get("references", [])
+    if not entries:
+        return
+    out.append("    references {")
+    taken: set[str] = set()
+    for idx, r in enumerate(entries):
+        key = _dedupe_key(_slug(r.get("name", "").split(",")[0] or "Ref"), taken)
+        out.append(f"        {key} {{")
+        if r.get("name"):
+            out.append(f"            name {_q(r['name'])}")
+        quote = r.get("reference")
+        q_overlays = {lang: (overlays.get(lang, {}).get("references") or [{}] * (idx + 1))[idx].get("reference") if idx < len(overlays.get(lang, {}).get("references") or []) else None for lang in LANGS}
+        if quote or any(q_overlays.values()):
+            out.append(f"            quote {_translated_or_plain(quote, q_overlays)}")
+        out.append("        }")
+    out.append("    }\n")
+
+
+def _emit_skills(canonical: dict, out: list[str]) -> None:
+    skills = canonical.get("skills", [])
+    if not skills:
+        return
+    out.append("    skills {")
+    for s in skills:
+        name = s.get("name", "")
+        keywords = s.get("keywords", [])
+        if not keywords:
+            continue
+        key = {"HardSkills": "hard", "SoftSkills": "soft", "Learning": "learning"}.get(name, name.lower())
+        items = ", ".join(_bare_or_string(k) for k in keywords)
+        out.append(f"        {key} [{items}]")
+    out.append("    }\n")
+
+
+def _emit_languages(canonical: dict, out: list[str]) -> None:
+    entries = canonical.get("languages", [])
+    if not entries:
+        return
+    out.append("    languages {")
+    for lang in entries:
+        name = lang.get("language", "Unknown")
+        fluency = lang.get("fluency", "")
+        if fluency.lower() in {"native speaker", "native"}:
+            out.append(f"        {_slug(name)} native")
+        else:
+            out.append(f"        {_slug(name)} {_q(fluency)}")
+    out.append("    }\n")
+
+
+def _emit_awards(canonical: dict, out: list[str]) -> None:
+    entries = canonical.get("awards", [])
+    if not entries:
+        return
+    out.append("    awards {")
+    taken: set[str] = set()
+    for a in entries:
+        key = _dedupe_key(_slug(a.get("title", "Award")), taken)
+        out.append(f"        {key} {{")
+        if a.get("title"):
+            out.append(f"            title {_q(a['title'])}")
+        if a.get("date"):
+            out.append(f"            date {a['date'][:7]}")
+        if a.get("awarder"):
+            out.append(f"            awarder {_q(a['awarder'])}")
+        if a.get("summary"):
+            out.append(f"            summary {_q(a['summary'])}")
+        out.append("        }")
+    out.append("    }\n")
+
+
+def _emit_interests(canonical: dict, out: list[str]) -> None:
+    entries = canonical.get("interests", [])
+    if not entries:
+        return
+    out.append("    interests {")
+    taken: set[str] = set()
+    for i in entries:
+        key = _dedupe_key(_slug(i.get("name", "Interest")), taken)
+        out.append(f"        {key} {{")
+        if i.get("name"):
+            out.append(f"            name {_q(i['name'])}")
+        if i.get("keywords"):
+            kws = ", ".join(_q(k) for k in i["keywords"])
+            out.append(f"            keywords [{kws}]")
+        out.append("        }")
+    out.append("    }\n")
+
+
+def _emit_volunteer(canonical: dict, out: list[str]) -> None:
+    entries = canonical.get("volunteer", [])
+    if not entries:
+        return
+    out.append("    volunteer {")
+    taken: set[str] = set()
+    for v in entries:
+        key = _dedupe_key(_slug(v.get("position", "Vol")), taken)
+        out.append(f"        {key} {{")
+        if v.get("position"):
+            out.append(f"            position {_q(v['position'])}")
+        if v.get("organization"):
+            out.append(f"            organization {_q(v['organization'])}")
+        if v.get("url"):
+            out.append(f"            url {_q(v['url'])}")
+        if (p := _period(v)):
+            out.append(f"            period {p}")
+        if v.get("summary"):
+            out.append(f"            summary {_q(v['summary'])}")
+        if v.get("highlights"):
+            hl = ", ".join(_q(h) for h in v["highlights"])
+            out.append(f"            highlights [{hl}]")
+        out.append("        }")
+    out.append("    }\n")
+
+
+def _emit_meta(canonical: dict, out: list[str]) -> None:
+    meta = canonical.get("meta", {})
+    theme = meta.get("theme")
+    daily = meta.get("dailyLife", {}).get("items", [])
+    if not (theme or daily):
+        return
+    out.append("    meta {")
+    if theme:
+        out.append(f"        theme {_q(theme)}")
+    if daily:
+        out.append("        dailyLife {")
+        for item in daily:
+            out.append(f"            {_slug(item.get('key','x'))} {item.get('hours', 0)} color {_q(item.get('color', '#000000'))}")
+        out.append("        }")
+    out.append("    }\n")
+
+
+def main() -> int:
+    canonical = _load(DATA / "resume.json")
+    overlays = {lang: _load(DATA / "i18n" / f"{lang}.json") for lang in LANGS}
+    out: list[str] = []
+    out.append('resume "grosjeanbaptiste" {\n')
+    _emit_basics(canonical, overlays, out)
+    _emit_work(canonical, overlays, out)
+    _emit_education(canonical, overlays, out)
+    _emit_projects(canonical, overlays, out)
+    _emit_references(canonical, overlays, out)
+    _emit_skills(canonical, out)
+    _emit_languages(canonical, out)
+    _emit_awards(canonical, out)
+    _emit_interests(canonical, out)
+    _emit_volunteer(canonical, out)
+    _emit_meta(canonical, out)
+    out.append("}\n")
+    DEFAULT_OUT.write_text("\n".join(out))
+    print(f"wrote {DEFAULT_OUT}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

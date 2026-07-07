@@ -1,0 +1,557 @@
+resume "grosjeanbaptiste" {
+
+    basics {
+        name "Baptiste Grosjean"
+        label t{ en: "Computer Scientist", fr: "Informaticien", nl: "Informaticus", es: "Informático", de: "Informatiker", zh: "计算机科学家" }
+        image "assets/images/profil.jpeg"
+        email "grosjeanbaptisteit@outlook.com"
+        phone "+32 496 28 97 05"
+        url "https://www.grosjeanbaptiste.com"
+        location {
+            address "Avenue Baron Albert D'Huart"
+            postalCode "1950"
+            city "Kraainem"
+            countryCode "BE"
+            region "Belgium"
+        }
+        profile linkedin "https://www.linkedin.com/in/grosjeanbaptiste"
+        profile github "https://github.com/grosjeanbaptiste"
+        profile npm "https://npm.com/grosjeanbaptiste"
+        summary t{ en: """
+Computer science student @UMons by night looking for a new opportunity by day while launching Acteble. 
+
+All the projects I have been involved in have been developed with a strong focus on Software Craftsmanship principles (clean code, clean architecture, and DDD) as best practices to ensure highest standards of quality, maintainability and scalability.
+""", fr: """
+Étudiant en informatique à l'UMons le soir, à la recherche d'une nouvelle opportunité de jour tout en lançant Acteble.
+
+Tous les projets auxquels j'ai participé ont été développés avec une forte orientation Software Craftsmanship (clean code, clean architecture, DDD) afin de garantir les plus hauts standards de qualité, maintenabilité et évolutivité.
+""", nl: """
+Computerwetenschappen-student aan UMons 's nachts, op zoek naar een nieuwe kans overdag terwijl ik Acteble lanceer.
+
+Alle projecten waaraan ik heb deelgenomen werden ontwikkeld met een sterke focus op Software Craftsmanship (clean code, clean architecture, DDD) als best practices om de hoogste normen van kwaliteit, onderhoudbaarheid en schaalbaarheid te garanderen.
+""", es: """
+Estudiante de informática en UMons por la noche, en busca de una nueva oportunidad de día mientras lanzo Acteble.
+
+Todos los proyectos en los que he participado se han desarrollado con un fuerte enfoque en los principios de Software Craftsmanship (clean code, clean architecture, DDD) como mejores prácticas para garantizar los más altos estándares de calidad, mantenibilidad y escalabilidad.
+""", de: """
+Informatikstudent an der UMons in der Nacht, auf der Suche nach einer neuen Gelegenheit tagsüber, während ich Acteble starte.
+
+Alle Projekte, an denen ich beteiligt war, wurden mit starkem Fokus auf Software-Craftsmanship-Prinzipien (Clean Code, Clean Architecture, DDD) entwickelt, um höchste Standards von Qualität, Wartbarkeit und Skalierbarkeit sicherzustellen.
+""", zh: """
+蒙斯大学 (UMons) 夜间计算机科学专业学生，白天寻找新机会的同时创办 Acteble。
+
+所有参与的项目均以软件工艺原则（整洁代码、整洁架构、领域驱动设计）为核心开发，确保最高的质量、可维护性和可扩展性标准。
+""" }
+    }
+
+    work {
+        Founder {
+            position t{ en: "Founder", fr: "Fondateur", nl: "Oprichter", es: "Fundador", de: "Gründer", zh: "创始人" }
+            at "Acteble"
+            url "https://www.acteble.com"
+            location "Brussels, Belgium"
+            period 2025-07..present
+            summary t{ en: "Building Acteble, a geo-located social platform that pairs travelers around shared activities under spatio-temporal and multi-criteria constraints. Sole founder, architect, and developer. The R&D layer doubles as the dissertation for my MSc in Computer Science at UMons.", fr: "Construction d'Acteble, plateforme sociale géo-localisée qui met en relation les voyageurs autour d'activités partagées sous contraintes spatio-temporelles et multicritères. Fondateur, architecte et développeur unique. La couche R&D tient lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons.", nl: "Bouwen van Acteble, een geolokaal sociaal platform dat reizigers koppelt rond gedeelde activiteiten onder ruimtelijk-temporele en multicriteria-beperkingen. Enige oprichter, architect en ontwikkelaar. De R&D-laag dient als mijn masterthesis voor de master in de computerwetenschappen aan UMons.", es: "Construcción de Acteble, plataforma social geolocalizada que conecta viajeros en torno a actividades compartidas bajo restricciones espacio-temporales y multicriterio. Fundador, arquitecto y desarrollador único. La capa de I+D sirve como memoria de fin de máster en el marco de mi máster en ciencias informáticas en UMons.", de: "Aufbau von Acteble, einer geolokalisierten sozialen Plattform, die Reisende rund um gemeinsame Aktivitäten unter raum-zeitlichen und multikriteriellen Einschränkungen zusammenbringt. Alleiniger Gründer, Architekt und Entwickler. Die F&E-Schicht dient gleichzeitig als Masterarbeit für meinen MSc in Informatik an der UMons.", zh: "构建 Acteble，一个基于地理位置的社交平台，在时空和多标准约束下将旅行者围绕共享活动配对。唯一的创始人、架构师和开发者。研发层同时作为蒙斯大学 (UMons) 计算机科学硕士论文的研究内容。" }
+            uses [Rust, Flutter, Dart, Tokio, Docker, DDD, CleanArchitecture]
+            projects [ref Acteble]
+        }
+        AI_Research_Scientist {
+            position t{ en: "AI Research Scientist", fr: "Chercheur en IA", nl: "AI-onderzoeker", es: "Investigador en IA", de: "KI-Forschungswissenschaftler", zh: "AI 研究员" }
+            at "Belgian Senate"
+            url "https://www.senate.be"
+            location "Brussels, Belgium"
+            period 2025-11..2026-06
+            summary t{ en: "AI research and engineering for the Belgian Federal Parliament. Designed an internal platform that lets staff search, explore and converse with the parliamentary archives. Authored an open evaluation protocol that compares retrieval strategies on the Senate corpus, with a focus on bilingual FR/NL robustness.", fr: "Recherche et ingénierie IA pour le Parlement fédéral belge. Conception d'une plateforme interne permettant au personnel de chercher, explorer et converser avec les archives parlementaires. Auteur d'un protocole d'évaluation ouvert qui compare les stratégies de retrieval sur le corpus du Sénat, avec un focus sur la robustesse bilingue FR/NL.", nl: "AI-onderzoek en engineering voor het Belgisch federaal Parlement. Ontwerp van een intern platform waarmee medewerkers de parlementaire archieven kunnen doorzoeken, verkennen en bevragen. Auteur van een open evaluatieprotocol dat retrieval-strategieën vergelijkt op het Senaat-corpus, met focus op tweetalige FR/NL-robuustheid.", es: "Investigación e ingeniería de IA para el Parlamento federal belga. Diseño de una plataforma interna que permite al personal buscar, explorar y conversar con los archivos parlamentarios. Autor de un protocolo abierto de evaluación que compara estrategias de recuperación sobre el corpus del Senado, con énfasis en la robustez bilingüe FR/NL.", de: "KI-Forschung und Engineering für das belgische Bundesparlament. Entwurf einer internen Plattform, die Mitarbeitern erlaubt, parlamentarische Archive zu durchsuchen, zu erkunden und zu befragen. Autor eines offenen Bewertungsprotokolls, das Retrieval-Strategien auf dem Senatskorpus mit Fokus auf zweisprachige FR/NL-Robustheit vergleicht.", zh: "为比利时联邦议会进行 AI 研究和工程。设计了一个内部平台，让工作人员可以搜索、探索和与议会档案对话。撰写了一个开源评估协议，比较参议院语料库上的检索策略，重点关注法语/荷兰语双语鲁棒性。" }
+            uses [Python, Java, ".NET"]
+        }
+        AI_Software_Crafter_Lead {
+            position t{ en: "AI Software Crafter Lead", fr: "AI Software Crafter Lead", nl: "AI Software Crafter Lead", es: "AI Software Crafter Lead", de: "AI Software Crafter Lead", zh: "AI 软件工艺负责人" }
+            at "Emvi.ai"
+            url "https://www.emvi.ai"
+            location "Brugge, Belgium"
+            period 2024-12..2025-06
+            summary t{ en: "Emvi App: AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes & barcodes), and an adapted Valhalla routing system for the visually impaired.", fr: "Emvi App : assistant visuel IA pour personnes malvoyantes, avec description de l'environnement, OCR, scan de codes (QR & barres) et système de routage Valhalla adapté.", nl: "Emvi App: AI-aangedreven visuele assistent voor slechtzienden met omgevingsbeschrijving, OCR, code-scans (QR & barcodes) en aangepast Valhalla-routesysteem.", es: "Emvi App: asistente visual con IA para personas con discapacidad visual, ofrece descripción del entorno, OCR, escaneo de códigos (QR y de barras) y sistema de rutas Valhalla adaptado.", de: "Emvi App: KI-gestützter visueller Assistent für sehbehinderte Menschen, mit Beschreibung der Umgebung, OCR, Code-Scans (QR & Barcodes) und einem angepassten Valhalla-Routing-System.", zh: "Emvi App：为视障人士设计的 AI 驱动视觉助手，提供环境描述、OCR、代码扫描 (二维码和条形码) 以及适配的 Valhalla 路线规划系统。" }
+            highlights ["Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla"]
+            uses [Dart, Flutter]
+            projects [ref Emvi_App]
+        }
+        AI_Software_Crafter {
+            position t{ en: "AI Software Crafter", fr: "AI Software Crafter", nl: "AI Software Crafter", es: "AI Software Crafter", de: "AI Software Crafter", zh: "AI 软件工艺师" }
+            at "Emvi.ai"
+            url "https://www.emvi.ai"
+            location "Brugge, Belgium"
+            period 2024-10..2025-06
+            summary t{ en: "Remi: Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the facial recognition pipeline (detection and recognition) and sentiment analysis for the LLM-generated descriptions.", fr: "Remi : application de réminiscence permettant aux personnes souffrant de troubles cognitifs de retrouver leurs souvenirs via des descriptions de photos générées par reconnaissance faciale et LLMs. Pipeline DeepFace (Serengil) pour la reconnaissance et analyse de sentiment pour les descriptions LLM.", nl: "Remi: reminiscentie-applicatie waarmee mensen met cognitieve problemen hun herinneringen terugvinden via beschrijvingen van hun foto's, gevoed door gezichtsherkenning en LLMs. DeepFace (Serengil) voor de gezichtsherkenningspipeline en sentimentanalyse voor de door LLM gegenereerde beschrijvingen.", es: "Remi: aplicación de reminiscencia que permite a personas con problemas cognitivos recuperar sus recuerdos mediante descripciones de fotos generadas por reconocimiento facial y LLMs. Pipeline DeepFace (Serengil) y análisis de sentimiento para las descripciones generadas por LLM.", de: "Remi: Reminiszenz-Anwendung, die Menschen mit kognitiven Problemen ermöglicht, ihre Erinnerungen durch Beschreibungen ihrer Fotos wiederzuerlangen, unterstützt durch Gesichtserkennung und LLMs.", zh: "Remi：一款追忆应用，让认知障碍患者通过基于面部识别和大模型生成的照片描述来恢复记忆。使用 DeepFace (Serengil) 进行面部识别管道，并为 LLM 生成的描述进行情感分析。" }
+            highlights ["Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil"]
+            uses [Python, Whisper]
+            projects [ref Remi]
+        }
+        Data_Scientist {
+            position t{ en: "Data Scientist", fr: "Data Scientist", nl: "Data Scientist", es: "Data Scientist", de: "Data Scientist", zh: "数据科学家" }
+            at "Xtrada"
+            url "https://www.xtrada.be"
+            location "Antwerp, Flanders, Belgium"
+            period 2024-03..2024-09
+            summary t{ en: "Used Python libraries (SpaCy, ...) to extract named entities from text via NER model training and implementation in .NET. Model recall score: 87%.", fr: "Bibliothèques Python (SpaCy…) pour extraire des entités nommées via entraînement d'un modèle NER et implémentation en .NET. Score de rappel du modèle : 87%.", nl: "Python-bibliotheken (SpaCy…) om benoemde entiteiten uit tekst te extraheren via NER-modeltraining en implementatie in .NET. Recall-score van het model: 87%.", es: "Uso de librerías Python (SpaCy…) para extraer entidades nombradas mediante entrenamiento de un modelo NER e implementación en .NET. Recall del modelo: 87%.", de: "Verwendung von Python-Bibliotheken (SpaCy, ...) zur Extraktion benannter Entitäten via NER-Modelltraining und Implementierung in .NET. Recall-Score des Modells: 87 %.", zh: "使用 Python 库 (SpaCy 等) 通过 NER 模型训练从文本中提取命名实体，并在 .NET 中实现。模型召回率：87%。" }
+            uses [Python, SpaCy, Pandas, NumPy, ".NET"]
+            projects [ref VhAuctions_NER_Inventory_Model]
+        }
+        Software_Crafter {
+            position t{ en: "Software Crafter", fr: "Software Crafter", nl: "Software Crafter", es: "Software Crafter", de: "Software Crafter", zh: "软件工艺师" }
+            at "Xtrada"
+            url "https://www.xtrada.be"
+            location "Antwerp, Flanders, Belgium"
+            period 2023-08..2024-09
+            summary t{ en: "Software modernization within the .NET stack following domain-driven design and clean code principles. Implementation of Azure AI services in a .NET solution.", fr: "Modernisation logicielle dans la stack .NET en suivant les principes DDD et clean code. Implémentation de services Azure AI dans une solution .NET.", nl: "Softwaremodernisering binnen de .NET-stack volgens DDD en clean code principes. Implementatie van Azure AI-services in een .NET-oplossing.", es: "Modernización de software en el stack .NET siguiendo DDD y clean code. Implementación de servicios Azure AI en una solución .NET.", de: "Software-Modernisierung im .NET-Stack nach DDD und Clean-Code-Prinzipien. Implementierung von Azure AI-Services in einer .NET-Lösung.", zh: "在 .NET 技术栈中遵循领域驱动设计和整洁代码原则进行软件现代化。在 .NET 解决方案中实施 Azure AI 服务。" }
+            uses [".NET", DDD, CleanCode, CleanArchitecture]
+        }
+        NET_React_Software_Crafter {
+            position t{ en: ".NET/React Software Crafter", fr: "Software Crafter .NET / React", nl: ".NET / React Software Crafter", es: "Software Crafter .NET / React", de: ".NET/React Software Crafter", zh: ".NET/React 软件工艺师" }
+            at "VhAuctions"
+            url "https://www.vhauctions.be"
+            location "Anvers, Région flamande, Belgique"
+            period 2024-01..2024-08
+            uses [".NET", React, "SQL Server"]
+            projects [ref VhAuctions]
+        }
+        Software_Crafter2 {
+            position t{ en: "Software Crafter", fr: "Software Crafter", nl: "Software Crafter", es: "Software Crafter", de: "Software Crafter", zh: "软件工艺师" }
+            at "Hackathon Citizens of Wallonia"
+            url "https://www.cow.be"
+            location "Charleroi et périphérie"
+            period 2024-03..2024-03
+            summary t{ en: "EduCraft: solution allowing anyone to craft a personalized path to gain new skills.", fr: "EduCraft : solution permettant à chacun de tracer son propre parcours personnalisé d'acquisition de compétences.", nl: "EduCraft: oplossing waarmee iedereen een eigen gepersonaliseerd leerpad kan opstellen om nieuwe vaardigheden te verwerven.", es: "EduCraft: solución que permite a cualquiera diseñar su propio itinerario personalizado para adquirir nuevas competencias.", de: "EduCraft: Lösung, mit der jeder seinen eigenen personalisierten Weg zum Erwerb neuer Fähigkeiten gestalten kann.", zh: "EduCraft：让任何人都能定制个性化路径以获得新技能的解决方案。" }
+            projects [ref EduCraft]
+        }
+        NET_Blazor_Software_Crafter {
+            position t{ en: ".NET/Blazor Software Crafter", fr: "Software Crafter .NET / Blazor", nl: ".NET / Blazor Software Crafter", es: "Software Crafter .NET / Blazor", de: ".NET/Blazor Software Crafter", zh: ".NET/Blazor 软件工艺师" }
+            at "aXinco"
+            url "https://www.axinco.be"
+            location "Anvers, Région flamande, Belgique"
+            period 2023-09..2023-12
+            summary t{ en: "Crafting Axinco Kwalitijd webapp in .NET / Blazor following DDD and clean code principles.", fr: "Développement de la webapp Axinco Kwalitijd en .NET / Blazor selon les principes DDD et clean code.", nl: "Ontwikkeling van de Axinco Kwalitijd webapp in .NET / Blazor volgens DDD en clean code principes.", es: "Desarrollo de la webapp Axinco Kwalitijd en .NET / Blazor siguiendo DDD y clean code.", de: "Entwicklung der Axinco Kwalitijd Webanwendung in .NET / Blazor nach DDD und Clean-Code-Prinzipien.", zh: "使用 .NET / Blazor 按照领域驱动设计和整洁代码原则开发 Axinco Kwalitijd Web 应用。" }
+            uses [".NET", Blazor, "SQL Server", DDD]
+            projects [ref Kwalitijd]
+        }
+        Full_Stack_Developer_Web_Intern {
+            position t{ en: "Full Stack Developer Web Intern", fr: "Stagiaire développeur Full Stack Web", nl: "Full Stack Webontwikkelaar Stagiair", es: "Desarrollador Web Full Stack en prácticas", de: "Full-Stack-Webentwickler Praktikant", zh: "全栈 Web 开发实习生" }
+            at "Technofutur TIC"
+            url "https://www.technofutur-tic.be"
+            location "Charleroi, Wallonia, Belgique"
+            period 2022-12..2023-06
+            summary t{ en: """
+This qualifying training aimed to strengthen the technical skills acquired during my bachelor's degree program at EPHEC.
+In addition, during the extension, we received an introduction to Business Intelligence and ETL processes (Data Warehousing) using Microsoft tools (SSIS, ...).
+This comprehensive training covered various areas including SQL Server, Node.js, Express.js, React, and Angular, encompassing everything from database development to user interface and backend.
+""", fr: """
+Formation qualifiante destinée à renforcer les compétences techniques acquises pendant mon bachelier à l'EPHEC.
+L'extension comprenait une introduction à la Business Intelligence et aux processus ETL (Data Warehousing) avec les outils Microsoft (SSIS, …).
+Formation couvrant SQL Server, Node.js, Express.js, React et Angular, du développement de base de données à l'interface utilisateur et au backend.
+""", nl: """
+Kwalificerende opleiding om de technische vaardigheden te versterken die ik tijdens mijn bachelor aan EPHEC heb verworven.
+De verlenging omvatte een introductie tot Business Intelligence en ETL-processen (Data Warehousing) met Microsoft-tools (SSIS, …).
+De opleiding behandelde SQL Server, Node.js, Express.js, React en Angular, van databaseontwikkeling tot gebruikersinterface en backend.
+""", es: """
+Formación cualificante destinada a reforzar las competencias técnicas adquiridas en mi bachelor en EPHEC.
+La extensión incluyó una introducción al Business Intelligence y a los procesos ETL (Data Warehousing) con herramientas Microsoft (SSIS, …).
+Formación que abarcó SQL Server, Node.js, Express.js, React y Angular, desde el desarrollo de bases de datos hasta la interfaz de usuario y el backend.
+""", de: """
+Qualifizierende Ausbildung zur Stärkung der technischen Fähigkeiten aus meinem Bachelor an der EPHEC.
+Die Erweiterung beinhaltete eine Einführung in Business Intelligence und ETL-Prozesse (Data Warehousing) mit Microsoft-Tools (SSIS, ...).
+Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von Datenbankentwicklung bis Benutzeroberfläche und Backend.
+""", zh: """
+旨在加强我在 EPHEC 学士学位项目中获得的技术技能的资格培训。
+扩展期间，我们接受了 Microsoft 工具 (SSIS 等) 的商业智能和 ETL 流程 (数据仓库) 的介绍。
+培训涵盖了 SQL Server、Node.js、Express.js、React 和 Angular，从数据库开发到用户界面和后端。
+""" }
+            uses ["SQL Server", "Node.js", "Express.js", React, Angular]
+            projects [ref MyWay]
+        }
+        Full_Stack_Developer_Web_Intern2 {
+            position t{ en: "Full Stack Developer Web Intern", fr: "Stagiaire développeur Full Stack Web", nl: "Full Stack Webontwikkelaar Stagiair", es: "Desarrollador Web Full Stack en prácticas", de: "Full-Stack-Webentwickler Praktikant", zh: "全栈 Web 开发实习生" }
+            at "Hackathon Citizens of Wallonia"
+            url "https://www.cow.be"
+            location "Charleroi, Région wallonne, Belgique"
+            period 2023-03..2023-03
+            summary t{ en: "OnlyTogether: solution ensuring vulnerable users are always accompanied.", fr: "OnlyTogether : solution assurant que les utilisateurs vulnérables soient toujours accompagnés.", nl: "OnlyTogether: oplossing die ervoor zorgt dat kwetsbare gebruikers altijd begeleid worden.", es: "OnlyTogether: solución que garantiza que los usuarios vulnerables estén siempre acompañados.", de: "OnlyTogether: Lösung, die sicherstellt, dass schutzbedürftige Nutzer immer begleitet werden.", zh: "OnlyTogether：确保弱势用户始终有人陪伴的解决方案。" }
+        }
+        Full_Stack_Developer_Web_Intern3 {
+            position t{ en: "Full Stack Developer Web Intern", fr: "Stagiaire développeur Full Stack Web", nl: "Full Stack Webontwikkelaar Stagiair", es: "Desarrollador Web Full Stack en prácticas", de: "Full-Stack-Webentwickler Praktikant", zh: "全栈 Web 开发实习生" }
+            at "EDITx: IT Challenges, IT Jobs, Education in IT for X"
+            url "https://www.linkedin.com/company/editx/"
+            location "Région de Bruxelles-Capitale, Belgique"
+            period 2022-04..2022-04
+        }
+        Student_Job {
+            position t{ en: "Student Job", fr: "Job étudiant", nl: "Studentenjob", es: "Trabajo de estudiante", de: "Studentenjob", zh: "学生工" }
+            at "Les Auberges de Jeunesse - Wallonie & Bruxelles"
+            url "https://www.laj.be"
+            location "Région de Bruxelles-Capitale, Belgique"
+            period 2022-03..2022-03
+        }
+        Full_Stack_Developer_Web_Intern4 {
+            position t{ en: "Full Stack Developer Web Intern", fr: "Stagiaire développeur Full Stack Web", nl: "Full Stack Webontwikkelaar Stagiair", es: "Desarrollador Web Full Stack en prácticas", de: "Full-Stack-Webentwickler Praktikant", zh: "全栈 Web 开发实习生" }
+            at "RESTOMAX"
+            url "https://www.restomax.be"
+            location "Région de Bruxelles-Capitale, Belgique"
+            period 2021-11..2022-03
+            uses [".NET", Flutter, "SQL Server"]
+            projects [ref WebMenu]
+        }
+        Student_Job2 {
+            position t{ en: "Student Job", fr: "Job étudiant", nl: "Studentenjob", es: "Trabajo de estudiante", de: "Studentenjob", zh: "学生工" }
+            at "Quick Restaurant"
+            url "https://www.quick.be"
+            location "Kraainem, Flemish Region, Belgium"
+            period 2017-09..2017-09
+        }
+    }
+
+    education {
+        UMons {
+            institution "UMons"
+            studyType "Master of Science - MS"
+            area "Computer Science (work-study program) (120 ECTS)"
+            period 2022-10..present
+            score "In progress (MA2)"
+            note t{ en: "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — supervised by Gauvain Devillez and Hadrien Mélot at the UMONS Service d'Algorithmique. Reference Python implementation (50+ modules, 214 unit tests at 86 % branch coverage, mypy --strict, PEP 561 typed) with bit-identical reproducibility (SHA-256 hashed datasets, CLI/notebook parity tests). 110-page LaTeX report. Student representative & buddy TandeMons.", fr: "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — encadré par Gauvain Devillez et Hadrien Mélot au Service d'Algorithmique de l'UMONS. Implémentation Python de référence (50+ modules, 214 tests unitaires à 86 % de couverture branches, mypy --strict, typé PEP 561) avec reproductibilité bit-identique (datasets hashés SHA-256, tests de parité CLI/notebook). Rapport LaTeX de 110 pages. Délégué étudiant & buddy TandeMons.", nl: "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — onder begeleiding van Gauvain Devillez en Hadrien Mélot in de Service d'Algorithmique van UMONS. Python referentie-implementatie (50+ modules, 214 unit tests met 86 % branch coverage, mypy --strict, PEP 561 getypeerd) met bit-identieke reproduceerbaarheid (SHA-256 gehashte datasets, CLI/notebook pariteitstests). LaTeX-rapport van 110 pagina's. Studentenvertegenwoordiger & buddy TandeMons.", es: "Memoria de fin de máster: «Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes» — supervisada por Gauvain Devillez y Hadrien Mélot en el Service d'Algorithmique de UMONS. Implementación Python de referencia (50+ módulos, 214 tests unitarios con 86 % de cobertura de ramas, mypy --strict, tipado PEP 561) con reproducibilidad bit-idéntica (datasets hash SHA-256, tests de paridad CLI/notebook). Informe LaTeX de 110 páginas. Delegado de estudiantes y buddy TandeMons.", de: "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — betreut von Gauvain Devillez und Hadrien Mélot am Service d'Algorithmique der UMONS. Python-Referenzimplementierung (50+ Module, 214 Unit-Tests mit 86 % Branch Coverage, mypy --strict, PEP 561 typisiert) mit bit-identischer Reproduzierbarkeit (SHA-256 gehashte Datasets, CLI/Notebook-Paritätstests). 110-seitiger LaTeX-Bericht. Studierendenvertreter & Buddy TandeMons.", zh: "硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 由蒙斯大学 (UMONS) 算法服务部的 Gauvain Devillez 和 Hadrien Mélot 指导。Python 参考实现 (50+ 模块、214 个单元测试、86% 分支覆盖率、mypy --strict、PEP 561 类型化) 具有比特级可复现性 (SHA-256 哈希数据集、CLI/Notebook 等价性测试)。110 页 LaTeX 报告。学生代表 & Buddy TandeMons。" }
+            uses [Python, LaTeX, DDD, CleanArchitecture]
+        }
+        Ecole_Pratique_Hautes_Etudes_Commerciales_EPHEC_EPS {
+            institution "Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)"
+            studyType "Professional Bachelor's degree"
+            area "Information Systems Management"
+            period 2018-09..2022-10
+            score "62.8%, Satis Bene"
+            note t{ en: """
+Student representative and tutor. 
+
+TFE: WebMenu 2.0
+""", fr: """
+Délégué étudiant et tuteur.
+
+TFE : WebMenu 2.0
+""", nl: """
+Studentenvertegenwoordiger en tutor.
+
+TFE: WebMenu 2.0
+""", es: """
+Delegado de estudiantes y tutor.
+
+TFE: WebMenu 2.0
+""", de: """
+Studierendenvertreter und Tutor.
+
+TFE: WebMenu 2.0
+""", zh: """
+学生代表和辅导员。
+
+TFE: WebMenu 2.0
+""" }
+            uses [SQL, "C#", ".NET", Java, Python, JS, HTML, CSS]
+        }
+        Institut_Saint_Louis_Bruxelles {
+            institution "Institut Saint-Louis Bruxelles"
+            studyType "Attestation"
+            area "7e Spéciale Mathématiques"
+            period 2019-09..2020-06
+            score "Attestation"
+        }
+        Universit_Saint_Louis_Bruxelles {
+            institution "Université Saint-Louis - Bruxelles"
+            studyType "Bachelor of Arts - BA"
+            area "Political sciences"
+            period 2016-09..2019-06
+            score "29 credits earned in 2016-2017, contact me for more information."
+        }
+        Solvay_Brussels_School_of_Economics_and_Management {
+            institution "Solvay Brussels School of Economics and Management"
+            studyType "Bachelor of Science - BSc"
+            area "Business Engineering"
+            period 2015-09..2016-06
+            score "Contact me for more information."
+        }
+        Universit_libre_de_Bruxelles {
+            institution "Université libre de Bruxelles"
+            studyType "Bachelor of Science - BSc"
+            area "Business Engineering"
+            period 2015-09..2016-06
+            score "Contact me for more information."
+        }
+        UCLouvain_Universit_catholique_de_Louvain {
+            institution "UCLouvain - Université catholique de Louvain"
+            studyType "Cours préparatoires"
+            area "Médecine et dentisterie"
+            period 2014-09..2015-06
+            score "Attestation "
+        }
+        Centre_Scolaire_Saint_Adrien_Val_Duchesse {
+            institution "Centre Scolaire Saint-Adrien - Val Duchesse"
+            studyType "C.E.S.S."
+            area "General Studies Maths & Modern languages"
+            period 2012-09..2015-06
+            score "Satis bene"
+        }
+        Lyc_e_Mater_Dei {
+            institution "Lycée Mater Dei"
+            area "General studies Latin & Greek"
+            period 2009-09..2012-06
+        }
+    }
+
+    projects {
+        Acteble {
+            name "Acteble"
+            description t{ en: "Mobile application connecting travelers during their journeys.", fr: "Application mobile connectant les voyageurs pendant leurs trajets.", nl: "Mobiele app die reizigers tijdens hun reizen met elkaar verbindt.", es: "Aplicación móvil que conecta a los viajeros durante sus trayectos.", de: "Mobile App, die Reisende während ihrer Reisen verbindet.", zh: "在旅途中连接旅行者的移动应用。" }
+            keywords [Flutter, Rust, Mobile, Travel, Tokio, PostgreSQL, Docker, Dart]
+            startDate 2025-07
+            type "Mobile Application"
+            roles [Founder]
+        }
+        Emvi_App {
+            name "Emvi App"
+            description t{ en: "AI powered visual assistant for visually impaired people.", fr: "Assistant visuel IA pour personnes malvoyantes.", nl: "AI-aangedreven visuele assistent voor slechtzienden.", es: "Asistente visual con IA para personas con discapacidad visual.", de: "KI-gestützter visueller Assistent für sehbehinderte Menschen.", zh: "为视障人士提供的 AI 驱动视觉助手。" }
+            keywords [Flutter, Firebase, OpenAI, Valhalla, AI]
+            startDate 2024-12
+            endDate 2025-06
+            type "Mobile Application"
+        }
+        Remi {
+            name "Remi"
+            description t{ en: "Reminiscence application for people with cognitive issues.", fr: "Application de réminiscence pour personnes souffrant de troubles cognitifs.", nl: "Reminiscentie-applicatie voor mensen met cognitieve problemen.", es: "Aplicación de reminiscencia para personas con problemas cognitivos.", de: "Reminiszenz-App für Menschen mit kognitiven Problemen.", zh: "为认知障碍患者设计的追忆应用。" }
+            keywords [Python, FastAPI, OpenAI, Whisper, DeepFace]
+            startDate 2024-10
+            endDate 2025-06
+            type "AI Application"
+        }
+        EduCraft {
+            name "EduCraft"
+            description t{ en: "Platform allowing users to get more skills.", fr: "Plateforme permettant à chacun d'acquérir de nouvelles compétences.", nl: "Platform waarmee iedereen nieuwe vaardigheden kan verwerven.", es: "Plataforma que permite a cualquiera adquirir nuevas competencias.", de: "Plattform für den Erwerb neuer Fähigkeiten.", zh: "让任何人都能获得新技能的平台。" }
+            keywords [PHP, API, "UI/UX"]
+            startDate 2024-03
+            endDate 2024-03
+        }
+        MyWay {
+            name "MyWay"
+            description t{ en: "Education manager for students. No longer maintained; database and auth are unavailable.", fr: "Gestionnaire de parcours éducatif pour étudiants. Plus maintenu ; la base de données et l'auth sont indisponibles.", nl: "Studieplanner voor studenten. Niet langer onderhouden; database en authenticatie zijn niet beschikbaar.", es: "Gestor educativo para estudiantes. Sin mantenimiento; la base de datos y la autenticación no están disponibles.", de: "Bildungsmanager für Studierende. Nicht mehr gepflegt; Datenbank und Auth sind nicht verfügbar.", zh: "学生教育管理工具。不再维护；数据库和身份验证不可用。" }
+            keywords [Angular, JavaScript, TypeScript, "Express.js", API, "UI/UX", "MSSQL Server"]
+            startDate 2023-01
+            endDate 2023-06
+            url "https://my-way-bg.vercel.app"
+            type "Web Application"
+            roles [Founder]
+            entity "Freelance"
+        }
+        VhAuctions_NER_Inventory_Model {
+            name "VhAuctions NER Inventory Model"
+            startDate 2024-03
+            endDate 2024-08
+        }
+        VhAuctions {
+            name "VhAuctions"
+            startDate 2024-01
+            endDate 2024-02
+        }
+        Kwalitijd {
+            name "Kwalitijd"
+            startDate 2023-09
+            endDate 2023-12
+        }
+        WebMenu {
+            name "WebMenu"
+            startDate 2021-11
+            endDate 2022-03
+        }
+    }
+
+    references {
+        Waseem_Virk {
+            name "Waseem Virk, Flutter Dev Emvi.ai"
+            quote t{ en: """
+Working alongside Baptiste Grosjean on the EMVI project has been an incredibly rewarding experience—both professionally and personally. Not only is Baptiste a highly skilled developer with a sharp eye for design and functionality, but he’s also been a mentor and an inspiration throughout our collaboration.
+
+I’ve learned so much from him—from best practices in Flutter development to the importance of thoughtful UI/UX and clean architecture. He’s always willing to share his knowledge, explain complex ideas with clarity, and support the team in any way he can.
+
+What stands out the most is Baptiste’s ability to turn challenges into opportunities. His calm, focused approach and problem-solving mindset helped us overcome technical hurdles and build features that truly improve user experience. On top of that, his collaborative nature made working as a team feel seamless and motivating.
+
+If you're looking for someone who not only delivers exceptional results but also uplifts everyone around him, I can't recommend Baptiste enough. He’s a fantastic developer, a great teammate, and someone I’ve been lucky to learn from.
+""", fr: """
+Travailler aux côtés de Baptiste Grosjean sur le projet EMVI a été une expérience incroyablement enrichissante, tant sur le plan professionnel que personnel. Baptiste n'est pas seulement un développeur très compétent avec un œil aiguisé pour le design et la fonctionnalité, il a aussi été un mentor et une source d'inspiration tout au long de notre collaboration.
+
+J'ai énormément appris de lui — des bonnes pratiques en développement Flutter à l'importance d'une UI/UX réfléchie et d'une architecture clean. Il est toujours prêt à partager ses connaissances, à expliquer clairement des idées complexes, et à soutenir l'équipe de toutes les manières possibles.
+
+Ce qui ressort le plus, c'est sa capacité à transformer les défis en opportunités. Son approche calme et concentrée et son esprit de résolution de problèmes nous ont aidés à surmonter des obstacles techniques et à construire des fonctionnalités qui améliorent réellement l'expérience utilisateur. Sa nature collaborative a rendu le travail d'équipe fluide et motivant.
+
+Si vous cherchez quelqu'un qui non seulement fournit des résultats exceptionnels mais aussi inspire tout son entourage, je recommande Baptiste sans réserve. C'est un développeur fantastique, un excellent coéquipier, et quelqu'un dont j'ai eu la chance d'apprendre. — (traduit depuis l'anglais)
+""", nl: """
+Samenwerken met Baptiste Grosjean aan het EMVI-project was een ongelooflijk verrijkende ervaring — zowel professioneel als persoonlijk. Baptiste is niet alleen een zeer bekwame ontwikkelaar met een scherp oog voor design en functionaliteit, maar hij is ook een mentor en inspiratiebron geweest tijdens onze samenwerking.
+
+Ik heb enorm veel van hem geleerd — van best practices in Flutter-ontwikkeling tot het belang van doordachte UI/UX en clean architecture. Hij staat altijd klaar om zijn kennis te delen, complexe ideeën helder uit te leggen, en het team op elke mogelijke manier te ondersteunen.
+
+Wat het meest opvalt is Baptistes vermogen om uitdagingen om te zetten in kansen. Zijn rustige, gefocuste aanpak en zijn probleemoplossende mindset hebben ons geholpen technische hindernissen te overwinnen en functies te bouwen die de gebruikerservaring echt verbeteren. Zijn collaboratieve aard maakte teamwerk soepel en motiverend.
+
+Als je iemand zoekt die niet alleen uitzonderlijke resultaten levert, maar ook iedereen om zich heen optilt, kan ik Baptiste niet genoeg aanbevelen. Hij is een fantastische ontwikkelaar, een geweldige teamgenoot, en iemand van wie ik het geluk heb gehad te mogen leren. — (vertaald uit het Engels)
+""", es: """
+Trabajar junto a Baptiste Grosjean en el proyecto EMVI ha sido una experiencia increíblemente gratificante, tanto profesional como personalmente. Baptiste no solo es un desarrollador altamente capacitado con un ojo agudo para el diseño y la funcionalidad, sino que también ha sido un mentor e inspiración a lo largo de nuestra colaboración.
+
+He aprendido mucho de él — desde las mejores prácticas en desarrollo Flutter hasta la importancia de una UI/UX cuidada y una arquitectura limpia. Siempre está dispuesto a compartir su conocimiento, a explicar ideas complejas con claridad, y a apoyar al equipo en todo lo posible.
+
+Lo que más destaca es su capacidad de convertir desafíos en oportunidades. Su enfoque tranquilo y enfocado y su mentalidad de resolución de problemas nos ayudaron a superar obstáculos técnicos y construir funcionalidades que realmente mejoran la experiencia de usuario. Su naturaleza colaborativa hizo que trabajar en equipo fuera fluido y motivador.
+
+Si buscas a alguien que no solo entregue resultados excepcionales sino que también levante a quienes lo rodean, no puedo recomendar a Baptiste lo suficiente. Es un desarrollador fantástico, un gran compañero de equipo, y alguien de quien he tenido la suerte de aprender. — (traducido del inglés)
+""", de: """
+Mit Baptiste Grosjean am EMVI-Projekt zu arbeiten, war eine unglaublich bereichernde Erfahrung — sowohl beruflich als auch persönlich. Baptiste ist nicht nur ein hochqualifizierter Entwickler mit einem scharfen Auge für Design und Funktionalität, sondern war auch ein Mentor und eine Inspiration während unserer Zusammenarbeit.
+
+Ich habe so viel von ihm gelernt — von Best Practices in der Flutter-Entwicklung bis zur Bedeutung durchdachter UI/UX und Clean Architecture. Er ist immer bereit, sein Wissen zu teilen, komplexe Ideen klar zu erklären und das Team auf jede erdenkliche Weise zu unterstützen.
+
+Was am meisten heraussticht, ist Baptistes Fähigkeit, Herausforderungen in Chancen zu verwandeln. Sein ruhiger, fokussierter Ansatz und seine problemlösende Denkweise halfen uns, technische Hürden zu überwinden und Funktionen zu entwickeln, die das Benutzererlebnis wirklich verbessern. Seine kollaborative Art machte die Teamarbeit nahtlos und motivierend.
+
+Wenn Sie jemanden suchen, der nicht nur außergewöhnliche Ergebnisse liefert, sondern auch alle um sich herum erhebt, kann ich Baptiste nicht genug empfehlen. Er ist ein fantastischer Entwickler, ein großartiger Teamkollege und jemand, von dem zu lernen ich das Glück hatte. — (aus dem Englischen übersetzt)
+""", zh: """
+在 EMVI 项目中与 Baptiste Grosjean 一起工作是一次令人难以置信的有益经历——无论是在专业上还是个人上。Baptiste 不仅是一位技术非常出色的开发者，对设计和功能有着敏锐的眼光，而且在我们的合作中也一直是导师和灵感来源。
+
+我从他身上学到了很多——从 Flutter 开发的最佳实践到深思熟虑的 UI/UX 和整洁架构的重要性。他总是乐于分享知识，清晰地解释复杂的想法，并以一切可能的方式支持团队。
+
+最突出的是 Baptiste 将挑战转化为机会的能力。他冷静专注的方法和解决问题的思维方式帮助我们克服了技术难题，并构建了真正改善用户体验的功能。他的协作精神让团队合作变得顺畅且鼓舞人心。
+
+如果您正在寻找一个不仅能交付卓越成果还能激励周围所有人的人，我无法更强烈地推荐 Baptiste。他是一位出色的开发者、伟大的队友，也是我有幸向其学习的人。 — （译自英语）
+""" }
+        }
+        Tino_Schuerewegen {
+            name "Tino Schuerewegen, Software developer at Xtrada"
+            quote t{ en: """
+I had the pleasure of working with Baptiste for a year, with the added joy of mentoring him on a project for three months. If there's one thing that stands out about Baptiste, it's his boundless energy. Whether it's 9 AM or 9 PM, he's always the most enthusiastic person in the room—sometimes even more enthusiastic than the coffee machine.
+
+Baptiste brings a contagious energy to any project he's part of. He’s outgoing, smart, and has an eagerness to learn that is truly admirable. Whether he's diving into a complex task or asking insightful questions, he's always in search of knowledge. His enthusiasm for learning, especially when it comes to leveraging tools like ChatGPT, is both impressive and a little intimidating. Seriously, if ChatGPT had a best friend, it would be Baptiste!
+
+He’s also incredibly hands-on, never shying away from rolling up his sleeves and getting deep into the work. His approach isn't just theoretical; he's all about practical, tangible results.
+
+In summary, if you're looking for someone who brings enthusiasm, intelligence, and a touch of humor to every task, Baptiste is your person. Working with him was not just productive, but genuinely enjoyable.
+""", fr: """
+J'ai eu le plaisir de travailler avec Baptiste pendant un an, avec la joie supplémentaire de l'avoir mentoré sur un projet pendant trois mois. S'il y a une chose qui se distingue chez Baptiste, c'est son énergie sans limites. Que ce soit 9h ou 21h, il est toujours la personne la plus enthousiaste de la pièce — parfois même plus enthousiaste que la machine à café.
+
+Baptiste apporte une énergie contagieuse à tout projet auquel il participe. Il est extraverti, intelligent, et a une soif d'apprendre vraiment admirable. Qu'il s'agisse de plonger dans une tâche complexe ou de poser des questions perspicaces, il est toujours en quête de connaissances. Son enthousiasme pour l'apprentissage, en particulier l'utilisation d'outils comme ChatGPT, est à la fois impressionnant et un peu intimidant. Sérieusement, si ChatGPT avait un meilleur ami, ce serait Baptiste !
+
+Il est aussi extrêmement opérationnel, n'hésitant jamais à se retrousser les manches et à entrer dans le concret. Son approche n'est pas que théorique ; il vise des résultats pratiques et tangibles.
+
+En résumé, si vous cherchez quelqu'un qui apporte enthousiasme, intelligence et une touche d'humour à chaque tâche, Baptiste est votre personne. Travailler avec lui n'était pas seulement productif, c'était véritablement agréable. — (traduit depuis l'anglais)
+""", nl: """
+Ik heb het genoegen gehad om een jaar met Baptiste samen te werken, met de extra vreugde hem drie maanden te hebben mogen mentoren in een project. Als er één ding aan Baptiste opvalt, is het zijn grenzeloze energie. Of het nu 9 uur 's ochtends of 9 uur 's avonds is, hij is altijd de meest enthousiaste persoon in de kamer — soms zelfs enthousiaster dan het koffiezetapparaat.
+
+Baptiste brengt aanstekelijke energie in elk project waaraan hij deelneemt. Hij is extravert, slim, en heeft een leergierigheid die echt bewonderenswaardig is. Of hij nu in een complexe taak duikt of inzichtelijke vragen stelt, hij is altijd op zoek naar kennis. Zijn enthousiasme om te leren, vooral als het gaat om tools als ChatGPT, is zowel indrukwekkend als een beetje intimiderend. Serieus, als ChatGPT een beste vriend had, zou het Baptiste zijn!
+
+Hij is ook ongelooflijk hands-on, schroomt nooit om de mouwen op te stropen en diep in het werk te duiken. Zijn aanpak is niet alleen theoretisch; het draait helemaal om praktische, tastbare resultaten.
+
+Kortom, als je iemand zoekt die enthousiasme, intelligentie en een vleugje humor in elke taak brengt, is Baptiste je man. Met hem werken was niet alleen productief, maar oprecht plezierig. — (vertaald uit het Engels)
+""", es: """
+Tuve el placer de trabajar con Baptiste durante un año, con la alegría adicional de mentorearlo en un proyecto durante tres meses. Si hay algo que destaca en Baptiste, es su energía ilimitada. Sean las 9 de la mañana o las 9 de la noche, siempre es la persona más entusiasta de la sala — a veces incluso más entusiasta que la máquina de café.
+
+Baptiste aporta una energía contagiosa a cualquier proyecto del que forma parte. Es extrovertido, inteligente, y tiene una sed de aprender verdaderamente admirable. Ya sea sumergiéndose en una tarea compleja o haciendo preguntas perspicaces, siempre está en busca de conocimiento. Su entusiasmo por aprender, especialmente cuando se trata de aprovechar herramientas como ChatGPT, es a la vez impresionante y un poco intimidante. ¡En serio, si ChatGPT tuviera un mejor amigo, sería Baptiste!
+
+También es increíblemente práctico, nunca duda en remangarse y meterse de lleno en el trabajo. Su enfoque no es solo teórico; busca resultados prácticos y tangibles.
+
+En resumen, si buscas a alguien que aporte entusiasmo, inteligencia y un toque de humor a cada tarea, Baptiste es tu persona. Trabajar con él no fue solo productivo, sino genuinamente agradable. — (traducido del inglés)
+""", de: """
+Ich hatte das Vergnügen, ein Jahr lang mit Baptiste zu arbeiten, mit der zusätzlichen Freude, ihn drei Monate lang in einem Projekt zu mentoren. Wenn es eine Sache gibt, die an Baptiste auffällt, dann ist es seine grenzenlose Energie. Ob 9 Uhr morgens oder 9 Uhr abends — er ist immer die enthusiastischste Person im Raum, manchmal sogar enthusiastischer als die Kaffeemaschine.
+
+Baptiste bringt ansteckende Energie in jedes Projekt, an dem er beteiligt ist. Er ist extrovertiert, klug und hat eine wirklich bewundernswerte Lernbegierde. Ob er sich in eine komplexe Aufgabe vertieft oder einsichtsvolle Fragen stellt, er ist immer auf der Suche nach Wissen. Sein Lernenthusiasmus, besonders wenn es um den Einsatz von Tools wie ChatGPT geht, ist sowohl beeindruckend als auch ein wenig einschüchternd. Ernsthaft: wenn ChatGPT einen besten Freund hätte, wäre es Baptiste!
+
+Er ist auch unglaublich praxisorientiert und scheut nie davor zurück, die Ärmel hochzukrempeln und tief in die Arbeit einzutauchen. Sein Ansatz ist nicht nur theoretisch; es geht ihm um praktische, greifbare Ergebnisse.
+
+Zusammengefasst: Wenn Sie jemanden suchen, der jeder Aufgabe Enthusiasmus, Intelligenz und einen Hauch Humor verleiht, ist Baptiste Ihre Person. Mit ihm zu arbeiten war nicht nur produktiv, sondern auch wirklich angenehm. — (aus dem Englischen übersetzt)
+""", zh: """
+我有幸与 Baptiste 共事了一年，并额外地获得了在一个项目中指导他三个月的乐趣。如果说 Baptiste 有一件事最突出，那就是他无穷的精力。无论是早上 9 点还是晚上 9 点，他始终是房间里最热情的人——有时甚至比咖啡机还热情。
+
+Baptiste 给他参与的每个项目都带来感染力的能量。他外向、聪明，并拥有真正令人钦佩的求知欲。无论是钻研复杂任务还是提出深刻的问题，他始终在追求知识。他对学习的热情，特别是在利用 ChatGPT 等工具方面，既令人印象深刻又略显令人生畏。说真的，如果 ChatGPT 有一个最好的朋友，那一定是 Baptiste！
+
+他也极具动手能力，从不畏惧卷起袖子深入工作。他的方法不仅是理论上的；他追求的是实用、切实的成果。
+
+总而言之，如果您正在寻找一个为每项任务带来热情、智慧和一丝幽默的人，Baptiste 就是您要找的人。与他合作不仅富有成效，而且真正令人愉快。 — （译自英语）
+""" }
+        }
+        Emiel_Van_Gysegem {
+            name "Emiel Van Gysegem, Marketing and operations at Xtra Groep"
+            quote t{ en: "Hoewel we niet direct samenwerkten, had ik altijd een heel fijne connectie met Baptiste. In een mengelmoes van Engels, Nederlands en Frans deelden we vaak leuke gesprekken. Zijn enthousiasme en energie zijn echt aanstekelijk, en hij weet een prettige, informele sfeer te creëren in elke interactie. Baptiste is iemand die een positieve dynamiek met zich meebrengt.", fr: "Bien que nous n'ayons pas travaillé directement ensemble, j'ai toujours eu une très belle connexion avec Baptiste. Dans un mélange d'anglais, de néerlandais et de français, nous partagions souvent des conversations agréables. Son enthousiasme et son énergie sont vraiment contagieux, et il sait créer une ambiance agréable et informelle dans chaque interaction. Baptiste est quelqu'un qui apporte une dynamique positive. — (traduit depuis le néerlandais)", es: "Aunque no trabajamos directamente juntos, siempre tuve una conexión muy agradable con Baptiste. En una mezcla de inglés, neerlandés y francés, compartíamos a menudo conversaciones agradables. Su entusiasmo y energía son verdaderamente contagiosos, y sabe crear un ambiente agradable e informal en cada interacción. Baptiste es alguien que aporta una dinámica positiva. — (traducido del neerlandés)", de: "Obwohl wir nicht direkt zusammengearbeitet haben, hatte ich immer eine sehr angenehme Verbindung zu Baptiste. In einer Mischung aus Englisch, Niederländisch und Französisch teilten wir oft schöne Gespräche. Sein Enthusiasmus und seine Energie sind wirklich ansteckend, und er weiß, in jeder Interaktion eine angenehme, informelle Atmosphäre zu schaffen. Baptiste ist jemand, der eine positive Dynamik mit sich bringt. — (aus dem Niederländischen übersetzt)", zh: "尽管我们没有直接合作，但我与 Baptiste 始终保持着非常愉快的联系。在英语、荷兰语和法语的混合中，我们经常分享愉快的对话。他的热情和能量真的很有感染力，他知道如何在每次互动中营造愉快、轻松的氛围。Baptiste 是一个能带来积极动力的人。 — （译自荷兰语）" }
+        }
+        Steven_Claus {
+            name "Steven Claus, CFO at Xtra Groep"
+            quote t{ en: "Baptiste is a full-stack software developer and is driven by an unwavering determination. This mindset permeates every aspect of his career. He has worked in various fields, allowing him to quickly adapt to any situation. These roles have honed both his technical and interpersonal skills, making him a versatile collaborator who significantly impacts every project he joins. Fueled by a constant desire to learn, he continually updates his knowledge through a master’s degree in computer science. This ongoing learning journey makes him a well-rounded IT professional in the field of computer science.", fr: "Baptiste est un développeur full-stack animé d'une détermination inébranlable. Cet état d'esprit imprègne chaque aspect de sa carrière. Il a travaillé dans des domaines variés, ce qui lui permet de s'adapter rapidement à toute situation. Ces rôles ont aiguisé à la fois ses compétences techniques et interpersonnelles, faisant de lui un collaborateur polyvalent qui a un impact significatif sur chaque projet qu'il rejoint. Animé par un désir constant d'apprendre, il met continuellement à jour ses connaissances via un master en informatique. Ce parcours d'apprentissage continu fait de lui un professionnel IT bien équilibré dans le domaine de l'informatique. — (traduit depuis l'anglais)", nl: "Baptiste is een full-stack softwareontwikkelaar gedreven door een onwankelbare vastberadenheid. Deze mindset doordringt elk aspect van zijn carrière. Hij heeft in verschillende domeinen gewerkt, waardoor hij zich snel aan elke situatie kan aanpassen. Deze rollen hebben zowel zijn technische als interpersoonlijke vaardigheden aangescherpt, waardoor hij een veelzijdige medewerker is die een significante impact heeft op elk project waaraan hij deelneemt. Gevoed door een constant verlangen om te leren, werkt hij zijn kennis voortdurend bij via een master in computerwetenschappen. Deze voortdurende leerreis maakt van hem een goed afgeronde IT-professional in het domein van computerwetenschappen. — (vertaald uit het Engels)", es: "Baptiste es un desarrollador full-stack impulsado por una determinación inquebrantable. Esta mentalidad impregna cada aspecto de su carrera. Ha trabajado en diversos campos, lo que le permite adaptarse rápidamente a cualquier situación. Estos roles han pulido tanto sus habilidades técnicas como interpersonales, convirtiéndolo en un colaborador versátil que impacta significativamente cada proyecto al que se une. Impulsado por un deseo constante de aprender, actualiza continuamente sus conocimientos a través de un máster en informática. Este viaje de aprendizaje continuo lo convierte en un profesional IT integral en el campo de las ciencias de la computación. — (traducido del inglés)", de: "Baptiste ist ein Full-Stack-Softwareentwickler, der von unerschütterlicher Entschlossenheit angetrieben wird. Diese Geisteshaltung durchdringt jeden Aspekt seiner Karriere. Er hat in verschiedenen Bereichen gearbeitet, was ihm ermöglicht, sich schnell an jede Situation anzupassen. Diese Rollen haben sowohl seine technischen als auch seine zwischenmenschlichen Fähigkeiten geschärft und ihn zu einem vielseitigen Mitarbeiter gemacht, der jedes Projekt, dem er beitritt, signifikant beeinflusst. Angetrieben von einem ständigen Lernwunsch aktualisiert er sein Wissen kontinuierlich durch einen Master in Informatik. Diese fortlaufende Lernreise macht ihn zu einem vielseitigen IT-Profi im Bereich der Informatik. — (aus dem Englischen übersetzt)", zh: "Baptiste 是一位全栈软件开发者，受坚定不移的决心驱动。这种心态贯穿他职业生涯的每个方面。他曾在多个领域工作，使他能够迅速适应任何情况。这些角色磨砺了他的技术和人际交往能力，使他成为一个多才多艺的合作者，对他加入的每个项目都产生重大影响。在持续学习愿望的推动下，他通过攻读计算机科学硕士不断更新自己的知识。这种持续的学习之旅使他成为计算机科学领域全面的 IT 专业人士。 — （译自英语）" }
+        }
+        Tj_rven_Janssens {
+            name "Tjörven Janssens, software developer at Xtrada"
+            quote t{ en: "Baptiste is naast een software ontwikkelaar, graag bezig met data-analyse en is een expert in het gebruik van ChatGPT. Hij leert graag nieuwe dingen en doet dit ook snel. Hij is erg enthousiast in omgang en staat steeds klaar voor een vriendelijk woord of wat advies.", fr: "En plus d'être développeur logiciel, Baptiste aime s'investir dans l'analyse de données et est un expert dans l'utilisation de ChatGPT. Il aime apprendre de nouvelles choses et le fait rapidement. Il est très enthousiaste dans ses interactions et toujours prêt à offrir un mot aimable ou un conseil. — (traduit depuis le néerlandais)", es: "Además de ser desarrollador de software, a Baptiste le gusta dedicarse al análisis de datos y es un experto en el uso de ChatGPT. Le gusta aprender cosas nuevas y lo hace rápido. Es muy entusiasta en el trato y siempre está dispuesto a ofrecer una palabra amable o un consejo. — (traducido del neerlandés)", de: "Baptiste ist nicht nur Softwareentwickler, sondern beschäftigt sich auch gerne mit Datenanalyse und ist Experte im Umgang mit ChatGPT. Er lernt gerne neue Dinge und tut dies auch schnell. Er ist im Umgang sehr enthusiastisch und stets bereit für ein freundliches Wort oder einen Rat. — (aus dem Niederländischen übersetzt)", zh: "除了是软件开发者之外，Baptiste 还喜欢从事数据分析，并且是 ChatGPT 使用方面的专家。他喜欢学习新事物，并且学得很快。他在交往中非常热情，总是随时准备给予友好的话语或建议。 — （译自荷兰语）" }
+        }
+        Michael_Culot {
+            name "Michael Culot, Sales manager at Xtrada"
+            quote t{ en: "Baptiste is a great and devoted developer who’s eager to keep learning new technologies and elevate his skill set. You would be amazed about not only his knowledge but also his warm open enthusiasm. Baptiste, you’re going to be doing great things in your life, just keep your vibrant spirit ✊", fr: "Baptiste est un développeur formidable et dévoué, désireux de continuer à apprendre de nouvelles technologies et d'élever ses compétences. Vous seriez impressionnés non seulement par ses connaissances mais aussi par son enthousiasme chaleureux et ouvert. Baptiste, tu vas accomplir de grandes choses dans ta vie, garde ton esprit vibrant ✊ — (traduit depuis l'anglais)", nl: "Baptiste is een geweldige en toegewijde ontwikkelaar die gretig is om nieuwe technologieën te blijven leren en zijn vaardigheden te verbeteren. Je zou verbaasd zijn over niet alleen zijn kennis, maar ook over zijn warme, open enthousiasme. Baptiste, je gaat geweldige dingen doen in je leven, blijf gewoon je levendige geest behouden ✊ — (vertaald uit het Engels)", es: "Baptiste es un desarrollador estupendo y entregado, ansioso por seguir aprendiendo nuevas tecnologías y elevar sus habilidades. Te sorprenderías no solo de su conocimiento sino también de su cálido y abierto entusiasmo. Baptiste, vas a hacer grandes cosas en tu vida, simplemente mantén tu espíritu vibrante ✊ — (traducido del inglés)", de: "Baptiste ist ein großartiger und engagierter Entwickler, der eifrig dabei ist, neue Technologien zu lernen und seine Fähigkeiten zu erweitern. Sie wären erstaunt, nicht nur über sein Wissen, sondern auch über seinen warmen, offenen Enthusiasmus. Baptiste, du wirst Großes in deinem Leben erreichen, behalte einfach deinen lebhaften Geist ✊ — (aus dem Englischen übersetzt)", zh: "Baptiste 是一位出色且尽职的开发者，渴望继续学习新技术并提升自己的技能。您不仅会惊叹于他的知识，还会惊叹于他温暖、开放的热情。Baptiste，你将在生活中做出伟大的事情，只需保持你充满活力的精神 ✊ — （译自英语）" }
+        }
+    }
+
+    skills {
+        hard [SQL, "C#", Java, Python, JS, TS, XML, JSON, HTML, CSS, Zsh, Dart, Rust, LaTeX, "SQL Server", EF, ".NET", Pandas, NumPy, Whisper, SpaCy, "Node.js", "Express.js", Blazor, Angular, React, Flutter, Tokio, Axum, Tower, Gradle, NPM, JWT, Auth0, SSH, Venv, Conda, Docker, UML, Merise, VisualParadigm, CleanCode, CleanArchitecture, DDD, CQRS]
+        learning [TDD, TensorFlow, "Scikit-Learn", C, XQuery, Blockchain]
+        soft [Adaptability, Resilience, Leadership, Creativity, Initiative, Analysis, Flexibility, Teamwork, Organization, Pragmatism, Resourcefulness, Thoroughness]
+    }
+
+    languages {
+        French native
+        English "B1+/B2 (TOEIC 730/ ELAO)"
+        Dutch "B1"
+    }
+
+    awards {
+        TOEIC {
+            title "TOEIC"
+            date 2023-06
+            awarder "ETS"
+            summary "730"
+        }
+    }
+
+    interests {
+        Research_and_Development {
+            name "Research and Development"
+            keywords ["Innovations", "Experimentation", "POCs"]
+        }
+    }
+
+    volunteer {
+        Student_Representative {
+            position "Student Representative"
+            organization "UMons"
+            url "https://www.umons.be"
+            period 2023-11..present
+        }
+        Buddy_Tandemons {
+            position "Buddy Tandemons"
+            organization "UMons"
+            url "https://www.umons.be"
+            period 2023-11..present
+        }
+        Student_Representative2 {
+            position "Student Representative"
+            organization "EPHEC École Supérieure de Promotion Sociale"
+            url "https://www.ephec.be"
+            period 2019-09..2022-10
+        }
+        Tutor {
+            position "Tutor"
+            organization "EPHEC École Supérieure de Promotion Sociale"
+            url "https://www.ephec.be"
+            period 2019-09..2022-10
+        }
+    }
+
+    meta {
+        theme "kendall"
+        dailyLife {
+            sleep 8 color "#F3890B"
+            transport 2 color "#FF0000"
+            work 9 color "#001F5A"
+            classes 3 color "#C0C0C0"
+            sport 1 color "#008000"
+            others 1 color "#FFFF00"
+        }
+    }
+
+}
