@@ -12,6 +12,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 _HERE = Path(__file__).resolve().parent
@@ -21,12 +22,22 @@ LANGS = ("fr", "nl", "es", "de", "zh")
 
 
 def _slug(text: str) -> str:
-    slug = re.sub(r"[^A-Za-z0-9]+", "_", text or "").strip("_")
-    if not slug:
-        slug = "Entry"
-    if slug[0].isdigit():
-        slug = "_" + slug
-    return slug
+    """Emit a CamelCase identifier stripped of diacritics and punctuation.
+
+    ``"Université Saint-Louis - Bruxelles"`` → ``"UniversiteSaintLouisBruxelles"``.
+    """
+    if not text:
+        return "Entry"
+    # Strip accents (é → e), drop all non-alphanumerics as word separators,
+    # then join the resulting words in CamelCase form.
+    ascii_text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode()
+    words = re.split(r"[^A-Za-z0-9]+", ascii_text)
+    camel = "".join(w[:1].upper() + w[1:] for w in words if w)
+    if not camel:
+        return "Entry"
+    if camel[0].isdigit():
+        camel = "_" + camel
+    return camel
 
 
 def _q(value: str) -> str:
@@ -82,11 +93,9 @@ def _period(entry: dict) -> str | None:
     end = entry.get("endDate")
     if not start:
         return None
-    start_short = start[:7]  # YYYY-MM
     if not end or end == "Present":
-        return f"{start_short}..present"
-    end_short = end[:7]
-    return f"{start_short}..{end_short}"
+        return f"{start}..present"
+    return f"{start}..{end}"
 
 
 def _emit_basics(canonical: dict, overlays: dict[str, dict], out: list[str]) -> None:
@@ -122,8 +131,12 @@ def _emit_basics(canonical: dict, overlays: dict[str, dict], out: list[str]) -> 
         out.append("        }")
 
     for prof in b.get("profiles", []):
-        net = (prof.get("network") or "").lower().replace(" ", "_") or "link"
-        out.append(f"        profile {net} {_q(prof.get('url', ''))}")
+        # Preserve original casing but use a DSL-safe key (letters/digits/underscore).
+        net = re.sub(r"[^A-Za-z0-9]+", "_", prof.get("network", "")).strip("_") or "link"
+        line = f"        profile {net} {_q(prof.get('url', ''))}"
+        if prof.get("username"):
+            line += f" username {_q(prof['username'])}"
+        out.append(line)
 
     summary_overlays = {lang: overlays.get(lang, {}).get("basics", {}).get("summary") for lang in LANGS}
     summary = b.get("summary")
@@ -180,15 +193,30 @@ def _bare_or_string(s: str) -> str:
     return _q(s)
 
 
-def _emit_education(canonical: dict, overlays: dict[str, dict], out: list[str]) -> None:
+def _emit_education(canonical: dict, overlays: dict[str, dict], overrides: dict, out: list[str]) -> None:
     entries = canonical.get("education", [])
     if not entries:
         return
+    hidden_html = set((overrides.get("hideOnHtml") or {}).get("education") or [])
+    hidden_pdf = set((overrides.get("hideOnPdf") or {}).get("education") or [])
+    display_overrides = {
+        p["match"]: p
+        for p in (overrides.get("displayOverrides") or {}).get("education") or []
+    }
     out.append("    education {")
     taken: set[str] = set()
     for idx, e in enumerate(entries):
         key = _dedupe_key(_slug(e.get("institution") or "Edu"), taken)
-        out.append(f"        {key} {{")
+        inst = e.get("institution", "")
+        flag_parts = []
+        if inst in hidden_html and inst in hidden_pdf:
+            flag_parts.append("hide on: both")
+        elif inst in hidden_html:
+            flag_parts.append("hide on: html")
+        elif inst in hidden_pdf:
+            flag_parts.append("hide on: pdf")
+        flag = " ".join(flag_parts)
+        out.append(f"        {key}{' ' + flag if flag else ''} {{")
         if e.get("institution"):
             out.append(f"            institution {_q(e['institution'])}")
         if e.get("url"):
@@ -199,6 +227,13 @@ def _emit_education(canonical: dict, overlays: dict[str, dict], out: list[str]) 
             out.append(f"            area {_q(e['area'])}")
         if (p := _period(e)):
             out.append(f"            period {p}")
+        # Emit inline display override from site-overrides.
+        display = display_overrides.get(inst)
+        if display and display.get("endDate"):
+            start = e.get("startDate")
+            override_end = display["endDate"]
+            if start:
+                out.append(f"            display period: {start}..{override_end}")
         if e.get("gpa"):
             out.append(f"            score {_q(e['gpa'])}")
         note = e.get("summary")
@@ -208,6 +243,15 @@ def _emit_education(canonical: dict, overlays: dict[str, dict], out: list[str]) 
         if e.get("skills"):
             uses = ", ".join(_bare_or_string(s) for s in e["skills"])
             out.append(f"            uses [{uses}]")
+        if e.get("projects"):
+            refs = []
+            for proj in e["projects"]:
+                if isinstance(proj, dict) and proj.get("name"):
+                    refs.append(_slug(proj["name"]))
+                elif isinstance(proj, str):
+                    refs.append(_slug(proj))
+            if refs:
+                out.append(f"            projects [{', '.join(f'ref {n}' for n in refs)}]")
         out.append("        }")
     out.append("    }\n")
 
@@ -227,13 +271,17 @@ def _emit_projects(canonical: dict, overlays: dict[str, dict], out: list[str]) -
         d_overlays = {lang: (overlays.get(lang, {}).get("projects") or [{}] * (idx + 1))[idx].get("description") if idx < len(overlays.get(lang, {}).get("projects") or []) else None for lang in LANGS}
         if desc or any(d_overlays.values()):
             out.append(f"            description {_translated_or_plain(desc, d_overlays)}")
+        summary = p.get("summary")
+        s_overlays = {lang: (overlays.get(lang, {}).get("projects") or [{}] * (idx + 1))[idx].get("summary") if idx < len(overlays.get(lang, {}).get("projects") or []) else None for lang in LANGS}
+        if summary or any(s_overlays.values()):
+            out.append(f"            summary {_translated_or_plain(summary, s_overlays)}")
         if p.get("keywords"):
             kws = ", ".join(_bare_or_string(k) for k in p["keywords"])
             out.append(f"            keywords [{kws}]")
         if p.get("startDate"):
-            out.append(f"            startDate {p['startDate'][:7]}")
+            out.append(f"            startDate {p['startDate']}")
         if p.get("endDate"):
-            out.append(f"            endDate {p['endDate'][:7]}")
+            out.append(f"            endDate {p['endDate']}")
         if p.get("url"):
             out.append(f"            url {_q(p['url'])}")
         if p.get("type"):
@@ -309,7 +357,7 @@ def _emit_awards(canonical: dict, out: list[str]) -> None:
         if a.get("title"):
             out.append(f"            title {_q(a['title'])}")
         if a.get("date"):
-            out.append(f"            date {a['date'][:7]}")
+            out.append(f"            date {a['date']}")
         if a.get("awarder"):
             out.append(f"            awarder {_q(a['awarder'])}")
         if a.get("summary"):
@@ -379,21 +427,40 @@ def _emit_meta(canonical: dict, out: list[str]) -> None:
     out.append("    }\n")
 
 
+_SECTION_BANNER = "    // ---------- {name} ----------"
+
+
+def _banner(name: str, out: list[str]) -> None:
+    out.append(_SECTION_BANNER.format(name=name))
+
+
 def main() -> int:
     canonical = _load(DATA / "resume.json")
     overlays = {lang: _load(DATA / "i18n" / f"{lang}.json") for lang in LANGS}
+    overrides = _load(DATA / "site-overrides.json")
     out: list[str] = []
     out.append('resume "grosjeanbaptiste" {\n')
+    _banner("basics", out)
     _emit_basics(canonical, overlays, out)
+    _banner("work", out)
     _emit_work(canonical, overlays, out)
-    _emit_education(canonical, overlays, out)
+    _banner("education", out)
+    _emit_education(canonical, overlays, overrides, out)
+    _banner("projects", out)
     _emit_projects(canonical, overlays, out)
+    _banner("references", out)
     _emit_references(canonical, overlays, out)
+    _banner("skills", out)
     _emit_skills(canonical, out)
+    _banner("languages", out)
     _emit_languages(canonical, out)
+    _banner("awards", out)
     _emit_awards(canonical, out)
+    _banner("interests", out)
     _emit_interests(canonical, out)
+    _banner("volunteer", out)
     _emit_volunteer(canonical, out)
+    _banner("meta", out)
     _emit_meta(canonical, out)
     out.append("}\n")
     DEFAULT_OUT.write_text("\n".join(out))

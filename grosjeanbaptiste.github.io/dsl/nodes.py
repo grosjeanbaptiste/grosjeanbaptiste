@@ -87,8 +87,9 @@ class DateRange(Node):
 
 @dataclass(frozen=True, kw_only=True)
 class Profile(Node):
-    network: str  # linkedin / github / npm / ... (raw name)
+    network: str  # LinkedIn / GitHub / Npm / ... (raw casing preserved)
     url: str
+    username: str | None = None
 
 
 @dataclass(frozen=True, kw_only=True)

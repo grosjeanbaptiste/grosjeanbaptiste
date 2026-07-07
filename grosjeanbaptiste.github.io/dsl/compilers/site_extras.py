@@ -15,24 +15,47 @@ from nodes import (
 )
 
 
+def _resolve_project_name(resume: Resume, ref_target: str) -> str:
+    """Resolve a DSL project key (`ref X`) to its rendered ``name``."""
+    for p in resume.projects:
+        if p.key == ref_target and p.name:
+            return p.name
+    return ref_target
+
+
 def _work_extras(resume: Resume) -> list[dict[str, Any]]:
-    out: list[dict[str, Any]] = []
+    """Index-aligned with resume.work — nulls for entries that carry no
+    extras. Index matching (rather than name matching) is essential
+    because entries can share a ``company`` (e.g. two Xtrada roles).
+    """
+    out: list[dict[str, Any] | None] = []
     for w in resume.work:
         extras: dict[str, Any] = {}
         if w.uses:
             extras["skills"] = list(w.uses)
         if w.projects:
-            extras["projects"] = [ref.target for ref in w.projects]
-        if extras:
-            extras["match"] = w.at or w.key
-            out.append(extras)
-    return out
+            # The Node pipeline stores work[].projects as bare name
+            # strings, not objects — cross-refs are resolved by
+            # ``name === n`` in the renderer.
+            extras["projects"] = [
+                _resolve_project_name(resume, ref.target) for ref in w.projects
+            ]
+        out.append(extras if extras else None)
+    return _trim_trailing_nulls(out)
 
 
-def _education_extras(resume: Resume) -> list[dict[str, Any]]:
-    out: list[dict[str, Any]] = []
+def _education_extras(resume: Resume) -> list[dict[str, Any] | None]:
+    """Index-aligned with resume.education. Carries every field JSON
+    Resume v1.0.0 does not define on education (``gpa`` from strict
+    ``score``, ``summary``, ``skills``, ``projects``, empty ``courses``
+    array) so the merged view stays byte-identical with the current
+    hand-edited resume.json.
+    """
+    out: list[dict[str, Any] | None] = []
     for e in resume.education:
         extras: dict[str, Any] = {}
+        if e.score is not None:
+            extras["gpa"] = e.score
         if e.note is not None:
             from nodes import Translated
             if isinstance(e.note, Translated):
@@ -42,29 +65,35 @@ def _education_extras(resume: Resume) -> list[dict[str, Any]]:
         if e.uses:
             extras["skills"] = list(e.uses)
         if e.projects:
-            extras["projects"] = [ref.target for ref in e.projects]
-        if extras:
-            extras["match"] = e.institution or e.key
-            out.append(extras)
-    return out
+            extras["projects"] = [
+                _resolve_project_name(resume, ref.target) for ref in e.projects
+            ]
+        extras["courses"] = list(e.courses) if e.courses else []
+        out.append(extras)
+    return _trim_trailing_nulls(out)
 
 
-def _project_extras(resume: Resume) -> list[dict[str, Any]]:
-    """Project summary field is not in JSON Resume v1.0.0; we mirror it
-    here alongside the schema-compliant description.
-    """
-    out: list[dict[str, Any]] = []
+def _project_extras(resume: Resume) -> list[dict[str, Any] | None]:
+    """Index-aligned with resume.projects."""
+    out: list[dict[str, Any] | None] = []
     for p in resume.projects:
         from nodes import Translated
         summary_val = None
         if p.summary is not None:
-            if isinstance(p.summary, Translated):
-                summary_val = p.summary.get("en")
-            else:
-                summary_val = p.summary
-        if summary_val:
-            out.append({"match": p.name or p.key, "summary": summary_val})
-    return out
+            summary_val = p.summary.get("en") if isinstance(p.summary, Translated) else p.summary
+        entry = {"summary": summary_val} if summary_val else None
+        out.append(entry)
+    return _trim_trailing_nulls(out)
+
+
+def _trim_trailing_nulls(items: list) -> list:
+    while items and items[-1] is None:
+        items.pop()
+    return items
+
+
+def _hours_as_int_if_whole(h: float) -> float | int:
+    return int(h) if h == int(h) else h
 
 
 def _daily_life(resume: Resume) -> dict[str, Any] | None:
@@ -72,7 +101,7 @@ def _daily_life(resume: Resume) -> dict[str, Any] | None:
         return None
     return {
         "items": [
-            {"key": item.key, "hours": item.hours, "color": item.color}
+            {"key": item.key, "hours": _hours_as_int_if_whole(item.hours), "color": item.color}
             for item in resume.meta.daily_life
         ]
     }

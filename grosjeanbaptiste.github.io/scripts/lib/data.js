@@ -24,25 +24,25 @@ function deepMerge(base, overlay) {
   return overlay;
 }
 
-// Merge site-extras (uses/notes/dailyLife dropped from strict resume.json)
-// back into the resume tree so the HTML generators keep seeing the same
-// shape they always have. Match order: institution → company → name.
+// Merge site-extras (per-entry fields dropped from strict resume.json)
+// back into the resume tree so downstream generators keep seeing the
+// shape they always have. Each patches array is INDEX-ALIGNED with its
+// canonical section — patches[i] applies to resume[section][i], with
+// `null` entries skipped. Trailing nulls in the patches array are
+// permitted (they're trimmed at emission time).
 function mergeExtras(resume, extras) {
   if (!extras) return resume;
   const patched = { ...resume };
-  const patchList = (list, patches) => {
-    if (!Array.isArray(list)) return list;
-    return list.map((entry) => {
-      const key = entry?.institution || entry?.company || entry?.name;
-      const patch = patches.find((p) => p.match === key);
-      if (!patch) return entry;
-      const { match: _m, ...fields } = patch;
-      return { ...entry, ...fields };
+  const patchByIndex = (list, patches) => {
+    if (!Array.isArray(list) || !Array.isArray(patches)) return list;
+    return list.map((entry, i) => {
+      const patch = patches[i];
+      return patch ? { ...entry, ...patch } : entry;
     });
   };
-  if (extras.work) patched.work = patchList(patched.work, extras.work);
-  if (extras.education) patched.education = patchList(patched.education, extras.education);
-  if (extras.projects) patched.projects = patchList(patched.projects, extras.projects);
+  if (extras.work) patched.work = patchByIndex(patched.work, extras.work);
+  if (extras.education) patched.education = patchByIndex(patched.education, extras.education);
+  if (extras.projects) patched.projects = patchByIndex(patched.projects, extras.projects);
   if (extras.dailyLife) {
     patched.meta = { ...(patched.meta || {}), dailyLife: extras.dailyLife };
   }

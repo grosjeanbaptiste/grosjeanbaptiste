@@ -46,7 +46,7 @@ basics_field: "name" value                             -> basics_name
             | "url" value                              -> basics_url
             | "summary" value                          -> basics_summary
             | "location" "{" location_field+ "}"       -> basics_location
-            | "profile" NAME value                     -> basics_profile
+            | "profile" NAME value ("username" value)? -> basics_profile
 
 location_field: "address" value      -> location_address
               | "postalCode" value   -> location_postal

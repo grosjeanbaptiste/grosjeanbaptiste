@@ -76,7 +76,11 @@ for (const lang of LANGS) {
 }
 for (const v of xmlOutputs) {
   const xmlPath = path.join(ROOT, 'assets/data', v.file);
-  if (writeIfChanged(xmlPath, generateXml(loadResume(v.lang), v.theme, v.lang))) wrote += 1;
+  // The XSLT-rendered XML view is a "web" view of the CV — apply the
+  // same HTML overrides (hide entries + display patches) that the
+  // static HTML consumers see so both stay in sync.
+  const xmlResume = applyHtmlOverrides(loadResume(v.lang));
+  if (writeIfChanged(xmlPath, generateXml(xmlResume, v.theme, v.lang))) wrote += 1;
 }
 console.log(`xml: assets/data/resume{,-minimal,-<lang>{,-minimal}}.xml × ${xmlOutputs.length}`);
 

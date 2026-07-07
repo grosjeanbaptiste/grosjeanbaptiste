@@ -74,10 +74,12 @@ def _basics(b: Basics) -> dict[str, Any]:
         if loc:
             out["location"] = loc
     if b.profiles:
-        out["profiles"] = [
-            {"network": p.network, "url": p.url}
-            for p in b.profiles
-        ]
+        out["profiles"] = []
+        for p in b.profiles:
+            entry = {"network": p.network, "url": p.url}
+            if p.username:
+                entry["username"] = p.username
+            out["profiles"].append(entry)
     return out
 
 
@@ -118,10 +120,9 @@ def _education_entry(e) -> dict[str, Any]:
         entry["startDate"] = start
     if end:
         entry["endDate"] = end
-    if e.score:
-        entry["score"] = e.score
-    if e.courses:
-        entry["courses"] = list(e.courses)
+    # `score` and `courses` are emitted by site_extras.py instead so the
+    # merged view keeps the non-strict `gpa` name and the ubiquitous
+    # empty `courses: []` array the pipeline expects.
     return entry
 
 

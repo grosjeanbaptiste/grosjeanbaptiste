@@ -169,8 +169,12 @@ class _Builder(Transformer):
     def basics_profile(self, meta, children):
         network = str(children[0])
         url = children[1]
+        username = children[2] if len(children) >= 3 else None
         # profiles is a repeating field; collect them under a sentinel key
-        return ("__profiles__", [Profile(src=_pos(meta), network=network, url=url)])
+        return (
+            "__profiles__",
+            [Profile(src=_pos(meta), network=network, url=url, username=username)],
+        )
 
     def location_address(self, meta, children):
         return ("address", children[0])
