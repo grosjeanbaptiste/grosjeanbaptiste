@@ -51,17 +51,18 @@ def _education_extras(resume: Resume) -> list[dict[str, Any] | None]:
     array) so the merged view stays byte-identical with the current
     hand-edited resume.json.
     """
+    from nodes import Translated
+    def _en(v):
+        if v is None:
+            return None
+        return v.get("en") if isinstance(v, Translated) else v
     out: list[dict[str, Any] | None] = []
     for e in resume.education:
         extras: dict[str, Any] = {}
         if e.score is not None:
-            extras["gpa"] = e.score
+            extras["gpa"] = _en(e.score)
         if e.note is not None:
-            from nodes import Translated
-            if isinstance(e.note, Translated):
-                extras["summary"] = e.note.get("en")
-            else:
-                extras["summary"] = e.note
+            extras["summary"] = _en(e.note)
         if e.uses:
             extras["skills"] = list(e.uses)
         if e.projects:

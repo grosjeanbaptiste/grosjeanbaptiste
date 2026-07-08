@@ -62,15 +62,15 @@ def _basics(b: Basics) -> dict[str, Any]:
     if b.location:
         loc = {}
         if b.location.address:
-            loc["address"] = b.location.address
+            loc["address"] = _text(b.location.address)
         if b.location.postal_code:
             loc["postalCode"] = b.location.postal_code
         if b.location.city:
-            loc["city"] = b.location.city
+            loc["city"] = _text(b.location.city)
         if b.location.country_code:
             loc["countryCode"] = b.location.country_code
         if b.location.region:
-            loc["region"] = b.location.region
+            loc["region"] = _text(b.location.region)
         if loc:
             out["location"] = loc
     if b.profiles:
@@ -87,13 +87,13 @@ def _work_entry(w: WorkEntry) -> dict[str, Any]:
     start, end = _period(w.period)
     entry: dict[str, Any] = {}
     if w.at:
-        entry["company"] = w.at
+        entry["company"] = _text(w.at)
     if w.position:
         entry["position"] = _text(w.position)
     if w.url:
         entry["url"] = w.url
     if w.location:
-        entry["location"] = w.location
+        entry["location"] = _text(w.location)
     if start:
         entry["startDate"] = start
     if end:
@@ -109,13 +109,13 @@ def _education_entry(e) -> dict[str, Any]:
     start, end = _period(e.period if e.period else None)
     entry: dict[str, Any] = {}
     if e.institution:
-        entry["institution"] = e.institution
+        entry["institution"] = _text(e.institution)
     if e.url:
         entry["url"] = e.url
     if e.study_type:
-        entry["studyType"] = e.study_type
+        entry["studyType"] = _text(e.study_type)
     if e.area:
-        entry["area"] = e.area
+        entry["area"] = _text(e.area)
     if start:
         entry["startDate"] = start
     if end:
@@ -154,7 +154,7 @@ def _project_entry(p) -> dict[str, Any]:
 def _reference_entry(r) -> dict[str, Any]:
     entry: dict[str, Any] = {}
     if r.name:
-        entry["name"] = r.name
+        entry["name"] = _text(r.name)
     if r.quote:
         entry["reference"] = _text(r.quote)
     return entry
@@ -167,7 +167,7 @@ def _award_entry(a) -> dict[str, Any]:
     if a.date:
         entry["date"] = _date_iso(a.date)
     if a.awarder:
-        entry["awarder"] = a.awarder
+        entry["awarder"] = _text(a.awarder)
     if a.summary:
         entry["summary"] = _text(a.summary)
     return entry
@@ -186,7 +186,7 @@ def _volunteer_entry(v) -> dict[str, Any]:
     start, end = _period(v.period)
     entry: dict[str, Any] = {}
     if v.organization:
-        entry["organization"] = v.organization
+        entry["organization"] = _text(v.organization)
     if v.position:
         entry["position"] = _text(v.position)
     if v.url:
@@ -216,10 +216,15 @@ def _skills(skills) -> list[dict[str, Any]]:
 
 
 def _languages(langs) -> list[dict[str, Any]]:
-    return [
-        {"language": lang.key, "fluency": "Native Speaker" if lang.fluency == "native" else lang.fluency}
-        for lang in langs
-    ]
+    out = []
+    for lang in langs:
+        display = _text(lang.language) if lang.language is not None else lang.key
+        if isinstance(lang.fluency, str) and lang.fluency == "native":
+            fluency = "Native Speaker"
+        else:
+            fluency = _text(lang.fluency) if lang.fluency is not None else ""
+        out.append({"language": display, "fluency": fluency})
+    return out
 
 
 def emit(resume: Resume) -> dict[str, Any]:

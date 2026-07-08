@@ -94,11 +94,11 @@ class Profile(Node):
 
 @dataclass(frozen=True, kw_only=True)
 class Location(Node):
-    address: str | None = None
-    postal_code: str | None = None
-    city: str | None = None
-    country_code: str | None = None
-    region: str | None = None
+    address: Value | None = None
+    postal_code: str | None = None  # neutral code, no translation
+    city: Value | None = None
+    country_code: str | None = None  # ISO code, no translation
+    region: Value | None = None
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -127,9 +127,9 @@ HideTarget = str  # "html" | "pdf" | "both"
 class WorkEntry(Node):
     key: str  # DSL identifier (e.g. Founder, AIResearchScientist)
     position: Value | None = None
-    at: str | None = None  # company name
+    at: Value | None = None  # company name (may be translated)
     url: str | None = None
-    location: str | None = None
+    location: Value | None = None
     period: DateRange | None = None
     summary: Value | None = None
     highlights: tuple[Value, ...] = ()
@@ -141,12 +141,12 @@ class WorkEntry(Node):
 @dataclass(frozen=True, kw_only=True)
 class EducationEntry(Node):
     key: str
-    institution: str | None = None
+    institution: Value | None = None
     url: str | None = None
-    study_type: str | None = None
-    area: str | None = None
+    study_type: Value | None = None
+    area: Value | None = None
     period: DateRange | None = None
-    score: str | None = None  # renamed from `gpa` for JSON Resume v1 compliance
+    score: Value | None = None  # aliased to `gpa` in the extras sidecar
     note: Value | None = None
     courses: tuple[str, ...] = ()
     uses: tuple[str, ...] = ()
@@ -175,7 +175,7 @@ class ProjectEntry(Node):
 @dataclass(frozen=True, kw_only=True)
 class ReferenceEntry(Node):
     key: str
-    name: str | None = None
+    name: Value | None = None
     quote: Value | None = None
 
 
@@ -189,7 +189,8 @@ class Skills(Node):
 @dataclass(frozen=True, kw_only=True)
 class LanguageEntry(Node):
     key: str
-    fluency: str  # "native" or free-form level string
+    language: Value | None = None  # display name (optional; defaults to key)
+    fluency: Value | None = None  # "native" or free-form level string
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -197,7 +198,7 @@ class AwardEntry(Node):
     key: str
     title: Value | None = None
     date: Date | None = None
-    awarder: str | None = None
+    awarder: Value | None = None
     summary: Value | None = None
 
 
@@ -212,7 +213,7 @@ class InterestEntry(Node):
 class VolunteerEntry(Node):
     key: str
     position: Value | None = None
-    organization: str | None = None
+    organization: Value | None = None
     url: str | None = None
     period: DateRange | None = None
     summary: Value | None = None

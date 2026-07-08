@@ -118,16 +118,19 @@ def _emit_basics(canonical: dict, overlays: dict[str, dict], out: list[str]) -> 
     loc = b.get("location") or {}
     if loc:
         out.append("        location {")
+        loc_overlays = {lang: overlays.get(lang, {}).get("basics", {}).get("location") or {} for lang in LANGS}
+        def _loc_field(key: str) -> dict:
+            return {lang: loc_overlays[lang].get(key) for lang in LANGS}
         if loc.get("address"):
-            out.append(f"            address {_q(loc['address'])}")
+            out.append(f"            address {_translated_or_plain(loc.get('address'), _loc_field('address'))}")
         if loc.get("postalCode"):
             out.append(f"            postalCode {_q(loc['postalCode'])}")
         if loc.get("city"):
-            out.append(f"            city {_q(loc['city'])}")
+            out.append(f"            city {_translated_or_plain(loc.get('city'), _loc_field('city'))}")
         if loc.get("countryCode"):
             out.append(f"            countryCode {_q(loc['countryCode'])}")
         if loc.get("region"):
-            out.append(f"            region {_q(loc['region'])}")
+            out.append(f"            region {_translated_or_plain(loc.get('region'), _loc_field('region'))}")
         out.append("        }")
 
     for prof in b.get("profiles", []):
@@ -145,6 +148,15 @@ def _emit_basics(canonical: dict, overlays: dict[str, dict], out: list[str]) -> 
     out.append("    }\n")
 
 
+def _overlay_field(overlays: dict[str, dict], section: str, idx: int, field: str) -> dict[str, str | None]:
+    result = {}
+    for lang in LANGS:
+        section_list = overlays.get(lang, {}).get(section) or []
+        entry = section_list[idx] if idx < len(section_list) else {}
+        result[lang] = (entry or {}).get(field)
+    return result
+
+
 def _emit_work(canonical: dict, overlays: dict[str, dict], out: list[str]) -> None:
     entries = canonical.get("work", [])
     if not entries:
@@ -154,17 +166,17 @@ def _emit_work(canonical: dict, overlays: dict[str, dict], out: list[str]) -> No
     for idx, w in enumerate(entries):
         key = _dedupe_key(_slug(w.get("position") or w.get("company") or "Job"), taken)
         out.append(f"        {key} {{")
-        out.append(f"            position {_translated_or_plain(w.get('position'), {lang: (overlays.get(lang, {}).get('work') or [{}] * (idx + 1))[idx].get('position') for lang in LANGS})}")
+        out.append(f"            position {_translated_or_plain(w.get('position'), _overlay_field(overlays, 'work', idx, 'position'))}")
         if w.get("company"):
-            out.append(f"            at {_q(w['company'])}")
+            out.append(f"            at {_translated_or_plain(w.get('company'), _overlay_field(overlays, 'work', idx, 'company'))}")
         if w.get("url"):
             out.append(f"            url {_q(w['url'])}")
         if w.get("location"):
-            out.append(f"            location {_q(w['location'])}")
+            out.append(f"            location {_translated_or_plain(w.get('location'), _overlay_field(overlays, 'work', idx, 'location'))}")
         if (p := _period(w)):
             out.append(f"            period {p}")
         summary = w.get("summary")
-        s_overlays = {lang: (overlays.get(lang, {}).get("work") or [{}] * (idx + 1))[idx].get("summary") for lang in LANGS}
+        s_overlays = _overlay_field(overlays, "work", idx, "summary")
         if summary or any(s_overlays.values()):
             out.append(f"            summary {_translated_or_plain(summary, s_overlays)}")
         if w.get("highlights"):
@@ -218,13 +230,13 @@ def _emit_education(canonical: dict, overlays: dict[str, dict], overrides: dict,
         flag = " ".join(flag_parts)
         out.append(f"        {key}{' ' + flag if flag else ''} {{")
         if e.get("institution"):
-            out.append(f"            institution {_q(e['institution'])}")
+            out.append(f"            institution {_translated_or_plain(e.get('institution'), _overlay_field(overlays, 'education', idx, 'institution'))}")
         if e.get("url"):
             out.append(f"            url {_q(e['url'])}")
         if e.get("studyType"):
-            out.append(f"            studyType {_q(e['studyType'])}")
+            out.append(f"            studyType {_translated_or_plain(e.get('studyType'), _overlay_field(overlays, 'education', idx, 'studyType'))}")
         if e.get("area"):
-            out.append(f"            area {_q(e['area'])}")
+            out.append(f"            area {_translated_or_plain(e.get('area'), _overlay_field(overlays, 'education', idx, 'area'))}")
         if (p := _period(e)):
             out.append(f"            period {p}")
         # Emit inline display override from site-overrides.
@@ -235,9 +247,9 @@ def _emit_education(canonical: dict, overlays: dict[str, dict], overrides: dict,
             if start:
                 out.append(f"            display period: {start}..{override_end}")
         if e.get("gpa"):
-            out.append(f"            score {_q(e['gpa'])}")
+            out.append(f"            score {_translated_or_plain(e.get('gpa'), _overlay_field(overlays, 'education', idx, 'gpa'))}")
         note = e.get("summary")
-        n_overlays = {lang: (overlays.get(lang, {}).get("education") or [{}] * (idx + 1))[idx].get("summary") if idx < len(overlays.get(lang, {}).get("education") or []) else None for lang in LANGS}
+        n_overlays = _overlay_field(overlays, "education", idx, "summary")
         if note or any(n_overlays.values()):
             out.append(f"            note {_translated_or_plain(note, n_overlays)}")
         if e.get("skills"):
@@ -305,9 +317,9 @@ def _emit_references(canonical: dict, overlays: dict[str, dict], out: list[str])
         key = _dedupe_key(_slug(r.get("name", "").split(",")[0] or "Ref"), taken)
         out.append(f"        {key} {{")
         if r.get("name"):
-            out.append(f"            name {_q(r['name'])}")
+            out.append(f"            name {_translated_or_plain(r.get('name'), _overlay_field(overlays, 'references', idx, 'name'))}")
         quote = r.get("reference")
-        q_overlays = {lang: (overlays.get(lang, {}).get("references") or [{}] * (idx + 1))[idx].get("reference") if idx < len(overlays.get(lang, {}).get("references") or []) else None for lang in LANGS}
+        q_overlays = _overlay_field(overlays, "references", idx, "reference")
         if quote or any(q_overlays.values()):
             out.append(f"            quote {_translated_or_plain(quote, q_overlays)}")
         out.append("        }")
@@ -330,53 +342,68 @@ def _emit_skills(canonical: dict, out: list[str]) -> None:
     out.append("    }\n")
 
 
-def _emit_languages(canonical: dict, out: list[str]) -> None:
+def _emit_languages(canonical: dict, overlays: dict[str, dict], out: list[str]) -> None:
     entries = canonical.get("languages", [])
     if not entries:
         return
     out.append("    languages {")
-    for lang in entries:
+    for idx, lang in enumerate(entries):
         name = lang.get("language", "Unknown")
         fluency = lang.get("fluency", "")
-        if fluency.lower() in {"native speaker", "native"}:
-            out.append(f"        {_slug(name)} native")
+        key = _slug(name)
+        name_overlays = _overlay_field(overlays, "languages", idx, "language")
+        fluency_overlays = _overlay_field(overlays, "languages", idx, "fluency")
+        has_name_tr = any(v is not None for v in name_overlays.values())
+        has_fluency_tr = any(v is not None for v in fluency_overlays.values())
+        if not (has_name_tr or has_fluency_tr):
+            # Shorthand form when nothing needs translation.
+            if fluency.lower() in {"native speaker", "native"}:
+                out.append(f"        {key} native")
+            else:
+                out.append(f"        {key} {_q(fluency)}")
         else:
-            out.append(f"        {_slug(name)} {_q(fluency)}")
+            out.append(f"        {key} {{")
+            out.append(f"            language {_translated_or_plain(name, name_overlays)}")
+            if fluency.lower() in {"native speaker", "native"} and not has_fluency_tr:
+                out.append("            native")
+            else:
+                out.append(f"            fluency {_translated_or_plain(fluency, fluency_overlays)}")
+            out.append("        }")
     out.append("    }\n")
 
 
-def _emit_awards(canonical: dict, out: list[str]) -> None:
+def _emit_awards(canonical: dict, overlays: dict[str, dict], out: list[str]) -> None:
     entries = canonical.get("awards", [])
     if not entries:
         return
     out.append("    awards {")
     taken: set[str] = set()
-    for a in entries:
+    for idx, a in enumerate(entries):
         key = _dedupe_key(_slug(a.get("title", "Award")), taken)
         out.append(f"        {key} {{")
         if a.get("title"):
-            out.append(f"            title {_q(a['title'])}")
+            out.append(f"            title {_translated_or_plain(a.get('title'), _overlay_field(overlays, 'awards', idx, 'title'))}")
         if a.get("date"):
             out.append(f"            date {a['date']}")
         if a.get("awarder"):
-            out.append(f"            awarder {_q(a['awarder'])}")
+            out.append(f"            awarder {_translated_or_plain(a.get('awarder'), _overlay_field(overlays, 'awards', idx, 'awarder'))}")
         if a.get("summary"):
-            out.append(f"            summary {_q(a['summary'])}")
+            out.append(f"            summary {_translated_or_plain(a.get('summary'), _overlay_field(overlays, 'awards', idx, 'summary'))}")
         out.append("        }")
     out.append("    }\n")
 
 
-def _emit_interests(canonical: dict, out: list[str]) -> None:
+def _emit_interests(canonical: dict, overlays: dict[str, dict], out: list[str]) -> None:
     entries = canonical.get("interests", [])
     if not entries:
         return
     out.append("    interests {")
     taken: set[str] = set()
-    for i in entries:
+    for idx, i in enumerate(entries):
         key = _dedupe_key(_slug(i.get("name", "Interest")), taken)
         out.append(f"        {key} {{")
         if i.get("name"):
-            out.append(f"            name {_q(i['name'])}")
+            out.append(f"            name {_translated_or_plain(i.get('name'), _overlay_field(overlays, 'interests', idx, 'name'))}")
         if i.get("keywords"):
             kws = ", ".join(_q(k) for k in i["keywords"])
             out.append(f"            keywords [{kws}]")
@@ -384,25 +411,25 @@ def _emit_interests(canonical: dict, out: list[str]) -> None:
     out.append("    }\n")
 
 
-def _emit_volunteer(canonical: dict, out: list[str]) -> None:
+def _emit_volunteer(canonical: dict, overlays: dict[str, dict], out: list[str]) -> None:
     entries = canonical.get("volunteer", [])
     if not entries:
         return
     out.append("    volunteer {")
     taken: set[str] = set()
-    for v in entries:
+    for idx, v in enumerate(entries):
         key = _dedupe_key(_slug(v.get("position", "Vol")), taken)
         out.append(f"        {key} {{")
         if v.get("position"):
-            out.append(f"            position {_q(v['position'])}")
+            out.append(f"            position {_translated_or_plain(v.get('position'), _overlay_field(overlays, 'volunteer', idx, 'position'))}")
         if v.get("organization"):
-            out.append(f"            organization {_q(v['organization'])}")
+            out.append(f"            organization {_translated_or_plain(v.get('organization'), _overlay_field(overlays, 'volunteer', idx, 'organization'))}")
         if v.get("url"):
             out.append(f"            url {_q(v['url'])}")
         if (p := _period(v)):
             out.append(f"            period {p}")
         if v.get("summary"):
-            out.append(f"            summary {_q(v['summary'])}")
+            out.append(f"            summary {_translated_or_plain(v.get('summary'), _overlay_field(overlays, 'volunteer', idx, 'summary'))}")
         if v.get("highlights"):
             hl = ", ".join(_q(h) for h in v["highlights"])
             out.append(f"            highlights [{hl}]")
@@ -422,7 +449,11 @@ def _emit_meta(canonical: dict, out: list[str]) -> None:
     if daily:
         out.append("        dailyLife {")
         for item in daily:
-            out.append(f"            {_slug(item.get('key','x'))} {item.get('hours', 0)} color {_q(item.get('color', '#000000'))}")
+            # dailyLife keys are lowercase identifiers matched by the
+            # Node HTML template's t.dailyLifeLabels[key] lookup — leave
+            # them alone (no CamelCase slugging).
+            key = item.get("key", "x")
+            out.append(f"            {key} {item.get('hours', 0)} color {_q(item.get('color', '#000000'))}")
         out.append("        }")
     out.append("    }\n")
 
@@ -453,13 +484,13 @@ def main() -> int:
     _banner("skills", out)
     _emit_skills(canonical, out)
     _banner("languages", out)
-    _emit_languages(canonical, out)
+    _emit_languages(canonical, overlays, out)
     _banner("awards", out)
-    _emit_awards(canonical, out)
+    _emit_awards(canonical, overlays, out)
     _banner("interests", out)
-    _emit_interests(canonical, out)
+    _emit_interests(canonical, overlays, out)
     _banner("volunteer", out)
-    _emit_volunteer(canonical, out)
+    _emit_volunteer(canonical, overlays, out)
     _banner("meta", out)
     _emit_meta(canonical, out)
     out.append("}\n")

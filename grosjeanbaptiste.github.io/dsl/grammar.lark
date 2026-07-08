@@ -137,10 +137,18 @@ skills_field: "hard" array   -> skills_hard
 
 languages_section: "languages" "{" language_entry+ "}"
 
-language_entry: NAME language_level
+// Two forms: shorthand `French native`/`English "B1+/B2"` and block form
+// with translated display name + fluency.
+language_entry: NAME language_level        -> lang_short
+              | NAME "{" language_field+ "}" -> lang_block
 
 language_level: "native"     -> lang_native
               | STRING       -> lang_level_string
+              | translation  -> lang_level_translation
+
+language_field: "language" value  -> lang_display
+              | "fluency" value   -> lang_fluency
+              | "native"          -> lang_native_flag
 
 // ---------------------------------------------------------------------------
 // awards / interests / volunteer

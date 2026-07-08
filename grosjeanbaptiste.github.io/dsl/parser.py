@@ -372,16 +372,35 @@ class _Builder(Transformer):
     def languages_section(self, meta, children):
         return ("languages", children)
 
-    def language_entry(self, meta, children):
+    def lang_short(self, meta, children):
         key = str(children[0])
         fluency = children[1]
         return LanguageEntry(src=_pos(meta), key=key, fluency=fluency)
+
+    def lang_block(self, meta, children):
+        key = str(children[0])
+        fields: dict = {}
+        for name, val in children[1:]:
+            fields[name] = val
+        return LanguageEntry(src=_pos(meta), key=key, **fields)
+
+    def lang_display(self, meta, children):
+        return ("language", children[0])
+
+    def lang_fluency(self, meta, children):
+        return ("fluency", children[0])
+
+    def lang_native_flag(self, meta, children):
+        return ("fluency", "native")
 
     def lang_native(self, meta, children):
         return "native"
 
     def lang_level_string(self, meta, children):
         return _strip_string(children[0])
+
+    def lang_level_translation(self, meta, children):
+        return children[0]
 
     # -----------------------------------------------------------------
     # awards / interests / volunteer
