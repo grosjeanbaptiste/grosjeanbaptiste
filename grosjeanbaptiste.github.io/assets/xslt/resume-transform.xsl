@@ -343,6 +343,9 @@
           .embedded-projects .label { font-weight: 600; color: var(--primary); margin: 0; }
           .embedded-projects ul { margin: 4px 0 0 4px; padding-left: 16px; }
           .embedded-projects li { margin: 2px 0; }
+          .ref-links { margin: 6px 0 0; font-size: 0.92em; color: var(--muted); }
+          .ref-links a { color: var(--accent); text-decoration: none; }
+          .ref-links a:hover { text-decoration: underline; }
 
           blockquote {
             margin: 8px 0;
@@ -644,6 +647,21 @@
                       </ul>
                     </div>
                   </xsl:if>
+
+                  <xsl:variable name="workRefs" select="/resume/references/reference[$workOrg and contains(name, $workOrg)]"/>
+                  <xsl:if test="$workRefs">
+                    <p class="ref-links">
+                      <xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template>
+                      <xsl:text>: </xsl:text>
+                      <xsl:for-each select="$workRefs">
+                        <xsl:if test="position() &gt; 1">, </xsl:if>
+                        <a>
+                          <xsl:attribute name="href">#<xsl:value-of select="generate-id(.)"/></xsl:attribute>
+                          <xsl:value-of select="name"/>
+                        </a>
+                      </xsl:for-each>
+                    </p>
+                  </xsl:if>
                 </div>
               </xsl:for-each>
             </xsl:if>
@@ -712,6 +730,21 @@
                       </ul>
                     </div>
                   </xsl:if>
+
+                  <xsl:variable name="eduRefs" select="/resume/references/reference[$eduInst and contains(name, $eduInst)]"/>
+                  <xsl:if test="$eduRefs">
+                    <p class="ref-links">
+                      <xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template>
+                      <xsl:text>: </xsl:text>
+                      <xsl:for-each select="$eduRefs">
+                        <xsl:if test="position() &gt; 1">, </xsl:if>
+                        <a>
+                          <xsl:attribute name="href">#<xsl:value-of select="generate-id(.)"/></xsl:attribute>
+                          <xsl:value-of select="name"/>
+                        </a>
+                      </xsl:for-each>
+                    </p>
+                  </xsl:if>
                 </div>
               </xsl:for-each>
             </xsl:if>
@@ -749,6 +782,7 @@
               <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template></h2>
               <xsl:for-each select="references/reference">
                 <div class="item">
+                  <xsl:attribute name="id"><xsl:value-of select="generate-id(.)"/></xsl:attribute>
                   <div class="ref-author"><xsl:value-of select="name"/></div>
                   <blockquote><xsl:value-of select="reference"/></blockquote>
                 </div>

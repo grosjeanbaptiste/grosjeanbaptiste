@@ -491,6 +491,20 @@
                   </xsl:for-each>
                 </ul>
               </xsl:if>
+              <xsl:variable name="workRefs" select="/resume/references/reference[$workOrg and contains(name, $workOrg)]"/>
+              <xsl:if test="$workRefs">
+                <div class="muted">
+                  <xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template>
+                  <xsl:text>: </xsl:text>
+                  <xsl:for-each select="$workRefs">
+                    <xsl:if test="position() &gt; 1">, </xsl:if>
+                    <a>
+                      <xsl:attribute name="href">#<xsl:value-of select="generate-id(.)"/></xsl:attribute>
+                      <xsl:value-of select="name"/>
+                    </a>
+                  </xsl:for-each>
+                </div>
+              </xsl:if>
             </div>
           </xsl:for-each>
         </xsl:if>
@@ -549,6 +563,20 @@
                     </li>
                   </xsl:for-each>
                 </ul>
+              </xsl:if>
+              <xsl:variable name="eduRefs" select="/resume/references/reference[$eduInst and contains(name, $eduInst)]"/>
+              <xsl:if test="$eduRefs">
+                <div class="muted">
+                  <xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template>
+                  <xsl:text>: </xsl:text>
+                  <xsl:for-each select="$eduRefs">
+                    <xsl:if test="position() &gt; 1">, </xsl:if>
+                    <a>
+                      <xsl:attribute name="href">#<xsl:value-of select="generate-id(.)"/></xsl:attribute>
+                      <xsl:value-of select="name"/>
+                    </a>
+                  </xsl:for-each>
+                </div>
               </xsl:if>
             </div>
           </xsl:for-each>
@@ -626,6 +654,7 @@
           <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template></h2>
           <xsl:for-each select="references/reference">
             <div class="row">
+              <xsl:attribute name="id"><xsl:value-of select="generate-id(.)"/></xsl:attribute>
               <div class="ref-author"><xsl:value-of select="name"/></div>
               <blockquote><xsl:value-of select="reference"/></blockquote>
             </div>
