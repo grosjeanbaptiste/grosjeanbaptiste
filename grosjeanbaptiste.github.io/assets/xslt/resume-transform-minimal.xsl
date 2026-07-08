@@ -165,6 +165,7 @@
       <xsl:attribute name="lang"><xsl:value-of select="$lang"/></xsl:attribute>
       <head>
         <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title><xsl:value-of select="basics/name"/> — Resume</title>
         <style>
           :root {
@@ -280,6 +281,42 @@
             border-top: 1px solid var(--rule);
             font-size: 0.85em;
             color: var(--muted);
+          }
+          @media (max-width: 768px) {
+            body { padding: 0 18px 32px; }
+            .toolbar {
+              margin: 0 -18px 22px;
+              padding: 6px 12px;
+              font-size: 0.8em;
+              gap: 8px;
+            }
+            .toolbar a, .toolbar button { padding: 3px 7px; font-size: 0.85em; }
+            h1 { font-size: 1.65em; }
+            h2 { font-size: 1.05em; margin-top: 24px; }
+            h3 { font-size: 0.98em; }
+          }
+          @media (max-width: 480px) {
+            body { padding: 0 12px 24px; font-size: 15px; line-height: 1.5; }
+            .toolbar {
+              margin: 0 -12px 18px;
+              padding: 6px 8px;
+              gap: 5px;
+              justify-content: flex-start;
+              overflow-x: auto;
+              flex-wrap: nowrap;
+              -webkit-overflow-scrolling: touch;
+            }
+            .toolbar .group { gap: 4px; flex-shrink: 0; }
+            .toolbar a, .toolbar button {
+              padding: 3px 6px;
+              font-size: 0.8em;
+              white-space: nowrap;
+            }
+            h1 { font-size: 1.4em; }
+            h2 { font-size: 1em; }
+            h3 { font-size: 0.95em; }
+            .meta-bar span { display: block; margin-right: 0; margin-bottom: 3px; }
+            blockquote { font-size: 0.9em; padding-left: 12px; }
           }
           @media print { .toolbar { display: none; } }
         </style>

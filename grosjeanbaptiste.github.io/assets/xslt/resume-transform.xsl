@@ -167,6 +167,7 @@
       <xsl:attribute name="lang"><xsl:value-of select="$lang"/></xsl:attribute>
       <head>
         <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title><xsl:value-of select="basics/name"/> — <xsl:value-of select="basics/label"/></title>
         <style>
           :root {
@@ -327,8 +328,44 @@
           .footer-note a { color: var(--accent); text-decoration: none; }
 
           @media (max-width: 820px) {
-            .container { flex-direction: column; }
-            .sidebar, .main { width: 100%; }
+            .container {
+              flex-direction: column;
+              padding: 14px;
+              gap: 14px;
+            }
+            .sidebar, .main { width: 100%; padding: 18px; }
+            #profile-picture { max-width: 220px; margin: 0 auto 16px; }
+            .toolbar { padding: 8px 12px; font-size: 0.8em; gap: 8px; }
+            .toolbar a, .toolbar button { padding: 3px 7px; font-size: 0.85em; }
+            .sidebar h1 { text-align: center; }
+            .sidebar .label { text-align: center; }
+          }
+          @media (max-width: 480px) {
+            body { font-size: 15px; }
+            .container { padding: 8px; gap: 10px; }
+            .sidebar, .main { padding: 14px; }
+            .toolbar {
+              padding: 6px 8px;
+              gap: 6px;
+              font-size: 0.75em;
+              justify-content: flex-start;
+              overflow-x: auto;
+              flex-wrap: nowrap;
+              -webkit-overflow-scrolling: touch;
+            }
+            .toolbar .group { gap: 4px; flex-shrink: 0; }
+            .toolbar a, .toolbar button {
+              padding: 3px 6px;
+              font-size: 0.85em;
+              white-space: nowrap;
+            }
+            h1 { font-size: 1.5em; }
+            .sidebar h1 { font-size: 1.3em; }
+            .main h2 { font-size: 1.15em; margin-top: 22px; }
+            .item h3 { font-size: 1em; }
+            .item p { font-size: 0.9em; }
+            #profile-picture { max-width: 160px; }
+            blockquote { font-size: 0.88em; padding: 6px 12px; }
           }
           @media print {
             .toolbar { display: none; }
