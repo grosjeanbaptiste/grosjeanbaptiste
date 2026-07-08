@@ -476,6 +476,19 @@
             <h1><xsl:value-of select="basics/name"/></h1>
             <div class="label"><xsl:value-of select="basics/label"/></div>
 
+            <xsl:if test="meta/degrees/inProgress">
+              <p class="degree degree-in-progress"><span class="icon">📖</span>
+                <xsl:value-of select="meta/degrees/inProgress"/>
+                <xsl:text> </xsl:text>
+                <span class="degree-status">(<xsl:call-template name="t"><xsl:with-param name="k" select="'inProgress'"/></xsl:call-template>)</span>
+              </p>
+            </xsl:if>
+            <xsl:if test="meta/degrees/obtained">
+              <p class="degree degree-obtained"><span class="icon">🎓</span>
+                <xsl:value-of select="meta/degrees/obtained"/>
+              </p>
+            </xsl:if>
+
             <xsl:if test="basics/email">
               <p><span class="icon">✉</span>
                 <a><xsl:attribute name="href">mailto:<xsl:value-of select="basics/email"/></xsl:attribute>
@@ -499,19 +512,6 @@
                 </a>
               </p>
             </xsl:for-each>
-
-            <xsl:if test="meta/degrees/inProgress">
-              <p class="degree degree-in-progress"><span class="icon">📖</span>
-                <xsl:value-of select="meta/degrees/inProgress"/>
-                <xsl:text> </xsl:text>
-                <span class="degree-status">(<xsl:call-template name="t"><xsl:with-param name="k" select="'inProgress'"/></xsl:call-template>)</span>
-              </p>
-            </xsl:if>
-            <xsl:if test="meta/degrees/obtained">
-              <p class="degree degree-obtained"><span class="icon">🎓</span>
-                <xsl:value-of select="meta/degrees/obtained"/>
-              </p>
-            </xsl:if>
 
             <xsl:variable name="hard" select="key('skill-by-name', 'HardSkills')"/>
             <xsl:if test="$hard/keywords/keyword">

@@ -393,6 +393,21 @@
         <h1><xsl:value-of select="basics/name"/></h1>
         <div class="label"><xsl:value-of select="basics/label"/></div>
 
+        <xsl:if test="meta/degrees/inProgress or meta/degrees/obtained">
+          <div class="degrees">
+            <xsl:if test="meta/degrees/inProgress">
+              <p class="degree degree-in-progress">
+                <xsl:value-of select="meta/degrees/inProgress"/>
+                <xsl:text> </xsl:text>
+                <span class="muted">(<xsl:call-template name="t"><xsl:with-param name="k" select="'inProgress'"/></xsl:call-template>)</span>
+              </p>
+            </xsl:if>
+            <xsl:if test="meta/degrees/obtained">
+              <p class="degree degree-obtained"><xsl:value-of select="meta/degrees/obtained"/></p>
+            </xsl:if>
+          </div>
+        </xsl:if>
+
         <div class="meta-bar">
           <xsl:if test="basics/email">
             <span>✉ <a><xsl:attribute name="href">mailto:<xsl:value-of select="basics/email"/></xsl:attribute><xsl:value-of select="basics/email"/></a></span>
@@ -409,21 +424,6 @@
             <span><xsl:value-of select="network"/>: <a><xsl:attribute name="href"><xsl:value-of select="url"/></xsl:attribute><xsl:value-of select="username"/></a></span>
           </xsl:for-each>
         </div>
-
-        <xsl:if test="meta/degrees/inProgress or meta/degrees/obtained">
-          <div class="degrees">
-            <xsl:if test="meta/degrees/inProgress">
-              <p class="degree degree-in-progress">
-                <xsl:value-of select="meta/degrees/inProgress"/>
-                <xsl:text> </xsl:text>
-                <span class="muted">(<xsl:call-template name="t"><xsl:with-param name="k" select="'inProgress'"/></xsl:call-template>)</span>
-              </p>
-            </xsl:if>
-            <xsl:if test="meta/degrees/obtained">
-              <p class="degree degree-obtained"><xsl:value-of select="meta/degrees/obtained"/></p>
-            </xsl:if>
-          </div>
-        </xsl:if>
 
         <xsl:if test="basics/summary">
           <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'about'"/></xsl:call-template></h2>
