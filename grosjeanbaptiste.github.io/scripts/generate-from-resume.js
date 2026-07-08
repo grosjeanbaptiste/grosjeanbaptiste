@@ -64,8 +64,18 @@ for (const lang of LANGS) {
 
 // XML mirrors: one per language × 2 themes, plus EN defaults
 // (resume.xml / resume-minimal.xml) for backwards-compatible links.
-const RICH = '../xslt/resume-transform.xsl';
-const MINIMAL = '../xslt/resume-transform-minimal.xsl';
+// Firefox caches XSLT stylesheets very aggressively — bypass the
+// disk cache by suffixing the href with a short content hash so the
+// URL changes whenever the XSLT does.
+const crypto = require('node:crypto');
+const xsltHash = (rel) =>
+  crypto
+    .createHash('sha1')
+    .update(fs.readFileSync(path.join(ROOT, 'assets/xslt', path.basename(rel))))
+    .digest('hex')
+    .slice(0, 8);
+const RICH = `../xslt/resume-transform.xsl?h=${xsltHash('resume-transform.xsl')}`;
+const MINIMAL = `../xslt/resume-transform-minimal.xsl?h=${xsltHash('resume-transform-minimal.xsl')}`;
 const xmlOutputs = [
   { file: 'resume.xml', theme: RICH, lang: 'en' },
   { file: 'resume-minimal.xml', theme: MINIMAL, lang: 'en' },

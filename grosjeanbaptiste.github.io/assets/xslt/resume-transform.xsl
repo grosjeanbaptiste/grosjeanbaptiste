@@ -409,17 +409,14 @@
             <xsl:call-template name="lang-link"><xsl:with-param name="code" select="'zh'"/></xsl:call-template>
           </div>
 
-          <!-- Theme (rich / minimal) -->
-          <div class="group">
-            <a class="active">
-              <xsl:attribute name="href">/assets/data/resume-<xsl:value-of select="$lang"/>.xml</xsl:attribute>
-              <xsl:call-template name="t"><xsl:with-param name="k" select="'rich'"/></xsl:call-template>
-            </a>
-            <a>
-              <xsl:attribute name="href">/assets/data/resume-<xsl:value-of select="$lang"/>-minimal.xml</xsl:attribute>
+          <!-- Theme toggle: single button pointing to the OTHER theme. -->
+          <a>
+            <xsl:attribute name="href">/assets/data/resume-<xsl:value-of select="$lang"/>-minimal.xml</xsl:attribute>
+            <xsl:attribute name="title">
               <xsl:call-template name="t"><xsl:with-param name="k" select="'minimal'"/></xsl:call-template>
-            </a>
-          </div>
+            </xsl:attribute>
+            ⇄ <xsl:call-template name="t"><xsl:with-param name="k" select="'minimal'"/></xsl:call-template>
+          </a>
 
           <!-- Dark/light toggle -->
           <button type="button" id="theme-toggle" aria-pressed="false">
