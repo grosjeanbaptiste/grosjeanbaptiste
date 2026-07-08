@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=5c1161bf"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=37d77a94"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -40,6 +40,10 @@
       </items>
     </dailyLife>
     <lang>en</lang>
+    <degrees>
+      <inProgress>Master of Science - MS in Computer Science (work-study program) (120 ECTS)</inProgress>
+      <obtained>Professional Bachelor's degree in Information Systems Management</obtained>
+    </degrees>
   </meta>
   <basics>
     <name>Baptiste Grosjean</name>

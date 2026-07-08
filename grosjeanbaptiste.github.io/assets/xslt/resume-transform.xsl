@@ -39,6 +39,7 @@
           <xsl:when test="$k='languages'">Langues</xsl:when>
           <xsl:when test="$k='typicalDay'">Une journée type</xsl:when>
           <xsl:when test="$k='present'">aujourd'hui</xsl:when>
+          <xsl:when test="$k='inProgress'">en cours</xsl:when>
           <xsl:when test="$k='downloadCV'">Télécharger le CV</xsl:when>
           <xsl:when test="$k='dark'">Mode sombre</xsl:when>
           <xsl:when test="$k='light'">Mode clair</xsl:when>
@@ -47,6 +48,10 @@
           <xsl:when test="$k='rich'">riche</xsl:when>
           <xsl:when test="$k='renderedNote'">Rendu depuis</xsl:when>
           <xsl:when test="$k='htmlSite'">Site</xsl:when>
+          <xsl:when test="$k='volunteer'">Bénévolat</xsl:when>
+          <xsl:when test="$k='awards'">Distinctions</xsl:when>
+          <xsl:when test="$k='interests'">Intérêts</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
         </xsl:choose>
       </xsl:when>
       <xsl:when test="$lang = 'nl'">
@@ -61,6 +66,7 @@
           <xsl:when test="$k='languages'">Talen</xsl:when>
           <xsl:when test="$k='typicalDay'">Een typische dag</xsl:when>
           <xsl:when test="$k='present'">heden</xsl:when>
+          <xsl:when test="$k='inProgress'">in uitvoering</xsl:when>
           <xsl:when test="$k='downloadCV'">CV downloaden</xsl:when>
           <xsl:when test="$k='dark'">Donkere modus</xsl:when>
           <xsl:when test="$k='light'">Lichte modus</xsl:when>
@@ -69,6 +75,10 @@
           <xsl:when test="$k='rich'">rijk</xsl:when>
           <xsl:when test="$k='renderedNote'">Gegenereerd uit</xsl:when>
           <xsl:when test="$k='htmlSite'">Site</xsl:when>
+          <xsl:when test="$k='volunteer'">Vrijwilligerswerk</xsl:when>
+          <xsl:when test="$k='awards'">Onderscheidingen</xsl:when>
+          <xsl:when test="$k='interests'">Interesses</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
         </xsl:choose>
       </xsl:when>
       <xsl:when test="$lang = 'es'">
@@ -83,6 +93,7 @@
           <xsl:when test="$k='languages'">Idiomas</xsl:when>
           <xsl:when test="$k='typicalDay'">Un día típico</xsl:when>
           <xsl:when test="$k='present'">actualidad</xsl:when>
+          <xsl:when test="$k='inProgress'">en curso</xsl:when>
           <xsl:when test="$k='downloadCV'">Descargar CV</xsl:when>
           <xsl:when test="$k='dark'">Modo oscuro</xsl:when>
           <xsl:when test="$k='light'">Modo claro</xsl:when>
@@ -91,6 +102,10 @@
           <xsl:when test="$k='rich'">enriquecido</xsl:when>
           <xsl:when test="$k='renderedNote'">Generado desde</xsl:when>
           <xsl:when test="$k='htmlSite'">Sitio</xsl:when>
+          <xsl:when test="$k='volunteer'">Voluntariado</xsl:when>
+          <xsl:when test="$k='awards'">Premios</xsl:when>
+          <xsl:when test="$k='interests'">Intereses</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
         </xsl:choose>
       </xsl:when>
       <xsl:when test="$lang = 'de'">
@@ -105,6 +120,7 @@
           <xsl:when test="$k='languages'">Sprachen</xsl:when>
           <xsl:when test="$k='typicalDay'">Ein typischer Tag</xsl:when>
           <xsl:when test="$k='present'">heute</xsl:when>
+          <xsl:when test="$k='inProgress'">läuft</xsl:when>
           <xsl:when test="$k='downloadCV'">Lebenslauf herunterladen</xsl:when>
           <xsl:when test="$k='dark'">Dunkler Modus</xsl:when>
           <xsl:when test="$k='light'">Heller Modus</xsl:when>
@@ -113,6 +129,10 @@
           <xsl:when test="$k='rich'">reich</xsl:when>
           <xsl:when test="$k='renderedNote'">Generiert aus</xsl:when>
           <xsl:when test="$k='htmlSite'">Website</xsl:when>
+          <xsl:when test="$k='volunteer'">Ehrenamt</xsl:when>
+          <xsl:when test="$k='awards'">Auszeichnungen</xsl:when>
+          <xsl:when test="$k='interests'">Interessen</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
         </xsl:choose>
       </xsl:when>
       <xsl:when test="$lang = 'zh'">
@@ -127,6 +147,7 @@
           <xsl:when test="$k='languages'">语言</xsl:when>
           <xsl:when test="$k='typicalDay'">我的一天</xsl:when>
           <xsl:when test="$k='present'">至今</xsl:when>
+          <xsl:when test="$k='inProgress'">进行中</xsl:when>
           <xsl:when test="$k='downloadCV'">下载简历</xsl:when>
           <xsl:when test="$k='dark'">深色模式</xsl:when>
           <xsl:when test="$k='light'">浅色模式</xsl:when>
@@ -135,6 +156,10 @@
           <xsl:when test="$k='rich'">丰富</xsl:when>
           <xsl:when test="$k='renderedNote'">来源</xsl:when>
           <xsl:when test="$k='htmlSite'">网站</xsl:when>
+          <xsl:when test="$k='volunteer'">志愿服务</xsl:when>
+          <xsl:when test="$k='awards'">奖项</xsl:when>
+          <xsl:when test="$k='interests'">兴趣</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
         </xsl:choose>
       </xsl:when>
       <xsl:otherwise>
@@ -149,6 +174,7 @@
           <xsl:when test="$k='languages'">Languages</xsl:when>
           <xsl:when test="$k='typicalDay'">A Day of My Life</xsl:when>
           <xsl:when test="$k='present'">Present</xsl:when>
+          <xsl:when test="$k='inProgress'">in progress</xsl:when>
           <xsl:when test="$k='downloadCV'">Download CV</xsl:when>
           <xsl:when test="$k='dark'">Dark mode</xsl:when>
           <xsl:when test="$k='light'">Light mode</xsl:when>
@@ -157,6 +183,10 @@
           <xsl:when test="$k='rich'">rich</xsl:when>
           <xsl:when test="$k='renderedNote'">Rendered from</xsl:when>
           <xsl:when test="$k='htmlSite'">Site</xsl:when>
+          <xsl:when test="$k='volunteer'">Volunteer</xsl:when>
+          <xsl:when test="$k='awards'">Awards</xsl:when>
+          <xsl:when test="$k='interests'">Interests</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
         </xsl:choose>
       </xsl:otherwise>
     </xsl:choose>
@@ -470,6 +500,19 @@
               </p>
             </xsl:for-each>
 
+            <xsl:if test="meta/degrees/inProgress">
+              <p class="degree degree-in-progress"><span class="icon">📖</span>
+                <xsl:value-of select="meta/degrees/inProgress"/>
+                <xsl:text> </xsl:text>
+                <span class="degree-status">(<xsl:call-template name="t"><xsl:with-param name="k" select="'inProgress'"/></xsl:call-template>)</span>
+              </p>
+            </xsl:if>
+            <xsl:if test="meta/degrees/obtained">
+              <p class="degree degree-obtained"><span class="icon">🎓</span>
+                <xsl:value-of select="meta/degrees/obtained"/>
+              </p>
+            </xsl:if>
+
             <xsl:variable name="hard" select="key('skill-by-name', 'HardSkills')"/>
             <xsl:if test="$hard/keywords/keyword">
               <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'technicalSkills'"/></xsl:call-template></h2>
@@ -629,6 +672,96 @@
               </xsl:for-each>
             </xsl:if>
 
+            <xsl:if test="volunteer/volunteer-item">
+              <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'volunteer'"/></xsl:call-template></h2>
+              <xsl:for-each select="volunteer/volunteer-item">
+                <div class="item">
+                  <h3>
+                    <xsl:value-of select="position"/>
+                    <xsl:if test="organization"> — <xsl:value-of select="organization"/></xsl:if>
+                  </h3>
+                  <p class="date">
+                    <xsl:value-of select="startDate"/>
+                    <xsl:text> – </xsl:text>
+                    <xsl:choose>
+                      <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
+                      <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
+                    </xsl:choose>
+                  </p>
+                  <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
+                  <xsl:if test="highlights/highlight">
+                    <ul>
+                      <xsl:for-each select="highlights/highlight"><li><xsl:value-of select="."/></li></xsl:for-each>
+                    </ul>
+                  </xsl:if>
+                </div>
+              </xsl:for-each>
+            </xsl:if>
+
+            <xsl:if test="projects/project">
+              <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'projects'"/></xsl:call-template></h2>
+              <xsl:for-each select="projects/project">
+                <div class="item">
+                  <h3>
+                    <xsl:choose>
+                      <xsl:when test="url">
+                        <a target="_blank" rel="noopener">
+                          <xsl:attribute name="href"><xsl:value-of select="url"/></xsl:attribute>
+                          <xsl:value-of select="name"/>
+                        </a>
+                      </xsl:when>
+                      <xsl:otherwise><xsl:value-of select="name"/></xsl:otherwise>
+                    </xsl:choose>
+                  </h3>
+                  <xsl:if test="startDate or endDate">
+                    <p class="date">
+                      <xsl:value-of select="startDate"/>
+                      <xsl:if test="endDate">
+                        <xsl:text> – </xsl:text>
+                        <xsl:value-of select="endDate"/>
+                      </xsl:if>
+                    </p>
+                  </xsl:if>
+                  <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
+                  <xsl:if test="description"><p><xsl:value-of select="description"/></p></xsl:if>
+                  <xsl:if test="keywords/keyword">
+                    <div class="inline-skills skill-tags">
+                      <xsl:for-each select="keywords/keyword"><span class="skill-tag"><xsl:value-of select="."/></span></xsl:for-each>
+                    </div>
+                  </xsl:if>
+                </div>
+              </xsl:for-each>
+            </xsl:if>
+
+            <xsl:if test="awards/award">
+              <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'awards'"/></xsl:call-template></h2>
+              <xsl:for-each select="awards/award">
+                <div class="item">
+                  <h3><xsl:value-of select="title"/></h3>
+                  <p class="date">
+                    <xsl:if test="awarder"><xsl:value-of select="awarder"/></xsl:if>
+                    <xsl:if test="awarder and date"> · </xsl:if>
+                    <xsl:if test="date"><xsl:value-of select="date"/></xsl:if>
+                  </p>
+                  <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
+                </div>
+              </xsl:for-each>
+            </xsl:if>
+
+            <xsl:if test="interests/interest">
+              <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'interests'"/></xsl:call-template></h2>
+              <xsl:for-each select="interests/interest">
+                <div class="item">
+                  <h3><xsl:value-of select="name"/></h3>
+                  <xsl:if test="keywords/keyword">
+                    <div class="inline-skills skill-tags">
+                      <xsl:for-each select="keywords/keyword"><span class="skill-tag"><xsl:value-of select="."/></span></xsl:for-each>
+                    </div>
+                  </xsl:if>
+                </div>
+              </xsl:for-each>
+            </xsl:if>
+
             <xsl:if test="references/reference">
               <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template></h2>
               <xsl:for-each select="references/reference">
@@ -645,6 +778,10 @@
               <a><xsl:attribute name="href">/assets/data/resume-<xsl:value-of select="$lang"/>.xml</xsl:attribute>resume-<xsl:value-of select="$lang"/>.xml</a>
               ·
               <a href="/assets/data/resume.json">resume.json</a>
+              ·
+              <a href="https://registry.jsonresume.org/grosjeanbaptiste" target="_blank" rel="external noopener">
+                <xsl:call-template name="t"><xsl:with-param name="k" select="'registry'"/></xsl:call-template>
+              </a>
               · canonical JSON Resume v1.0.0.
             </div>
 

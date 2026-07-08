@@ -33,6 +33,7 @@
           <xsl:when test="$k='references'">Références</xsl:when>
           <xsl:when test="$k='viewProject'">Voir le projet</xsl:when>
           <xsl:when test="$k='present'">aujourd'hui</xsl:when>
+          <xsl:when test="$k='inProgress'">en cours</xsl:when>
           <xsl:when test="$k='downloadCV'">Télécharger le CV</xsl:when>
           <xsl:when test="$k='dark'">Mode sombre</xsl:when>
           <xsl:when test="$k='light'">Mode clair</xsl:when>
@@ -40,6 +41,8 @@
           <xsl:when test="$k='rich'">riche</xsl:when>
           <xsl:when test="$k='note'">Thème minimal XSLT 1.0. Données canoniques :</xsl:when>
           <xsl:when test="$k='htmlSite'">Site</xsl:when>
+          <xsl:when test="$k='typicalDay'">Une journée type</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
         </xsl:choose>
       </xsl:when>
       <xsl:when test="$lang = 'nl'">
@@ -56,12 +59,15 @@
           <xsl:when test="$k='references'">Referenties</xsl:when>
           <xsl:when test="$k='viewProject'">Bekijk project</xsl:when>
           <xsl:when test="$k='present'">heden</xsl:when>
+          <xsl:when test="$k='inProgress'">in uitvoering</xsl:when>
           <xsl:when test="$k='downloadCV'">CV downloaden</xsl:when>
           <xsl:when test="$k='dark'">Donkere modus</xsl:when>
           <xsl:when test="$k='light'">Lichte modus</xsl:when>
           <xsl:when test="$k='minimal'">minimaal</xsl:when>
           <xsl:when test="$k='rich'">rijk</xsl:when>
           <xsl:when test="$k='note'">Minimaal XSLT 1.0-thema. Canonieke data:</xsl:when>
+          <xsl:when test="$k='typicalDay'">Een typische dag</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
           <xsl:when test="$k='htmlSite'">Site</xsl:when>
         </xsl:choose>
       </xsl:when>
@@ -79,12 +85,15 @@
           <xsl:when test="$k='references'">Referencias</xsl:when>
           <xsl:when test="$k='viewProject'">Ver proyecto</xsl:when>
           <xsl:when test="$k='present'">actualidad</xsl:when>
+          <xsl:when test="$k='inProgress'">en curso</xsl:when>
           <xsl:when test="$k='downloadCV'">Descargar CV</xsl:when>
           <xsl:when test="$k='dark'">Modo oscuro</xsl:when>
           <xsl:when test="$k='light'">Modo claro</xsl:when>
           <xsl:when test="$k='minimal'">mínimo</xsl:when>
           <xsl:when test="$k='rich'">enriquecido</xsl:when>
           <xsl:when test="$k='note'">Tema mínimo XSLT 1.0. Datos canónicos:</xsl:when>
+          <xsl:when test="$k='typicalDay'">Un día típico</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
           <xsl:when test="$k='htmlSite'">Sitio</xsl:when>
         </xsl:choose>
       </xsl:when>
@@ -102,12 +111,15 @@
           <xsl:when test="$k='references'">Referenzen</xsl:when>
           <xsl:when test="$k='viewProject'">Projekt ansehen</xsl:when>
           <xsl:when test="$k='present'">heute</xsl:when>
+          <xsl:when test="$k='inProgress'">läuft</xsl:when>
           <xsl:when test="$k='downloadCV'">Lebenslauf herunterladen</xsl:when>
           <xsl:when test="$k='dark'">Dunkler Modus</xsl:when>
           <xsl:when test="$k='light'">Heller Modus</xsl:when>
           <xsl:when test="$k='minimal'">minimal</xsl:when>
           <xsl:when test="$k='rich'">reich</xsl:when>
           <xsl:when test="$k='note'">Minimales XSLT-1.0-Thema. Kanonische Daten:</xsl:when>
+          <xsl:when test="$k='typicalDay'">Ein typischer Tag</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
           <xsl:when test="$k='htmlSite'">Website</xsl:when>
         </xsl:choose>
       </xsl:when>
@@ -125,12 +137,15 @@
           <xsl:when test="$k='references'">推荐人</xsl:when>
           <xsl:when test="$k='viewProject'">查看项目</xsl:when>
           <xsl:when test="$k='present'">至今</xsl:when>
+          <xsl:when test="$k='inProgress'">进行中</xsl:when>
           <xsl:when test="$k='downloadCV'">下载简历</xsl:when>
           <xsl:when test="$k='dark'">深色模式</xsl:when>
           <xsl:when test="$k='light'">浅色模式</xsl:when>
           <xsl:when test="$k='minimal'">简约</xsl:when>
           <xsl:when test="$k='rich'">丰富</xsl:when>
           <xsl:when test="$k='note'">极简 XSLT 1.0 主题。原始数据：</xsl:when>
+          <xsl:when test="$k='typicalDay'">我的一天</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
           <xsl:when test="$k='htmlSite'">网站</xsl:when>
         </xsl:choose>
       </xsl:when>
@@ -148,12 +163,15 @@
           <xsl:when test="$k='references'">References</xsl:when>
           <xsl:when test="$k='viewProject'">View project</xsl:when>
           <xsl:when test="$k='present'">Present</xsl:when>
+          <xsl:when test="$k='inProgress'">in progress</xsl:when>
           <xsl:when test="$k='downloadCV'">Download CV</xsl:when>
           <xsl:when test="$k='dark'">Dark mode</xsl:when>
           <xsl:when test="$k='light'">Light mode</xsl:when>
           <xsl:when test="$k='minimal'">minimal</xsl:when>
           <xsl:when test="$k='rich'">rich</xsl:when>
           <xsl:when test="$k='note'">Minimal XSLT 1.0 theme. Canonical data:</xsl:when>
+          <xsl:when test="$k='typicalDay'">A Day of My Life</xsl:when>
+          <xsl:when test="$k='registry'">JSON Resume registry</xsl:when>
           <xsl:when test="$k='htmlSite'">Site</xsl:when>
         </xsl:choose>
       </xsl:otherwise>
@@ -392,6 +410,21 @@
           </xsl:for-each>
         </div>
 
+        <xsl:if test="meta/degrees/inProgress or meta/degrees/obtained">
+          <div class="degrees">
+            <xsl:if test="meta/degrees/inProgress">
+              <p class="degree degree-in-progress">
+                <xsl:value-of select="meta/degrees/inProgress"/>
+                <xsl:text> </xsl:text>
+                <span class="muted">(<xsl:call-template name="t"><xsl:with-param name="k" select="'inProgress'"/></xsl:call-template>)</span>
+              </p>
+            </xsl:if>
+            <xsl:if test="meta/degrees/obtained">
+              <p class="degree degree-obtained"><xsl:value-of select="meta/degrees/obtained"/></p>
+            </xsl:if>
+          </div>
+        </xsl:if>
+
         <xsl:if test="basics/summary">
           <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'about'"/></xsl:call-template></h2>
           <p><xsl:value-of select="basics/summary"/></p>
@@ -520,6 +553,22 @@
           </ul>
         </xsl:if>
 
+        <xsl:if test="meta/dailyLife/items/item">
+          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'typicalDay'"/></xsl:call-template></h2>
+          <ul>
+            <xsl:for-each select="meta/dailyLife/items/item">
+              <li>
+                <span class="tag">
+                  <xsl:attribute name="style">background:<xsl:value-of select="color"/></xsl:attribute>
+                  <xsl:text>&#160;</xsl:text>
+                </span>
+                <xsl:text> </xsl:text>
+                <strong><xsl:value-of select="key"/></strong> — <xsl:value-of select="hours"/>h
+              </li>
+            </xsl:for-each>
+          </ul>
+        </xsl:if>
+
         <xsl:if test="awards/award">
           <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'awards'"/></xsl:call-template></h2>
           <ul>
@@ -563,6 +612,10 @@
           <xsl:call-template name="t"><xsl:with-param name="k" select="'note'"/></xsl:call-template>
           <xsl:text> </xsl:text>
           <a href="/assets/data/resume.json">resume.json</a>
+          <xsl:text> · </xsl:text>
+          <a href="https://registry.jsonresume.org/grosjeanbaptiste" target="_blank" rel="external noopener">
+            <xsl:call-template name="t"><xsl:with-param name="k" select="'registry'"/></xsl:call-template>
+          </a>
           <xsl:text> · </xsl:text>
           <a href="https://www.grosjeanbaptiste.com/">grosjeanbaptiste.com</a>.
         </div>
