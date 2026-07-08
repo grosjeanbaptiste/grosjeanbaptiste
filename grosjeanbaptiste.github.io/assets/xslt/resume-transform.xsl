@@ -653,7 +653,7 @@
                     </div>
                   </xsl:if>
 
-                  <xsl:variable name="workRefs" select="/resume/references/reference[$workOrg and contains(name, $workOrg)]"/>
+                  <xsl:variable name="workRefs" select="/resume/references/reference[$workOrg and contains(name, substring($workOrg, 1, 4))]"/>
                   <xsl:if test="$workRefs">
                     <p class="ref-links">
                       <xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template>

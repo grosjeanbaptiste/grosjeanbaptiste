@@ -495,7 +495,7 @@
                   </xsl:for-each>
                 </ul>
               </xsl:if>
-              <xsl:variable name="workRefs" select="/resume/references/reference[$workOrg and contains(name, $workOrg)]"/>
+              <xsl:variable name="workRefs" select="/resume/references/reference[$workOrg and contains(name, substring($workOrg, 1, 4))]"/>
               <xsl:if test="$workRefs">
                 <div class="muted">
                   <xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template>
