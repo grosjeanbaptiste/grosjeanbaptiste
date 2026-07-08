@@ -39,6 +39,11 @@
         </item>
       </items>
     </dailyLife>
+    <brand>
+      <primary>#800020</primary>
+      <accent>#F3890B</accent>
+      <darkBg>#121212</darkBg>
+    </brand>
     <lang>nl</lang>
     <degrees>
       <inProgress>Master of Science — Computerwetenschappen (duaal leren) (120 ECTS)</inProgress>

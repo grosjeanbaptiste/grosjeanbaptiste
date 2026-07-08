@@ -480,6 +480,12 @@ class _Builder(Transformer):
     def meta_daily(self, meta, children):
         return ("daily_life", tuple(children))
 
+    def meta_brand(self, meta, children):
+        return ("brand_tokens", tuple(children))
+
+    def brand_field(self, meta, children):
+        return (str(children[0]), _strip_string(children[1]))
+
     def daily_item(self, meta, children):
         key = str(children[0])
         hours = float(children[1])

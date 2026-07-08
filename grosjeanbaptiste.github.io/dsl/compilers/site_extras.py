@@ -120,4 +120,6 @@ def emit(resume: Resume) -> dict[str, Any]:
         payload["projects"] = extras
     if (daily := _daily_life(resume)) is not None:
         payload["dailyLife"] = daily
+    if resume.meta and resume.meta.brand_tokens:
+        payload["brand"] = dict(resume.meta.brand_tokens)
     return payload

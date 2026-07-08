@@ -46,6 +46,9 @@ function mergeExtras(resume, extras) {
   if (extras.dailyLife) {
     patched.meta = { ...(patched.meta || {}), dailyLife: extras.dailyLife };
   }
+  if (extras.brand) {
+    patched.meta = { ...(patched.meta || {}), brand: extras.brand };
+  }
   return patched;
 }
 

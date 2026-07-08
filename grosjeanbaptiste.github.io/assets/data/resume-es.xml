@@ -39,6 +39,11 @@
         </item>
       </items>
     </dailyLife>
+    <brand>
+      <primary>#800020</primary>
+      <accent>#F3890B</accent>
+      <darkBg>#121212</darkBg>
+    </brand>
     <lang>es</lang>
     <degrees>
       <inProgress>Máster en Ciencias — Informática (alternancia) (120 ECTS)</inProgress>

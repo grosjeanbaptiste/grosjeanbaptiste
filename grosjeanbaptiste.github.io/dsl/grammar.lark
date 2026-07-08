@@ -189,8 +189,11 @@ meta_section: "meta" "{" meta_field+ "}"
 
 meta_field: "theme" value                    -> meta_theme
           | "dailyLife" "{" daily_item+ "}"  -> meta_daily
+          | "brand" "{" brand_field+ "}"     -> meta_brand
 
 daily_item: NAME NUMBER "color" STRING
+
+brand_field: NAME STRING
 
 // ---------------------------------------------------------------------------
 // Shared: values, arrays, dates, translations, refs, flags

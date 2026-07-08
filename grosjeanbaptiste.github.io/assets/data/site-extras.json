@@ -231,5 +231,10 @@
         "color": "#FFFF00"
       }
     ]
+  },
+  "brand": {
+    "primary": "#800020",
+    "accent": "#F3890B",
+    "darkBg": "#121212"
   }
 }

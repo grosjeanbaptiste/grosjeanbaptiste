@@ -97,4 +97,21 @@ console.log(`xml: assets/data/resume{,-minimal,-<lang>{,-minimal}}.xml × ${xmlO
 if (writeIfChanged(path.join(ROOT, 'sitemap.xml'), generateSitemap())) wrote += 1;
 console.log('sitemap: sitemap.xml');
 
+// Brand tokens live in the DSL — sync the two static files that hard-code
+// them: the SVG favicon (bordeaux disc) and the PWA manifest (theme_color).
+const brand = loadResume('en').meta?.brand;
+if (brand?.primary) {
+  const svgPath = path.join(ROOT, 'assets/icons/favicon.svg');
+  const svg = fs.readFileSync(svgPath, 'utf8').replace(/(<circle[^>]*fill=")#[0-9A-Fa-f]{3,8}(")/,
+    `$1${brand.primary}$2`);
+  if (writeIfChanged(svgPath, svg)) wrote += 1;
+
+  const manifestPath = path.join(ROOT, 'manifest.webmanifest');
+  const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+  if (manifest.theme_color !== brand.primary) {
+    manifest.theme_color = brand.primary;
+    if (writeIfChanged(manifestPath, JSON.stringify(manifest, null, 2) + '\n')) wrote += 1;
+  }
+}
+
 console.log(`generate-from-resume: ${wrote} file(s) updated`);

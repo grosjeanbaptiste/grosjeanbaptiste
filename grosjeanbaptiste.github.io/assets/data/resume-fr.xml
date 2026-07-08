@@ -39,6 +39,11 @@
         </item>
       </items>
     </dailyLife>
+    <brand>
+      <primary>#800020</primary>
+      <accent>#F3890B</accent>
+      <darkBg>#121212</darkBg>
+    </brand>
     <lang>fr</lang>
     <degrees>
       <inProgress>Master en Sciences — Informatique (en alternance) (120 ECTS)</inProgress>
