@@ -128,7 +128,7 @@ function generateHead(resume, lang) {
   const summary = (b.summary || b.label || '').replace(/\s+/g, ' ').trim();
   const description = summary.length > 200 ? `${summary.slice(0, 197)}…` : summary;
   const ogTitle = `${b.name} — ${b.label}`;
-  const pageTitle = `${ogTitle} | ${t.pageTitleSuffix}`;
+  const pageTitle = `${b.name} | ${t.pageTitleSuffix}`;
   const { jsonld, imageUrl, hardSkills } = buildJsonLd(resume, lang, b, summary);
   const metaLines = buildMeta(b, lang, description, ogTitle, imageUrl, t, hardSkills);
 
