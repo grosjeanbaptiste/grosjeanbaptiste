@@ -42,31 +42,8 @@ function formatDegreeLine(degree, lang) {
   return parts.join(sep);
 }
 
-function degreeAbbr(studyType) {
-  if (!studyType) return null;
-  if (/master|MSc?\b|MA\b/i.test(studyType)) return 'MSc';
-  if (/bachelor|bachelier|BSc|BA\b/i.test(studyType)) return 'BSc';
-  if (/attestation|certificat/i.test(studyType)) return 'Cert.';
-  if (/CESS|secondaire/i.test(studyType)) return 'CESS';
-  return null;
-}
-
-function highestDegreeAbbr(education) {
-  // Prefer the in-progress degree when it outranks the obtained one, so the
-  // headline abbreviation reflects the highest tier the person is currently
-  // reaching for.
-  const inProgress = highestInProgressDegree(education);
-  const obtained = highestObtainedDegree(education);
-  const inProgressScore = degreeScore(inProgress?.studyType);
-  const obtainedScore = degreeScore(obtained?.studyType);
-  const pick = inProgressScore >= obtainedScore ? inProgress : obtained;
-  return degreeAbbr(pick?.studyType);
-}
-
 module.exports = {
   highestObtainedDegree,
   highestInProgressDegree,
   formatDegreeLine,
-  degreeAbbr,
-  highestDegreeAbbr,
 };

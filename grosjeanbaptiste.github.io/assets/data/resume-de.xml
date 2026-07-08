@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=edf9d438"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=25ca450d"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -43,7 +43,6 @@
     <degrees>
       <inProgress>Master of Science — Informatik (duales Studium) (120 ECTS)</inProgress>
       <obtained>Professioneller Bachelor — Wirtschaftsinformatik</obtained>
-      <abbr>MSc</abbr>
     </degrees>
   </meta>
   <basics>

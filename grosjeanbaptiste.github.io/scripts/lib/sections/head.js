@@ -1,7 +1,6 @@
 const I18N = require('../i18n');
 const { SITE_URL, LANGS, langPath } = require('../config');
 const { escapeHtml } = require('../format');
-const { highestDegreeAbbr } = require('../degrees');
 
 const COUNTRY_NAMES = { BE: 'Belgium', FR: 'France', NL: 'Netherlands', LU: 'Luxembourg' };
 
@@ -128,9 +127,7 @@ function generateHead(resume, lang) {
 
   const summary = (b.summary || b.label || '').replace(/\s+/g, ' ').trim();
   const description = summary.length > 200 ? `${summary.slice(0, 197)}…` : summary;
-  const abbr = highestDegreeAbbr(resume.education);
-  const nameWithAbbr = abbr ? `${b.name}, ${abbr}` : b.name;
-  const ogTitle = `${nameWithAbbr} — ${b.label}`;
+  const ogTitle = `${b.name} — ${b.label}`;
   const pageTitle = `${ogTitle} | ${t.pageTitleSuffix}`;
   const { jsonld, imageUrl, hardSkills } = buildJsonLd(resume, lang, b, summary);
   const metaLines = buildMeta(b, lang, description, ogTitle, imageUrl, t, hardSkills);

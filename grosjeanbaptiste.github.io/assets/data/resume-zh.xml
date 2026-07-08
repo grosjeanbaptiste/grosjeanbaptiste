@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=edf9d438"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=25ca450d"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -43,7 +43,6 @@
     <degrees>
       <inProgress>理学硕士 — 计算机科学 (校企合作项目) (120 ECTS)</inProgress>
       <obtained>文学学士 (BA) — 政治学</obtained>
-      <abbr>BSc</abbr>
     </degrees>
   </meta>
   <basics>
