@@ -2,6 +2,7 @@ const {
   highestObtainedDegree,
   highestInProgressDegree,
   formatDegreeLine,
+  highestDegreeAbbr,
 } = require('./degrees');
 
 const XML_ITEM_NAMES = {
@@ -57,9 +58,11 @@ function generateXml(resume, themePath = '../xslt/resume-transform.xsl', lang = 
   // XSLT 1.0 has no reliable current-date primitive, so we pre-compute here.
   const inProgress = formatDegreeLine(highestInProgressDegree(resume.education), lang);
   const obtained = formatDegreeLine(highestObtainedDegree(resume.education), lang);
+  const abbr = highestDegreeAbbr(resume.education);
   const degrees = {};
   if (inProgress) degrees.inProgress = inProgress;
   if (obtained) degrees.obtained = obtained;
+  if (abbr) degrees.abbr = abbr;
   const meta = { ...(resume.meta || {}), lang };
   if (Object.keys(degrees).length) meta.degrees = degrees;
   const tagged = { ...resume, meta };

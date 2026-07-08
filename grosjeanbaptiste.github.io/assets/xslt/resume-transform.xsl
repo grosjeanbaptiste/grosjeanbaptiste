@@ -198,7 +198,12 @@
       <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title><xsl:value-of select="basics/name"/> — <xsl:value-of select="basics/label"/></title>
+        <title>
+          <xsl:value-of select="basics/name"/>
+          <xsl:if test="meta/degrees/abbr">, <xsl:value-of select="meta/degrees/abbr"/></xsl:if>
+          <xsl:text> — </xsl:text>
+          <xsl:value-of select="basics/label"/>
+        </title>
         <style>
           :root {
             --primary:    #001F5A;
