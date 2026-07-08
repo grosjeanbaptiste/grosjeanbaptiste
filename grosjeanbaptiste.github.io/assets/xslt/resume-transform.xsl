@@ -622,6 +622,28 @@
                       </ul>
                     </div>
                   </xsl:if>
+
+                  <xsl:variable name="workOrg" select="company"/>
+                  <xsl:variable name="workVols" select="/resume/volunteer/volunteer-item[$workOrg and contains($workOrg, substring-before(concat(organization, ' '), ' '))]"/>
+                  <xsl:if test="$workVols">
+                    <div class="embedded-projects">
+                      <p class="label"><xsl:call-template name="t"><xsl:with-param name="k" select="'volunteer'"/></xsl:call-template></p>
+                      <ul>
+                        <xsl:for-each select="$workVols">
+                          <li>
+                            <strong><xsl:value-of select="position"/></strong>
+                            <xsl:text> — </xsl:text>
+                            <xsl:value-of select="startDate"/>
+                            <xsl:text> – </xsl:text>
+                            <xsl:choose>
+                              <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
+                              <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
+                            </xsl:choose>
+                          </li>
+                        </xsl:for-each>
+                      </ul>
+                    </div>
+                  </xsl:if>
                 </div>
               </xsl:for-each>
             </xsl:if>
@@ -668,65 +690,26 @@
                       </ul>
                     </div>
                   </xsl:if>
-                </div>
-              </xsl:for-each>
-            </xsl:if>
 
-            <xsl:if test="volunteer/volunteer-item">
-              <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'volunteer'"/></xsl:call-template></h2>
-              <xsl:for-each select="volunteer/volunteer-item">
-                <div class="item">
-                  <h3>
-                    <xsl:value-of select="position"/>
-                    <xsl:if test="organization"> — <xsl:value-of select="organization"/></xsl:if>
-                  </h3>
-                  <p class="date">
-                    <xsl:value-of select="startDate"/>
-                    <xsl:text> – </xsl:text>
-                    <xsl:choose>
-                      <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
-                      <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
-                    </xsl:choose>
-                  </p>
-                  <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
-                  <xsl:if test="highlights/highlight">
-                    <ul>
-                      <xsl:for-each select="highlights/highlight"><li><xsl:value-of select="."/></li></xsl:for-each>
-                    </ul>
-                  </xsl:if>
-                </div>
-              </xsl:for-each>
-            </xsl:if>
-
-            <xsl:if test="projects/project">
-              <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'projects'"/></xsl:call-template></h2>
-              <xsl:for-each select="projects/project">
-                <div class="item">
-                  <h3>
-                    <xsl:choose>
-                      <xsl:when test="url">
-                        <a target="_blank" rel="noopener">
-                          <xsl:attribute name="href"><xsl:value-of select="url"/></xsl:attribute>
-                          <xsl:value-of select="name"/>
-                        </a>
-                      </xsl:when>
-                      <xsl:otherwise><xsl:value-of select="name"/></xsl:otherwise>
-                    </xsl:choose>
-                  </h3>
-                  <xsl:if test="startDate or endDate">
-                    <p class="date">
-                      <xsl:value-of select="startDate"/>
-                      <xsl:if test="endDate">
-                        <xsl:text> – </xsl:text>
-                        <xsl:value-of select="endDate"/>
-                      </xsl:if>
-                    </p>
-                  </xsl:if>
-                  <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
-                  <xsl:if test="description"><p><xsl:value-of select="description"/></p></xsl:if>
-                  <xsl:if test="keywords/keyword">
-                    <div class="inline-skills skill-tags">
-                      <xsl:for-each select="keywords/keyword"><span class="skill-tag"><xsl:value-of select="."/></span></xsl:for-each>
+                  <xsl:variable name="eduInst" select="institution"/>
+                  <xsl:variable name="eduVols" select="/resume/volunteer/volunteer-item[$eduInst and contains($eduInst, substring-before(concat(organization, ' '), ' '))]"/>
+                  <xsl:if test="$eduVols">
+                    <div class="embedded-projects">
+                      <p class="label"><xsl:call-template name="t"><xsl:with-param name="k" select="'volunteer'"/></xsl:call-template></p>
+                      <ul>
+                        <xsl:for-each select="$eduVols">
+                          <li>
+                            <strong><xsl:value-of select="position"/></strong>
+                            <xsl:text> — </xsl:text>
+                            <xsl:value-of select="startDate"/>
+                            <xsl:text> – </xsl:text>
+                            <xsl:choose>
+                              <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
+                              <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
+                            </xsl:choose>
+                          </li>
+                        </xsl:for-each>
+                      </ul>
                     </div>
                   </xsl:if>
                 </div>
