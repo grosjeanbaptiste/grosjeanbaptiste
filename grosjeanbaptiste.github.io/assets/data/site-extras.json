@@ -1,0 +1,235 @@
+{
+  "_note": "Generated from resume.grosjean by dsl/compile.py. Do not hand-edit.",
+  "work": [
+    {
+      "skills": [
+        "Rust",
+        "Flutter",
+        "Dart",
+        "Tokio",
+        "Docker",
+        "DDD",
+        "CleanArchitecture"
+      ],
+      "projects": [
+        "Acteble"
+      ]
+    },
+    {
+      "skills": [
+        "Python",
+        "Java",
+        ".NET"
+      ]
+    },
+    {
+      "skills": [
+        "Dart",
+        "Flutter"
+      ],
+      "projects": [
+        "Emvi App"
+      ]
+    },
+    {
+      "skills": [
+        "Python",
+        "Whisper"
+      ],
+      "projects": [
+        "Remi"
+      ]
+    },
+    {
+      "skills": [
+        "Python",
+        "SpaCy",
+        "Pandas",
+        "NumPy",
+        ".NET"
+      ],
+      "projects": [
+        "VhAuctions NER Inventory Model"
+      ]
+    },
+    {
+      "skills": [
+        ".NET",
+        "DDD",
+        "CleanCode",
+        "CleanArchitecture"
+      ]
+    },
+    {
+      "skills": [
+        ".NET",
+        "React",
+        "SQL Server"
+      ],
+      "projects": [
+        "VhAuctions"
+      ]
+    },
+    {
+      "projects": [
+        "EduCraft"
+      ]
+    },
+    {
+      "skills": [
+        ".NET",
+        "Blazor",
+        "SQL Server",
+        "DDD"
+      ],
+      "projects": [
+        "Kwalitijd"
+      ]
+    },
+    {
+      "skills": [
+        "SQL Server",
+        "Node.js",
+        "Express.js",
+        "React",
+        "Angular"
+      ],
+      "projects": [
+        "MyWay"
+      ]
+    },
+    null,
+    null,
+    null,
+    {
+      "skills": [
+        ".NET",
+        "Flutter",
+        "SQL Server"
+      ],
+      "projects": [
+        "WebMenu"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "gpa": "In progress (MA2)",
+      "summary": "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — supervised by Gauvain Devillez and Hadrien Mélot at the UMONS Service d'Algorithmique. Reference Python implementation (50+ modules, 214 unit tests at 86 % branch coverage, mypy --strict, PEP 561 typed) with bit-identical reproducibility (SHA-256 hashed datasets, CLI/notebook parity tests). 110-page LaTeX report. Student representative & buddy TandeMons.",
+      "skills": [
+        "Python",
+        "LaTeX",
+        "DDD",
+        "CleanArchitecture"
+      ],
+      "projects": [
+        "Acteble"
+      ],
+      "courses": []
+    },
+    {
+      "gpa": "62.8%, Satis Bene",
+      "summary": "Student representative and tutor. \n\nTFE: WebMenu 2.0",
+      "skills": [
+        "SQL",
+        "C#",
+        ".NET",
+        "Java",
+        "Python",
+        "JS",
+        "HTML",
+        "CSS"
+      ],
+      "projects": [
+        "WebMenu"
+      ],
+      "courses": []
+    },
+    {
+      "gpa": "Attestation",
+      "courses": []
+    },
+    {
+      "gpa": "29 credits earned in 2016-2017, contact me for more information.",
+      "courses": []
+    },
+    {
+      "gpa": "Contact me for more information.",
+      "courses": []
+    },
+    {
+      "gpa": "Contact me for more information.",
+      "courses": []
+    },
+    {
+      "gpa": "Attestation ",
+      "courses": []
+    },
+    {
+      "gpa": "Satis bene",
+      "courses": []
+    },
+    {
+      "courses": []
+    }
+  ],
+  "projects": [
+    {
+      "summary": "Development of a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend."
+    },
+    {
+      "summary": "AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes & barcodes), and an adapted Valhalla routing system for the visually impaired."
+    },
+    {
+      "summary": "Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the facial recognition pipeline."
+    },
+    null,
+    null,
+    {
+      "summary": "Named Entity Recognition machine learning model to extract inventory items from an audio transcription."
+    },
+    {
+      "summary": "Fleet manager for auctions."
+    },
+    {
+      "summary": "Survey manager for sports clubs and federations."
+    },
+    {
+      "summary": "QR code based cash register for HoReCa establishments."
+    }
+  ],
+  "dailyLife": {
+    "items": [
+      {
+        "key": "sleep",
+        "hours": 8,
+        "color": "#F3890B"
+      },
+      {
+        "key": "transport",
+        "hours": 2,
+        "color": "#FF0000"
+      },
+      {
+        "key": "work",
+        "hours": 9,
+        "color": "#001F5A"
+      },
+      {
+        "key": "classes",
+        "hours": 3,
+        "color": "#C0C0C0"
+      },
+      {
+        "key": "sport",
+        "hours": 1,
+        "color": "#008000"
+      },
+      {
+        "key": "others",
+        "hours": 5,
+        "color": "#FFFF00"
+      }
+    ]
+  }
+}
