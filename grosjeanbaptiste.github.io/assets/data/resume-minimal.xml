@@ -362,7 +362,7 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <area>Computer Science (work-study program) (120 ECTS)</area>
       <startDate>2022-10-15</startDate>
       <gpa>In progress (MA2)</gpa>
-      <summary>MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — supervised by Gauvain Devillez and Hadrien Mélot at the UMONS Service d'Algorithmique. Reference Python implementation (50+ modules, 214 unit tests at 86 % branch coverage, mypy --strict, PEP 561 typed) with bit-identical reproducibility (SHA-256 hashed datasets, CLI/notebook parity tests). 110-page LaTeX report. Student representative &amp; buddy TandeMons.</summary>
+      <summary>MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — supervised by Gauvain Devillez and Hadrien Mélot at the UMONS Service d'Algorithmique. Student representative &amp; buddy TandeMons.</summary>
       <skills>
         <skill>Python</skill>
         <skill>LaTeX</skill>

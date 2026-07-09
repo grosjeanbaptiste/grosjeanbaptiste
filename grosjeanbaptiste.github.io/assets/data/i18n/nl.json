@@ -84,7 +84,7 @@
       "studyType": "Master of Science",
       "area": "Computerwetenschappen (duaal leren) (120 ECTS)",
       "gpa": "In uitvoering (MA2)",
-      "summary": "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — onder begeleiding van Gauvain Devillez en Hadrien Mélot in de Service d'Algorithmique van UMONS. Python referentie-implementatie (50+ modules, 214 unit tests met 86 % branch coverage, mypy --strict, PEP 561 getypeerd) met bit-identieke reproduceerbaarheid (SHA-256 gehashte datasets, CLI/notebook pariteitstests). LaTeX-rapport van 110 pagina's. Studentenvertegenwoordiger & buddy TandeMons."
+      "summary": "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — onder begeleiding van Gauvain Devillez en Hadrien Mélot in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger & buddy TandeMons."
     },
     {
       "studyType": "Professionele bachelor",

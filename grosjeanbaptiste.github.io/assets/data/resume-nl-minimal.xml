@@ -362,7 +362,7 @@ De opleiding behandelde SQL Server, Node.js, Express.js, React en Angular, van d
       <area>Computerwetenschappen (duaal leren) (120 ECTS)</area>
       <startDate>2022-10-15</startDate>
       <gpa>In uitvoering (MA2)</gpa>
-      <summary>Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — onder begeleiding van Gauvain Devillez en Hadrien Mélot in de Service d'Algorithmique van UMONS. Python referentie-implementatie (50+ modules, 214 unit tests met 86 % branch coverage, mypy --strict, PEP 561 getypeerd) met bit-identieke reproduceerbaarheid (SHA-256 gehashte datasets, CLI/notebook pariteitstests). LaTeX-rapport van 110 pagina's. Studentenvertegenwoordiger &amp; buddy TandeMons.</summary>
+      <summary>Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — onder begeleiding van Gauvain Devillez en Hadrien Mélot in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger &amp; buddy TandeMons.</summary>
       <skills>
         <skill>Python</skill>
         <skill>LaTeX</skill>

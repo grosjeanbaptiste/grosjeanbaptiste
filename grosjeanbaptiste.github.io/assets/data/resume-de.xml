@@ -362,7 +362,7 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
       <area>Informatik (duales Studium) (120 ECTS)</area>
       <startDate>2022-10-15</startDate>
       <gpa>Laufend (MA2)</gpa>
-      <summary>Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — betreut von Gauvain Devillez und Hadrien Mélot am Service d'Algorithmique der UMONS. Python-Referenzimplementierung (50+ Module, 214 Unit-Tests mit 86 % Branch Coverage, mypy --strict, PEP 561 typisiert) mit bit-identischer Reproduzierbarkeit (SHA-256 gehashte Datasets, CLI/Notebook-Paritätstests). 110-seitiger LaTeX-Bericht. Studierendenvertreter &amp; Buddy TandeMons.</summary>
+      <summary>Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — betreut von Gauvain Devillez und Hadrien Mélot am Service d'Algorithmique der UMONS. Studierendenvertreter &amp; Buddy TandeMons.</summary>
       <skills>
         <skill>Python</skill>
         <skill>LaTeX</skill>

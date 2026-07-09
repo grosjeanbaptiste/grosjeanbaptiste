@@ -362,7 +362,7 @@
       <area>计算机科学 (校企合作项目) (120 ECTS)</area>
       <startDate>2022-10-15</startDate>
       <gpa>进行中 (MA2)</gpa>
-      <summary>硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 由蒙斯大学 (UMONS) 算法服务部的 Gauvain Devillez 和 Hadrien Mélot 指导。Python 参考实现 (50+ 模块、214 个单元测试、86% 分支覆盖率、mypy --strict、PEP 561 类型化) 具有比特级可复现性 (SHA-256 哈希数据集、CLI/Notebook 等价性测试)。110 页 LaTeX 报告。学生代表 &amp; Buddy TandeMons。</summary>
+      <summary>硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 由蒙斯大学 (UMONS) 算法服务部的 Gauvain Devillez 和 Hadrien Mélot 指导。学生代表 &amp; Buddy TandeMons。</summary>
       <skills>
         <skill>Python</skill>
         <skill>LaTeX</skill>

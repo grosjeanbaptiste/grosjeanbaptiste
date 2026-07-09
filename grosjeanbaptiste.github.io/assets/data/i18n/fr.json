@@ -84,7 +84,7 @@
       "studyType": "Master en Sciences",
       "area": "Informatique (en alternance) (120 ECTS)",
       "gpa": "En cours (MA2)",
-      "summary": "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — encadré par Gauvain Devillez et Hadrien Mélot au Service d'Algorithmique de l'UMONS. Implémentation Python de référence (50+ modules, 214 tests unitaires à 86 % de couverture branches, mypy --strict, typé PEP 561) avec reproductibilité bit-identique (datasets hashés SHA-256, tests de parité CLI/notebook). Rapport LaTeX de 110 pages. Délégué étudiant & buddy TandeMons."
+      "summary": "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — encadré par Gauvain Devillez et Hadrien Mélot au Service d'Algorithmique de l'UMONS. Délégué étudiant & buddy TandeMons."
     },
     {
       "studyType": "Bachelier professionnalisant",
