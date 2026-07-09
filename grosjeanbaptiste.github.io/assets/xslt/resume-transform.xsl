@@ -201,29 +201,29 @@
         <title><xsl:value-of select="basics/name"/></title>
         <style>
           :root {
-            --primary:    #001F5A;
-            --accent:     #F3890B;
-            --body:       #2E2E2E;
-            --muted:      #666;
-            --bg-page:    #ffffff;
-            --bg-sidebar: #E2E2E2;
+            --primary:    <xsl:value-of select="meta/brand/xsltPrimary"/>;
+            --accent:     <xsl:value-of select="meta/brand/accent"/>;
+            --body:       <xsl:value-of select="meta/brand/xsltBody"/>;
+            --muted:      <xsl:value-of select="meta/brand/xsltMuted"/>;
+            --bg-page:    <xsl:value-of select="meta/brand/xsltBg"/>;
+            --bg-sidebar: <xsl:value-of select="meta/brand/xsltRuleLight"/>;
             --bg-block:   rgba(243, 137, 11, 0.05);
-            --rule:       #ddd;
+            --rule:       <xsl:value-of select="meta/brand/xsltRuleRich"/>;
           }
           html[data-theme="dark"] {
-            --primary:    #FFB142;
-            --accent:     #FFB142;
-            --body:       #EDE0C8;
-            --muted:      #B89A82;
-            --bg-page:    #1F0E0E;
-            --bg-sidebar: #2E1818;
+            --primary:    <xsl:value-of select="meta/brand/xsltPrimaryDark"/>;
+            --accent:     <xsl:value-of select="meta/brand/xsltPrimaryDark"/>;
+            --body:       <xsl:value-of select="meta/brand/xsltBodyDark"/>;
+            --muted:      <xsl:value-of select="meta/brand/xsltMutedDark"/>;
+            --bg-page:    <xsl:value-of select="meta/brand/xsltBgDark"/>;
+            --bg-sidebar: <xsl:value-of select="meta/brand/xsltSidebarDark"/>;
             --bg-block:   rgba(255, 177, 66, 0.10);
-            --rule:       #4A2828;
+            --rule:       <xsl:value-of select="meta/brand/xsltRuleDark"/>;
           }
           * { box-sizing: border-box; }
           body {
             margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            font-family: <xsl:value-of select="meta/brand/fontXslt"/>;
             color: var(--body);
             background: var(--bg-page);
             line-height: 1.45;

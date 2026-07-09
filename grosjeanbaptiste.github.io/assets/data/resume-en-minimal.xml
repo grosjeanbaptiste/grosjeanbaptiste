@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=676a19dd"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=8d117149"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -43,6 +43,36 @@
       <primary>#800020</primary>
       <accent>#F3890B</accent>
       <darkBg>#121212</darkBg>
+      <siteSecondary>#ff0000</siteSecondary>
+      <siteBody>#666666</siteBody>
+      <siteEmphasis>#2e2e2e</siteEmphasis>
+      <siteBg>#e2e2e2</siteBg>
+      <siteCard>#ffffff</siteCard>
+      <siteBorder>#dddddd</siteBorder>
+      <sitePrimaryDark>#ff4d6d</sitePrimaryDark>
+      <siteSecondaryDark>#ff6b6b</siteSecondaryDark>
+      <siteAccentDark>#ffb347</siteAccentDark>
+      <siteBodyDark>#cccccc</siteBodyDark>
+      <siteEmphasisDark>#e0e0e0</siteEmphasisDark>
+      <siteCardDark>#1e1e1e</siteCardDark>
+      <siteBorderDark>#333333</siteBorderDark>
+      <xsltPrimary>#001F5A</xsltPrimary>
+      <xsltBody>#2E2E2E</xsltBody>
+      <xsltMuted>#666</xsltMuted>
+      <xsltBg>#ffffff</xsltBg>
+      <xsltRuleLight>#E2E2E2</xsltRuleLight>
+      <xsltRuleRich>#ddd</xsltRuleRich>
+      <xsltBlockMin>#555</xsltBlockMin>
+      <xsltTbBg>#F7F7F7</xsltTbBg>
+      <xsltPrimaryDark>#FFB142</xsltPrimaryDark>
+      <xsltBodyDark>#EDE0C8</xsltBodyDark>
+      <xsltMutedDark>#B89A82</xsltMutedDark>
+      <xsltBgDark>#1F0E0E</xsltBgDark>
+      <xsltSidebarDark>#2E1818</xsltSidebarDark>
+      <xsltRuleDark>#4A2828</xsltRuleDark>
+      <xsltBlockMinDark>#D4C0A0</xsltBlockMinDark>
+      <fontXslt>-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif</fontXslt>
+      <fontSite>'Roboto', sans-serif</fontSite>
     </brand>
     <sectionOrder>
       <section>about</section>

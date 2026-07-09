@@ -189,27 +189,27 @@
         <title><xsl:value-of select="basics/name"/> — Resume</title>
         <style>
           :root {
-            --primary: #001F5A;
-            --accent:  #F3890B;
-            --muted:   #666;
-            --body:    #2E2E2E;
-            --bg:      #ffffff;
-            --rule:    #E2E2E2;
-            --block:   #555;
-            --tb-bg:   #F7F7F7;
+            --primary: <xsl:value-of select="meta/brand/xsltPrimary"/>;
+            --accent:  <xsl:value-of select="meta/brand/accent"/>;
+            --muted:   <xsl:value-of select="meta/brand/xsltMuted"/>;
+            --body:    <xsl:value-of select="meta/brand/xsltBody"/>;
+            --bg:      <xsl:value-of select="meta/brand/xsltBg"/>;
+            --rule:    <xsl:value-of select="meta/brand/xsltRuleLight"/>;
+            --block:   <xsl:value-of select="meta/brand/xsltBlockMin"/>;
+            --tb-bg:   <xsl:value-of select="meta/brand/xsltTbBg"/>;
           }
           html[data-theme="dark"] {
-            --primary: #FFB142;
-            --accent:  #FFB142;
-            --muted:   #B89A82;
-            --body:    #EDE0C8;
-            --bg:      #1F0E0E;
-            --rule:    #4A2828;
-            --block:   #D4C0A0;
-            --tb-bg:   #2E1818;
+            --primary: <xsl:value-of select="meta/brand/xsltPrimaryDark"/>;
+            --accent:  <xsl:value-of select="meta/brand/xsltPrimaryDark"/>;
+            --muted:   <xsl:value-of select="meta/brand/xsltMutedDark"/>;
+            --body:    <xsl:value-of select="meta/brand/xsltBodyDark"/>;
+            --bg:      <xsl:value-of select="meta/brand/xsltBgDark"/>;
+            --rule:    <xsl:value-of select="meta/brand/xsltRuleDark"/>;
+            --block:   <xsl:value-of select="meta/brand/xsltBlockMinDark"/>;
+            --tb-bg:   <xsl:value-of select="meta/brand/xsltSidebarDark"/>;
           }
           body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            font-family: <xsl:value-of select="meta/brand/fontXslt"/>;
             max-width: 880px;
             margin: 0 auto;
             padding: 0 24px 48px;

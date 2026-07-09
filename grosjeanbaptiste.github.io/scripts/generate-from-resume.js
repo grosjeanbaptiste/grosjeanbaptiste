@@ -97,8 +97,9 @@ console.log(`xml: assets/data/resume{,-minimal,-<lang>{,-minimal}}.xml × ${xmlO
 if (writeIfChanged(path.join(ROOT, 'sitemap.xml'), generateSitemap())) wrote += 1;
 console.log('sitemap: sitemap.xml');
 
-// Brand tokens live in the DSL — sync the two static files that hard-code
-// them: the SVG favicon (bordeaux disc) and the PWA manifest (theme_color).
+// Brand tokens live in the DSL — sync the static files that hard-code them:
+// the SVG favicon (bordeaux disc), the PWA manifest (theme_color), and
+// css/variables.css (whole CSS var block, both themes).
 const brand = loadResume('en').meta?.brand;
 if (brand?.primary) {
   const svgPath = path.join(ROOT, 'assets/icons/favicon.svg');
@@ -112,6 +113,64 @@ if (brand?.primary) {
     manifest.theme_color = brand.primary;
     if (writeIfChanged(manifestPath, JSON.stringify(manifest, null, 2) + '\n')) wrote += 1;
   }
+
+  const hexToRgb = (h) => {
+    const m = /^#([0-9A-Fa-f]{2})([0-9A-Fa-f]{2})([0-9A-Fa-f]{2})$/.exec(h);
+    if (!m) return null;
+    return `${parseInt(m[1], 16)}, ${parseInt(m[2], 16)}, ${parseInt(m[3], 16)}`;
+  };
+  const b = brand;
+  const varsCss = [
+    '/* Auto-generated from dsl/resume.grosjean meta.brand. Do not hand-edit. */',
+    '/* Default light theme */',
+    ':root {',
+    '  /* Colors */',
+    `  --primary-color: ${b.primary}; /* Bordeaux */`,
+    `  --secondary-color: ${b.siteSecondary}; /* Rouge */`,
+    `  --third-color: ${b.accent.toLowerCase()}; /* Orange foncé */`,
+    `  --body-color: ${b.siteBody}; /* Gris foncé */`,
+    `  --emphasis-color: ${b.siteEmphasis}; /* Gris très foncé */`,
+    `  --background-color: ${b.siteBg}; /* Gris clair */`,
+    `  --card-background: ${b.siteCard}; /* White for cards */`,
+    `  --text-color: ${b.siteEmphasis}; /* Dark text */`,
+    `  --border-color: ${b.siteBorder}; /* Light border */`,
+    `  --primary-color-rgb: ${hexToRgb(b.primary)}; /* RGB for primary color in light mode */`,
+    `  --card-background-rgb: ${hexToRgb(b.siteCard)}; /* RGB for card background in light mode */`,
+    '}',
+    '',
+    '/* Dark theme */',
+    '[data-theme="dark"] {',
+    `  --primary-color: ${b.sitePrimaryDark}; /* Lighter red for better visibility */`,
+    `  --secondary-color: ${b.siteSecondaryDark}; /* Softer red */`,
+    `  --third-color: ${b.siteAccentDark}; /* Lighter orange */`,
+    `  --body-color: ${b.siteBodyDark}; /* Lighter gray for better readability */`,
+    `  --emphasis-color: ${b.siteEmphasisDark}; /* Light gray for emphasis */`,
+    `  --background-color: ${b.darkBg}; /* Dark background */`,
+    `  --card-background: ${b.siteCardDark}; /* Slightly lighter than background */`,
+    `  --text-color: ${b.siteEmphasisDark}; /* Light text */`,
+    `  --border-color: ${b.siteBorderDark}; /* Dark border */`,
+    `  --primary-color-rgb: ${hexToRgb(b.sitePrimaryDark)}; /* RGB for primary color in dark mode */`,
+    `  --card-background-rgb: ${hexToRgb(b.siteCardDark)}; /* RGB for card background in dark mode */`,
+    '}',
+    '',
+    '/* System preference for dark mode */',
+    '@media (prefers-color-scheme: dark) {',
+    '  :root:not([data-theme="light"]) {',
+    `    --primary-color: ${b.sitePrimaryDark};`,
+    `    --secondary-color: ${b.siteSecondaryDark};`,
+    `    --third-color: ${b.siteAccentDark};`,
+    `    --body-color: ${b.siteBodyDark};`,
+    `    --emphasis-color: ${b.siteEmphasisDark};`,
+    `    --background-color: ${b.darkBg};`,
+    `    --card-background: ${b.siteCardDark};`,
+    `    --text-color: ${b.siteEmphasisDark};`,
+    `    --border-color: ${b.siteBorderDark};`,
+    '  }',
+    '}',
+    '',
+  ].join('\n');
+  const varsPath = path.join(ROOT, 'css/variables.css');
+  if (writeIfChanged(varsPath, varsCss)) wrote += 1;
 }
 
 console.log(`generate-from-resume: ${wrote} file(s) updated`);
