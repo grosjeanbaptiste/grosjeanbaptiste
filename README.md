@@ -21,9 +21,11 @@
 
 Passionate AI Software Crafter Lead with expertise in full-stack development as well as AI solutions. Currently pursuing a Master's Degree in Computer Science at [University of Mons (UMons)](https://www.umons.be/).
 
+<!-- LLM-ABOUT-FACTS -->
 - **📍 Location**: Kraainem, Belgium
-- **🎓 Education**: Master's in Computer Science, UMons
-- **💻 Current Focus**: Leading development of Acteble - building a high-performance Rust backend and cross-platform Flutter mobile application [Acteble](https://acteble.com)
+- **🎓 Education**: Master of Science - MS in Computer Science (work-study program) (120 ECTS), UMons
+- **💻 Current Focus**: Building Acteble, a geo-located social platform that pairs travelers around shared activities under spatio-temporal and multi-criteria constraints. — [Acteble](https://www.acteble.com)
+<!-- /LLM-ABOUT-FACTS -->
 - **💼 Portfolio**: [View My Portfolio](https://my-way-bg.vercel.app/about/way)
 - **📄 Resume**: [View My Resume](https://registry.jsonresume.org/grosjeanbaptiste)
 - **🔍 Professional Profile**: [View on JSON Resume](https://registry.jsonresume.org/grosjeanbaptiste/dashboard)
@@ -118,8 +120,12 @@ Le pipeline est déterministe et byte-identical : recompiler la même source don
 
 ## 📫 Contact Information
 <p align="center">
-  <a href="mailto:grosjeanbaptisteit@outlook.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
-  <a href="tel:+32496289705"><img src="https://img.shields.io/badge/Phone-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Phone"></a>
+  <!-- LLM-EMAIL -->
+<a href="mailto:grosjeanbaptisteit@outlook.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+<!-- /LLM-EMAIL -->
+  <!-- LLM-PHONE -->
+<a href="tel:+32496289705"><img src="https://img.shields.io/badge/Phone-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Phone"></a>
+<!-- /LLM-PHONE -->
 </p>
 
 <p align="center">
