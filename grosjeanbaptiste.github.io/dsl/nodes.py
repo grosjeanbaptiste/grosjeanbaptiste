@@ -237,6 +237,7 @@ class Meta(Node):
     theme: str | None = None
     daily_life: tuple[DailyItem, ...] = ()
     brand_tokens: tuple[tuple[str, str], ...] = ()
+    section_order: tuple[str, ...] = ()
 
 
 # ---------------------------------------------------------------------------

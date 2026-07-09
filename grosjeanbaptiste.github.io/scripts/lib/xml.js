@@ -19,6 +19,7 @@ const XML_ITEM_NAMES = {
   keywords: 'keyword',
   courses: 'course',
   roles: 'role',
+  sectionOrder: 'section',
 };
 
 const xmlEsc = (s) =>

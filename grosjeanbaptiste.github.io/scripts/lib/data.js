@@ -49,6 +49,9 @@ function mergeExtras(resume, extras) {
   if (extras.brand) {
     patched.meta = { ...(patched.meta || {}), brand: extras.brand };
   }
+  if (extras.sectionOrder) {
+    patched.meta = { ...(patched.meta || {}), sectionOrder: extras.sectionOrder };
+  }
   return patched;
 }
 

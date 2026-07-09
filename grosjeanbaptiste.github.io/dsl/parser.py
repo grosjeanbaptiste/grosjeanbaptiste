@@ -486,6 +486,12 @@ class _Builder(Transformer):
     def brand_field(self, meta, children):
         return (str(children[0]), _strip_string(children[1]))
 
+    def meta_section_order(self, meta, children):
+        return ("section_order", tuple(children))
+
+    def section_name(self, meta, children):
+        return str(children[0])
+
     def daily_item(self, meta, children):
         key = str(children[0])
         hours = float(children[1])

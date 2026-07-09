@@ -190,10 +190,13 @@ meta_section: "meta" "{" meta_field+ "}"
 meta_field: "theme" value                    -> meta_theme
           | "dailyLife" "{" daily_item+ "}"  -> meta_daily
           | "brand" "{" brand_field+ "}"     -> meta_brand
+          | "sectionOrder" "[" section_name+ "]"  -> meta_section_order
 
 daily_item: NAME NUMBER "color" STRING
 
 brand_field: NAME STRING
+
+section_name: NAME
 
 // ---------------------------------------------------------------------------
 // Shared: values, arrays, dates, translations, refs, flags

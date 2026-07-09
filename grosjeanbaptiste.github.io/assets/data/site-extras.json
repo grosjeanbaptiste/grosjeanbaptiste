@@ -236,5 +236,16 @@
     "primary": "#800020",
     "accent": "#F3890B",
     "darkBg": "#121212"
-  }
+  },
+  "sectionOrder": [
+    "about",
+    "work",
+    "education",
+    "skills",
+    "languages",
+    "dailyLife",
+    "awards",
+    "interests",
+    "references"
+  ]
 }

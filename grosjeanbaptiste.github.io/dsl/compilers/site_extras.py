@@ -122,4 +122,6 @@ def emit(resume: Resume) -> dict[str, Any]:
         payload["dailyLife"] = daily
     if resume.meta and resume.meta.brand_tokens:
         payload["brand"] = dict(resume.meta.brand_tokens)
+    if resume.meta and resume.meta.section_order:
+        payload["sectionOrder"] = list(resume.meta.section_order)
     return payload

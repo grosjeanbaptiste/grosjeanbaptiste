@@ -112,63 +112,72 @@ function renderContact(b, t, lang) {
   ].join('\n');
 }
 
+function renderWorkSection(resume, lang, t) {
+  if (!resume.work?.length) return null;
+  const items = resume.work
+    .map((w) => indentLines(renderExperienceItem(w, lang, resume.projects || [], t), 2))
+    .join('\n');
+  return [
+    '<section id="experience">',
+    `  <h2>${escapeHtml(t.experience)}</h2>`,
+    items,
+    '</section>',
+  ].join('\n');
+}
+
+function renderEducationSection(resume, lang, t) {
+  if (!resume.education?.length) return null;
+  const items = resume.education
+    .map((e) => indentLines(renderEducationItem(e, lang, resume.projects || [], t), 2))
+    .join('\n');
+  return [
+    '<section id="education">',
+    `  <h2>${escapeHtml(t.education)}</h2>`,
+    items,
+    '</section>',
+  ].join('\n');
+}
+
+function renderReferencesSection(resume, t) {
+  if (!resume.references?.length) return null;
+  const items = resume.references
+    .map((r) =>
+      indentLines(
+        [
+          '<article class="reference-item">',
+          `  <p><strong>${escapeHtml(r.name)}</strong></p>`,
+          `  <blockquote>${escapeHtml(r.reference).replace(/\n/g, '<br>')}</blockquote>`,
+          '</article>',
+        ].join('\n'),
+        2,
+      ),
+    )
+    .join('\n');
+  return [
+    '<section id="references">',
+    `  <h2>${escapeHtml(t.references)}</h2>`,
+    items,
+    '</section>',
+  ].join('\n');
+}
+
+// Maps a section name from meta.sectionOrder to a renderer for the HTML main
+// column. Sections not listed here (skills/languages/dailyLife → sidebar,
+// awards/interests → not part of the HTML site) are silently skipped when they
+// appear in the order.
+const MAIN_RENDERERS = {
+  about: (resume, lang, t) => renderAbout(resume, t),
+  work: renderWorkSection,
+  education: renderEducationSection,
+  references: (resume, lang, t) => renderReferencesSection(resume, t),
+};
+
 function generateMain(resume, lang) {
   const t = I18N[lang];
-  const projects = resume.projects || [];
-  const sections = [renderAbout(resume, t)];
-
-  if (resume.work?.length) {
-    const items = resume.work
-      .map((w) => indentLines(renderExperienceItem(w, lang, projects, t), 2))
-      .join('\n');
-    sections.push(
-      [
-        '<section id="experience">',
-        `  <h2>${escapeHtml(t.experience)}</h2>`,
-        items,
-        '</section>',
-      ].join('\n'),
-    );
-  }
-
-  if (resume.education?.length) {
-    const items = resume.education
-      .map((e) => indentLines(renderEducationItem(e, lang, projects, t), 2))
-      .join('\n');
-    sections.push(
-      [
-        '<section id="education">',
-        `  <h2>${escapeHtml(t.education)}</h2>`,
-        items,
-        '</section>',
-      ].join('\n'),
-    );
-  }
-
-  if (resume.references?.length) {
-    const items = resume.references
-      .map((r) =>
-        indentLines(
-          [
-            '<article class="reference-item">',
-            `  <p><strong>${escapeHtml(r.name)}</strong></p>`,
-            `  <blockquote>${escapeHtml(r.reference).replace(/\n/g, '<br>')}</blockquote>`,
-            '</article>',
-          ].join('\n'),
-          2,
-        ),
-      )
-      .join('\n');
-    sections.push(
-      [
-        '<section id="references">',
-        `  <h2>${escapeHtml(t.references)}</h2>`,
-        items,
-        '</section>',
-      ].join('\n'),
-    );
-  }
-
+  const order = resume.meta?.sectionOrder ?? ['about', 'work', 'education', 'references'];
+  const sections = order
+    .map((name) => MAIN_RENDERERS[name]?.(resume, lang, t))
+    .filter(Boolean);
   sections.push(renderContact(resume.basics, t, lang));
   return sections.join('\n\n');
 }

@@ -427,14 +427,70 @@
           </xsl:for-each>
         </div>
 
-        <xsl:if test="basics/summary">
-          <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'about'"/></xsl:call-template></h2>
-          <p><xsl:value-of select="basics/summary"/></p>
-        </xsl:if>
+        <xsl:for-each select="meta/sectionOrder/section">
+          <xsl:variable name="name" select="."/>
+          <xsl:choose>
+            <xsl:when test="$name='about'"><xsl:call-template name="section-about"/></xsl:when>
+            <xsl:when test="$name='work'"><xsl:call-template name="section-work"/></xsl:when>
+            <xsl:when test="$name='education'"><xsl:call-template name="section-education"/></xsl:when>
+            <xsl:when test="$name='skills'"><xsl:call-template name="section-skills"/></xsl:when>
+            <xsl:when test="$name='languages'"><xsl:call-template name="section-languages"/></xsl:when>
+            <xsl:when test="$name='dailyLife'"><xsl:call-template name="section-dailyLife"/></xsl:when>
+            <xsl:when test="$name='awards'"><xsl:call-template name="section-awards"/></xsl:when>
+            <xsl:when test="$name='interests'"><xsl:call-template name="section-interests"/></xsl:when>
+            <xsl:when test="$name='references'"><xsl:call-template name="section-references"/></xsl:when>
+          </xsl:choose>
+        </xsl:for-each>
 
-        <xsl:if test="work/job">
+        <div class="stylesheet-note">
+          <xsl:call-template name="t"><xsl:with-param name="k" select="'note'"/></xsl:call-template>
+          <xsl:text> </xsl:text>
+          <a href="/assets/data/resume.json">resume.json</a>
+          <xsl:text> · </xsl:text>
+          <a href="https://registry.jsonresume.org/grosjeanbaptiste" target="_blank" rel="external noopener">
+            <xsl:call-template name="t"><xsl:with-param name="k" select="'registry'"/></xsl:call-template>
+          </a>
+          <xsl:text> · </xsl:text>
+          <a href="https://www.grosjeanbaptiste.com/">grosjeanbaptiste.com</a>.
+        </div>
+
+        <script>
+          (function() {
+            var btn = document.getElementById('theme-toggle');
+            var label = document.getElementById('theme-toggle-label');
+            var labels = { dark: '<xsl:call-template name="t"><xsl:with-param name="k" select="'dark'"/></xsl:call-template>',
+                           light: '<xsl:call-template name="t"><xsl:with-param name="k" select="'light'"/></xsl:call-template>' };
+            function syncLabel() {
+              var t = document.documentElement.getAttribute('data-theme') || 'light';
+              label.textContent = (t === 'dark') ? labels.light : labels.dark;
+              btn.setAttribute('aria-pressed', t === 'dark' ? 'true' : 'false');
+            }
+            syncLabel();
+            btn.addEventListener('click', function() {
+              var current = document.documentElement.getAttribute('data-theme') || 'light';
+              var next = current === 'dark' ? 'light' : 'dark';
+              document.documentElement.setAttribute('data-theme', next);
+              try { localStorage.setItem('xslt-theme', next); } catch (e) {}
+              syncLabel();
+            });
+          })();
+        </script>
+
+      </body>
+    </html>
+  </xsl:template>
+
+  <xsl:template name="section-about">
+    <xsl:if test="/resume/basics/summary">
+      <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'about'"/></xsl:call-template></h2>
+      <p><xsl:value-of select="/resume/basics/summary"/></p>
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template name="section-work">
+    <xsl:if test="/resume/work/job">
           <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'experience'"/></xsl:call-template></h2>
-          <xsl:for-each select="work/job">
+          <xsl:for-each select="/resume/work/job">
             <div class="row">
               <h3>
                 <xsl:value-of select="position"/>
@@ -508,10 +564,12 @@
             </div>
           </xsl:for-each>
         </xsl:if>
+  </xsl:template>
 
-        <xsl:if test="education/school">
+  <xsl:template name="section-education">
+    <xsl:if test="/resume/education/school">
           <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'education'"/></xsl:call-template></h2>
-          <xsl:for-each select="education/school">
+          <xsl:for-each select="/resume/education/school">
             <div class="row">
               <h3>
                 <xsl:value-of select="studyType"/>
@@ -581,10 +639,12 @@
             </div>
           </xsl:for-each>
         </xsl:if>
+  </xsl:template>
 
-        <xsl:if test="skills/skill">
+  <xsl:template name="section-skills">
+    <xsl:if test="/resume/skills/skill">
           <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'skills'"/></xsl:call-template></h2>
-          <xsl:for-each select="skills/skill">
+          <xsl:for-each select="/resume/skills/skill">
             <h3><xsl:value-of select="name"/></h3>
             <xsl:if test="keywords/keyword">
               <div>
@@ -595,20 +655,24 @@
             </xsl:if>
           </xsl:for-each>
         </xsl:if>
+  </xsl:template>
 
-        <xsl:if test="languages/language-item">
+  <xsl:template name="section-languages">
+    <xsl:if test="/resume/languages/language-item">
           <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'languages'"/></xsl:call-template></h2>
           <ul>
-            <xsl:for-each select="languages/language-item">
+            <xsl:for-each select="/resume/languages/language-item">
               <li><strong><xsl:value-of select="language"/></strong>: <xsl:value-of select="fluency"/></li>
             </xsl:for-each>
           </ul>
         </xsl:if>
+  </xsl:template>
 
-        <xsl:if test="meta/dailyLife/items/item">
+  <xsl:template name="section-dailyLife">
+    <xsl:if test="/resume/meta/dailyLife/items/item">
           <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'typicalDay'"/></xsl:call-template></h2>
           <ul>
-            <xsl:for-each select="meta/dailyLife/items/item">
+            <xsl:for-each select="/resume/meta/dailyLife/items/item">
               <li>
                 <span class="tag">
                   <xsl:attribute name="style">background:<xsl:value-of select="color"/></xsl:attribute>
@@ -620,11 +684,13 @@
             </xsl:for-each>
           </ul>
         </xsl:if>
+  </xsl:template>
 
-        <xsl:if test="awards/award">
+  <xsl:template name="section-awards">
+    <xsl:if test="/resume/awards/award">
           <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'awards'"/></xsl:call-template></h2>
           <ul>
-            <xsl:for-each select="awards/award">
+            <xsl:for-each select="/resume/awards/award">
               <li>
                 <strong><xsl:value-of select="title"/></strong>
                 <xsl:if test="awarder"> — <xsl:value-of select="awarder"/></xsl:if>
@@ -634,10 +700,12 @@
             </xsl:for-each>
           </ul>
         </xsl:if>
+  </xsl:template>
 
-        <xsl:if test="interests/interest">
+  <xsl:template name="section-interests">
+    <xsl:if test="/resume/interests/interest">
           <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'interests'"/></xsl:call-template></h2>
-          <xsl:for-each select="interests/interest">
+          <xsl:for-each select="/resume/interests/interest">
             <div class="row">
               <strong><xsl:value-of select="name"/></strong>
               <xsl:if test="keywords/keyword">:
@@ -649,10 +717,12 @@
             </div>
           </xsl:for-each>
         </xsl:if>
+  </xsl:template>
 
-        <xsl:if test="references/reference">
+  <xsl:template name="section-references">
+    <xsl:if test="/resume/references/reference">
           <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'references'"/></xsl:call-template></h2>
-          <xsl:for-each select="references/reference">
+          <xsl:for-each select="/resume/references/reference">
             <div class="row">
               <xsl:attribute name="id"><xsl:value-of select="generate-id(.)"/></xsl:attribute>
               <div class="ref-author"><xsl:value-of select="name"/></div>
@@ -660,43 +730,6 @@
             </div>
           </xsl:for-each>
         </xsl:if>
-
-        <div class="stylesheet-note">
-          <xsl:call-template name="t"><xsl:with-param name="k" select="'note'"/></xsl:call-template>
-          <xsl:text> </xsl:text>
-          <a href="/assets/data/resume.json">resume.json</a>
-          <xsl:text> · </xsl:text>
-          <a href="https://registry.jsonresume.org/grosjeanbaptiste" target="_blank" rel="external noopener">
-            <xsl:call-template name="t"><xsl:with-param name="k" select="'registry'"/></xsl:call-template>
-          </a>
-          <xsl:text> · </xsl:text>
-          <a href="https://www.grosjeanbaptiste.com/">grosjeanbaptiste.com</a>.
-        </div>
-
-        <script>
-          (function() {
-            var btn = document.getElementById('theme-toggle');
-            var label = document.getElementById('theme-toggle-label');
-            var labels = { dark: '<xsl:call-template name="t"><xsl:with-param name="k" select="'dark'"/></xsl:call-template>',
-                           light: '<xsl:call-template name="t"><xsl:with-param name="k" select="'light'"/></xsl:call-template>' };
-            function syncLabel() {
-              var t = document.documentElement.getAttribute('data-theme') || 'light';
-              label.textContent = (t === 'dark') ? labels.light : labels.dark;
-              btn.setAttribute('aria-pressed', t === 'dark' ? 'true' : 'false');
-            }
-            syncLabel();
-            btn.addEventListener('click', function() {
-              var current = document.documentElement.getAttribute('data-theme') || 'light';
-              var next = current === 'dark' ? 'light' : 'dark';
-              document.documentElement.setAttribute('data-theme', next);
-              try { localStorage.setItem('xslt-theme', next); } catch (e) {}
-              syncLabel();
-            });
-          })();
-        </script>
-
-      </body>
-    </html>
   </xsl:template>
 
   <xsl:template name="lang-link">

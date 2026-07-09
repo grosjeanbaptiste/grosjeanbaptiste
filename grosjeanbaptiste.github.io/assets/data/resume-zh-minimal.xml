@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=d396c5fe"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform-minimal.xsl?h=676a19dd"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -44,6 +44,17 @@
       <accent>#F3890B</accent>
       <darkBg>#121212</darkBg>
     </brand>
+    <sectionOrder>
+      <section>about</section>
+      <section>work</section>
+      <section>education</section>
+      <section>skills</section>
+      <section>languages</section>
+      <section>dailyLife</section>
+      <section>awards</section>
+      <section>interests</section>
+      <section>references</section>
+    </sectionOrder>
     <lang>zh</lang>
     <degrees>
       <inProgress>理学硕士 — 计算机科学 (校企合作项目) (120 ECTS)</inProgress>

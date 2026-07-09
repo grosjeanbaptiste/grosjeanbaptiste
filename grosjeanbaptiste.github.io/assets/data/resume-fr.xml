@@ -44,6 +44,17 @@
       <accent>#F3890B</accent>
       <darkBg>#121212</darkBg>
     </brand>
+    <sectionOrder>
+      <section>about</section>
+      <section>work</section>
+      <section>education</section>
+      <section>skills</section>
+      <section>languages</section>
+      <section>dailyLife</section>
+      <section>awards</section>
+      <section>interests</section>
+      <section>references</section>
+    </sectionOrder>
     <lang>fr</lang>
     <degrees>
       <inProgress>Master en Sciences — Informatique (en alternance) (120 ECTS)</inProgress>
