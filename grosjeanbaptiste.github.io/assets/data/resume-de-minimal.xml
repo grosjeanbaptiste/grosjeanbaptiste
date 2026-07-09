@@ -55,6 +55,11 @@
       <section>interests</section>
       <section>references</section>
     </sectionOrder>
+    <sidebarOrder>
+      <section>skills</section>
+      <section>languages</section>
+      <section>dailyLife</section>
+    </sidebarOrder>
     <lang>de</lang>
     <degrees>
       <inProgress>Master of Science — Informatik (duales Studium) (120 ECTS)</inProgress>

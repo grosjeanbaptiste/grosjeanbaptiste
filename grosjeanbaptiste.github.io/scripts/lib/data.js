@@ -52,6 +52,9 @@ function mergeExtras(resume, extras) {
   if (extras.sectionOrder) {
     patched.meta = { ...(patched.meta || {}), sectionOrder: extras.sectionOrder };
   }
+  if (extras.sidebarOrder) {
+    patched.meta = { ...(patched.meta || {}), sidebarOrder: extras.sidebarOrder };
+  }
   return patched;
 }
 

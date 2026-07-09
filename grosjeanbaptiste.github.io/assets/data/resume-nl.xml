@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=c17063b1"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=77e1662f"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -55,6 +55,11 @@
       <section>interests</section>
       <section>references</section>
     </sectionOrder>
+    <sidebarOrder>
+      <section>skills</section>
+      <section>languages</section>
+      <section>dailyLife</section>
+    </sidebarOrder>
     <lang>nl</lang>
     <degrees>
       <inProgress>Master of Science — Computerwetenschappen (duaal leren) (120 ECTS)</inProgress>

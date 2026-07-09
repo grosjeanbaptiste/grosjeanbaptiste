@@ -55,6 +55,11 @@
       <section>interests</section>
       <section>references</section>
     </sectionOrder>
+    <sidebarOrder>
+      <section>skills</section>
+      <section>languages</section>
+      <section>dailyLife</section>
+    </sidebarOrder>
     <lang>es</lang>
     <degrees>
       <inProgress>Máster en Ciencias — Informática (alternancia) (120 ECTS)</inProgress>

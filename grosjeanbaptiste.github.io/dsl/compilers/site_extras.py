@@ -124,4 +124,6 @@ def emit(resume: Resume) -> dict[str, Any]:
         payload["brand"] = dict(resume.meta.brand_tokens)
     if resume.meta and resume.meta.section_order:
         payload["sectionOrder"] = list(resume.meta.section_order)
+    if resume.meta and resume.meta.sidebar_order:
+        payload["sidebarOrder"] = list(resume.meta.sidebar_order)
     return payload

@@ -20,6 +20,7 @@ const XML_ITEM_NAMES = {
   courses: 'course',
   roles: 'role',
   sectionOrder: 'section',
+  sidebarOrder: 'section',
 };
 
 const xmlEsc = (s) =>

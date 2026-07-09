@@ -489,6 +489,9 @@ class _Builder(Transformer):
     def meta_section_order(self, meta, children):
         return ("section_order", tuple(children))
 
+    def meta_sidebar_order(self, meta, children):
+        return ("sidebar_order", tuple(children))
+
     def section_name(self, meta, children):
         return str(children[0])
 

@@ -238,6 +238,7 @@ class Meta(Node):
     daily_life: tuple[DailyItem, ...] = ()
     brand_tokens: tuple[tuple[str, str], ...] = ()
     section_order: tuple[str, ...] = ()
+    sidebar_order: tuple[str, ...] = ()
 
 
 # ---------------------------------------------------------------------------

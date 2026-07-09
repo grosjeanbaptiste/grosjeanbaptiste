@@ -55,6 +55,11 @@
       <section>interests</section>
       <section>references</section>
     </sectionOrder>
+    <sidebarOrder>
+      <section>skills</section>
+      <section>languages</section>
+      <section>dailyLife</section>
+    </sidebarOrder>
     <lang>en</lang>
     <degrees>
       <inProgress>Master of Science - MS in Computer Science (work-study program) (120 ECTS)</inProgress>

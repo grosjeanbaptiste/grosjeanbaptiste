@@ -55,6 +55,11 @@
       <section>interests</section>
       <section>references</section>
     </sectionOrder>
+    <sidebarOrder>
+      <section>skills</section>
+      <section>languages</section>
+      <section>dailyLife</section>
+    </sidebarOrder>
     <lang>fr</lang>
     <degrees>
       <inProgress>Master en Sciences — Informatique (en alternance) (120 ECTS)</inProgress>

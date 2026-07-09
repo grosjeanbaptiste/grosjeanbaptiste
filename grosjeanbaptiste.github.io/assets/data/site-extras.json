@@ -247,5 +247,10 @@
     "awards",
     "interests",
     "references"
+  ],
+  "sidebarOrder": [
+    "skills",
+    "languages",
+    "dailyLife"
   ]
 }
