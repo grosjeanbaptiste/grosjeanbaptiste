@@ -2,7 +2,7 @@
   <img src="https://your-banner-image-link.com/banner.png" alt="Baptiste Grosjean's GitHub Profile" width="100%">
 </p> -->
 
-# 🚀 Baptiste Grosjean - AI Software Crafter Lead
+# 🚀 Baptiste Grosjean
 
 ![Alt](https://repobeats.axiom.co/api/embed/601d142a2d9ac9943a6abc89ae573571f9c8f2ff.svg "Repobeats analytics image")
 
@@ -16,7 +16,7 @@
 
 ## 👨‍💻 About Me
 
-Passionate AI Software Crafter Lead with expertise in full-stack development as well as AI solutions. Currently pursuing a Master's Degree in Computer Science at [University of Mons (UMons)](https://www.umons.be/).
+Building [Acteble](https://www.acteble.com) — a geo-located social platform — while finishing my MSc in Computer Science at [UMons](https://www.umons.be/).
 
 <!-- LLM-ABOUT-FACTS -->
 - **📍 Location**: Kraainem, Belgium
