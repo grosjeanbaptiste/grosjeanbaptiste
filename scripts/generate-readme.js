@@ -73,14 +73,14 @@ function buildAboutFacts(r) {
 function buildEmail(r) {
   const email = r.basics?.email;
   if (!email) return '';
-  return `<a href="mailto:${email}"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>`;
+  return `- Email — [${email}](mailto:${email})`;
 }
 
 function buildPhone(r) {
   const phone = r.basics?.phone;
   if (!phone) return '';
   const digits = phone.replace(/[^+\d]/g, '');
-  return `<a href="tel:${digits}"><img src="https://img.shields.io/badge/Phone-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Phone"></a>`;
+  return `- Phone — [${phone}](tel:${digits})`;
 }
 
 const resume = JSON.parse(fs.readFileSync(RESUME, 'utf8'));

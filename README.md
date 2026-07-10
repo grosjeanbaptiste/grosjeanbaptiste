@@ -47,17 +47,16 @@ Le pipeline est déterministe et byte-identical : recompiler la même source don
 
 <hr>
 
-## 📫 Contact
+## Contact
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/grosjeanbaptiste"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <!-- LLM-EMAIL -->
-<a href="mailto:grosjeanbaptisteit@outlook.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+<!-- LLM-EMAIL -->
+- Email — [grosjeanbaptisteit@outlook.com](mailto:grosjeanbaptisteit@outlook.com)
 <!-- /LLM-EMAIL -->
-  <!-- LLM-PHONE -->
-<a href="tel:+32496289705"><img src="https://img.shields.io/badge/Phone-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Phone"></a>
+<!-- LLM-PHONE -->
+- Phone — [+32 496 28 97 05](tel:+32496289705)
 <!-- /LLM-PHONE -->
-</p>
+- LinkedIn — [linkedin.com/in/grosjeanbaptiste](https://www.linkedin.com/in/grosjeanbaptiste)
+- Website — [grosjeanbaptiste.com](https://www.grosjeanbaptiste.com)
 
 ---
 _by Baptiste Grosjean_
