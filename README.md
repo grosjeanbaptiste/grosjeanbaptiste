@@ -23,9 +23,6 @@ Building [Acteble](https://www.acteble.com) — a geo-located social platform �
 - **🎓 Education**: Master of Science - MS in Computer Science (work-study program) (120 ECTS), UMons
 - **💻 Current Focus**: Building Acteble, a geo-located social platform that pairs travelers around shared activities under spatio-temporal and multi-criteria constraints. — [Acteble](https://www.acteble.com)
 <!-- /LLM-ABOUT-FACTS -->
-- **💼 Portfolio**: [View My Portfolio](https://my-way-bg.vercel.app/about/way)
-- **📄 Resume**: [View My Resume](https://registry.jsonresume.org/grosjeanbaptiste)
-- **🔍 Professional Profile**: [View on JSON Resume](https://registry.jsonresume.org/grosjeanbaptiste/dashboard)
 
 ## 🌐 Personal Website & CV Pipeline
 
