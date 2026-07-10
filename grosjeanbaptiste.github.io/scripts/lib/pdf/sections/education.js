@@ -17,9 +17,17 @@ function renderSummary(text, max) {
 function renderEducationEntry(e, lang, t, limits) {
   const start = formatDate(e.startDate, lang);
   const end = formatDate(e.endDate, lang);
-  const title = e.area ? `${tex(e.studyType)} ${tex(t.degreeIn)} ${tex(e.area)}` : tex(e.studyType);
+  // \cvevent's title + subtitle land in \altacvevent{...}{...} boxes that
+  // altacv doesn't \raggedright'ify, so a long word like "Professional" gets
+  // hyphenated to "Pro-fessional" at the box edge. Wrap every word in \mbox{}
+  // (via nohyphen) to make the word atomic.
+  const title = e.area
+    ? `${nohyphen(e.studyType)} ${nohyphen(t.degreeIn)} ${nohyphen(e.area)}`
+    : nohyphen(e.studyType);
   const dates = `${tex(start)} -- ${tex(end)}`;
-  const parts = [`\\cvevent{${title}}{${tex(e.institution)}}{${dates}}{${e.gpa ? tex(e.gpa) : ''}}`];
+  const parts = [
+    `\\cvevent{${title}}{${nohyphen(e.institution)}}{${dates}}{${e.gpa ? nohyphen(e.gpa) : ''}}`,
+  ];
   const summary = renderSummary(e.summary, limits.summary);
   if (summary) parts.push(summary);
   return parts;
