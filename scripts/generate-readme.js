@@ -64,9 +64,9 @@ function buildAboutFacts(r) {
     ? `${currentWork.summary?.split(/(?<=[.!?])\s/)[0] ?? `${currentWork.position} at ${currentWork.company}`}${currentWork.url ? ` — [${currentWork.company}](${currentWork.url})` : ''}`
     : '';
   const lines = [];
-  if (locationLine) lines.push(`- **📍 Location**: ${locationLine}`);
-  if (eduLine) lines.push(`- **🎓 Education**: ${eduLine}`);
-  if (focusLine) lines.push(`- **💻 Current Focus**: ${focusLine}`);
+  if (locationLine) lines.push(`- **Location** — ${locationLine}`);
+  if (eduLine) lines.push(`- **Education** — ${eduLine}`);
+  if (focusLine) lines.push(`- **Current focus** — ${focusLine}`);
   return lines.join('\n');
 }
 

@@ -1,51 +1,35 @@
-<!-- <p align="center">
-  <img src="https://your-banner-image-link.com/banner.png" alt="Baptiste Grosjean's GitHub Profile" width="100%">
-</p> -->
-
-# 🚀 Baptiste Grosjean
-
-![Alt](https://repobeats.axiom.co/api/embed/601d142a2d9ac9943a6abc89ae573571f9c8f2ff.svg "Repobeats analytics image")
-
-## GitHub Stats
-
-<a href="https://github.com/grosjeanbaptiste">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=grosjeanbaptiste&show_icons=true&theme=dark&bg_color=0d1117&title_color=9f7aea&text_color=ffffff&icon_color=9f7aea&hide_border=true&count_private=true" alt="GrosjeanBaptiste's GitHub Stats" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=grosjeanbaptiste&theme=dark&bg_color=0d1117&title_color=9f7aea&text_color=ffffff&hide_border=true&layout=compact" 
-    alt="Grosjean Baptiste GitHub Top Languages" />
-</a>
-
-## 👨‍💻 About Me
+# Baptiste Grosjean
 
 Building [Acteble](https://www.acteble.com) — a geo-located social platform — while finishing my MSc in Computer Science at [UMons](https://www.umons.be/).
 
+## About
+
 <!-- LLM-ABOUT-FACTS -->
-- **📍 Location**: Kraainem, Belgium
-- **🎓 Education**: Master of Science - MS in Computer Science (work-study program) (120 ECTS), UMons
-- **💻 Current Focus**: Building Acteble, a geo-located social platform that pairs travelers around shared activities under spatio-temporal and multi-criteria constraints. — [Acteble](https://www.acteble.com)
+- **Location** — Kraainem, Belgium
+- **Education** — Master of Science - MS in Computer Science (work-study program) (120 ECTS), UMons
+- **Current focus** — Building Acteble, a geo-located social platform that pairs travelers around shared activities under spatio-temporal and multi-criteria constraints. — [Acteble](https://www.acteble.com)
 <!-- /LLM-ABOUT-FACTS -->
 
-## 🌐 Personal Website & CV Pipeline
+## Personal website & CV pipeline
 
-The [grosjeanbaptiste.com](https://www.grosjeanbaptiste.com) site — including this CV — is generated from a single custom DSL (`resume.grosjean`) that fans out to 6 languages × 3 web views + 6 PDFs.
+The [grosjeanbaptiste.com](https://www.grosjeanbaptiste.com) site — including this CV — is generated from a single custom DSL (`resume.grosjean`) that fans out to 6 languages, 3 web views and 6 PDFs.
 
 ```
 resume.grosjean  ─(Python + Lark)─►  JSON Resume v1.0.0 + i18n overlays + site extras
                                              │
                           ┌──────────────────┼──────────────────┐
                           ▼                  ▼                  ▼
-                   HTML × 6 langues   XML/XSLT rich+min   LaTeX / altacv PDF × 6
-                   (site principal)   (2 thèmes web)      (recto/verso, 2 pages max)
+                     HTML × 6 languages   XML/XSLT rich+min    LaTeX PDF × 6
+                     (main site)          (two web themes)     (recto/verso, 2 pages max)
 ```
 
-**Ce qui vient du DSL** : contenu, traductions, ordre des sections (`sectionOrder`, `sidebarOrder`), palette de marque (33 tokens qui pilotent les CSS variables, les XSLT `:root`, le favicon SVG, le manifest PWA et les `<meta name="theme-color">`), les overrides d'affichage (`hideOnHtml` / `hideOnPdf`), les extras hors-schéma (`dailyLife`, refs `work.projects`).
+**Driven by the DSL** — content, translations, section order (`sectionOrder`, `sidebarOrder`), brand palette (33 tokens feeding the CSS variables, the XSLT `:root` blocks, the SVG favicon, the PWA manifest and the `<meta name="theme-color">` tags), display overrides (`hideOnHtml` / `hideOnPdf`), and off-schema extras (`dailyLife`, `work.projects` references).
 
-**Ce qui reste écrit à la main** : les layouts HTML/XSLT, le CSS de style, le JS interactif, la logique XSLT (matching, keys, dispatchers), la géométrie du favicon SVG.
+**Hand-written** — the HTML and XSLT layouts, the CSS styling, the interactive JavaScript, the XSLT logic (matching, keys, dispatchers) and the geometry of the favicon SVG.
 
-**Contrainte dure** : chaque PDF tient sur 1 feuille recto/verso (max 2 pages). Un fit-loop itère plusieurs plans (plus riche → plus minimal) et échoue plutôt que de shipper un 3-pager.
+**Hard constraint** — every PDF must fit on a single sheet (recto/verso, two pages maximum). A fit loop walks through progressively tighter plans and fails hard rather than shipping a three-page CV.
 
-Le pipeline est déterministe et byte-identical : recompiler la même source donne les mêmes fichiers au bit près.
-
-<hr>
+The pipeline is deterministic and byte-identical: recompiling the same source yields the same output down to the byte.
 
 ## Contact
 
@@ -57,6 +41,3 @@ Le pipeline est déterministe et byte-identical : recompiler la même source don
 <!-- /LLM-PHONE -->
 - LinkedIn — [linkedin.com/in/grosjeanbaptiste](https://www.linkedin.com/in/grosjeanbaptiste)
 - Website — [grosjeanbaptiste.com](https://www.grosjeanbaptiste.com)
-
----
-_by Baptiste Grosjean_
