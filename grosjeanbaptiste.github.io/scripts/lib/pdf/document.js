@@ -2,7 +2,12 @@ const I18N = require('./i18n');
 const { BABEL } = require('./config');
 const { buildPreamble } = require('./preamble');
 const { buildHeader } = require('./sections/header');
-const { buildSkillsBlock, buildLanguagesBlock, buildDayBlock } = require('./sections/sidebar');
+const {
+  buildSkillsBlock,
+  buildLanguagesBlock,
+  buildDayBlock,
+  buildDegreesSummary,
+} = require('./sections/sidebar');
 const { buildAbout } = require('./sections/about');
 const { buildWork } = require('./sections/work');
 const { buildEducation } = require('./sections/education');
@@ -20,13 +25,14 @@ function generateLatex(resume, lang, limits) {
     buildHeader(resume, t),
     '\\columnratio{0.30}',
     '\\begin{paracol}{2}',
-    buildEducation(resume, t, lang, limits),
+    buildDegreesSummary(resume, t, lang),
     buildLanguagesBlock(resume, t),
     buildSkillsBlock(resume, t),
     buildDayBlock(resume, t),
     '\\switchcolumn',
     buildAbout(resume, t),
     buildWork(resume, t, lang, limits),
+    buildEducation(resume, t, lang, limits),
     '\\end{paracol}',
     verso,
     '\\end{document}',
