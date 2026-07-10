@@ -4,6 +4,24 @@
     {
       "skills": [
         "Rust",
+        "Prolog",
+        "LinkGrammar",
+        "DDD",
+        "CleanArchitecture"
+      ]
+    },
+    {
+      "skills": [
+        "Rust",
+        "DDD",
+        "CleanArchitecture",
+        "TDD",
+        "RAG"
+      ]
+    },
+    {
+      "skills": [
+        "Rust",
         "Flutter",
         "Dart",
         "Tokio",

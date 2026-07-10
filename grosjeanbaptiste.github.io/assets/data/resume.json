@@ -40,6 +40,22 @@
   },
   "work": [
     {
+      "company": "Baba",
+      "position": "Author",
+      "url": "https://github.com/grosjeanbaptiste/baba",
+      "location": "Kraainem, Belgium",
+      "startDate": "2026-07-02",
+      "summary": "Author of Baba, a shell-like CLI queried in controlled English through pure symbolic AI — no LLM in the loop. Five layers: Rust CLI shell, link-grammar syntactic parser, SWI-Prolog symbolic engine, domain vocabulary packs, action executors."
+    },
+    {
+      "company": "KAG",
+      "position": "Author",
+      "url": "https://github.com/grosjeanbaptiste/KAG",
+      "location": "Kraainem, Belgium",
+      "startDate": "2026-07-05",
+      "summary": "Author of KAG, a domain-agnostic Rust framework for benchmarking Retrieval-Augmented Generation pipelines. Hexagonal + DDD + TDD design where every pipeline stage (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) is a swappable component selected by label, with zero external dependencies in the core."
+    },
+    {
       "company": "Acteble",
       "position": "Founder",
       "url": "https://www.acteble.com",

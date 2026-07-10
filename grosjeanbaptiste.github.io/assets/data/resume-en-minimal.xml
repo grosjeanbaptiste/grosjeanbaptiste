@@ -133,6 +133,36 @@ All the projects I have been involved in have been developed with a strong focus
   </basics>
   <work>
     <job>
+      <company>Baba</company>
+      <position>Author</position>
+      <url>https://github.com/grosjeanbaptiste/baba</url>
+      <location>Kraainem, Belgium</location>
+      <startDate>2026-07-02</startDate>
+      <summary>Author of Baba, a shell-like CLI queried in controlled English through pure symbolic AI — no LLM in the loop. Five layers: Rust CLI shell, link-grammar syntactic parser, SWI-Prolog symbolic engine, domain vocabulary packs, action executors.</summary>
+      <skills>
+        <skill>Rust</skill>
+        <skill>Prolog</skill>
+        <skill>LinkGrammar</skill>
+        <skill>DDD</skill>
+        <skill>CleanArchitecture</skill>
+      </skills>
+    </job>
+    <job>
+      <company>KAG</company>
+      <position>Author</position>
+      <url>https://github.com/grosjeanbaptiste/KAG</url>
+      <location>Kraainem, Belgium</location>
+      <startDate>2026-07-05</startDate>
+      <summary>Author of KAG, a domain-agnostic Rust framework for benchmarking Retrieval-Augmented Generation pipelines. Hexagonal + DDD + TDD design where every pipeline stage (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) is a swappable component selected by label, with zero external dependencies in the core.</summary>
+      <skills>
+        <skill>Rust</skill>
+        <skill>DDD</skill>
+        <skill>CleanArchitecture</skill>
+        <skill>TDD</skill>
+        <skill>RAG</skill>
+      </skills>
+    </job>
+    <job>
       <company>Acteble</company>
       <position>Founder</position>
       <url>https://www.acteble.com</url>

@@ -59,14 +59,19 @@ function buildAboutFacts(r) {
   const eduLine = currentEdu
     ? `${currentEdu.studyType}${currentEdu.area ? ` in ${currentEdu.area}` : ''}, ${currentEdu.institution}`
     : '';
-  const currentWork = (r.work || []).find((w) => !w.endDate || w.endDate === 'Present');
-  const focusLine = currentWork
-    ? `${currentWork.summary?.split(/(?<=[.!?])\s/)[0] ?? `${currentWork.position} at ${currentWork.company}`}${currentWork.url ? ` — [${currentWork.company}](${currentWork.url})` : ''}`
-    : '';
+  const currentWork = (r.work || []).filter((w) => !w.endDate || w.endDate === 'Present');
+  const workItems = currentWork.map((w) => {
+    const firstSentence = w.summary?.split(/(?<=[.!?])\s/)[0] ?? `${w.position} at ${w.company}`;
+    const link = w.url ? ` — [${w.company}](${w.url})` : '';
+    return `  - ${firstSentence}${link}`;
+  });
   const lines = [];
   if (locationLine) lines.push(`- **Location** — ${locationLine}`);
   if (eduLine) lines.push(`- **Education** — ${eduLine}`);
-  if (focusLine) lines.push(`- **Current focus** — ${focusLine}`);
+  if (workItems.length) {
+    lines.push('- **Current focus**');
+    lines.push(...workItems);
+  }
   return lines.join('\n');
 }
 

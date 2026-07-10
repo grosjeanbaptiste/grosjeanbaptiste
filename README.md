@@ -7,7 +7,10 @@ Building [Acteble](https://www.acteble.com) — a geo-located social platform �
 <!-- LLM-ABOUT-FACTS -->
 - **Location** — Kraainem, Belgium
 - **Education** — Master of Science - MS in Computer Science (work-study program) (120 ECTS), UMons
-- **Current focus** — Building Acteble, a geo-located social platform that pairs travelers around shared activities under spatio-temporal and multi-criteria constraints. — [Acteble](https://www.acteble.com)
+- **Current focus**
+  - Author of Baba, a shell-like CLI queried in controlled English through pure symbolic AI — no LLM in the loop. — [Baba](https://github.com/grosjeanbaptiste/baba)
+  - Author of KAG, a domain-agnostic Rust framework for benchmarking Retrieval-Augmented Generation pipelines. — [KAG](https://github.com/grosjeanbaptiste/KAG)
+  - Building Acteble, a geo-located social platform that pairs travelers around shared activities under spatio-temporal and multi-criteria constraints. — [Acteble](https://www.acteble.com)
 <!-- /LLM-ABOUT-FACTS -->
 
 ## Personal website & CV pipeline

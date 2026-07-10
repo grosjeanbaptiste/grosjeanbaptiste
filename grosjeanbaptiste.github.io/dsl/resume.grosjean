@@ -47,6 +47,24 @@ Alle Projekte, an denen ich beteiligt war, wurden mit starkem Fokus auf Software
 
     // ---------- work ----------
     work {
+        AuthorBaba {
+            position t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }
+            at "Baba"
+            url "https://github.com/grosjeanbaptiste/baba"
+            location t{ en: "Kraainem, Belgium", fr: "Kraainem, Belgique", nl: "Kraainem, België", es: "Kraainem, Bélgica", de: "Kraainem, Belgien", zh: "克赖内姆，比利时" }
+            period 2026-07-02..present
+            summary t{ en: "Author of Baba, a shell-like CLI queried in controlled English through pure symbolic AI — no LLM in the loop. Five layers: Rust CLI shell, link-grammar syntactic parser, SWI-Prolog symbolic engine, domain vocabulary packs, action executors.", fr: "Auteur de Baba, un CLI qu'on interroge en anglais contrôlé via une IA symbolique pure — aucun LLM dans la boucle. Cinq couches : shell CLI Rust, parseur syntaxique link-grammar, moteur symbolique SWI-Prolog, packs de vocabulaire de domaine, exécuteurs d'actions.", nl: "Auteur van Baba, een CLI die je in gecontroleerd Engels bevraagt via pure symbolische AI — geen LLM in de lus. Vijf lagen: Rust CLI-shell, link-grammar syntactische parser, SWI-Prolog symbolische engine, domeinvocabulairepacks, actie-uitvoerders.", es: "Autor de Baba, una CLI consultada en inglés controlado mediante IA simbólica pura — sin LLM en el bucle. Cinco capas: shell CLI en Rust, parser sintáctico link-grammar, motor simbólico SWI-Prolog, paquetes de vocabulario de dominio, ejecutores de acciones.", de: "Autor von Baba, einer CLI, die in kontrolliertem Englisch über reine symbolische KI abgefragt wird — kein LLM im Ablauf. Fünf Ebenen: Rust-CLI-Shell, link-grammar Syntaxparser, symbolische SWI-Prolog-Engine, Domänen-Vokabularpakete, Aktionsausführer.", zh: "Baba 作者：一个通过纯符号 AI（无 LLM）以受控英语查询的 CLI。五层架构：Rust CLI shell、link-grammar 句法解析器、SWI-Prolog 符号引擎、领域词汇包、动作执行器。" }
+            uses [Rust, Prolog, LinkGrammar, DDD, CleanArchitecture]
+        }
+        AuthorKAG {
+            position t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }
+            at "KAG"
+            url "https://github.com/grosjeanbaptiste/KAG"
+            location t{ en: "Kraainem, Belgium", fr: "Kraainem, Belgique", nl: "Kraainem, België", es: "Kraainem, Bélgica", de: "Kraainem, Belgien", zh: "克赖内姆，比利时" }
+            period 2026-07-05..present
+            summary t{ en: "Author of KAG, a domain-agnostic Rust framework for benchmarking Retrieval-Augmented Generation pipelines. Hexagonal + DDD + TDD design where every pipeline stage (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) is a swappable component selected by label, with zero external dependencies in the core.", fr: "Auteur de KAG, un framework Rust indépendant du domaine pour benchmarker les pipelines Retrieval-Augmented Generation. Conception hexagonale + DDD + TDD où chaque étape (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) est un composant interchangeable sélectionné par label, sans dépendances externes dans le core.", nl: "Auteur van KAG, een domein-onafhankelijk Rust-framework voor het benchmarken van Retrieval-Augmented Generation-pipelines. Hexagonaal + DDD + TDD ontwerp waarin elke stap (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) een uitwisselbaar component is, geselecteerd via label, zonder externe afhankelijkheden in de core.", es: "Autor de KAG, un framework Rust independiente del dominio para benchmarking de pipelines de Retrieval-Augmented Generation. Diseño hexagonal + DDD + TDD donde cada etapa (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) es un componente intercambiable seleccionado por label, sin dependencias externas en el core.", de: "Autor von KAG, einem domänenunabhängigen Rust-Framework zum Benchmarking von Retrieval-Augmented-Generation-Pipelines. Hexagonales + DDD + TDD Design, in dem jede Stufe (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) eine austauschbare, per Label ausgewählte Komponente ist — ohne externe Abhängigkeiten im Core.", zh: "KAG 作者：一个领域无关的 Rust 框架，用于对检索增强生成（RAG）管道进行基准测试。采用六边形架构 + DDD + TDD，其中每个流水线阶段（download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate）都是通过标签选择的可互换组件，核心零外部依赖。" }
+            uses [Rust, DDD, CleanArchitecture, TDD, RAG]
+        }
         Founder {
             position t{ en: "Founder", fr: "Fondateur", nl: "Oprichter", es: "Fundador", de: "Gründer", zh: "创始人" }
             at "Acteble"

@@ -133,6 +133,36 @@ Alle projecten waaraan ik heb deelgenomen werden ontwikkeld met een sterke focus
   </basics>
   <work>
     <job>
+      <company>Baba</company>
+      <position>Auteur</position>
+      <url>https://github.com/grosjeanbaptiste/baba</url>
+      <location>Kraainem, België</location>
+      <startDate>2026-07-02</startDate>
+      <summary>Auteur van Baba, een CLI die je in gecontroleerd Engels bevraagt via pure symbolische AI — geen LLM in de lus. Vijf lagen: Rust CLI-shell, link-grammar syntactische parser, SWI-Prolog symbolische engine, domeinvocabulairepacks, actie-uitvoerders.</summary>
+      <skills>
+        <skill>Rust</skill>
+        <skill>Prolog</skill>
+        <skill>LinkGrammar</skill>
+        <skill>DDD</skill>
+        <skill>CleanArchitecture</skill>
+      </skills>
+    </job>
+    <job>
+      <company>KAG</company>
+      <position>Auteur</position>
+      <url>https://github.com/grosjeanbaptiste/KAG</url>
+      <location>Kraainem, België</location>
+      <startDate>2026-07-05</startDate>
+      <summary>Auteur van KAG, een domein-onafhankelijk Rust-framework voor het benchmarken van Retrieval-Augmented Generation-pipelines. Hexagonaal + DDD + TDD ontwerp waarin elke stap (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) een uitwisselbaar component is, geselecteerd via label, zonder externe afhankelijkheden in de core.</summary>
+      <skills>
+        <skill>Rust</skill>
+        <skill>DDD</skill>
+        <skill>CleanArchitecture</skill>
+        <skill>TDD</skill>
+        <skill>RAG</skill>
+      </skills>
+    </job>
+    <job>
       <company>Acteble</company>
       <position>Oprichter</position>
       <url>https://www.acteble.com</url>

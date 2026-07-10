@@ -8,6 +8,16 @@
   },
   "work": [
     {
+      "position": "Autor",
+      "location": "Kraainem, Belgien",
+      "summary": "Autor von Baba, einer CLI, die in kontrolliertem Englisch über reine symbolische KI abgefragt wird — kein LLM im Ablauf. Fünf Ebenen: Rust-CLI-Shell, link-grammar Syntaxparser, symbolische SWI-Prolog-Engine, Domänen-Vokabularpakete, Aktionsausführer."
+    },
+    {
+      "position": "Autor",
+      "location": "Kraainem, Belgien",
+      "summary": "Autor von KAG, einem domänenunabhängigen Rust-Framework zum Benchmarking von Retrieval-Augmented-Generation-Pipelines. Hexagonales + DDD + TDD Design, in dem jede Stufe (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) eine austauschbare, per Label ausgewählte Komponente ist — ohne externe Abhängigkeiten im Core."
+    },
+    {
       "position": "Gründer",
       "location": "Brüssel, Belgien",
       "summary": "Aufbau von Acteble, einer geolokalisierten sozialen Plattform, die Reisende rund um gemeinsame Aktivitäten unter raum-zeitlichen und multikriteriellen Einschränkungen zusammenbringt. Alleiniger Gründer, Architekt und Entwickler. Die F&E-Schicht dient gleichzeitig als Masterarbeit für meinen MSc in Informatik an der UMons."
