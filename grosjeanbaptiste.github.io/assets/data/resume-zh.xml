@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=e926f1df"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=b75045c2"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -86,8 +86,9 @@
       <section>references</section>
     </sectionOrder>
     <sidebarOrder>
-      <section>skills</section>
       <section>languages</section>
+      <section>projects</section>
+      <section>skills</section>
       <section>dailyLife</section>
     </sidebarOrder>
     <lang>zh</lang>
@@ -100,7 +101,7 @@
     <name>Baptiste Grosjean</name>
     <label>计算机科学家</label>
     <image>assets/images/profil.jpeg</image>
-    <email>grosjeanbaptisteit@outlook.com</email>
+    <email>grosjeanbaptiste@outlook.com</email>
     <phone>+32 496 28 97 05</phone>
     <url>https://www.grosjeanbaptiste.com</url>
     <summary>蒙斯大学 (UMons) 夜间计算机科学专业学生，白天寻找新机会的同时创办 Acteble。
@@ -132,36 +133,6 @@
     </profiles>
   </basics>
   <work>
-    <job>
-      <company>Baba</company>
-      <position>作者</position>
-      <url>https://github.com/grosjeanbaptiste/baba</url>
-      <location>克赖内姆，比利时</location>
-      <startDate>2026-07-02</startDate>
-      <summary>Baba 作者：一个通过纯符号 AI（无 LLM）以受控英语查询的 CLI。五层架构：Rust CLI shell、link-grammar 句法解析器、SWI-Prolog 符号引擎、领域词汇包、动作执行器。</summary>
-      <skills>
-        <skill>Rust</skill>
-        <skill>Prolog</skill>
-        <skill>LinkGrammar</skill>
-        <skill>DDD</skill>
-        <skill>CleanArchitecture</skill>
-      </skills>
-    </job>
-    <job>
-      <company>KAG</company>
-      <position>作者</position>
-      <url>https://github.com/grosjeanbaptiste/KAG</url>
-      <location>克赖内姆，比利时</location>
-      <startDate>2026-07-05</startDate>
-      <summary>KAG 作者：一个领域无关的 Rust 框架，用于对检索增强生成（RAG）管道进行基准测试。采用六边形架构 + DDD + TDD，其中每个流水线阶段（download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate）都是通过标签选择的可互换组件，核心零外部依赖。</summary>
-      <skills>
-        <skill>Rust</skill>
-        <skill>DDD</skill>
-        <skill>CleanArchitecture</skill>
-        <skill>TDD</skill>
-        <skill>RAG</skill>
-      </skills>
-    </job>
     <job>
       <company>Acteble</company>
       <position>创始人</position>
@@ -467,6 +438,42 @@ TFE: WebMenu 2.0</summary>
     </school>
   </education>
   <projects>
+    <project>
+      <name>Baba</name>
+      <description>类 shell CLI，通过纯符号 AI（无 LLM）以受控英语查询。</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Prolog</keyword>
+        <keyword>LinkGrammar</keyword>
+        <keyword>DDD</keyword>
+        <keyword>CleanArchitecture</keyword>
+      </keywords>
+      <startDate>2026-07-02</startDate>
+      <url>https://github.com/grosjeanbaptiste/baba</url>
+      <type>CLI</type>
+      <roles>
+        <role>Author</role>
+      </roles>
+      <summary>五层架构：Rust CLI shell、link-grammar 句法解析器、SWI-Prolog 符号引擎、领域词汇包、动作执行器。</summary>
+    </project>
+    <project>
+      <name>KAG</name>
+      <description>领域无关的 Rust 框架，用于对检索增强生成（RAG）管道进行基准测试。</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>DDD</keyword>
+        <keyword>CleanArchitecture</keyword>
+        <keyword>TDD</keyword>
+        <keyword>RAG</keyword>
+      </keywords>
+      <startDate>2026-07-05</startDate>
+      <url>https://github.com/grosjeanbaptiste/KAG</url>
+      <type>Framework</type>
+      <roles>
+        <role>Author</role>
+      </roles>
+      <summary>采用六边形架构 + DDD + TDD，每个流水线阶段（download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate）都是通过标签选择的可互换组件，核心零外部依赖。</summary>
+    </project>
     <project>
       <name>Acteble</name>
       <description>在旅途中连接旅行者的移动应用。</description>

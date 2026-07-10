@@ -8,8 +8,6 @@ Building [Acteble](https://www.acteble.com) — a geo-located social platform �
 - **Location** — Kraainem, Belgium
 - **Education** — Master of Science - MS in Computer Science (work-study program) (120 ECTS), UMons
 - **Current focus**
-  - Author of Baba, a shell-like CLI queried in controlled English through pure symbolic AI — no LLM in the loop. — [Baba](https://github.com/grosjeanbaptiste/baba)
-  - Author of KAG, a domain-agnostic Rust framework for benchmarking Retrieval-Augmented Generation pipelines. — [KAG](https://github.com/grosjeanbaptiste/KAG)
   - Building Acteble, a geo-located social platform that pairs travelers around shared activities under spatio-temporal and multi-criteria constraints. — [Acteble](https://www.acteble.com)
 <!-- /LLM-ABOUT-FACTS -->
 
@@ -37,7 +35,7 @@ The pipeline is deterministic and byte-identical: recompiling the same source yi
 ## Contact
 
 <!-- LLM-EMAIL -->
-- Email — [grosjeanbaptisteit@outlook.com](mailto:grosjeanbaptisteit@outlook.com)
+- Email — [grosjeanbaptiste@outlook.com](mailto:grosjeanbaptiste@outlook.com)
 <!-- /LLM-EMAIL -->
 <!-- LLM-PHONE -->
 - Phone — [+32 496 28 97 05](tel:+32496289705)

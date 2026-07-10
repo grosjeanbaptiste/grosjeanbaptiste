@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=e926f1df"?>
+<?xml-stylesheet type="text/xsl" href="../xslt/resume-transform.xsl?h=b75045c2"?>
 <resume>
   <meta>
     <version>v1.0.0</version>
@@ -86,8 +86,9 @@
       <section>references</section>
     </sectionOrder>
     <sidebarOrder>
-      <section>skills</section>
       <section>languages</section>
+      <section>projects</section>
+      <section>skills</section>
       <section>dailyLife</section>
     </sidebarOrder>
     <lang>de</lang>
@@ -100,7 +101,7 @@
     <name>Baptiste Grosjean</name>
     <label>Informatiker</label>
     <image>assets/images/profil.jpeg</image>
-    <email>grosjeanbaptisteit@outlook.com</email>
+    <email>grosjeanbaptiste@outlook.com</email>
     <phone>+32 496 28 97 05</phone>
     <url>https://www.grosjeanbaptiste.com</url>
     <summary>Informatikstudent an der UMons in der Nacht, auf der Suche nach einer neuen Gelegenheit tagsüber, während ich Acteble starte.
@@ -132,36 +133,6 @@ Alle Projekte, an denen ich beteiligt war, wurden mit starkem Fokus auf Software
     </profiles>
   </basics>
   <work>
-    <job>
-      <company>Baba</company>
-      <position>Autor</position>
-      <url>https://github.com/grosjeanbaptiste/baba</url>
-      <location>Kraainem, Belgien</location>
-      <startDate>2026-07-02</startDate>
-      <summary>Autor von Baba, einer CLI, die in kontrolliertem Englisch über reine symbolische KI abgefragt wird — kein LLM im Ablauf. Fünf Ebenen: Rust-CLI-Shell, link-grammar Syntaxparser, symbolische SWI-Prolog-Engine, Domänen-Vokabularpakete, Aktionsausführer.</summary>
-      <skills>
-        <skill>Rust</skill>
-        <skill>Prolog</skill>
-        <skill>LinkGrammar</skill>
-        <skill>DDD</skill>
-        <skill>CleanArchitecture</skill>
-      </skills>
-    </job>
-    <job>
-      <company>KAG</company>
-      <position>Autor</position>
-      <url>https://github.com/grosjeanbaptiste/KAG</url>
-      <location>Kraainem, Belgien</location>
-      <startDate>2026-07-05</startDate>
-      <summary>Autor von KAG, einem domänenunabhängigen Rust-Framework zum Benchmarking von Retrieval-Augmented-Generation-Pipelines. Hexagonales + DDD + TDD Design, in dem jede Stufe (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) eine austauschbare, per Label ausgewählte Komponente ist — ohne externe Abhängigkeiten im Core.</summary>
-      <skills>
-        <skill>Rust</skill>
-        <skill>DDD</skill>
-        <skill>CleanArchitecture</skill>
-        <skill>TDD</skill>
-        <skill>RAG</skill>
-      </skills>
-    </job>
     <job>
       <company>Acteble</company>
       <position>Gründer</position>
@@ -467,6 +438,42 @@ TFE: WebMenu 2.0</summary>
     </school>
   </education>
   <projects>
+    <project>
+      <name>Baba</name>
+      <description>Shell-artige CLI, in kontrolliertem Englisch abgefragt über reine symbolische KI — ohne LLM im Ablauf.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Prolog</keyword>
+        <keyword>LinkGrammar</keyword>
+        <keyword>DDD</keyword>
+        <keyword>CleanArchitecture</keyword>
+      </keywords>
+      <startDate>2026-07-02</startDate>
+      <url>https://github.com/grosjeanbaptiste/baba</url>
+      <type>CLI</type>
+      <roles>
+        <role>Author</role>
+      </roles>
+      <summary>Fünf Ebenen: Rust-CLI-Shell, link-grammar Syntaxparser, symbolische SWI-Prolog-Engine, Domänen-Vokabularpakete, Aktionsausführer.</summary>
+    </project>
+    <project>
+      <name>KAG</name>
+      <description>Domänenunabhängiges Rust-Framework zum Benchmarking von Retrieval-Augmented-Generation-Pipelines.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>DDD</keyword>
+        <keyword>CleanArchitecture</keyword>
+        <keyword>TDD</keyword>
+        <keyword>RAG</keyword>
+      </keywords>
+      <startDate>2026-07-05</startDate>
+      <url>https://github.com/grosjeanbaptiste/KAG</url>
+      <type>Framework</type>
+      <roles>
+        <role>Author</role>
+      </roles>
+      <summary>Hexagonales + DDD + TDD Design, in dem jede Stufe (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) eine austauschbare, per Label ausgewählte Komponente ist — ohne externe Abhängigkeiten im Core.</summary>
+    </project>
     <project>
       <name>Acteble</name>
       <description>Mobile App, die Reisende während ihrer Reisen verbindet.</description>

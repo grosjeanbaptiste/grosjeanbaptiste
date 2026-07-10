@@ -9,7 +9,7 @@
     "name": "Baptiste Grosjean",
     "label": "Computer Scientist",
     "image": "assets/images/profil.jpeg",
-    "email": "grosjeanbaptisteit@outlook.com",
+    "email": "grosjeanbaptiste@outlook.com",
     "phone": "+32 496 28 97 05",
     "url": "https://www.grosjeanbaptiste.com",
     "summary": "Computer science student @UMons by night looking for a new opportunity by day while launching Acteble. \n\nAll the projects I have been involved in have been developed with a strong focus on Software Craftsmanship principles (clean code, clean architecture, and DDD) as best practices to ensure highest standards of quality, maintainability and scalability.",
@@ -39,22 +39,6 @@
     ]
   },
   "work": [
-    {
-      "company": "Baba",
-      "position": "Author",
-      "url": "https://github.com/grosjeanbaptiste/baba",
-      "location": "Kraainem, Belgium",
-      "startDate": "2026-07-02",
-      "summary": "Author of Baba, a shell-like CLI queried in controlled English through pure symbolic AI — no LLM in the loop. Five layers: Rust CLI shell, link-grammar syntactic parser, SWI-Prolog symbolic engine, domain vocabulary packs, action executors."
-    },
-    {
-      "company": "KAG",
-      "position": "Author",
-      "url": "https://github.com/grosjeanbaptiste/KAG",
-      "location": "Kraainem, Belgium",
-      "startDate": "2026-07-05",
-      "summary": "Author of KAG, a domain-agnostic Rust framework for benchmarking Retrieval-Augmented Generation pipelines. Hexagonal + DDD + TDD design where every pipeline stage (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) is a swappable component selected by label, with zero external dependencies in the core."
-    },
     {
       "company": "Acteble",
       "position": "Founder",
@@ -255,6 +239,40 @@
     }
   ],
   "projects": [
+    {
+      "name": "Baba",
+      "description": "Shell-like CLI queried in controlled English through pure symbolic AI — no LLM in the loop.",
+      "keywords": [
+        "Rust",
+        "Prolog",
+        "LinkGrammar",
+        "DDD",
+        "CleanArchitecture"
+      ],
+      "startDate": "2026-07-02",
+      "url": "https://github.com/grosjeanbaptiste/baba",
+      "type": "CLI",
+      "roles": [
+        "Author"
+      ]
+    },
+    {
+      "name": "KAG",
+      "description": "Domain-agnostic Rust framework for benchmarking Retrieval-Augmented Generation pipelines.",
+      "keywords": [
+        "Rust",
+        "DDD",
+        "CleanArchitecture",
+        "TDD",
+        "RAG"
+      ],
+      "startDate": "2026-07-05",
+      "url": "https://github.com/grosjeanbaptiste/KAG",
+      "type": "Framework",
+      "roles": [
+        "Author"
+      ]
+    },
     {
       "name": "Acteble",
       "description": "Mobile application connecting travelers during their journeys.",

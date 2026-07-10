@@ -5,7 +5,7 @@ resume "grosjeanbaptiste" {
         name "Baptiste Grosjean"
         label t{ en: "Computer Scientist", fr: "Informaticien", nl: "Informaticus", es: "Informático", de: "Informatiker", zh: "计算机科学家" }
         image "assets/images/profil.jpeg"
-        email "grosjeanbaptisteit@outlook.com"
+        email "grosjeanbaptiste@outlook.com"
         phone "+32 496 28 97 05"
         url "https://www.grosjeanbaptiste.com"
         location {
@@ -47,24 +47,6 @@ Alle Projekte, an denen ich beteiligt war, wurden mit starkem Fokus auf Software
 
     // ---------- work ----------
     work {
-        AuthorBaba {
-            position t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }
-            at "Baba"
-            url "https://github.com/grosjeanbaptiste/baba"
-            location t{ en: "Kraainem, Belgium", fr: "Kraainem, Belgique", nl: "Kraainem, België", es: "Kraainem, Bélgica", de: "Kraainem, Belgien", zh: "克赖内姆，比利时" }
-            period 2026-07-02..present
-            summary t{ en: "Author of Baba, a shell-like CLI queried in controlled English through pure symbolic AI — no LLM in the loop. Five layers: Rust CLI shell, link-grammar syntactic parser, SWI-Prolog symbolic engine, domain vocabulary packs, action executors.", fr: "Auteur de Baba, un CLI qu'on interroge en anglais contrôlé via une IA symbolique pure — aucun LLM dans la boucle. Cinq couches : shell CLI Rust, parseur syntaxique link-grammar, moteur symbolique SWI-Prolog, packs de vocabulaire de domaine, exécuteurs d'actions.", nl: "Auteur van Baba, een CLI die je in gecontroleerd Engels bevraagt via pure symbolische AI — geen LLM in de lus. Vijf lagen: Rust CLI-shell, link-grammar syntactische parser, SWI-Prolog symbolische engine, domeinvocabulairepacks, actie-uitvoerders.", es: "Autor de Baba, una CLI consultada en inglés controlado mediante IA simbólica pura — sin LLM en el bucle. Cinco capas: shell CLI en Rust, parser sintáctico link-grammar, motor simbólico SWI-Prolog, paquetes de vocabulario de dominio, ejecutores de acciones.", de: "Autor von Baba, einer CLI, die in kontrolliertem Englisch über reine symbolische KI abgefragt wird — kein LLM im Ablauf. Fünf Ebenen: Rust-CLI-Shell, link-grammar Syntaxparser, symbolische SWI-Prolog-Engine, Domänen-Vokabularpakete, Aktionsausführer.", zh: "Baba 作者：一个通过纯符号 AI（无 LLM）以受控英语查询的 CLI。五层架构：Rust CLI shell、link-grammar 句法解析器、SWI-Prolog 符号引擎、领域词汇包、动作执行器。" }
-            uses [Rust, Prolog, LinkGrammar, DDD, CleanArchitecture]
-        }
-        AuthorKAG {
-            position t{ en: "Author", fr: "Auteur", nl: "Auteur", es: "Autor", de: "Autor", zh: "作者" }
-            at "KAG"
-            url "https://github.com/grosjeanbaptiste/KAG"
-            location t{ en: "Kraainem, Belgium", fr: "Kraainem, Belgique", nl: "Kraainem, België", es: "Kraainem, Bélgica", de: "Kraainem, Belgien", zh: "克赖内姆，比利时" }
-            period 2026-07-05..present
-            summary t{ en: "Author of KAG, a domain-agnostic Rust framework for benchmarking Retrieval-Augmented Generation pipelines. Hexagonal + DDD + TDD design where every pipeline stage (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) is a swappable component selected by label, with zero external dependencies in the core.", fr: "Auteur de KAG, un framework Rust indépendant du domaine pour benchmarker les pipelines Retrieval-Augmented Generation. Conception hexagonale + DDD + TDD où chaque étape (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) est un composant interchangeable sélectionné par label, sans dépendances externes dans le core.", nl: "Auteur van KAG, een domein-onafhankelijk Rust-framework voor het benchmarken van Retrieval-Augmented Generation-pipelines. Hexagonaal + DDD + TDD ontwerp waarin elke stap (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) een uitwisselbaar component is, geselecteerd via label, zonder externe afhankelijkheden in de core.", es: "Autor de KAG, un framework Rust independiente del dominio para benchmarking de pipelines de Retrieval-Augmented Generation. Diseño hexagonal + DDD + TDD donde cada etapa (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) es un componente intercambiable seleccionado por label, sin dependencias externas en el core.", de: "Autor von KAG, einem domänenunabhängigen Rust-Framework zum Benchmarking von Retrieval-Augmented-Generation-Pipelines. Hexagonales + DDD + TDD Design, in dem jede Stufe (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) eine austauschbare, per Label ausgewählte Komponente ist — ohne externe Abhängigkeiten im Core.", zh: "KAG 作者：一个领域无关的 Rust 框架，用于对检索增强生成（RAG）管道进行基准测试。采用六边形架构 + DDD + TDD，其中每个流水线阶段（download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate）都是通过标签选择的可互换组件，核心零外部依赖。" }
-            uses [Rust, DDD, CleanArchitecture, TDD, RAG]
-        }
         Founder {
             position t{ en: "Founder", fr: "Fondateur", nl: "Oprichter", es: "Fundador", de: "Gründer", zh: "创始人" }
             at "Acteble"
@@ -325,6 +307,26 @@ TFE: WebMenu 2.0
 
     // ---------- projects ----------
     projects {
+        Baba {
+            name "Baba"
+            description t{ en: "Shell-like CLI queried in controlled English through pure symbolic AI — no LLM in the loop.", fr: "CLI de type shell interrogé en anglais contrôlé via une IA symbolique pure — aucun LLM dans la boucle.", nl: "Shell-achtige CLI die je in gecontroleerd Engels bevraagt via pure symbolische AI — geen LLM in de lus.", es: "CLI tipo shell consultada en inglés controlado mediante IA simbólica pura — sin LLM en el bucle.", de: "Shell-artige CLI, in kontrolliertem Englisch abgefragt über reine symbolische KI — ohne LLM im Ablauf.", zh: "类 shell CLI，通过纯符号 AI（无 LLM）以受控英语查询。" }
+            summary t{ en: "Five layers: Rust CLI shell, link-grammar syntactic parser, SWI-Prolog symbolic engine, domain vocabulary packs, action executors.", fr: "Cinq couches : shell CLI Rust, parseur syntaxique link-grammar, moteur symbolique SWI-Prolog, packs de vocabulaire de domaine, exécuteurs d'actions.", nl: "Vijf lagen: Rust CLI-shell, link-grammar syntactische parser, SWI-Prolog symbolische engine, domeinvocabulairepacks, actie-uitvoerders.", es: "Cinco capas: shell CLI en Rust, parser sintáctico link-grammar, motor simbólico SWI-Prolog, paquetes de vocabulario de dominio, ejecutores de acciones.", de: "Fünf Ebenen: Rust-CLI-Shell, link-grammar Syntaxparser, symbolische SWI-Prolog-Engine, Domänen-Vokabularpakete, Aktionsausführer.", zh: "五层架构：Rust CLI shell、link-grammar 句法解析器、SWI-Prolog 符号引擎、领域词汇包、动作执行器。" }
+            url "https://github.com/grosjeanbaptiste/baba"
+            keywords [Rust, Prolog, LinkGrammar, DDD, CleanArchitecture]
+            startDate 2026-07-02
+            type "CLI"
+            roles [Author]
+        }
+        KAG {
+            name "KAG"
+            description t{ en: "Domain-agnostic Rust framework for benchmarking Retrieval-Augmented Generation pipelines.", fr: "Framework Rust indépendant du domaine pour benchmarker les pipelines Retrieval-Augmented Generation.", nl: "Domein-onafhankelijk Rust-framework voor het benchmarken van Retrieval-Augmented Generation-pipelines.", es: "Framework Rust independiente del dominio para benchmarking de pipelines Retrieval-Augmented Generation.", de: "Domänenunabhängiges Rust-Framework zum Benchmarking von Retrieval-Augmented-Generation-Pipelines.", zh: "领域无关的 Rust 框架，用于对检索增强生成（RAG）管道进行基准测试。" }
+            summary t{ en: "Hexagonal + DDD + TDD design where every pipeline stage (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) is a swappable component selected by label, zero external dependencies in the core.", fr: "Conception hexagonale + DDD + TDD où chaque étape (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) est un composant interchangeable sélectionné par label, sans dépendances externes dans le core.", nl: "Hexagonaal + DDD + TDD ontwerp waarin elke stap (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) een uitwisselbaar component is, geselecteerd via label, zonder externe afhankelijkheden in de core.", es: "Diseño hexagonal + DDD + TDD donde cada etapa (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) es un componente intercambiable seleccionado por label, sin dependencias externas en el core.", de: "Hexagonales + DDD + TDD Design, in dem jede Stufe (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) eine austauschbare, per Label ausgewählte Komponente ist — ohne externe Abhängigkeiten im Core.", zh: "采用六边形架构 + DDD + TDD，每个流水线阶段（download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate）都是通过标签选择的可互换组件，核心零外部依赖。" }
+            url "https://github.com/grosjeanbaptiste/KAG"
+            keywords [Rust, DDD, CleanArchitecture, TDD, RAG]
+            startDate 2026-07-05
+            type "Framework"
+            roles [Author]
+        }
         Acteble {
             name "Acteble"
             description t{ en: "Mobile application connecting travelers during their journeys.", fr: "Application mobile connectant les voyageurs pendant leurs trajets.", nl: "Mobiele app die reizigers tijdens hun reizen met elkaar verbindt.", es: "Aplicación móvil que conecta a los viajeros durante sus trayectos.", de: "Mobile App, die Reisende während ihrer Reisen verbindet.", zh: "在旅途中连接旅行者的移动应用。" }
@@ -635,7 +637,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
             fontSite "'Roboto', sans-serif"
         }
         sectionOrder [about work education skills languages dailyLife awards interests references]
-        sidebarOrder [skills languages dailyLife]
+        sidebarOrder [languages projects skills dailyLife]
         dailyLife {
             sleep 8 color "#F3890B"
             transport 2 color "#FF0000"

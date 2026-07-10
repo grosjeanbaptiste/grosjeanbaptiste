@@ -521,6 +521,7 @@
               <xsl:choose>
                 <xsl:when test="$name='skills'"><xsl:call-template name="sidebar-skills"/></xsl:when>
                 <xsl:when test="$name='languages'"><xsl:call-template name="sidebar-languages"/></xsl:when>
+                <xsl:when test="$name='projects'"><xsl:call-template name="sidebar-projects"/></xsl:when>
                 <xsl:when test="$name='dailyLife'"><xsl:call-template name="sidebar-dailyLife"/></xsl:when>
               </xsl:choose>
             </xsl:for-each>
@@ -616,6 +617,26 @@
         <div class="lang-item">
           <strong><xsl:value-of select="language"/></strong><br/>
           <xsl:value-of select="fluency"/>
+        </div>
+      </xsl:for-each>
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template name="sidebar-projects">
+    <xsl:if test="/resume/projects/project">
+      <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'projects'"/></xsl:call-template></h2>
+      <xsl:for-each select="/resume/projects/project">
+        <div class="lang-item">
+          <xsl:choose>
+            <xsl:when test="url">
+              <a target="_blank" rel="noopener">
+                <xsl:attribute name="href"><xsl:value-of select="url"/></xsl:attribute>
+                <strong><xsl:value-of select="name"/></strong>
+              </a>
+            </xsl:when>
+            <xsl:otherwise><strong><xsl:value-of select="name"/></strong></xsl:otherwise>
+          </xsl:choose>
+          <xsl:if test="description"><br/><xsl:value-of select="description"/></xsl:if>
         </div>
       </xsl:for-each>
     </xsl:if>

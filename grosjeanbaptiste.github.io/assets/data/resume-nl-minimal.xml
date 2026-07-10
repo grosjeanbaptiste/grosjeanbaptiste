@@ -86,8 +86,9 @@
       <section>references</section>
     </sectionOrder>
     <sidebarOrder>
-      <section>skills</section>
       <section>languages</section>
+      <section>projects</section>
+      <section>skills</section>
       <section>dailyLife</section>
     </sidebarOrder>
     <lang>nl</lang>
@@ -100,7 +101,7 @@
     <name>Baptiste Grosjean</name>
     <label>Informaticus</label>
     <image>assets/images/profil.jpeg</image>
-    <email>grosjeanbaptisteit@outlook.com</email>
+    <email>grosjeanbaptiste@outlook.com</email>
     <phone>+32 496 28 97 05</phone>
     <url>https://www.grosjeanbaptiste.com</url>
     <summary>Computerwetenschappen-student aan UMons 's nachts, op zoek naar een nieuwe kans overdag terwijl ik Acteble lanceer.
@@ -132,36 +133,6 @@ Alle projecten waaraan ik heb deelgenomen werden ontwikkeld met een sterke focus
     </profiles>
   </basics>
   <work>
-    <job>
-      <company>Baba</company>
-      <position>Auteur</position>
-      <url>https://github.com/grosjeanbaptiste/baba</url>
-      <location>Kraainem, België</location>
-      <startDate>2026-07-02</startDate>
-      <summary>Auteur van Baba, een CLI die je in gecontroleerd Engels bevraagt via pure symbolische AI — geen LLM in de lus. Vijf lagen: Rust CLI-shell, link-grammar syntactische parser, SWI-Prolog symbolische engine, domeinvocabulairepacks, actie-uitvoerders.</summary>
-      <skills>
-        <skill>Rust</skill>
-        <skill>Prolog</skill>
-        <skill>LinkGrammar</skill>
-        <skill>DDD</skill>
-        <skill>CleanArchitecture</skill>
-      </skills>
-    </job>
-    <job>
-      <company>KAG</company>
-      <position>Auteur</position>
-      <url>https://github.com/grosjeanbaptiste/KAG</url>
-      <location>Kraainem, België</location>
-      <startDate>2026-07-05</startDate>
-      <summary>Auteur van KAG, een domein-onafhankelijk Rust-framework voor het benchmarken van Retrieval-Augmented Generation-pipelines. Hexagonaal + DDD + TDD ontwerp waarin elke stap (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) een uitwisselbaar component is, geselecteerd via label, zonder externe afhankelijkheden in de core.</summary>
-      <skills>
-        <skill>Rust</skill>
-        <skill>DDD</skill>
-        <skill>CleanArchitecture</skill>
-        <skill>TDD</skill>
-        <skill>RAG</skill>
-      </skills>
-    </job>
     <job>
       <company>Acteble</company>
       <position>Oprichter</position>
@@ -467,6 +438,42 @@ TFE: WebMenu 2.0</summary>
     </school>
   </education>
   <projects>
+    <project>
+      <name>Baba</name>
+      <description>Shell-achtige CLI die je in gecontroleerd Engels bevraagt via pure symbolische AI — geen LLM in de lus.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Prolog</keyword>
+        <keyword>LinkGrammar</keyword>
+        <keyword>DDD</keyword>
+        <keyword>CleanArchitecture</keyword>
+      </keywords>
+      <startDate>2026-07-02</startDate>
+      <url>https://github.com/grosjeanbaptiste/baba</url>
+      <type>CLI</type>
+      <roles>
+        <role>Author</role>
+      </roles>
+      <summary>Vijf lagen: Rust CLI-shell, link-grammar syntactische parser, SWI-Prolog symbolische engine, domeinvocabulairepacks, actie-uitvoerders.</summary>
+    </project>
+    <project>
+      <name>KAG</name>
+      <description>Domein-onafhankelijk Rust-framework voor het benchmarken van Retrieval-Augmented Generation-pipelines.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>DDD</keyword>
+        <keyword>CleanArchitecture</keyword>
+        <keyword>TDD</keyword>
+        <keyword>RAG</keyword>
+      </keywords>
+      <startDate>2026-07-05</startDate>
+      <url>https://github.com/grosjeanbaptiste/KAG</url>
+      <type>Framework</type>
+      <roles>
+        <role>Author</role>
+      </roles>
+      <summary>Hexagonaal + DDD + TDD ontwerp waarin elke stap (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) een uitwisselbaar component is, geselecteerd via label, zonder externe afhankelijkheden in de core.</summary>
+    </project>
     <project>
       <name>Acteble</name>
       <description>Mobiele app die reizigers tijdens hun reizen met elkaar verbindt.</description>

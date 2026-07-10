@@ -8,16 +8,6 @@
   },
   "work": [
     {
-      "position": "Auteur",
-      "location": "Kraainem, België",
-      "summary": "Auteur van Baba, een CLI die je in gecontroleerd Engels bevraagt via pure symbolische AI — geen LLM in de lus. Vijf lagen: Rust CLI-shell, link-grammar syntactische parser, SWI-Prolog symbolische engine, domeinvocabulairepacks, actie-uitvoerders."
-    },
-    {
-      "position": "Auteur",
-      "location": "Kraainem, België",
-      "summary": "Auteur van KAG, een domein-onafhankelijk Rust-framework voor het benchmarken van Retrieval-Augmented Generation-pipelines. Hexagonaal + DDD + TDD ontwerp waarin elke stap (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) een uitwisselbaar component is, geselecteerd via label, zonder externe afhankelijkheden in de core."
-    },
-    {
       "position": "Oprichter",
       "location": "Brussel, België",
       "summary": "Bouwen van Acteble, een geolokaal sociaal platform dat reizigers koppelt rond gedeelde activiteiten onder ruimtelijk-temporele en multicriteria-beperkingen. Enige oprichter, architect en ontwikkelaar. De R&D-laag dient als mijn masterthesis voor de master in de computerwetenschappen aan UMons."
@@ -137,6 +127,14 @@
     }
   ],
   "projects": [
+    {
+      "description": "Shell-achtige CLI die je in gecontroleerd Engels bevraagt via pure symbolische AI — geen LLM in de lus.",
+      "summary": "Vijf lagen: Rust CLI-shell, link-grammar syntactische parser, SWI-Prolog symbolische engine, domeinvocabulairepacks, actie-uitvoerders."
+    },
+    {
+      "description": "Domein-onafhankelijk Rust-framework voor het benchmarken van Retrieval-Augmented Generation-pipelines.",
+      "summary": "Hexagonaal + DDD + TDD ontwerp waarin elke stap (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) een uitwisselbaar component is, geselecteerd via label, zonder externe afhankelijkheden in de core."
+    },
     {
       "description": "Mobiele app die reizigers tijdens hun reizen met elkaar verbindt.",
       "summary": "Ontwikkeling van een mobiele applicatie die reizigers tijdens hun reis met elkaar verbindt. Flutter voor de mobiele app, Rust voor de backend."

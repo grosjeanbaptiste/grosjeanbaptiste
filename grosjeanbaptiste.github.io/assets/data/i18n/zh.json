@@ -8,16 +8,6 @@
   },
   "work": [
     {
-      "position": "作者",
-      "location": "克赖内姆，比利时",
-      "summary": "Baba 作者：一个通过纯符号 AI（无 LLM）以受控英语查询的 CLI。五层架构：Rust CLI shell、link-grammar 句法解析器、SWI-Prolog 符号引擎、领域词汇包、动作执行器。"
-    },
-    {
-      "position": "作者",
-      "location": "克赖内姆，比利时",
-      "summary": "KAG 作者：一个领域无关的 Rust 框架，用于对检索增强生成（RAG）管道进行基准测试。采用六边形架构 + DDD + TDD，其中每个流水线阶段（download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate）都是通过标签选择的可互换组件，核心零外部依赖。"
-    },
-    {
       "position": "创始人",
       "location": "布鲁塞尔，比利时",
       "summary": "构建 Acteble，一个基于地理位置的社交平台，在时空和多标准约束下将旅行者围绕共享活动配对。唯一的创始人、架构师和开发者。研发层同时作为蒙斯大学 (UMons) 计算机科学硕士论文的研究内容。"
@@ -137,6 +127,14 @@
     }
   ],
   "projects": [
+    {
+      "description": "类 shell CLI，通过纯符号 AI（无 LLM）以受控英语查询。",
+      "summary": "五层架构：Rust CLI shell、link-grammar 句法解析器、SWI-Prolog 符号引擎、领域词汇包、动作执行器。"
+    },
+    {
+      "description": "领域无关的 Rust 框架，用于对检索增强生成（RAG）管道进行基准测试。",
+      "summary": "采用六边形架构 + DDD + TDD，每个流水线阶段（download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate）都是通过标签选择的可互换组件，核心零外部依赖。"
+    },
     {
       "description": "在旅途中连接旅行者的移动应用。",
       "summary": "开发一款在旅途中连接旅行者的移动应用。Flutter 用于移动应用，Rust 用于后端。"

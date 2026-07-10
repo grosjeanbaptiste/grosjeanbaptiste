@@ -4,24 +4,6 @@
     {
       "skills": [
         "Rust",
-        "Prolog",
-        "LinkGrammar",
-        "DDD",
-        "CleanArchitecture"
-      ]
-    },
-    {
-      "skills": [
-        "Rust",
-        "DDD",
-        "CleanArchitecture",
-        "TDD",
-        "RAG"
-      ]
-    },
-    {
-      "skills": [
-        "Rust",
         "Flutter",
         "Dart",
         "Tokio",
@@ -193,6 +175,12 @@
   ],
   "projects": [
     {
+      "summary": "Five layers: Rust CLI shell, link-grammar syntactic parser, SWI-Prolog symbolic engine, domain vocabulary packs, action executors."
+    },
+    {
+      "summary": "Hexagonal + DDD + TDD design where every pipeline stage (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) is a swappable component selected by label, zero external dependencies in the core."
+    },
+    {
       "summary": "Development of a mobile application that connects travelers during their journeys. Working with Flutter for the mobile app and Rust for the backend."
     },
     {
@@ -297,8 +285,9 @@
     "references"
   ],
   "sidebarOrder": [
-    "skills",
     "languages",
+    "projects",
+    "skills",
     "dailyLife"
   ]
 }

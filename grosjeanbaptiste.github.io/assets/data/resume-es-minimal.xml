@@ -86,8 +86,9 @@
       <section>references</section>
     </sectionOrder>
     <sidebarOrder>
-      <section>skills</section>
       <section>languages</section>
+      <section>projects</section>
+      <section>skills</section>
       <section>dailyLife</section>
     </sidebarOrder>
     <lang>es</lang>
@@ -100,7 +101,7 @@
     <name>Baptiste Grosjean</name>
     <label>Informático</label>
     <image>assets/images/profil.jpeg</image>
-    <email>grosjeanbaptisteit@outlook.com</email>
+    <email>grosjeanbaptiste@outlook.com</email>
     <phone>+32 496 28 97 05</phone>
     <url>https://www.grosjeanbaptiste.com</url>
     <summary>Estudiante de informática en UMons por la noche, en busca de una nueva oportunidad de día mientras lanzo Acteble.
@@ -132,36 +133,6 @@ Todos los proyectos en los que he participado se han desarrollado con un fuerte 
     </profiles>
   </basics>
   <work>
-    <job>
-      <company>Baba</company>
-      <position>Autor</position>
-      <url>https://github.com/grosjeanbaptiste/baba</url>
-      <location>Kraainem, Bélgica</location>
-      <startDate>2026-07-02</startDate>
-      <summary>Autor de Baba, una CLI consultada en inglés controlado mediante IA simbólica pura — sin LLM en el bucle. Cinco capas: shell CLI en Rust, parser sintáctico link-grammar, motor simbólico SWI-Prolog, paquetes de vocabulario de dominio, ejecutores de acciones.</summary>
-      <skills>
-        <skill>Rust</skill>
-        <skill>Prolog</skill>
-        <skill>LinkGrammar</skill>
-        <skill>DDD</skill>
-        <skill>CleanArchitecture</skill>
-      </skills>
-    </job>
-    <job>
-      <company>KAG</company>
-      <position>Autor</position>
-      <url>https://github.com/grosjeanbaptiste/KAG</url>
-      <location>Kraainem, Bélgica</location>
-      <startDate>2026-07-05</startDate>
-      <summary>Autor de KAG, un framework Rust independiente del dominio para benchmarking de pipelines de Retrieval-Augmented Generation. Diseño hexagonal + DDD + TDD donde cada etapa (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) es un componente intercambiable seleccionado por label, sin dependencias externas en el core.</summary>
-      <skills>
-        <skill>Rust</skill>
-        <skill>DDD</skill>
-        <skill>CleanArchitecture</skill>
-        <skill>TDD</skill>
-        <skill>RAG</skill>
-      </skills>
-    </job>
     <job>
       <company>Acteble</company>
       <position>Fundador</position>
@@ -467,6 +438,42 @@ TFE: WebMenu 2.0</summary>
     </school>
   </education>
   <projects>
+    <project>
+      <name>Baba</name>
+      <description>CLI tipo shell consultada en inglés controlado mediante IA simbólica pura — sin LLM en el bucle.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>Prolog</keyword>
+        <keyword>LinkGrammar</keyword>
+        <keyword>DDD</keyword>
+        <keyword>CleanArchitecture</keyword>
+      </keywords>
+      <startDate>2026-07-02</startDate>
+      <url>https://github.com/grosjeanbaptiste/baba</url>
+      <type>CLI</type>
+      <roles>
+        <role>Author</role>
+      </roles>
+      <summary>Cinco capas: shell CLI en Rust, parser sintáctico link-grammar, motor simbólico SWI-Prolog, paquetes de vocabulario de dominio, ejecutores de acciones.</summary>
+    </project>
+    <project>
+      <name>KAG</name>
+      <description>Framework Rust independiente del dominio para benchmarking de pipelines Retrieval-Augmented Generation.</description>
+      <keywords>
+        <keyword>Rust</keyword>
+        <keyword>DDD</keyword>
+        <keyword>CleanArchitecture</keyword>
+        <keyword>TDD</keyword>
+        <keyword>RAG</keyword>
+      </keywords>
+      <startDate>2026-07-05</startDate>
+      <url>https://github.com/grosjeanbaptiste/KAG</url>
+      <type>Framework</type>
+      <roles>
+        <role>Author</role>
+      </roles>
+      <summary>Diseño hexagonal + DDD + TDD donde cada etapa (download → ocrize → parse → normalize → chunk → embed → retrieve → rerank → generate) es un componente intercambiable seleccionado por label, sin dependencias externas en el core.</summary>
+    </project>
     <project>
       <name>Acteble</name>
       <description>Aplicación móvil que conecta a los viajeros durante sus trayectos.</description>
