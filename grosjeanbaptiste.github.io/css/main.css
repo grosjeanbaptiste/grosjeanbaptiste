@@ -44,6 +44,26 @@
   margin-bottom: 20px;
 }
 
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.experience-header .company,
+.experience-header .date {
+  margin: 0;
+  color: var(--third-color);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.experience-item.continuation {
+  margin-top: -8px;
+}
+
 .experience-item h3,
 .education-item h3,
 .project-item h3 {

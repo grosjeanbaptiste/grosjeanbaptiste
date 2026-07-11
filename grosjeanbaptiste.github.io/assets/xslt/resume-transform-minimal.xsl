@@ -274,6 +274,20 @@
           .meta-bar span { margin-right: 14px; white-space: nowrap; }
           .muted { color: var(--muted); font-size: 0.9em; }
           .row { margin-bottom: 14px; }
+          .row.continuation { margin-top: -6px; }
+          .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+            flex-wrap: wrap;
+          }
+          .experience-header .company-right,
+          .experience-header .right {
+            color: var(--accent);
+            font-weight: 600;
+            white-space: nowrap;
+          }
           .tag {
             display: inline-block;
             background: var(--accent);
@@ -491,21 +505,48 @@
     <xsl:if test="/resume/work/job">
           <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'experience'"/></xsl:call-template></h2>
           <xsl:for-each select="/resume/work/job">
-            <div class="row">
-              <h3>
-                <xsl:value-of select="position"/>
-                <xsl:if test="company"> — <xsl:value-of select="company"/></xsl:if>
-              </h3>
-              <div class="muted">
-                <xsl:value-of select="startDate"/>
-                <xsl:text> – </xsl:text>
+            <xsl:variable name="prevCompany" select="preceding-sibling::job[1]/company"/>
+            <xsl:variable name="continuation" select="$prevCompany = company and $prevCompany != ''"/>
+            <div>
+              <xsl:attribute name="class">
                 <xsl:choose>
-                  <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
-                  <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
+                  <xsl:when test="$continuation">row continuation</xsl:when>
+                  <xsl:otherwise>row</xsl:otherwise>
                 </xsl:choose>
-                <xsl:if test="location"> · <xsl:value-of select="location"/></xsl:if>
-                <xsl:if test="url"> · <a><xsl:attribute name="href"><xsl:value-of select="url"/></xsl:attribute><xsl:value-of select="url"/></a></xsl:if>
+              </xsl:attribute>
+              <div class="experience-header">
+                <h3>
+                  <xsl:value-of select="position"/>
+                  <xsl:if test="client"> · <xsl:value-of select="client"/></xsl:if>
+                </h3>
+                <xsl:choose>
+                  <xsl:when test="$continuation">
+                    <span class="muted right">
+                      <xsl:value-of select="startDate"/>
+                      <xsl:text> – </xsl:text>
+                      <xsl:choose>
+                        <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
+                        <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
+                      </xsl:choose>
+                    </span>
+                  </xsl:when>
+                  <xsl:when test="company">
+                    <span class="company-right"><xsl:value-of select="company"/></span>
+                  </xsl:when>
+                </xsl:choose>
               </div>
+              <xsl:if test="not($continuation)">
+                <div class="muted">
+                  <xsl:value-of select="startDate"/>
+                  <xsl:text> – </xsl:text>
+                  <xsl:choose>
+                    <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
+                    <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
+                  </xsl:choose>
+                  <xsl:if test="location"> · <xsl:value-of select="location"/></xsl:if>
+                  <xsl:if test="url"> · <a><xsl:attribute name="href"><xsl:value-of select="url"/></xsl:attribute><xsl:value-of select="url"/></a></xsl:if>
+                </div>
+              </xsl:if>
               <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
               <xsl:if test="highlights/highlight">
                 <ul>
