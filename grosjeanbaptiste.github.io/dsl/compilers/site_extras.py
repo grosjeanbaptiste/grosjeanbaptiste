@@ -41,6 +41,18 @@ def _work_extras(resume: Resume) -> list[dict[str, Any]]:
             extras["projects"] = [
                 _resolve_project_name(resume, ref.target) for ref in w.projects
             ]
+        if w.client:
+            # Consulting mission client (e.g. Xtrada → VhAuctions). Falls
+            # into extras because JSON Resume has no dedicated slot; the
+            # PDF/HTML renderers pick it up to distinguish "several roles
+            # at same employer" from "several missions via a consulting
+            # firm".
+            if isinstance(w.client, Translated):
+                extras["client"] = w.client.get("en")
+            elif isinstance(w.client, str):
+                extras["client"] = w.client
+            else:
+                extras["client"] = str(w.client)
         out.append(extras if extras else None)
     return _trim_trailing_nulls(out)
 

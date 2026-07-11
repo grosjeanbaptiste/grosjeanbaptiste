@@ -128,6 +128,7 @@ class WorkEntry(Node):
     key: str  # DSL identifier (e.g. Founder, AIResearchScientist)
     position: Value | None = None
     at: Value | None = None  # company name (may be translated)
+    client: Value | None = None  # consulting client (Xtrada → VhAuctions, aXinco)
     url: str | None = None
     location: Value | None = None
     period: DateRange | None = None

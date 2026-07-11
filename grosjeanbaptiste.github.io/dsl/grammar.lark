@@ -65,6 +65,7 @@ work_entry: NAME hide_flag? "{" work_field+ "}"
 
 work_field: "position" value              -> work_position
           | "at" value                    -> work_at
+          | "client" value                -> work_client
           | "url" value                   -> work_url
           | "location" value              -> work_location
           | "period" date_range           -> work_period

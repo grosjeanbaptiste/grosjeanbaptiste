@@ -240,7 +240,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
       </skills>
     </job>
     <job>
-      <company>VhAuctions</company>
+      <company>Xtrada</company>
       <position>.NET/React Software Crafter</position>
       <url>https://www.vhauctions.be</url>
       <location>Antwerpen, Flandern, Belgien</location>
@@ -254,9 +254,10 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
       <projects>
         <project>VhAuctions</project>
       </projects>
+      <client>VhAuctions</client>
     </job>
     <job>
-      <company>aXinco</company>
+      <company>Xtrada</company>
       <position>.NET/Blazor Software Crafter</position>
       <url>https://www.axinco.be</url>
       <location>Antwerpen, Flandern, Belgien</location>
@@ -272,6 +273,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
       <projects>
         <project>Kwalitijd</project>
       </projects>
+      <client>aXinco</client>
     </job>
     <job>
       <company>Technofutur TIC</company>

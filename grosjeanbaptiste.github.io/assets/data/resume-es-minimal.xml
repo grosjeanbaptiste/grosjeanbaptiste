@@ -240,7 +240,7 @@ En la encrucijada de la ingeniería del software en la era de la IA — flujos C
       </skills>
     </job>
     <job>
-      <company>VhAuctions</company>
+      <company>Xtrada</company>
       <position>Software Crafter .NET / React</position>
       <url>https://www.vhauctions.be</url>
       <location>Amberes, Flandes, Bélgica</location>
@@ -254,9 +254,10 @@ En la encrucijada de la ingeniería del software en la era de la IA — flujos C
       <projects>
         <project>VhAuctions</project>
       </projects>
+      <client>VhAuctions</client>
     </job>
     <job>
-      <company>aXinco</company>
+      <company>Xtrada</company>
       <position>Software Crafter .NET / Blazor</position>
       <url>https://www.axinco.be</url>
       <location>Amberes, Flandes, Bélgica</location>
@@ -272,6 +273,7 @@ En la encrucijada de la ingeniería del software en la era de la IA — flujos C
       <projects>
         <project>Kwalitijd</project>
       </projects>
+      <client>aXinco</client>
     </job>
     <job>
       <company>Technofutur TIC</company>

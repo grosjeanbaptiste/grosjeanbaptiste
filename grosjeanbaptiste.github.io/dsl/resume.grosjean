@@ -109,7 +109,8 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
         }
         NETReactSoftwareCrafter {
             position t{ en: ".NET/React Software Crafter", fr: "Software Crafter .NET / React", nl: ".NET / React Software Crafter", es: "Software Crafter .NET / React", de: ".NET/React Software Crafter", zh: ".NET/React 软件工艺师" }
-            at "VhAuctions"
+            at "Xtrada"
+            client "VhAuctions"
             url "https://www.vhauctions.be"
             location t{ en: "Anvers, Région flamande, Belgique", fr: "Anvers, Flandres, Belgique", nl: "Antwerpen, Vlaanderen, België", es: "Amberes, Flandes, Bélgica", de: "Antwerpen, Flandern, Belgien", zh: "安特卫普，弗拉芒大区，比利时" }
             period 2024-01-01..2024-08-07
@@ -118,7 +119,8 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
         }
         NETBlazorSoftwareCrafter {
             position t{ en: ".NET/Blazor Software Crafter", fr: "Software Crafter .NET / Blazor", nl: ".NET / Blazor Software Crafter", es: "Software Crafter .NET / Blazor", de: ".NET/Blazor Software Crafter", zh: ".NET/Blazor 软件工艺师" }
-            at "aXinco"
+            at "Xtrada"
+            client "aXinco"
             url "https://www.axinco.be"
             location t{ en: "Anvers, Région flamande, Belgique", fr: "Anvers, Flandres, Belgique", nl: "Antwerpen, Vlaanderen, België", es: "Amberes, Flandes, Bélgica", de: "Antwerpen, Flandern, Belgien", zh: "安特卫普，弗拉芒大区，比利时" }
             period 2023-09-01..2023-12-31

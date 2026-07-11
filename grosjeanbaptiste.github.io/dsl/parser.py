@@ -216,6 +216,9 @@ class _Builder(Transformer):
     def work_at(self, meta, children):
         return ("at", children[0])
 
+    def work_client(self, meta, children):
+        return ("client", children[0])
+
     def work_url(self, meta, children):
         return ("url", children[0])
 

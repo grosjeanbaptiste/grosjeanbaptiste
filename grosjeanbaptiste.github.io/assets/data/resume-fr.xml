@@ -240,7 +240,7 @@ Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude
       </skills>
     </job>
     <job>
-      <company>VhAuctions</company>
+      <company>Xtrada</company>
       <position>Software Crafter .NET / React</position>
       <url>https://www.vhauctions.be</url>
       <location>Anvers, Flandres, Belgique</location>
@@ -254,9 +254,10 @@ Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude
       <projects>
         <project>VhAuctions</project>
       </projects>
+      <client>VhAuctions</client>
     </job>
     <job>
-      <company>aXinco</company>
+      <company>Xtrada</company>
       <position>Software Crafter .NET / Blazor</position>
       <url>https://www.axinco.be</url>
       <location>Anvers, Flandres, Belgique</location>
@@ -272,6 +273,7 @@ Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude
       <projects>
         <project>Kwalitijd</project>
       </projects>
+      <client>aXinco</client>
     </job>
     <job>
       <company>Technofutur TIC</company>
