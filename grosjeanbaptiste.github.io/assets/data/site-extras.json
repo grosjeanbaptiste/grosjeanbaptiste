@@ -71,11 +71,6 @@
       ]
     },
     {
-      "projects": [
-        "EduCraft"
-      ]
-    },
-    {
       "skills": [
         ".NET",
         "Blazor",
@@ -98,7 +93,6 @@
         "MyWay"
       ]
     },
-    null,
     null,
     null,
     {
@@ -238,6 +232,24 @@
       }
     ]
   },
+  "competitions": [
+    {
+      "key": "HackathonCOW2024",
+      "title": "Hackathon Citizens of Wallonia 2024",
+      "date": "2024-03-17",
+      "organizer": "Citizens of Wallonia",
+      "summary": "EduCraft — solution allowing anyone to craft a personalized path to gain new skills.",
+      "url": "https://www.cow.be"
+    },
+    {
+      "key": "HackathonCOW2023",
+      "title": "Hackathon Citizens of Wallonia 2023",
+      "date": "2023-03-31",
+      "organizer": "Citizens of Wallonia",
+      "summary": "OnlyTogether — solution ensuring vulnerable users are always accompanied.",
+      "url": "https://www.cow.be"
+    }
+  ],
   "brand": {
     "primary": "#800020",
     "accent": "#F3890B",

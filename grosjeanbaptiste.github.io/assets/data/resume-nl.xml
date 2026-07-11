@@ -256,18 +256,6 @@ Alle projecten waaraan ik heb deelgenomen werden ontwikkeld met een sterke focus
       </projects>
     </job>
     <job>
-      <company>Hackathon Citizens of Wallonia</company>
-      <position>Software Crafter</position>
-      <url>https://www.cow.be</url>
-      <location>Charleroi en omgeving</location>
-      <startDate>2024-03-15</startDate>
-      <endDate>2024-03-17</endDate>
-      <summary>EduCraft: oplossing waarmee iedereen een eigen gepersonaliseerd leerpad kan opstellen om nieuwe vaardigheden te verwerven.</summary>
-      <projects>
-        <project>EduCraft</project>
-      </projects>
-    </job>
-    <job>
       <company>aXinco</company>
       <position>.NET / Blazor Software Crafter</position>
       <url>https://www.axinco.be</url>
@@ -305,15 +293,6 @@ De opleiding behandelde SQL Server, Node.js, Express.js, React en Angular, van d
       <projects>
         <project>MyWay</project>
       </projects>
-    </job>
-    <job>
-      <company>Hackathon Citizens of Wallonia</company>
-      <position>Full Stack Webontwikkelaar Stagiair</position>
-      <url>https://www.cow.be</url>
-      <location>Charleroi, Waals Gewest, België</location>
-      <startDate>2023-03-29</startDate>
-      <endDate>2023-03-31</endDate>
-      <summary>OnlyTogether: oplossing die ervoor zorgt dat kwetsbare gebruikers altijd begeleid worden.</summary>
     </job>
     <job>
       <company>EDITx: IT Challenges, IT Jobs, Education in IT for X</company>
@@ -759,4 +738,22 @@ Kortom, als je iemand zoekt die enthousiasme, intelligentie en een vleugje humor
       <endDate>2022-10-15</endDate>
     </volunteer-item>
   </volunteer>
+  <competitions>
+    <item>
+      <key>HackathonCOW2024</key>
+      <title>Hackathon Citizens of Wallonia 2024</title>
+      <date>2024-03-17</date>
+      <organizer>Citizens of Wallonia</organizer>
+      <summary>EduCraft — oplossing waarmee iedereen een eigen gepersonaliseerd leerpad kan opstellen om nieuwe vaardigheden te verwerven.</summary>
+      <url>https://www.cow.be</url>
+    </item>
+    <item>
+      <key>HackathonCOW2023</key>
+      <title>Hackathon Citizens of Wallonia 2023</title>
+      <date>2023-03-31</date>
+      <organizer>Citizens of Wallonia</organizer>
+      <summary>OnlyTogether — oplossing die ervoor zorgt dat kwetsbare gebruikers altijd begeleid worden.</summary>
+      <url>https://www.cow.be</url>
+    </item>
+  </competitions>
 </resume>

@@ -107,15 +107,6 @@
       "endDate": "2024-08-07"
     },
     {
-      "company": "Hackathon Citizens of Wallonia",
-      "position": "Software Crafter",
-      "url": "https://www.cow.be",
-      "location": "Charleroi et périphérie",
-      "startDate": "2024-03-15",
-      "endDate": "2024-03-17",
-      "summary": "EduCraft: solution allowing anyone to craft a personalized path to gain new skills."
-    },
-    {
       "company": "aXinco",
       "position": ".NET/Blazor Software Crafter",
       "url": "https://www.axinco.be",
@@ -132,15 +123,6 @@
       "startDate": "2022-12-01",
       "endDate": "2023-06-30",
       "summary": "This qualifying training aimed to strengthen the technical skills acquired during my bachelor's degree program at EPHEC.\nIn addition, during the extension, we received an introduction to Business Intelligence and ETL processes (Data Warehousing) using Microsoft tools (SSIS, ...).\nThis comprehensive training covered various areas including SQL Server, Node.js, Express.js, React, and Angular, encompassing everything from database development to user interface and backend."
-    },
-    {
-      "company": "Hackathon Citizens of Wallonia",
-      "position": "Full Stack Developer Web Intern",
-      "url": "https://www.cow.be",
-      "location": "Charleroi, Région wallonne, Belgique",
-      "startDate": "2023-03-29",
-      "endDate": "2023-03-31",
-      "summary": "OnlyTogether: solution ensuring vulnerable users are always accompanied."
     },
     {
       "company": "EDITx: IT Challenges, IT Jobs, Education in IT for X",

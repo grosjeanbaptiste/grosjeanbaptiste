@@ -19,6 +19,7 @@ from lark import Lark, Token, Transformer, v_args
 
 from nodes import (
     AwardEntry,
+    CompetitionEntry,
     Basics,
     DailyItem,
     Date,
@@ -113,6 +114,7 @@ class _Builder(Transformer):
             skills=singletons.get("skills"),
             languages=tuple(buckets.get("languages", ())),
             awards=tuple(buckets.get("awards", ())),
+            competitions=tuple(buckets.get("competitions", ())),
             interests=tuple(buckets.get("interests", ())),
             volunteer=tuple(buckets.get("volunteer", ())),
             meta=singletons.get("meta"),
@@ -425,6 +427,29 @@ class _Builder(Transformer):
 
     def award_summary(self, meta, children):
         return ("summary", children[0])
+
+    def competitions_section(self, meta, children):
+        return ("competitions", children)
+
+    def competition_entry(self, meta, children):
+        key = str(children[0])
+        fields = dict(children[1:])
+        return CompetitionEntry(src=_pos(meta), key=key, **fields)
+
+    def comp_title(self, meta, children):
+        return ("title", children[0])
+
+    def comp_date(self, meta, children):
+        return ("date", Date(text=str(children[0])))
+
+    def comp_organizer(self, meta, children):
+        return ("organizer", children[0])
+
+    def comp_summary(self, meta, children):
+        return ("summary", children[0])
+
+    def comp_url(self, meta, children):
+        return ("url", children[0])
 
     def interests_section(self, meta, children):
         return ("interests", children)

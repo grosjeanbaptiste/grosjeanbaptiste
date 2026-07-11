@@ -43,11 +43,6 @@
       "location": "安特卫普，弗拉芒大区，比利时"
     },
     {
-      "position": "软件工艺师",
-      "location": "沙勒罗瓦及周边",
-      "summary": "EduCraft：让任何人都能定制个性化路径以获得新技能的解决方案。"
-    },
-    {
       "position": ".NET/Blazor 软件工艺师",
       "location": "安特卫普，弗拉芒大区，比利时",
       "summary": "使用 .NET / Blazor 按照领域驱动设计和整洁代码原则开发 Axinco Kwalitijd Web 应用。"
@@ -56,11 +51,6 @@
       "position": "全栈 Web 开发实习生",
       "location": "沙勒罗瓦，瓦隆大区，比利时",
       "summary": "旨在加强我在 EPHEC 学士学位项目中获得的技术技能的资格培训。\n扩展期间，我们接受了 Microsoft 工具 (SSIS 等) 的商业智能和 ETL 流程 (数据仓库) 的介绍。\n培训涵盖了 SQL Server、Node.js、Express.js、React 和 Angular，从数据库开发到用户界面和后端。"
-    },
-    {
-      "position": "全栈 Web 开发实习生",
-      "location": "沙勒罗瓦，瓦隆大区，比利时",
-      "summary": "OnlyTogether：确保弱势用户始终有人陪伴的解决方案。"
     },
     {
       "position": "全栈 Web 开发实习生",
@@ -197,6 +187,18 @@
       "title": "TOEIC",
       "awarder": "ETS",
       "summary": "730"
+    }
+  ],
+  "competitions": [
+    {
+      "title": "Hackathon Citizens of Wallonia 2024",
+      "organizer": "Citizens of Wallonia",
+      "summary": "EduCraft — 让任何人都能定制个性化路径以获得新技能的解决方案。"
+    },
+    {
+      "title": "Hackathon Citizens of Wallonia 2023",
+      "organizer": "Citizens of Wallonia",
+      "summary": "OnlyTogether — 确保弱势用户始终有人陪伴的解决方案。"
     }
   ],
   "interests": [

@@ -203,6 +203,16 @@ class AwardEntry(Node):
 
 
 @dataclass(frozen=True, kw_only=True)
+class CompetitionEntry(Node):
+    key: str
+    title: Value | None = None
+    date: Date | None = None
+    organizer: Value | None = None
+    summary: Value | None = None
+    url: Value | None = None
+
+
+@dataclass(frozen=True, kw_only=True)
 class InterestEntry(Node):
     key: str
     name: Value | None = None
@@ -257,6 +267,7 @@ class Resume(Node):
     skills: Skills | None = None
     languages: tuple[LanguageEntry, ...] = ()
     awards: tuple[AwardEntry, ...] = ()
+    competitions: tuple[CompetitionEntry, ...] = ()
     interests: tuple[InterestEntry, ...] = ()
     volunteer: tuple[VolunteerEntry, ...] = ()
     meta: Meta | None = None

@@ -28,6 +28,7 @@ section: basics_section
        | skills_section
        | languages_section
        | awards_section
+       | competitions_section
        | interests_section
        | volunteer_section
        | meta_section
@@ -162,6 +163,16 @@ award_field: "title" value      -> award_title
            | "date" DATE        -> award_date
            | "awarder" value    -> award_awarder
            | "summary" value    -> award_summary
+
+competitions_section: "competitions" "{" competition_entry+ "}"
+
+competition_entry: NAME "{" competition_field+ "}"
+
+competition_field: "title" value      -> comp_title
+                 | "date" DATE        -> comp_date
+                 | "organizer" value  -> comp_organizer
+                 | "summary" value    -> comp_summary
+                 | "url" value        -> comp_url
 
 interests_section: "interests" "{" interest_entry+ "}"
 

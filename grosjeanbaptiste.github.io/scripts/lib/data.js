@@ -55,6 +55,9 @@ function mergeExtras(resume, extras) {
   if (extras.sidebarOrder) {
     patched.meta = { ...(patched.meta || {}), sidebarOrder: extras.sidebarOrder };
   }
+  if (extras.competitions) {
+    patched.competitions = extras.competitions;
+  }
   return patched;
 }
 

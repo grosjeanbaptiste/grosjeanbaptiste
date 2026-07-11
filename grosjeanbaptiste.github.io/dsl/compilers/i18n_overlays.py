@@ -105,6 +105,17 @@ def _award_overlay(a, lang: str) -> dict[str, Any] | None:
     return entry or None
 
 
+def _competition_overlay(c, lang: str) -> dict[str, Any] | None:
+    entry: dict[str, Any] = {}
+    if (val := _tr(c.title, lang)) is not None:
+        entry["title"] = val
+    if (val := _tr(c.organizer, lang)) is not None:
+        entry["organizer"] = val
+    if (val := _tr(c.summary, lang)) is not None:
+        entry["summary"] = val
+    return entry or None
+
+
 def _interest_overlay(i, lang: str) -> dict[str, Any] | None:
     entry: dict[str, Any] = {}
     if (val := _tr(i.name, lang)) is not None:
@@ -153,6 +164,7 @@ def emit_for_lang(resume: Resume, lang: str) -> dict[str, Any]:
         ("projects", resume.projects, _project_overlay),
         ("references", resume.references, _reference_overlay),
         ("awards", resume.awards, _award_overlay),
+        ("competitions", resume.competitions, _competition_overlay),
         ("interests", resume.interests, _interest_overlay),
         ("volunteer", resume.volunteer, _volunteer_overlay),
         ("languages", resume.languages, _language_overlay),

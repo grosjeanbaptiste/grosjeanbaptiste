@@ -43,11 +43,6 @@
       "location": "Antwerpen, Flandern, Belgien"
     },
     {
-      "position": "Software Crafter",
-      "location": "Charleroi und Umgebung",
-      "summary": "EduCraft: Lösung, mit der jeder seinen eigenen personalisierten Weg zum Erwerb neuer Fähigkeiten gestalten kann."
-    },
-    {
       "position": ".NET/Blazor Software Crafter",
       "location": "Antwerpen, Flandern, Belgien",
       "summary": "Entwicklung der Axinco Kwalitijd Webanwendung in .NET / Blazor nach DDD und Clean-Code-Prinzipien."
@@ -56,11 +51,6 @@
       "position": "Full-Stack-Webentwickler Praktikant",
       "location": "Charleroi, Wallonien, Belgien",
       "summary": "Qualifizierende Ausbildung zur Stärkung der technischen Fähigkeiten aus meinem Bachelor an der EPHEC.\nDie Erweiterung beinhaltete eine Einführung in Business Intelligence und ETL-Prozesse (Data Warehousing) mit Microsoft-Tools (SSIS, ...).\nDie Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von Datenbankentwicklung bis Benutzeroberfläche und Backend."
-    },
-    {
-      "position": "Full-Stack-Webentwickler Praktikant",
-      "location": "Charleroi, Wallonische Region, Belgien",
-      "summary": "OnlyTogether: Lösung, die sicherstellt, dass schutzbedürftige Nutzer immer begleitet werden."
     },
     {
       "position": "Full-Stack-Webentwickler Praktikant",
@@ -197,6 +187,18 @@
       "title": "TOEIC",
       "awarder": "ETS",
       "summary": "730"
+    }
+  ],
+  "competitions": [
+    {
+      "title": "Hackathon Citizens of Wallonia 2024",
+      "organizer": "Citizens of Wallonia",
+      "summary": "EduCraft — Lösung, mit der jeder seinen eigenen personalisierten Weg zum Erwerb neuer Fähigkeiten gestalten kann."
+    },
+    {
+      "title": "Hackathon Citizens of Wallonia 2023",
+      "organizer": "Citizens of Wallonia",
+      "summary": "OnlyTogether — Lösung, die sicherstellt, dass schutzbedürftige Nutzer immer begleitet werden."
     }
   ],
   "interests": [

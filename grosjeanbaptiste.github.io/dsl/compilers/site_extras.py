@@ -12,6 +12,7 @@ from typing import Any
 
 from nodes import (
     Resume,
+    Translated,
 )
 
 
@@ -97,6 +98,32 @@ def _hours_as_int_if_whole(h: float) -> float | int:
     return int(h) if h == int(h) else h
 
 
+def _competitions(resume: Resume) -> list[dict[str, Any]]:
+    def _text(v):
+        if v is None:
+            return None
+        if isinstance(v, Translated):
+            return v.get("en")
+        if isinstance(v, str):
+            return v
+        return str(v)
+    out = []
+    for c in resume.competitions:
+        entry: dict[str, Any] = {"key": c.key}
+        if (val := _text(c.title)) is not None:
+            entry["title"] = val
+        if c.date and c.date.text:
+            entry["date"] = c.date.text
+        if (val := _text(c.organizer)) is not None:
+            entry["organizer"] = val
+        if (val := _text(c.summary)) is not None:
+            entry["summary"] = val
+        if (val := _text(c.url)) is not None:
+            entry["url"] = val
+        out.append(entry)
+    return out
+
+
 def _daily_life(resume: Resume) -> dict[str, Any] | None:
     if not resume.meta or not resume.meta.daily_life:
         return None
@@ -120,6 +147,8 @@ def emit(resume: Resume) -> dict[str, Any]:
         payload["projects"] = extras
     if (daily := _daily_life(resume)) is not None:
         payload["dailyLife"] = daily
+    if resume.competitions:
+        payload["competitions"] = _competitions(resume)
     if resume.meta and resume.meta.brand_tokens:
         payload["brand"] = dict(resume.meta.brand_tokens)
     if resume.meta and resume.meta.section_order:
