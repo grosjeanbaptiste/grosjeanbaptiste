@@ -17,16 +17,19 @@ function renderSummary(text, max) {
 function renderEducationEntry(e, lang, t, limits) {
   const start = formatDate(e.startDate, lang);
   const end = formatDate(e.endDate, lang);
-  // \cvevent's title + subtitle land in \altacvevent{...}{...} boxes that
-  // altacv doesn't \raggedright'ify, so a long word like "Professional" gets
-  // hyphenated to "Pro-fessional" at the box edge. Wrap every word in \mbox{}
-  // (via nohyphen) to make the word atomic.
   const title = e.area
     ? `${nohyphen(e.studyType)} ${nohyphen(t.degreeIn)} ${nohyphen(e.area)}`
     : nohyphen(e.studyType);
-  const dates = `${tex(start)} -- ${tex(end)}`;
+  // Same layout as Work: title (studyType [in area]) left, institution right;
+  // dates left, gpa right on the second line. Using \hfill between two mbox
+  // chains dodges the \cvevent concatenation that was hyphenating long words
+  // like "Professional" or "Attestation" mid-box.
   const parts = [
-    `\\cvevent{${title}}{${nohyphen(e.institution)}}{${dates}}{${e.gpa ? nohyphen(e.gpa) : ''}}`,
+    '\\par\\needspace{4\\baselineskip}',
+    `\\noindent{\\large\\color{emphasis}${title}}\\hfill{\\large\\color{accent}${nohyphen(e.institution)}}\\par`,
+    `\\smallskip\\noindent{\\small\\color{accent}\\faCalendar\\color{emphasis}~${tex(start)} -- ${tex(end)}}\\hfill${
+      e.gpa ? `{\\small\\color{accent}\\faStar\\color{emphasis}~${nohyphen(e.gpa)}}` : ''
+    }\\par\\medskip`,
   ];
   const summary = renderSummary(e.summary, limits.summary);
   if (summary) parts.push(summary);
