@@ -10,7 +10,7 @@
     {
       "position": "Fundador",
       "location": "Bruselas, Bélgica",
-      "summary": "Construcción de Acteble, plataforma social geolocalizada que conecta viajeros en torno a actividades compartidas bajo restricciones espacio-temporales y multicriterio. Fundador, arquitecto y desarrollador único. La capa de I+D sirve como memoria de fin de máster en el marco de mi máster en ciencias informáticas en UMons."
+      "summary": "Fundador único, arquitecto y desarrollador. Backend en Rust + móvil en Flutter. La capa de I+D sirve como memoria de fin de máster en el marco de mi máster en ciencias informáticas en UMons."
     },
     {
       "position": "Investigador en IA",
@@ -21,12 +21,12 @@
     {
       "position": "AI Software Crafter Lead",
       "location": "Brujas, Bélgica",
-      "summary": "Emvi App: asistente visual con IA para personas con discapacidad visual, ofrece descripción del entorno, OCR, escaneo de códigos (QR y de barras) y sistema de rutas Valhalla adaptado."
+      "summary": "Dirección técnica y desarrollo desde el diseño hasta la entrega: pipeline OCR, escaneo de códigos y sistema de rutas Valhalla adaptado para personas con discapacidad visual."
     },
     {
       "position": "AI Software Crafter",
       "location": "Brujas, Bélgica",
-      "summary": "Remi: aplicación de reminiscencia que permite a personas con problemas cognitivos recuperar sus recuerdos mediante descripciones de fotos generadas por reconocimiento facial y LLMs. Pipeline DeepFace (Serengil) y análisis de sentimiento para las descripciones generadas por LLM."
+      "summary": "Construcción del pipeline de reconocimiento facial (DeepFace / Serengil, detección + reconocimiento) y de la capa de análisis de sentimiento para las descripciones de fotos generadas por LLM."
     },
     {
       "position": "Data Scientist",
@@ -45,7 +45,7 @@
     {
       "position": "Software Crafter .NET / Blazor",
       "location": "Amberes, Flandes, Bélgica",
-      "summary": "Desarrollo de la webapp Axinco Kwalitijd en .NET / Blazor siguiendo DDD y clean code."
+      "summary": "Desarrollo de la webapp en .NET / Blazor siguiendo DDD y clean code."
     },
     {
       "position": "Desarrollador Web Full Stack en prácticas",

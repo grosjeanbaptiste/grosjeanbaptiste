@@ -10,7 +10,7 @@
     {
       "position": "创始人",
       "location": "布鲁塞尔，比利时",
-      "summary": "构建 Acteble，一个基于地理位置的社交平台，在时空和多标准约束下将旅行者围绕共享活动配对。唯一的创始人、架构师和开发者。研发层同时作为蒙斯大学 (UMons) 计算机科学硕士论文的研究内容。"
+      "summary": "唯一的创始人、架构师和开发者。Rust 后端 + Flutter 移动端。研发层同时作为蒙斯大学 (UMons) 计算机科学硕士论文的研究内容。"
     },
     {
       "position": "AI 研究员",
@@ -21,12 +21,12 @@
     {
       "position": "AI 软件工艺负责人",
       "location": "布鲁日，比利时",
-      "summary": "Emvi App：为视障人士设计的 AI 驱动视觉助手，提供环境描述、OCR、代码扫描 (二维码和条形码) 以及适配的 Valhalla 路线规划系统。"
+      "summary": "从技术设计到交付主导开发：OCR 管道、代码扫描以及为视障人士适配的 Valhalla 路线规划系统。"
     },
     {
       "position": "AI 软件工艺师",
       "location": "布鲁日，比利时",
-      "summary": "Remi：一款追忆应用，让认知障碍患者通过基于面部识别和大模型生成的照片描述来恢复记忆。使用 DeepFace (Serengil) 进行面部识别管道，并为 LLM 生成的描述进行情感分析。"
+      "summary": "构建面部识别管道 (DeepFace / Serengil，检测与识别) 以及为 LLM 生成的照片描述提供情感分析栈。"
     },
     {
       "position": "数据科学家",
@@ -45,7 +45,7 @@
     {
       "position": ".NET/Blazor 软件工艺师",
       "location": "安特卫普，弗拉芒大区，比利时",
-      "summary": "使用 .NET / Blazor 按照领域驱动设计和整洁代码原则开发 Axinco Kwalitijd Web 应用。"
+      "summary": "使用 .NET / Blazor 按照领域驱动设计和整洁代码原则开发 Web 应用。"
     },
     {
       "position": "全栈 Web 开发实习生",

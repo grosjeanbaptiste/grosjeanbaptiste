@@ -139,7 +139,7 @@ Op het kruispunt van softwareontwikkeling in het AI-tijdperk — Claude Code-wor
       <url>https://www.acteble.com</url>
       <location>Brussel, België</location>
       <startDate>2025-07-01</startDate>
-      <summary>Bouwen van Acteble, een geolokaal sociaal platform dat reizigers koppelt rond gedeelde activiteiten onder ruimtelijk-temporele en multicriteria-beperkingen. Enige oprichter, architect en ontwikkelaar. De R&amp;D-laag dient als mijn masterthesis voor de master in de computerwetenschappen aan UMons.</summary>
+      <summary>Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&amp;D-laag dient als mijn masterthesis voor de master in de computerwetenschappen aan UMons.</summary>
       <skills>
         <skill>Rust</skill>
         <skill>Flutter</skill>
@@ -174,7 +174,7 @@ Op het kruispunt van softwareontwikkeling in het AI-tijdperk — Claude Code-wor
       <location>Brugge, België</location>
       <startDate>2024-12-01</startDate>
       <endDate>2025-06-30</endDate>
-      <summary>Emvi App: AI-aangedreven visuele assistent voor slechtzienden met omgevingsbeschrijving, OCR, code-scans (QR &amp; barcodes) en aangepast Valhalla-routesysteem.</summary>
+      <summary>Technische leiding en ontwikkeling van ontwerp tot oplevering: OCR-pijplijn, code-scans en aangepast Valhalla-routesysteem voor slechtzienden.</summary>
       <highlights>
         <highlight>Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla</highlight>
       </highlights>
@@ -193,7 +193,7 @@ Op het kruispunt van softwareontwikkeling in het AI-tijdperk — Claude Code-wor
       <location>Brugge, België</location>
       <startDate>2024-10-01</startDate>
       <endDate>2025-06-30</endDate>
-      <summary>Remi: reminiscentie-applicatie waarmee mensen met cognitieve problemen hun herinneringen terugvinden via beschrijvingen van hun foto's, gevoed door gezichtsherkenning en LLMs. DeepFace (Serengil) voor de gezichtsherkenningspipeline en sentimentanalyse voor de door LLM gegenereerde beschrijvingen.</summary>
+      <summary>Bouwde de gezichtsherkenningspijplijn (DeepFace / Serengil, detectie + herkenning) en de sentimentanalyse-stack voor de door LLM gegenereerde fotobeschrijvingen.</summary>
       <highlights>
         <highlight>Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil</highlight>
       </highlights>
@@ -262,7 +262,7 @@ Op het kruispunt van softwareontwikkeling in het AI-tijdperk — Claude Code-wor
       <location>Antwerpen, Vlaanderen, België</location>
       <startDate>2023-09-01</startDate>
       <endDate>2023-12-31</endDate>
-      <summary>Ontwikkeling van de Axinco Kwalitijd webapp in .NET / Blazor volgens DDD en clean code principes.</summary>
+      <summary>Ontwikkeling van de webapp in .NET / Blazor volgens DDD en clean code principes.</summary>
       <skills>
         <skill>.NET</skill>
         <skill>Blazor</skill>

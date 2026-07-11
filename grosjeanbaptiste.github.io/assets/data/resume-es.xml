@@ -139,7 +139,7 @@ En la encrucijada de la ingeniería del software en la era de la IA — flujos C
       <url>https://www.acteble.com</url>
       <location>Bruselas, Bélgica</location>
       <startDate>2025-07-01</startDate>
-      <summary>Construcción de Acteble, plataforma social geolocalizada que conecta viajeros en torno a actividades compartidas bajo restricciones espacio-temporales y multicriterio. Fundador, arquitecto y desarrollador único. La capa de I+D sirve como memoria de fin de máster en el marco de mi máster en ciencias informáticas en UMons.</summary>
+      <summary>Fundador único, arquitecto y desarrollador. Backend en Rust + móvil en Flutter. La capa de I+D sirve como memoria de fin de máster en el marco de mi máster en ciencias informáticas en UMons.</summary>
       <skills>
         <skill>Rust</skill>
         <skill>Flutter</skill>
@@ -174,7 +174,7 @@ En la encrucijada de la ingeniería del software en la era de la IA — flujos C
       <location>Brujas, Bélgica</location>
       <startDate>2024-12-01</startDate>
       <endDate>2025-06-30</endDate>
-      <summary>Emvi App: asistente visual con IA para personas con discapacidad visual, ofrece descripción del entorno, OCR, escaneo de códigos (QR y de barras) y sistema de rutas Valhalla adaptado.</summary>
+      <summary>Dirección técnica y desarrollo desde el diseño hasta la entrega: pipeline OCR, escaneo de códigos y sistema de rutas Valhalla adaptado para personas con discapacidad visual.</summary>
       <highlights>
         <highlight>Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla</highlight>
       </highlights>
@@ -193,7 +193,7 @@ En la encrucijada de la ingeniería del software en la era de la IA — flujos C
       <location>Brujas, Bélgica</location>
       <startDate>2024-10-01</startDate>
       <endDate>2025-06-30</endDate>
-      <summary>Remi: aplicación de reminiscencia que permite a personas con problemas cognitivos recuperar sus recuerdos mediante descripciones de fotos generadas por reconocimiento facial y LLMs. Pipeline DeepFace (Serengil) y análisis de sentimiento para las descripciones generadas por LLM.</summary>
+      <summary>Construcción del pipeline de reconocimiento facial (DeepFace / Serengil, detección + reconocimiento) y de la capa de análisis de sentimiento para las descripciones de fotos generadas por LLM.</summary>
       <highlights>
         <highlight>Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil</highlight>
       </highlights>
@@ -262,7 +262,7 @@ En la encrucijada de la ingeniería del software en la era de la IA — flujos C
       <location>Amberes, Flandes, Bélgica</location>
       <startDate>2023-09-01</startDate>
       <endDate>2023-12-31</endDate>
-      <summary>Desarrollo de la webapp Axinco Kwalitijd en .NET / Blazor siguiendo DDD y clean code.</summary>
+      <summary>Desarrollo de la webapp en .NET / Blazor siguiendo DDD y clean code.</summary>
       <skills>
         <skill>.NET</skill>
         <skill>Blazor</skill>

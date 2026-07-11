@@ -10,7 +10,7 @@
     {
       "position": "Gründer",
       "location": "Brüssel, Belgien",
-      "summary": "Aufbau von Acteble, einer geolokalisierten sozialen Plattform, die Reisende rund um gemeinsame Aktivitäten unter raum-zeitlichen und multikriteriellen Einschränkungen zusammenbringt. Alleiniger Gründer, Architekt und Entwickler. Die F&E-Schicht dient gleichzeitig als Masterarbeit für meinen MSc in Informatik an der UMons."
+      "summary": "Alleiniger Gründer, Architekt und Entwickler. Rust-Backend + Flutter-Mobile. Die F&E-Schicht dient gleichzeitig als Masterarbeit für meinen MSc in Informatik an der UMons."
     },
     {
       "position": "KI-Forschungswissenschaftler",
@@ -21,12 +21,12 @@
     {
       "position": "AI Software Crafter Lead",
       "location": "Brügge, Belgien",
-      "summary": "Emvi App: KI-gestützter visueller Assistent für sehbehinderte Menschen, mit Beschreibung der Umgebung, OCR, Code-Scans (QR & Barcodes) und einem angepassten Valhalla-Routing-System."
+      "summary": "Technische Leitung und Entwicklung vom Design bis zur Auslieferung: OCR-Pipeline, Code-Scans und angepasstes Valhalla-Routing-System für sehbehinderte Menschen."
     },
     {
       "position": "AI Software Crafter",
       "location": "Brügge, Belgien",
-      "summary": "Remi: Reminiszenz-Anwendung, die Menschen mit kognitiven Problemen ermöglicht, ihre Erinnerungen durch Beschreibungen ihrer Fotos wiederzuerlangen, unterstützt durch Gesichtserkennung und LLMs."
+      "summary": "Aufbau der Gesichtserkennungs-Pipeline (DeepFace / Serengil, Erkennung + Wiedererkennung) und des Sentiment-Analyse-Stacks für die durch LLM erzeugten Fotobeschreibungen."
     },
     {
       "position": "Data Scientist",
@@ -45,7 +45,7 @@
     {
       "position": ".NET/Blazor Software Crafter",
       "location": "Antwerpen, Flandern, Belgien",
-      "summary": "Entwicklung der Axinco Kwalitijd Webanwendung in .NET / Blazor nach DDD und Clean-Code-Prinzipien."
+      "summary": "Entwicklung der Webanwendung in .NET / Blazor nach DDD und Clean-Code-Prinzipien."
     },
     {
       "position": "Full-Stack-Webentwickler Praktikant",

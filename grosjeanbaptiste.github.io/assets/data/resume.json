@@ -45,7 +45,7 @@
       "url": "https://www.acteble.com",
       "location": "Brussels, Belgium",
       "startDate": "2025-07-01",
-      "summary": "Building Acteble, a geo-located social platform that pairs travelers around shared activities under spatio-temporal and multi-criteria constraints. Sole founder, architect, and developer. The R&D layer doubles as the dissertation for my MSc in Computer Science at UMons."
+      "summary": "Sole founder, architect and developer. Rust backend + Flutter mobile. The R&D layer doubles as the dissertation for my MSc in Computer Science at UMons."
     },
     {
       "company": "Belgian Senate",
@@ -63,7 +63,7 @@
       "location": "Brugge, Belgium",
       "startDate": "2024-12-01",
       "endDate": "2025-06-30",
-      "summary": "Emvi App: AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes & barcodes), and an adapted Valhalla routing system for the visually impaired.",
+      "summary": "Led the crafting from technical design through delivery: OCR pipeline, code scanning, and a Valhalla routing system adapted for the visually impaired.",
       "highlights": [
         "Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla"
       ]
@@ -75,7 +75,7 @@
       "location": "Brugge, Belgium",
       "startDate": "2024-10-01",
       "endDate": "2025-06-30",
-      "summary": "Remi: Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the facial recognition pipeline (detection and recognition) and sentiment analysis for the LLM-generated descriptions.",
+      "summary": "Built the facial recognition pipeline (DeepFace / Serengil — detection + recognition) and the sentiment-analysis stack for the LLM-generated photo descriptions.",
       "highlights": [
         "Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil"
       ]
@@ -113,7 +113,7 @@
       "location": "Anvers, Région flamande, Belgique",
       "startDate": "2023-09-01",
       "endDate": "2023-12-31",
-      "summary": "Crafting Axinco Kwalitijd webapp in .NET / Blazor following DDD and clean code principles."
+      "summary": "Crafted the webapp in .NET / Blazor following DDD and clean code principles."
     },
     {
       "company": "Technofutur TIC",

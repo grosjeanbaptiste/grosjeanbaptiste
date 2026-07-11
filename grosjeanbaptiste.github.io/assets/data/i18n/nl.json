@@ -10,7 +10,7 @@
     {
       "position": "Oprichter",
       "location": "Brussel, België",
-      "summary": "Bouwen van Acteble, een geolokaal sociaal platform dat reizigers koppelt rond gedeelde activiteiten onder ruimtelijk-temporele en multicriteria-beperkingen. Enige oprichter, architect en ontwikkelaar. De R&D-laag dient als mijn masterthesis voor de master in de computerwetenschappen aan UMons."
+      "summary": "Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&D-laag dient als mijn masterthesis voor de master in de computerwetenschappen aan UMons."
     },
     {
       "position": "AI-onderzoeker",
@@ -21,12 +21,12 @@
     {
       "position": "AI Software Crafter Lead",
       "location": "Brugge, België",
-      "summary": "Emvi App: AI-aangedreven visuele assistent voor slechtzienden met omgevingsbeschrijving, OCR, code-scans (QR & barcodes) en aangepast Valhalla-routesysteem."
+      "summary": "Technische leiding en ontwikkeling van ontwerp tot oplevering: OCR-pijplijn, code-scans en aangepast Valhalla-routesysteem voor slechtzienden."
     },
     {
       "position": "AI Software Crafter",
       "location": "Brugge, België",
-      "summary": "Remi: reminiscentie-applicatie waarmee mensen met cognitieve problemen hun herinneringen terugvinden via beschrijvingen van hun foto's, gevoed door gezichtsherkenning en LLMs. DeepFace (Serengil) voor de gezichtsherkenningspipeline en sentimentanalyse voor de door LLM gegenereerde beschrijvingen."
+      "summary": "Bouwde de gezichtsherkenningspijplijn (DeepFace / Serengil, detectie + herkenning) en de sentimentanalyse-stack voor de door LLM gegenereerde fotobeschrijvingen."
     },
     {
       "position": "Data Scientist",
@@ -45,7 +45,7 @@
     {
       "position": ".NET / Blazor Software Crafter",
       "location": "Antwerpen, Vlaanderen, België",
-      "summary": "Ontwikkeling van de Axinco Kwalitijd webapp in .NET / Blazor volgens DDD en clean code principes."
+      "summary": "Ontwikkeling van de webapp in .NET / Blazor volgens DDD en clean code principes."
     },
     {
       "position": "Full Stack Webontwikkelaar Stagiair",

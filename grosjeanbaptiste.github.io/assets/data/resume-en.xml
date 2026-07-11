@@ -139,7 +139,7 @@ Working at the crossroads of AI-era software engineering — Claude Code workflo
       <url>https://www.acteble.com</url>
       <location>Brussels, Belgium</location>
       <startDate>2025-07-01</startDate>
-      <summary>Building Acteble, a geo-located social platform that pairs travelers around shared activities under spatio-temporal and multi-criteria constraints. Sole founder, architect, and developer. The R&amp;D layer doubles as the dissertation for my MSc in Computer Science at UMons.</summary>
+      <summary>Sole founder, architect and developer. Rust backend + Flutter mobile. The R&amp;D layer doubles as the dissertation for my MSc in Computer Science at UMons.</summary>
       <skills>
         <skill>Rust</skill>
         <skill>Flutter</skill>
@@ -174,7 +174,7 @@ Working at the crossroads of AI-era software engineering — Claude Code workflo
       <location>Brugge, Belgium</location>
       <startDate>2024-12-01</startDate>
       <endDate>2025-06-30</endDate>
-      <summary>Emvi App: AI powered visual assistant for visually impaired people providing them with a description of their environment, OCR, code scans (QR codes &amp; barcodes), and an adapted Valhalla routing system for the visually impaired.</summary>
+      <summary>Led the crafting from technical design through delivery: OCR pipeline, code scanning, and a Valhalla routing system adapted for the visually impaired.</summary>
       <highlights>
         <highlight>Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla</highlight>
       </highlights>
@@ -193,7 +193,7 @@ Working at the crossroads of AI-era software engineering — Claude Code workflo
       <location>Brugge, Belgium</location>
       <startDate>2024-10-01</startDate>
       <endDate>2025-06-30</endDate>
-      <summary>Remi: Reminiscence application allowing people with cognitive issues to recover their memories through descriptions of their photos powered by facial recognition and LLMs. DeepFace by Serengil was used for the facial recognition pipeline (detection and recognition) and sentiment analysis for the LLM-generated descriptions.</summary>
+      <summary>Built the facial recognition pipeline (DeepFace / Serengil — detection + recognition) and the sentiment-analysis stack for the LLM-generated photo descriptions.</summary>
       <highlights>
         <highlight>Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil</highlight>
       </highlights>
@@ -262,7 +262,7 @@ Working at the crossroads of AI-era software engineering — Claude Code workflo
       <location>Anvers, Région flamande, Belgique</location>
       <startDate>2023-09-01</startDate>
       <endDate>2023-12-31</endDate>
-      <summary>Crafting Axinco Kwalitijd webapp in .NET / Blazor following DDD and clean code principles.</summary>
+      <summary>Crafted the webapp in .NET / Blazor following DDD and clean code principles.</summary>
       <skills>
         <skill>.NET</skill>
         <skill>Blazor</skill>

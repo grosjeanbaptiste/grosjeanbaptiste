@@ -139,7 +139,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
       <url>https://www.acteble.com</url>
       <location>Brüssel, Belgien</location>
       <startDate>2025-07-01</startDate>
-      <summary>Aufbau von Acteble, einer geolokalisierten sozialen Plattform, die Reisende rund um gemeinsame Aktivitäten unter raum-zeitlichen und multikriteriellen Einschränkungen zusammenbringt. Alleiniger Gründer, Architekt und Entwickler. Die F&amp;E-Schicht dient gleichzeitig als Masterarbeit für meinen MSc in Informatik an der UMons.</summary>
+      <summary>Alleiniger Gründer, Architekt und Entwickler. Rust-Backend + Flutter-Mobile. Die F&amp;E-Schicht dient gleichzeitig als Masterarbeit für meinen MSc in Informatik an der UMons.</summary>
       <skills>
         <skill>Rust</skill>
         <skill>Flutter</skill>
@@ -174,7 +174,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
       <location>Brügge, Belgien</location>
       <startDate>2024-12-01</startDate>
       <endDate>2025-06-30</endDate>
-      <summary>Emvi App: KI-gestützter visueller Assistent für sehbehinderte Menschen, mit Beschreibung der Umgebung, OCR, Code-Scans (QR &amp; Barcodes) und einem angepassten Valhalla-Routing-System.</summary>
+      <summary>Technische Leitung und Entwicklung vom Design bis zur Auslieferung: OCR-Pipeline, Code-Scans und angepasstes Valhalla-Routing-System für sehbehinderte Menschen.</summary>
       <highlights>
         <highlight>Dart / Flutter / Firebase / Firestore / OpenAI / Valhalla</highlight>
       </highlights>
@@ -193,7 +193,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
       <location>Brügge, Belgien</location>
       <startDate>2024-10-01</startDate>
       <endDate>2025-06-30</endDate>
-      <summary>Remi: Reminiszenz-Anwendung, die Menschen mit kognitiven Problemen ermöglicht, ihre Erinnerungen durch Beschreibungen ihrer Fotos wiederzuerlangen, unterstützt durch Gesichtserkennung und LLMs.</summary>
+      <summary>Aufbau der Gesichtserkennungs-Pipeline (DeepFace / Serengil, Erkennung + Wiedererkennung) und des Sentiment-Analyse-Stacks für die durch LLM erzeugten Fotobeschreibungen.</summary>
       <highlights>
         <highlight>Python / FastAPI / OpenAI / Whisper / DeepFace by Serengil</highlight>
       </highlights>
@@ -262,7 +262,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
       <location>Antwerpen, Flandern, Belgien</location>
       <startDate>2023-09-01</startDate>
       <endDate>2023-12-31</endDate>
-      <summary>Entwicklung der Axinco Kwalitijd Webanwendung in .NET / Blazor nach DDD und Clean-Code-Prinzipien.</summary>
+      <summary>Entwicklung der Webanwendung in .NET / Blazor nach DDD und Clean-Code-Prinzipien.</summary>
       <skills>
         <skill>.NET</skill>
         <skill>Blazor</skill>
