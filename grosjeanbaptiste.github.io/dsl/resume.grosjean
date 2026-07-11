@@ -19,29 +19,29 @@ resume "grosjeanbaptiste" {
         profile GitHub "https://github.com/grosjeanbaptiste" username "grosjeanbaptiste"
         profile Npm "https://npm.com/grosjeanbaptiste" username "grosjeanbaptiste"
         summary t{ en: """
-Computer science student @UMons by night looking for a new opportunity by day while launching Acteble. 
+Computer science student finishing my MSc at UMons while building Acteble.
 
-All the projects I have been involved in have been developed with a strong focus on Software Craftsmanship principles (clean code, clean architecture, and DDD) as best practices to ensure highest standards of quality, maintainability and scalability.
+Every project follows Software Craftsmanship principles — clean code, clean architecture, DDD — for quality, maintainability and scalability.
 """, fr: """
-Étudiant en informatique à l'UMons le soir, à la recherche d'une nouvelle opportunité de jour tout en lançant Acteble.
+Étudiant en informatique finissant mon Master à l'UMons tout en construisant Acteble.
 
-Tous les projets auxquels j'ai participé ont été développés avec une forte orientation Software Craftsmanship (clean code, clean architecture, DDD) afin de garantir les plus hauts standards de qualité, maintenabilité et évolutivité.
+Chaque projet suit les principes du Software Craftsmanship — clean code, clean architecture, DDD — pour la qualité, la maintenabilité et l'évolutivité.
 """, nl: """
-Computerwetenschappen-student aan UMons 's nachts, op zoek naar een nieuwe kans overdag terwijl ik Acteble lanceer.
+Computerwetenschappen-student, master aan UMons afrondend terwijl ik Acteble bouw.
 
-Alle projecten waaraan ik heb deelgenomen werden ontwikkeld met een sterke focus op Software Craftsmanship (clean code, clean architecture, DDD) als best practices om de hoogste normen van kwaliteit, onderhoudbaarheid en schaalbaarheid te garanderen.
+Elk project volgt de Software Craftsmanship-principes — clean code, clean architecture, DDD — voor kwaliteit, onderhoudbaarheid en schaalbaarheid.
 """, es: """
-Estudiante de informática en UMons por la noche, en busca de una nueva oportunidad de día mientras lanzo Acteble.
+Estudiante de informática terminando mi máster en UMons mientras construyo Acteble.
 
-Todos los proyectos en los que he participado se han desarrollado con un fuerte enfoque en los principios de Software Craftsmanship (clean code, clean architecture, DDD) como mejores prácticas para garantizar los más altos estándares de calidad, mantenibilidad y escalabilidad.
+Cada proyecto sigue los principios de Software Craftsmanship — clean code, clean architecture, DDD — para la calidad, la mantenibilidad y la escalabilidad.
 """, de: """
-Informatikstudent an der UMons in der Nacht, auf der Suche nach einer neuen Gelegenheit tagsüber, während ich Acteble starte.
+Informatikstudent an der UMons, meinen Master abschließend während ich Acteble baue.
 
-Alle Projekte, an denen ich beteiligt war, wurden mit starkem Fokus auf Software-Craftsmanship-Prinzipien (Clean Code, Clean Architecture, DDD) entwickelt, um höchste Standards von Qualität, Wartbarkeit und Skalierbarkeit sicherzustellen.
+Jedes Projekt folgt den Software-Craftsmanship-Prinzipien — Clean Code, Clean Architecture, DDD — für Qualität, Wartbarkeit und Skalierbarkeit.
 """, zh: """
-蒙斯大学 (UMons) 夜间计算机科学专业学生，白天寻找新机会的同时创办 Acteble。
+在蒙斯大学 (UMons) 完成计算机科学硕士学位，同时构建 Acteble。
 
-所有参与的项目均以软件工艺原则（整洁代码、整洁架构、领域驱动设计）为核心开发，确保最高的质量、可维护性和可扩展性标准。
+每个项目都遵循软件工艺原则 —— 整洁代码、整洁架构、领域驱动设计 —— 以确保质量、可维护性和可扩展性。
 """ }
     }
 
