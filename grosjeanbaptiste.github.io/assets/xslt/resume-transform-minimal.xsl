@@ -200,7 +200,7 @@
           }
           html[data-theme="dark"] {
             --primary: <xsl:value-of select="meta/brand/xsltPrimaryDark"/>;
-            --accent:  <xsl:value-of select="meta/brand/xsltPrimaryDark"/>;
+            --accent:  <xsl:value-of select="meta/brand/accent"/>;
             --muted:   <xsl:value-of select="meta/brand/xsltMutedDark"/>;
             --body:    <xsl:value-of select="meta/brand/xsltBodyDark"/>;
             --bg:      <xsl:value-of select="meta/brand/xsltBgDark"/>;
