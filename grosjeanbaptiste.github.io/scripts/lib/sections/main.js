@@ -45,31 +45,24 @@ function renderAbout(resume, t) {
   );
 }
 
-function renderExperienceItem(w, lang, projects, t, { continuation } = {}) {
+function renderExperienceItem(w, lang, projects, t) {
   const companyHtml = w.company
     ? w.url
       ? `<a href="${escapeHtml(w.url)}" target="_blank" rel="noopener">${escapeHtml(w.company)}</a>`
       : escapeHtml(w.company)
     : '';
-  // "Position • Client" when the role is a consulting mission (e.g. Xtrada
-  // → VhAuctions), so the reader tells "several missions via a consulting
-  // firm" apart from "several roles at the same employer".
+  // "Position · Client" when the role is a consulting mission (e.g. Xtrada
+  // → VhAuctions) so the reader still sees the end-client alongside the
+  // employer (Xtrada) in the pipe-separated header.
   const positionLabel = w.client
     ? `${escapeHtml(w.position)} · ${escapeHtml(w.client)}`
     : escapeHtml(w.position);
   const parts = [
-    `<article class="experience-item${continuation ? ' continuation' : ''}">`,
-    '  <div class="experience-header">',
-    `    <h3>${positionLabel}</h3>`,
-    continuation
-      ? `    <p class="date">${dateRangeHtml(w.startDate, w.endDate, lang)}</p>`
-      : `    <p class="company">${companyHtml}</p>`,
-    '  </div>',
+    '<article class="experience-item">',
+    `  <h3>${positionLabel}${w.company ? ` | ${companyHtml}` : ''}</h3>`,
+    `  <p class="date">${dateRangeHtml(w.startDate, w.endDate, lang)}</p>`,
   ];
-  if (!continuation) {
-    parts.push(`  <p class="date">${dateRangeHtml(w.startDate, w.endDate, lang)}</p>`);
-    if (w.location) parts.push(`  <p class="location">${escapeHtml(w.location)}</p>`);
-  }
+  if (w.location) parts.push(`  <p class="location">${escapeHtml(w.location)}</p>`);
   if (w.summary) parts.push(`  <p>${escapeHtml(w.summary).replace(/\n/g, '<br>')}</p>`);
   for (const h of w.highlights || []) parts.push(`  <p>• ${escapeHtml(h)}</p>`);
   const skillsHtml = renderEmbeddedSkills(w.skills);
@@ -128,14 +121,7 @@ function renderContact(b, t, lang) {
 function renderWorkSection(resume, lang, t) {
   if (!resume.work?.length) return null;
   const items = resume.work
-    .map((w, i, arr) => {
-      const previous = i > 0 ? arr[i - 1] : null;
-      const continuation = Boolean(previous && previous.company === w.company);
-      return indentLines(
-        renderExperienceItem(w, lang, resume.projects || [], t, { continuation }),
-        2,
-      );
-    })
+    .map((w) => indentLines(renderExperienceItem(w, lang, resume.projects || [], t), 2))
     .join('\n');
   return [
     '<section id="experience">',

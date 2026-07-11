@@ -332,28 +332,6 @@
           }
           .main h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--accent); margin-top: 4px; }
           .item { margin-bottom: 18px; }
-          .item.continuation { margin-top: -10px; }
-          .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-bottom: 2px;
-          }
-          .experience-header > h3 { margin: 0; flex: 1 1 auto; }
-          .experience-header .company,
-          .experience-header .date {
-            margin: 0;
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 0.98em;
-            white-space: nowrap;
-            text-align: right;
-            flex: 0 0 auto;
-          }
-          .experience-header .company a { color: var(--accent); text-decoration: none; }
-          .experience-header .company a:hover { text-decoration: underline; }
           .item h3 { font-size: 1.05em; margin: 0 0 2px; color: var(--primary); }
           .item h3 a { color: var(--primary); text-decoration: none; }
           .item .date { color: var(--muted); font-size: 0.85em; font-style: italic; margin: 0 0 4px; }
@@ -694,57 +672,32 @@
     <xsl:if test="/resume/work/job">
               <h2><xsl:call-template name="t"><xsl:with-param name="k" select="'experience'"/></xsl:call-template></h2>
               <xsl:for-each select="/resume/work/job">
-                <xsl:variable name="prevCompany" select="preceding-sibling::job[1]/company"/>
-                <xsl:variable name="continuation" select="$prevCompany = company and $prevCompany != ''"/>
-                <div>
-                  <xsl:attribute name="class">
-                    <xsl:choose>
-                      <xsl:when test="$continuation">item continuation</xsl:when>
-                      <xsl:otherwise>item</xsl:otherwise>
-                    </xsl:choose>
-                  </xsl:attribute>
-                  <div class="experience-header">
-                    <h3>
-                      <xsl:value-of select="position"/>
-                      <xsl:if test="client"> · <xsl:value-of select="client"/></xsl:if>
-                    </h3>
-                    <xsl:choose>
-                      <xsl:when test="$continuation">
-                        <p class="date">
-                          <xsl:value-of select="startDate"/>
-                          <xsl:text> – </xsl:text>
-                          <xsl:choose>
-                            <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
-                            <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
-                          </xsl:choose>
-                        </p>
-                      </xsl:when>
-                      <xsl:when test="company">
-                        <p class="company">
-                          <xsl:choose>
-                            <xsl:when test="url">
-                              <a target="_blank" rel="noopener">
-                                <xsl:attribute name="href"><xsl:value-of select="url"/></xsl:attribute>
-                                <xsl:value-of select="company"/>
-                              </a>
-                            </xsl:when>
-                            <xsl:otherwise><xsl:value-of select="company"/></xsl:otherwise>
-                          </xsl:choose>
-                        </p>
-                      </xsl:when>
-                    </xsl:choose>
-                  </div>
-                  <xsl:if test="not($continuation)">
-                    <p class="date">
-                      <xsl:value-of select="startDate"/>
-                      <xsl:text> – </xsl:text>
+                <div class="item">
+                  <h3>
+                    <xsl:value-of select="position"/>
+                    <xsl:if test="client"> · <xsl:value-of select="client"/></xsl:if>
+                    <xsl:if test="company">
+                      <xsl:text> | </xsl:text>
                       <xsl:choose>
-                        <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
-                        <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
+                        <xsl:when test="url">
+                          <a target="_blank" rel="noopener">
+                            <xsl:attribute name="href"><xsl:value-of select="url"/></xsl:attribute>
+                            <xsl:value-of select="company"/>
+                          </a>
+                        </xsl:when>
+                        <xsl:otherwise><xsl:value-of select="company"/></xsl:otherwise>
                       </xsl:choose>
-                    </p>
-                    <xsl:if test="location"><p class="location">📍 <xsl:value-of select="location"/></p></xsl:if>
-                  </xsl:if>
+                    </xsl:if>
+                  </h3>
+                  <p class="date">
+                    <xsl:value-of select="startDate"/>
+                    <xsl:text> – </xsl:text>
+                    <xsl:choose>
+                      <xsl:when test="endDate"><xsl:value-of select="endDate"/></xsl:when>
+                      <xsl:otherwise><xsl:call-template name="t"><xsl:with-param name="k" select="'present'"/></xsl:call-template></xsl:otherwise>
+                    </xsl:choose>
+                  </p>
+                  <xsl:if test="location"><p class="location">📍 <xsl:value-of select="location"/></p></xsl:if>
                   <xsl:if test="summary"><p><xsl:value-of select="summary"/></p></xsl:if>
                   <xsl:if test="highlights/highlight">
                     <ul>
