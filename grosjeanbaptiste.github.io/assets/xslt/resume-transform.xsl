@@ -339,15 +339,21 @@
             align-items: baseline;
             gap: 12px;
             flex-wrap: wrap;
+            margin-bottom: 2px;
           }
+          .experience-header > h3 { margin: 0; flex: 1 1 auto; }
           .experience-header .company,
           .experience-header .date {
             margin: 0;
             color: var(--accent);
             font-weight: 600;
-            font-size: 0.95em;
+            font-size: 0.98em;
             white-space: nowrap;
+            text-align: right;
+            flex: 0 0 auto;
           }
+          .experience-header .company a { color: var(--accent); text-decoration: none; }
+          .experience-header .company a:hover { text-decoration: underline; }
           .item h3 { font-size: 1.05em; margin: 0 0 2px; color: var(--primary); }
           .item h3 a { color: var(--primary); text-decoration: none; }
           .item .date { color: var(--muted); font-size: 0.85em; font-style: italic; margin: 0 0 4px; }

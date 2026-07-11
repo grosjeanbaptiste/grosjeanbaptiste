@@ -281,12 +281,17 @@
             align-items: baseline;
             gap: 12px;
             flex-wrap: wrap;
+            margin-bottom: 2px;
           }
+          .experience-header > h3 { margin: 0; flex: 1 1 auto; }
           .experience-header .company-right,
           .experience-header .right {
             color: var(--accent);
             font-weight: 600;
+            font-size: 0.98em;
             white-space: nowrap;
+            text-align: right;
+            flex: 0 0 auto;
           }
           .tag {
             display: inline-block;

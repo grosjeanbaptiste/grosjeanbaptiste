@@ -50,6 +50,12 @@
   align-items: baseline;
   gap: 12px;
   flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.experience-header > h3 {
+  margin: 0;
+  flex: 1 1 auto;
 }
 
 .experience-header .company,
@@ -57,7 +63,19 @@
   margin: 0;
   color: var(--third-color);
   font-weight: 600;
+  font-size: 1.05em;
   white-space: nowrap;
+  text-align: right;
+  flex: 0 0 auto;
+}
+
+.experience-header .company a {
+  color: var(--third-color);
+  text-decoration: none;
+}
+
+.experience-header .company a:hover {
+  text-decoration: underline;
 }
 
 .experience-item.continuation {
