@@ -76,9 +76,7 @@ function buildReferences(resume, t) {
   resume.references.forEach((r, i, arr) => {
     parts.push(`\\textbf{${tex(r.name)}}\\\\`);
     if (r.reference) {
-      const snippet =
-        r.reference.length > 220 ? `${r.reference.slice(0, 217).trimEnd()}…` : r.reference;
-      parts.push(`\\begin{quote}\\small\\itshape ${tex(snippet)}\\end{quote}`);
+      parts.push(`\\begin{quote}\\small\\itshape ${tex(r.reference)}\\end{quote}`);
     }
     if (i < arr.length - 1) parts.push('\\medskip');
   });

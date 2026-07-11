@@ -32,7 +32,7 @@ function generateLatex(resume, lang, limits) {
     '\\switchcolumn',
     buildAbout(resume, t),
     buildWork(resume, t, lang, limits),
-    buildEducation(resume, t, lang, limits),
+    limits.education_in_body ? buildEducation(resume, t, lang, limits) : '',
     '\\end{paracol}',
     verso,
     '\\end{document}',

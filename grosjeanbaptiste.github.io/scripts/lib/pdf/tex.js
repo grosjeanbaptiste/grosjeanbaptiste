@@ -35,9 +35,17 @@ const MONTHS = {
   zh: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
 };
 
+// Drop pictographs and dingbat-range codepoints (emoji, ✊, etc.) that
+// pdflatex can't render — those come through mostly from references and
+// summary paragraphs written casually. Keep everything else (accented
+// letters, CJK, standard punctuation) intact.
+const EMOJI_RANGES =
+  /[\u{1F000}-\u{1FFFF}\u{2600}-\u{27BF}\u{2900}-\u{29FF}\u{FE00}-\u{FE0F}]/gu;
+
 function tex(value) {
   if (value === null || value === undefined) return '';
   return String(value)
+    .replace(EMOJI_RANGES, '')
     .replace(/\\/g, '\\textbackslash{}')
     .replace(/&/g, '\\&')
     .replace(/%/g, '\\%')
