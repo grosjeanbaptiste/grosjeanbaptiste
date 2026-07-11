@@ -11,16 +11,17 @@ function renderWorkEntry(w, lang, resume, t, limits, { continuation } = {}) {
     // right slot carries the dates directly (no company repeat, no second
     // line, no location) so the block reads as one tighter stack.
     parts.push(
-      `\\noindent{\\large\\color{emphasis}${nohyphen(w.position)}}\\hfill{\\small\\color{accent}\\faCalendar\\color{emphasis}~${tex(start)} -- ${tex(end)}}\\par\\medskip`,
+      `\\noindent\\parbox[t]{0.62\\linewidth}{\\raggedright\\large\\color{emphasis}${tex(w.position)}}\\hfill\\parbox[t]{0.35\\linewidth}{\\raggedleft\\small\\color{accent}\\faCalendar\\color{emphasis}~${tex(start)} -- ${tex(end)}}\\par\\medskip`,
     );
   } else {
     // Uniform header: position left, company right on line 1; dates left,
-    // location right on line 2.
+    // location right on line 2. Fixed-width \parbox columns so long titles
+    // wrap on their own side instead of colliding with the company.
     parts.push(
-      `\\noindent{\\large\\color{emphasis}${nohyphen(w.position)}}\\hfill{\\large\\color{accent}${nohyphen(w.company)}}\\par`,
+      `\\noindent\\parbox[t]{0.62\\linewidth}{\\raggedright\\large\\color{emphasis}${tex(w.position)}}\\hfill\\parbox[t]{0.35\\linewidth}{\\raggedleft\\large\\color{accent}${tex(w.company)}}\\par`,
       `\\smallskip\\noindent{\\small\\color{accent}\\faCalendar\\color{emphasis}~${tex(start)} -- ${tex(end)}}\\hfill${
         w.location
-          ? `{\\small\\color{accent}\\faMapMarker\\color{emphasis}~${nohyphen(w.location)}}`
+          ? `{\\small\\color{accent}\\faMapMarker\\color{emphasis}~${tex(w.location)}}`
           : ''
       }\\par\\medskip`,
     );

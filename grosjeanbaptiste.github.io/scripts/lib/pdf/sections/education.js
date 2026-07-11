@@ -18,17 +18,16 @@ function renderEducationEntry(e, lang, t, limits) {
   const start = formatDate(e.startDate, lang);
   const end = formatDate(e.endDate, lang);
   const title = e.area
-    ? `${nohyphen(e.studyType)} ${nohyphen(t.degreeIn)} ${nohyphen(e.area)}`
-    : nohyphen(e.studyType);
-  // Same layout as Work: title (studyType [in area]) left, institution right;
-  // dates left, gpa right on the second line. Using \hfill between two mbox
-  // chains dodges the \cvevent concatenation that was hyphenating long words
-  // like "Professional" or "Attestation" mid-box.
+    ? `${tex(e.studyType)} ${tex(t.degreeIn)} ${tex(e.area)}`
+    : tex(e.studyType);
+  // Fixed-width \parbox columns so long titles wrap on their own side instead
+  // of eating \hfill and colliding with the institution. Top-aligned so both
+  // columns share a baseline.
   const parts = [
     '\\par\\needspace{4\\baselineskip}',
-    `\\noindent{\\large\\color{emphasis}${title}}\\hfill{\\large\\color{accent}${nohyphen(e.institution)}}\\par`,
+    `\\noindent\\parbox[t]{0.62\\linewidth}{\\raggedright\\large\\color{emphasis}${title}}\\hfill\\parbox[t]{0.35\\linewidth}{\\raggedleft\\large\\color{accent}${tex(e.institution)}}\\par`,
     `\\smallskip\\noindent{\\small\\color{accent}\\faCalendar\\color{emphasis}~${tex(start)} -- ${tex(end)}}\\hfill${
-      e.gpa ? `{\\small\\color{accent}\\faStar\\color{emphasis}~${nohyphen(e.gpa)}}` : ''
+      e.gpa ? `{\\small\\color{accent}\\faStar\\color{emphasis}~${tex(e.gpa)}}` : ''
     }\\par\\medskip`,
   ];
   const summary = renderSummary(e.summary, limits.summary);
