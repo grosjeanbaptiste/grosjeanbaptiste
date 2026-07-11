@@ -333,7 +333,8 @@
           .main h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--accent); margin-top: 4px; }
           .item { margin-bottom: 18px; }
           .item h3 { font-size: 1.05em; margin: 0 0 2px; color: var(--primary); }
-          .item h3 a { color: var(--primary); text-decoration: none; }
+          .item h3 a { color: var(--accent); text-decoration: none; }
+          .item h3 a:hover { text-decoration: underline; }
           .item .date { color: var(--muted); font-size: 0.85em; font-style: italic; margin: 0 0 4px; }
           .item .location { color: var(--muted); font-size: 0.85em; margin: 0 0 6px; }
           .item p { margin: 6px 0; font-size: 0.92em; }

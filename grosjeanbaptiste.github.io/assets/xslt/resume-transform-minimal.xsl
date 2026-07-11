@@ -269,6 +269,7 @@
             letter-spacing: 0.02em;
           }
           h3 { font-size: 1em; margin: 14px 0 2px; }
+          h3 .company { color: var(--accent); }
           .label { color: var(--muted); font-style: italic; margin-bottom: 10px; }
           .meta-bar { font-size: 0.9em; color: var(--muted); margin-bottom: 8px; }
           .meta-bar span { margin-right: 14px; white-space: nowrap; }
@@ -495,7 +496,7 @@
               <h3>
                 <xsl:value-of select="position"/>
                 <xsl:if test="client"> · <xsl:value-of select="client"/></xsl:if>
-                <xsl:if test="company"> — <xsl:value-of select="company"/></xsl:if>
+                <xsl:if test="company"> — <span class="company"><xsl:value-of select="company"/></span></xsl:if>
               </h3>
               <div class="muted">
                 <xsl:value-of select="startDate"/>
