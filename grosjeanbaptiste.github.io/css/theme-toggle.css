@@ -15,7 +15,11 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   white-space: nowrap;
+  /* Anchor to the right of the nav row at every viewport size and never
+   * let the other flex children push it off the edge. */
+  margin-left: auto;
   flex-shrink: 0;
+  flex-grow: 0;
 }
 
 #theme-toggle:hover {

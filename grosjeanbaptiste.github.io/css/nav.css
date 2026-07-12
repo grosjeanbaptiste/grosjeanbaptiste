@@ -15,9 +15,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   height: 70px;
   box-sizing: border-box;
+  /* Never let the bar wrap onto a second row — the theme toggle at the far
+   * right must remain reachable at every viewport size. */
+  flex-wrap: nowrap;
 }
 
 nav ul {
@@ -28,6 +31,8 @@ nav ul {
   gap: clamp(0.4rem, 1.6vw, 2rem);
   align-items: center;
   flex-wrap: wrap;
+  min-width: 0;
+  flex-shrink: 1;
 }
 
 nav li {
@@ -87,6 +92,10 @@ nav ul li a:hover {
   align-items: center;
   flex-wrap: wrap;
   justify-content: flex-end;
+  /* Allow the switcher to shrink first when the row is tight so the
+   * theme toggle at the far right always has room. */
+  min-width: 0;
+  flex-shrink: 1;
 }
 
 .lang-switcher a {
