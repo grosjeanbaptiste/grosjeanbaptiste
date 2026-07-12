@@ -47,24 +47,10 @@
   padding: 0.5rem;
 }
 
-/* Between hamburger and full desktop, drop the "Dark mode" / "Light
- * mode" text so only the moon icon remains — otherwise the pill
- * button eats too much of the compact nav bar. */
-@media (max-width: 1024px) {
-  #theme-toggle span {
-    display: none;
-  }
-  #theme-toggle {
-    padding: 6px 10px;
-    border-radius: 50%;
-  }
-}
-
 @media (max-width: 768px) {
   #theme-toggle {
     padding: 8px 12px;
     min-height: 44px;
-    min-width: 44px;
   }
 
   .menu-toggle {
