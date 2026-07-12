@@ -89,9 +89,9 @@ function generateSidebar(resume, lang) {
   return [
     renderContactInfo(b, t, lang, degreeLines, profileLines),
     '',
-    renderSkillsBlocks(resume, t),
-    '',
     renderLanguagesBlock(resume, t),
+    '',
+    renderSkillsBlocks(resume, t),
   ].join('\n');
 }
 
