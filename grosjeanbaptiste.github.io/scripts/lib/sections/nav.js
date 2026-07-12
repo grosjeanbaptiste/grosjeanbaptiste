@@ -10,7 +10,6 @@ function generateNav(lang) {
     { id: 'experience', label: t.nav.experience },
     { id: 'education', label: t.nav.education },
     { id: 'references', label: t.nav.references },
-    { id: 'contact', label: t.nav.contact },
   ];
   const navLinks = navItems
     .map((i) => `    <li><a href="#${i.id}" class="nav-link">${escapeHtml(i.label)}</a></li>`)
