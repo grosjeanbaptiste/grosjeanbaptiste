@@ -1,7 +1,5 @@
 const I18N = require('../i18n');
 const { escapeHtml, dateRangeHtml } = require('../format');
-const { profileIcon } = require('../profiles');
-const { icon } = require('../icons');
 const { indentLines } = require('../markers');
 
 const renderEmbeddedSkills = (skills) => {
@@ -142,34 +140,6 @@ function renderEducationItem(e, lang, projects, volunteer, references, t) {
   return parts.join('\n');
 }
 
-function renderContact(b, t, lang) {
-  const phoneDigits = (b.phone || '').replace(/[^+\d]/g, '');
-  const lines = [
-    `  <p>${icon('envelope')} <a href="mailto:${escapeHtml(b.email)}">${escapeHtml(b.email)}</a></p>`,
-  ];
-  if (phoneDigits) {
-    lines.push(
-      `  <p>${icon('phone')} <a href="tel:${escapeHtml(phoneDigits)}">${escapeHtml(b.phone)}</a></p>`,
-    );
-  }
-  for (const p of b.profiles || []) {
-    lines.push(
-      `  <p>${icon(profileIcon(p.network))} <a href="${escapeHtml(p.url)}" rel="me">${escapeHtml(p.network)}</a></p>`,
-    );
-  }
-  lines.push(
-    `  <p>${icon('code')} <a href="/assets/data/resume-${lang}.xml">${escapeHtml(t.xmlResume)}</a> <span class="muted-inline">(${escapeHtml(t.firefoxNote)})</span></p>`,
-    `  <p>${icon('code-branch')} <a href="https://registry.jsonresume.org/grosjeanbaptiste" rel="external noopener" target="_blank">${escapeHtml(t.jsonRegistry)}</a> <span class="muted-inline">(${escapeHtml(t.jsonRegistryNote)})</span></p>`,
-  );
-  return [
-    '<section id="contact">',
-    `  <h2>${escapeHtml(t.contact)}</h2>`,
-    `  <p>${escapeHtml(t.contactCTA)}</p>`,
-    lines.join('\n'),
-    '</section>',
-  ].join('\n');
-}
-
 function renderWorkSection(resume, lang, t) {
   if (!resume.work?.length) return null;
   const items = resume.work
@@ -260,7 +230,6 @@ function generateMain(resume, lang) {
   const sections = order
     .map((name) => MAIN_RENDERERS[name]?.(resume, lang, t))
     .filter(Boolean);
-  sections.push(renderContact(resume.basics, t, lang));
   return sections.join('\n\n');
 }
 

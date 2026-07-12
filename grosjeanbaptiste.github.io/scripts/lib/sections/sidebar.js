@@ -4,17 +4,24 @@ const { profileIcon } = require('../profiles');
 const { icon } = require('../icons');
 const { highestObtainedDegree, highestInProgressDegree, formatDegreeLine } = require('../degrees');
 
-function renderContactInfo(b, t, degreeLines, profileLines) {
+function renderContactInfo(b, t, lang, degreeLines, profileLines) {
+  const phoneDigits = (b.phone || '').replace(/[^+\d]/g, '');
   return [
     '<div class="contact-info">',
     `  <h1>${escapeHtml(b.name)}</h1>`,
     `  <h2>${escapeHtml(b.label)}</h2>`,
     ...degreeLines,
     `  <p>${icon('envelope')} <a href="mailto:${escapeHtml(b.email)}">${escapeHtml(b.email)}</a></p>`,
-    `  <p>${icon('phone')} ${escapeHtml(b.phone)}</p>`,
+    `  <p>${icon('phone')} <a href="tel:${escapeHtml(phoneDigits)}">${escapeHtml(b.phone)}</a></p>`,
     `  <p>${icon('map-marker-alt')} ${escapeHtml(b.location?.city)}, ${escapeHtml(b.location?.countryCode)}</p>`,
     ...profileLines,
     `  <p>${icon('car')} ${escapeHtml(t.driverLicense)}</p>`,
+    // Machine-readable views — XML for Firefox / registry for JSON Resume.
+    // These used to live in the redundant standalone Contact section at
+    // the bottom of the page; folded into the sidebar so the CV has a
+    // single point of contact information.
+    `  <p>${icon('code')} <a href="/assets/data/resume-${lang}.xml">${escapeHtml(t.xmlResume)}</a></p>`,
+    `  <p>${icon('code-branch')} <a href="https://registry.jsonresume.org/grosjeanbaptiste" rel="external noopener" target="_blank">${escapeHtml(t.jsonRegistry)}</a></p>`,
     '</div>',
   ].join('\n');
 }
@@ -80,7 +87,7 @@ function generateSidebar(resume, lang) {
   }
 
   return [
-    renderContactInfo(b, t, degreeLines, profileLines),
+    renderContactInfo(b, t, lang, degreeLines, profileLines),
     '',
     renderSkillsBlocks(resume, t),
     '',
