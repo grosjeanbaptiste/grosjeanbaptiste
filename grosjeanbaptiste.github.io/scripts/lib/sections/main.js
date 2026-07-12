@@ -33,6 +33,50 @@ function renderEmbeddedProjects(projectNames, projects, t) {
   ].join('\n');
 }
 
+// Match volunteer entries to a work/education host by the first word of the
+// volunteer's organization: "UMons" matches UMons, "EPHEC …" matches
+// "Ecole … (EPHEC-EPS)". Same heuristic as the XSLT views.
+function renderEmbeddedVolunteer(volunteer, hostName, lang, t) {
+  if (!hostName || !volunteer?.length) return '';
+  const matched = volunteer.filter((v) => {
+    if (!v.organization) return false;
+    const firstWord = v.organization.split(/\s+/)[0];
+    return firstWord && hostName.includes(firstWord);
+  });
+  if (!matched.length) return '';
+  const items = matched
+    .map((v) => {
+      const dates = `${v.startDate || ''} – ${v.endDate || 'Present'}`;
+      return `<li><strong>${escapeHtml(v.position)}</strong> — ${escapeHtml(dates)}</li>`;
+    })
+    .join('\n        ');
+  return [
+    '<div class="embedded-projects">',
+    `  <p class="embedded-label">${escapeHtml(t.volunteer)}:</p>`,
+    '  <ul>',
+    `        ${items}`,
+    '  </ul>',
+    '</div>',
+  ].join('\n');
+}
+
+// Reference names look like "Name Lastname, role at Company". We surface a
+// "See references: Name1, Name2" line under the host whose company name is
+// a 4-char substring match — same as the XSLT views. The links anchor to
+// the standalone References section id="ref-<index>".
+function renderEmbeddedReferenceLinks(references, hostName, t) {
+  if (!hostName || !references?.length || hostName.length < 4) return '';
+  const stem = hostName.slice(0, 4);
+  const matched = references
+    .map((r, idx) => ({ r, idx }))
+    .filter(({ r }) => r.name && r.name.includes(stem));
+  if (!matched.length) return '';
+  const links = matched
+    .map(({ r, idx }) => `<a href="#ref-${idx}">${escapeHtml(r.name)}</a>`)
+    .join(', ');
+  return `<p class="ref-links">${escapeHtml(t.references)}: ${links}</p>`;
+}
+
 function renderAbout(resume, t) {
   const paras = (resume.basics?.summary || '')
     .split(/\n\s*\n/)
@@ -45,7 +89,7 @@ function renderAbout(resume, t) {
   );
 }
 
-function renderExperienceItem(w, lang, projects, t) {
+function renderExperienceItem(w, lang, projects, volunteer, references, t) {
   const companyHtml = w.company
     ? w.url
       ? `<a href="${escapeHtml(w.url)}" target="_blank" rel="noopener">${escapeHtml(w.company)}</a>`
@@ -69,11 +113,15 @@ function renderExperienceItem(w, lang, projects, t) {
   if (skillsHtml) parts.push(`  ${skillsHtml}`);
   const projsHtml = renderEmbeddedProjects(w.projects, projects, t);
   if (projsHtml) parts.push(indentLines(projsHtml, 2));
+  const volsHtml = renderEmbeddedVolunteer(volunteer, w.company, lang, t);
+  if (volsHtml) parts.push(indentLines(volsHtml, 2));
+  const refsHtml = renderEmbeddedReferenceLinks(references, w.company, t);
+  if (refsHtml) parts.push(`  ${refsHtml}`);
   parts.push('</article>');
   return parts.join('\n');
 }
 
-function renderEducationItem(e, lang, projects, t) {
+function renderEducationItem(e, lang, projects, volunteer, references, t) {
   const parts = [
     '<article class="education-item">',
     `  <h3>${escapeHtml(e.studyType)}${e.area ? `${lang === 'en' ? ' in ' : ' — '}${escapeHtml(e.area)}` : ''}</h3>`,
@@ -86,6 +134,10 @@ function renderEducationItem(e, lang, projects, t) {
   if (skillsHtml) parts.push(`  ${skillsHtml}`);
   const projsHtml = renderEmbeddedProjects(e.projects, projects, t);
   if (projsHtml) parts.push(indentLines(projsHtml, 2));
+  const volsHtml = renderEmbeddedVolunteer(volunteer, e.institution, lang, t);
+  if (volsHtml) parts.push(indentLines(volsHtml, 2));
+  const refsHtml = renderEmbeddedReferenceLinks(references, e.institution, t);
+  if (refsHtml) parts.push(`  ${refsHtml}`);
   parts.push('</article>');
   return parts.join('\n');
 }
@@ -121,7 +173,19 @@ function renderContact(b, t, lang) {
 function renderWorkSection(resume, lang, t) {
   if (!resume.work?.length) return null;
   const items = resume.work
-    .map((w) => indentLines(renderExperienceItem(w, lang, resume.projects || [], t), 2))
+    .map((w) =>
+      indentLines(
+        renderExperienceItem(
+          w,
+          lang,
+          resume.projects || [],
+          resume.volunteer || [],
+          resume.references || [],
+          t,
+        ),
+        2,
+      ),
+    )
     .join('\n');
   return [
     '<section id="experience">',
@@ -134,7 +198,19 @@ function renderWorkSection(resume, lang, t) {
 function renderEducationSection(resume, lang, t) {
   if (!resume.education?.length) return null;
   const items = resume.education
-    .map((e) => indentLines(renderEducationItem(e, lang, resume.projects || [], t), 2))
+    .map((e) =>
+      indentLines(
+        renderEducationItem(
+          e,
+          lang,
+          resume.projects || [],
+          resume.volunteer || [],
+          resume.references || [],
+          t,
+        ),
+        2,
+      ),
+    )
     .join('\n');
   return [
     '<section id="education">',
@@ -147,10 +223,10 @@ function renderEducationSection(resume, lang, t) {
 function renderReferencesSection(resume, t) {
   if (!resume.references?.length) return null;
   const items = resume.references
-    .map((r) =>
+    .map((r, idx) =>
       indentLines(
         [
-          '<article class="reference-item">',
+          `<article class="reference-item" id="ref-${idx}">`,
           `  <p><strong>${escapeHtml(r.name)}</strong></p>`,
           `  <blockquote>${escapeHtml(r.reference).replace(/\n/g, '<br>')}</blockquote>`,
           '</article>',
