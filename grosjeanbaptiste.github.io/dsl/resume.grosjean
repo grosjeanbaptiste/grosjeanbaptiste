@@ -642,12 +642,12 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
         sectionOrder [about work education skills languages dailyLife references]
         sidebarOrder [languages projects skills dailyLife]
         dailyLife {
-            sleep 8 color "#F3890B"
+            sleep 7 color "#F3890B"
             transport 2 color "#FF0000"
-            work 9 color "#001F5A"
+            work 8 color "#001F5A"
             classes 3 color "#C0C0C0"
-            sport 1 color "#008000"
-            others 5 color "#FFFF00"
+            sport 2 color "#008000"
+            others 2 color "#FFFF00"
         }
     }
 
