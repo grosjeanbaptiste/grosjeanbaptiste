@@ -3,6 +3,7 @@
 
 import json
 import subprocess
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent.parent
@@ -12,36 +13,47 @@ GROSJEAN = DSL_DIR / "resume.grosjean"
 
 
 def _merge_extras(base: dict, extras: dict) -> dict:
-    """Mirror scripts/lib/data.js::mergeExtras (Node) in Python for test."""
+    """Mirror scripts/lib/data.js::mergeExtras (Node) in Python for test.
+
+    Each section's patch array is INDEX-ALIGNED with its canonical
+    section: ``patches[i]`` applies to ``base[section][i]``. A ``None``
+    patch — or an index past the (trailing-null-trimmed) end of the
+    array — leaves the entry untouched. This matches ``patchByIndex``
+    in data.js; the old name-keyed ``match`` model never reflected the
+    emitted sidecar shape.
+    """
     if not extras:
         return base
     out = {**base}
-    def patch_list(list_, patches):
-        if not isinstance(list_, list):
+
+    def patch_by_index(list_, patches):
+        if not isinstance(list_, list) or not isinstance(patches, list):
             return list_
         result = []
-        for entry in list_:
-            key = entry.get("institution") or entry.get("company") or entry.get("name")
-            patch = next((p for p in patches if p.get("match") == key), None)
-            if patch:
-                fields = {k: v for k, v in patch.items() if k != "match"}
-                result.append({**entry, **fields})
-            else:
-                result.append(entry)
+        for i, entry in enumerate(list_):
+            patch = patches[i] if i < len(patches) else None
+            result.append({**entry, **patch} if patch else entry)
         return result
+
     for section in ("work", "education", "projects"):
         if section in extras:
-            out[section] = patch_list(out.get(section), extras[section])
-    if "dailyLife" in extras:
-        out["meta"] = {**(out.get("meta") or {}), "dailyLife": extras["dailyLife"]}
+            out[section] = patch_by_index(out.get(section), extras[section])
+    for key in ("dailyLife", "brand", "sectionOrder", "sidebarOrder"):
+        if key in extras:
+            out["meta"] = {**(out.get("meta") or {}), key: extras[key]}
+    if "competitions" in extras:
+        out["competitions"] = extras["competitions"]
     return out
 
 
 def test_dsl_roundtrip_matches_original_json():
     tmp = Path("/tmp/dsl-roundtrip")
     tmp.mkdir(exist_ok=True)
+    # Use the interpreter running the test (the project venv locally, the
+    # runner's Python in CI) rather than a hard-coded .venv path that only
+    # exists on a dev machine.
     subprocess.check_call(
-        [str(DSL_DIR / ".venv" / "bin" / "python"), "compile.py", str(GROSJEAN), "--out", str(tmp)],
+        [sys.executable, "compile.py", str(GROSJEAN), "--out", str(tmp)],
         cwd=str(DSL_DIR),
     )
     dsl_json = json.loads((tmp / "resume.json").read_text())
