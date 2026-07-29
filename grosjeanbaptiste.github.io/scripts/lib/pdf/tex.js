@@ -38,14 +38,17 @@ const MONTHS = {
 // Drop pictographs and dingbat-range codepoints (emoji, ✊, etc.) that
 // pdflatex can't render — those come through mostly from references and
 // summary paragraphs written casually. Keep everything else (accented
-// letters, CJK, standard punctuation) intact.
-const EMOJI_RANGES =
-  /[\u{1F000}-\u{1FFFF}\u{2600}-\u{27BF}\u{2900}-\u{29FF}\u{FE00}-\u{FE0F}]/gu;
+// letters, CJK, standard punctuation) intact. Variation selectors are matched
+// via the Unicode property (not a character class) so the pattern never mixes
+// a base glyph with a combining mark (biome noMisleadingCharacterClass).
+const EMOJI_RANGES = /[\u{1F000}-\u{1FFFF}\u{2600}-\u{27BF}\u{2900}-\u{29FF}]/gu;
+const VARIATION_SELECTORS = /\p{Variation_Selector}/gu;
 
 function tex(value) {
   if (value === null || value === undefined) return '';
   return String(value)
     .replace(EMOJI_RANGES, '')
+    .replace(VARIATION_SELECTORS, '')
     .replace(/\\/g, '\\textbackslash{}')
     .replace(/&/g, '\\&')
     .replace(/%/g, '\\%')

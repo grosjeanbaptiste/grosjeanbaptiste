@@ -103,21 +103,22 @@ console.log('sitemap: sitemap.xml');
 const brand = loadResume('en').meta?.brand;
 if (brand?.primary) {
   const svgPath = path.join(ROOT, 'assets/icons/favicon.svg');
-  const svg = fs.readFileSync(svgPath, 'utf8').replace(/(<circle[^>]*fill=")#[0-9A-Fa-f]{3,8}(")/,
-    `$1${brand.primary}$2`);
+  const svg = fs
+    .readFileSync(svgPath, 'utf8')
+    .replace(/(<circle[^>]*fill=")#[0-9A-Fa-f]{3,8}(")/, `$1${brand.primary}$2`);
   if (writeIfChanged(svgPath, svg)) wrote += 1;
 
   const manifestPath = path.join(ROOT, 'manifest.webmanifest');
   const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
   if (manifest.theme_color !== brand.primary) {
     manifest.theme_color = brand.primary;
-    if (writeIfChanged(manifestPath, JSON.stringify(manifest, null, 2) + '\n')) wrote += 1;
+    if (writeIfChanged(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`)) wrote += 1;
   }
 
   const hexToRgb = (h) => {
     const m = /^#([0-9A-Fa-f]{2})([0-9A-Fa-f]{2})([0-9A-Fa-f]{2})$/.exec(h);
     if (!m) return null;
-    return `${parseInt(m[1], 16)}, ${parseInt(m[2], 16)}, ${parseInt(m[3], 16)}`;
+    return `${Number.parseInt(m[1], 16)}, ${Number.parseInt(m[2], 16)}, ${Number.parseInt(m[3], 16)}`;
   };
   const b = brand;
   const varsCss = [
