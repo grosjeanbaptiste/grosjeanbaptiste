@@ -1,4 +1,4 @@
-const { tex, nohyphen, truncate, formatDate } = require('../tex');
+const { tex, truncate, formatDate } = require('../tex');
 const { topN } = require('../data');
 const { appendItemTrailer } = require('./_trailer');
 
@@ -8,7 +8,9 @@ function renderWorkEntry(w, lang, resume, t, limits, { continuation } = {}) {
   // Consulting missions (e.g. Xtrada → VhAuctions / aXinco): the client
   // rides on the position label so "several missions via a consulting firm"
   // reads visually different from "several roles at the same employer".
-  const positionLabel = w.client ? `${tex(w.position)} \\textbullet\\ ${tex(w.client)}` : tex(w.position);
+  const positionLabel = w.client
+    ? `${tex(w.position)} \\textbullet\\ ${tex(w.client)}`
+    : tex(w.position);
   const parts = ['\\par\\needspace{5\\baselineskip}'];
   if (continuation) {
     parts.push(

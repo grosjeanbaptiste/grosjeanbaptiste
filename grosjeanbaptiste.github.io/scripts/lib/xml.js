@@ -1,8 +1,4 @@
-const {
-  highestObtainedDegree,
-  highestInProgressDegree,
-  formatDegreeLine,
-} = require('./degrees');
+const { highestObtainedDegree, highestInProgressDegree, formatDegreeLine } = require('./degrees');
 
 const XML_ITEM_NAMES = {
   work: 'job',

@@ -40,7 +40,13 @@ function generateDailyLife(resume, lang) {
     const start = cumAngle;
     const sweep = (i.hours / total) * 360;
     cumAngle = start + sweep;
-    return { label: t.dailyLifeLabels[i.key] || i.key, hours: i.hours, color: i.color, start, end: cumAngle };
+    return {
+      label: t.dailyLifeLabels[i.key] || i.key,
+      hours: i.hours,
+      color: i.color,
+      start,
+      end: cumAngle,
+    };
   });
 
   const summary = slices.map((s) => `${s.hours}${t.dailyLifeUnit} ${s.label}`).join(', ');

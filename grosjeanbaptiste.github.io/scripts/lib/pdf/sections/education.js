@@ -17,9 +17,7 @@ function renderSummary(text, max) {
 function renderEducationEntry(e, lang, t, limits) {
   const start = formatDate(e.startDate, lang);
   const end = formatDate(e.endDate, lang);
-  const title = e.area
-    ? `${tex(e.studyType)} ${tex(t.degreeIn)} ${tex(e.area)}`
-    : tex(e.studyType);
+  const title = e.area ? `${tex(e.studyType)} ${tex(t.degreeIn)} ${tex(e.area)}` : tex(e.studyType);
   // Fixed-width \parbox columns so long titles wrap on their own side instead
   // of eating \hfill and colliding with the institution. Top-aligned so both
   // columns share a baseline.
