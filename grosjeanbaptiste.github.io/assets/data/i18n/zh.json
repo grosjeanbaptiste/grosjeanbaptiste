@@ -1,7 +1,7 @@
 {
   "basics": {
     "label": "计算机科学家",
-    "summary": "在蒙斯大学 (UMons) 完成计算机科学硕士学位，同时构建 Acteble。\n\n工作聚焦于 AI 时代的软件工程交汇点 —— Claude Code 工作流、自主智能体、RAG 管道、移动开发 —— 以软件工艺为根基：整洁代码、整洁架构、六边形架构、领域驱动设计（DDD）、测试驱动开发（TDD）。",
+    "summary": "计算机科学家 —— 蒙斯大学 (UMons) 计算机科学硕士 —— 正在构建 Acteble。\n\n工作聚焦于 AI 时代的软件工程交汇点 —— Claude Code 工作流、自主智能体、RAG 管道、移动开发 —— 以软件工艺为根基：整洁代码、整洁架构、六边形架构、领域驱动设计（DDD）、测试驱动开发（TDD）。",
     "location": {
       "region": "比利时"
     }
@@ -72,9 +72,9 @@
   "education": [
     {
       "studyType": "理学硕士",
-      "area": "计算机科学 (校企合作项目) (120 ECTS)",
-      "gpa": "进行中 (MA2)",
-      "summary": "硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 由蒙斯大学 (UMONS) 算法服务部的 Gauvain Devillez 和 Hadrien Mélot 指导。学生代表 & Buddy TandeMons。"
+      "area": "计算机科学 (校企合作项目) — 专业化专精方向 (120 ECTS)",
+      "gpa": "已获得",
+      "summary": "硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 在蒙斯大学 (UMONS) 算法服务部完成。学生代表 & Buddy TandeMons。"
     },
     {
       "studyType": "职业学士",

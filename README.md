@@ -1,14 +1,14 @@
 # Baptiste Grosjean
 
-Building [Acteble](https://www.acteble.com) — a geo-located social platform — while finishing my MSc in Computer Science at [UMons](https://www.umons.be/).
+Building [Acteble](https://www.acteble.com) — a geo-located social platform — after earning my MSc in Computer Science at [UMons](https://www.umons.be/).
 
 ## About
 
 <!-- LLM-ABOUT-FACTS -->
 - **Location** — Kraainem, Belgium
-- **Education** — Master of Science - MS in Computer Science (work-study program) (120 ECTS), UMons
+- **Education** — Master of Science - MS in Computer Science (work-study program) — specialised professional focus (120 ECTS), UMons
 - **Current focus**
-  - Building Acteble, a geo-located social platform that pairs travelers around shared activities under spatio-temporal and multi-criteria constraints. — [Acteble](https://www.acteble.com)
+  - Sole founder, architect and developer. — [Acteble](https://www.acteble.com)
 <!-- /LLM-ABOUT-FACTS -->
 
 ## Personal website & CV pipeline

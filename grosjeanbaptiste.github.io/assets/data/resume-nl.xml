@@ -91,8 +91,7 @@
     </sidebarOrder>
     <lang>nl</lang>
     <degrees>
-      <inProgress>Master of Science — Computerwetenschappen (duaal leren) (120 ECTS)</inProgress>
-      <obtained>Professionele bachelor — Bedrijfsinformatica</obtained>
+      <obtained>Master of Science — Computerwetenschappen (duaal leren) — gespecialiseerde professionele afstudeerrichting (120 ECTS)</obtained>
     </degrees>
   </meta>
   <basics>
@@ -102,7 +101,7 @@
     <email>grosjeanbaptiste@outlook.com</email>
     <phone>+32 496 28 97 05</phone>
     <url>https://www.grosjeanbaptiste.com</url>
-    <summary>Computerwetenschappen-student, master aan UMons afrondend terwijl ik Acteble bouw.
+    <summary>Informaticus — master in de computerwetenschappen aan UMons — Acteble bouwend.
 
 Op het kruispunt van softwareontwikkeling in het AI-tijdperk — Claude Code-workflows, autonome agents, RAG-pipelines, mobiele ontwikkeling — verankerd in Software Craftsmanship: clean code, clean architecture, hexagonale architectuur, DDD, TDD.</summary>
     <location>
@@ -137,7 +136,7 @@ Op het kruispunt van softwareontwikkeling in het AI-tijdperk — Claude Code-wor
       <url>https://www.acteble.com</url>
       <location>Brussel, België</location>
       <startDate>2025-07-01</startDate>
-      <summary>Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&amp;D-laag dient als mijn masterthesis voor de master in de computerwetenschappen aan UMons.</summary>
+      <summary>Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&amp;D-laag diende als mijn masterthesis voor de master in de computerwetenschappen aan UMons.</summary>
       <skills>
         <skill>Rust</skill>
         <skill>Flutter</skill>
@@ -339,10 +338,11 @@ De opleiding behandelde SQL Server, Node.js, Express.js, React en Angular, van d
     <school>
       <institution>UMons</institution>
       <studyType>Master of Science</studyType>
-      <area>Computerwetenschappen (duaal leren) (120 ECTS)</area>
+      <area>Computerwetenschappen (duaal leren) — gespecialiseerde professionele afstudeerrichting (120 ECTS)</area>
       <startDate>2022-10-15</startDate>
-      <gpa>In uitvoering (MA2)</gpa>
-      <summary>Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — onder begeleiding van Gauvain Devillez en Hadrien Mélot in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger &amp; buddy TandeMons.</summary>
+      <endDate>2026-09-03</endDate>
+      <gpa>Behaald</gpa>
+      <summary>Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger &amp; buddy TandeMons.</summary>
       <skills>
         <skill>Python</skill>
         <skill>LaTeX</skill>

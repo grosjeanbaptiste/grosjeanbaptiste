@@ -1,7 +1,7 @@
 {
   "basics": {
     "label": "Informaticien",
-    "summary": "Étudiant en informatique finissant mon Master à l'UMons tout en construisant Acteble.\n\nAu croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude Code, agents autonomes, pipelines RAG, développement mobile — ancré dans le Software Craftsmanship : clean code, clean architecture, architecture hexagonale, DDD, TDD.",
+    "summary": "Informaticien — Master en sciences informatiques de l'UMons — construisant Acteble.\n\nAu croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude Code, agents autonomes, pipelines RAG, développement mobile — ancré dans le Software Craftsmanship : clean code, clean architecture, architecture hexagonale, DDD, TDD.",
     "location": {
       "region": "Belgique"
     }
@@ -10,7 +10,7 @@
     {
       "position": "Fondateur",
       "location": "Bruxelles, Belgique",
-      "summary": "Fondateur unique, architecte et développeur. Backend Rust + mobile Flutter. La couche R&D tient lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons."
+      "summary": "Fondateur unique, architecte et développeur. Backend Rust + mobile Flutter. La couche R&D a tenu lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons."
     },
     {
       "position": "Chercheur en IA",
@@ -72,9 +72,9 @@
   "education": [
     {
       "studyType": "Master en Sciences",
-      "area": "Informatique (en alternance) (120 ECTS)",
-      "gpa": "En cours (MA2)",
-      "summary": "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — encadré par Gauvain Devillez et Hadrien Mélot au Service d'Algorithmique de l'UMONS. Délégué étudiant & buddy TandeMons."
+      "area": "Sciences informatiques (en alternance) à finalité spécialisée professionnelle (120 ECTS)",
+      "gpa": "Obtenu",
+      "summary": "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS. Délégué étudiant & buddy TandeMons."
     },
     {
       "studyType": "Bachelier professionnalisant",

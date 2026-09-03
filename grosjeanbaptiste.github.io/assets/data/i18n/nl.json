@@ -1,7 +1,7 @@
 {
   "basics": {
     "label": "Informaticus",
-    "summary": "Computerwetenschappen-student, master aan UMons afrondend terwijl ik Acteble bouw.\n\nOp het kruispunt van softwareontwikkeling in het AI-tijdperk — Claude Code-workflows, autonome agents, RAG-pipelines, mobiele ontwikkeling — verankerd in Software Craftsmanship: clean code, clean architecture, hexagonale architectuur, DDD, TDD.",
+    "summary": "Informaticus — master in de computerwetenschappen aan UMons — Acteble bouwend.\n\nOp het kruispunt van softwareontwikkeling in het AI-tijdperk — Claude Code-workflows, autonome agents, RAG-pipelines, mobiele ontwikkeling — verankerd in Software Craftsmanship: clean code, clean architecture, hexagonale architectuur, DDD, TDD.",
     "location": {
       "region": "België"
     }
@@ -10,7 +10,7 @@
     {
       "position": "Oprichter",
       "location": "Brussel, België",
-      "summary": "Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&D-laag dient als mijn masterthesis voor de master in de computerwetenschappen aan UMons."
+      "summary": "Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&D-laag diende als mijn masterthesis voor de master in de computerwetenschappen aan UMons."
     },
     {
       "position": "AI-onderzoeker",
@@ -72,9 +72,9 @@
   "education": [
     {
       "studyType": "Master of Science",
-      "area": "Computerwetenschappen (duaal leren) (120 ECTS)",
-      "gpa": "In uitvoering (MA2)",
-      "summary": "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — onder begeleiding van Gauvain Devillez en Hadrien Mélot in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger & buddy TandeMons."
+      "area": "Computerwetenschappen (duaal leren) — gespecialiseerde professionele afstudeerrichting (120 ECTS)",
+      "gpa": "Behaald",
+      "summary": "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger & buddy TandeMons."
     },
     {
       "studyType": "Professionele bachelor",

@@ -91,8 +91,7 @@
     </sidebarOrder>
     <lang>fr</lang>
     <degrees>
-      <inProgress>Master en Sciences — Informatique (en alternance) (120 ECTS)</inProgress>
-      <obtained>Bachelier professionnalisant — Informatique de gestion</obtained>
+      <obtained>Master en Sciences — Sciences informatiques (en alternance) à finalité spécialisée professionnelle (120 ECTS)</obtained>
     </degrees>
   </meta>
   <basics>
@@ -102,7 +101,7 @@
     <email>grosjeanbaptiste@outlook.com</email>
     <phone>+32 496 28 97 05</phone>
     <url>https://www.grosjeanbaptiste.com</url>
-    <summary>Étudiant en informatique finissant mon Master à l'UMons tout en construisant Acteble.
+    <summary>Informaticien — Master en sciences informatiques de l'UMons — construisant Acteble.
 
 Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude Code, agents autonomes, pipelines RAG, développement mobile — ancré dans le Software Craftsmanship : clean code, clean architecture, architecture hexagonale, DDD, TDD.</summary>
     <location>
@@ -137,7 +136,7 @@ Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude
       <url>https://www.acteble.com</url>
       <location>Bruxelles, Belgique</location>
       <startDate>2025-07-01</startDate>
-      <summary>Fondateur unique, architecte et développeur. Backend Rust + mobile Flutter. La couche R&amp;D tient lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons.</summary>
+      <summary>Fondateur unique, architecte et développeur. Backend Rust + mobile Flutter. La couche R&amp;D a tenu lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons.</summary>
       <skills>
         <skill>Rust</skill>
         <skill>Flutter</skill>
@@ -339,10 +338,11 @@ Formation couvrant SQL Server, Node.js, Express.js, React et Angular, du dévelo
     <school>
       <institution>UMons</institution>
       <studyType>Master en Sciences</studyType>
-      <area>Informatique (en alternance) (120 ECTS)</area>
+      <area>Sciences informatiques (en alternance) à finalité spécialisée professionnelle (120 ECTS)</area>
       <startDate>2022-10-15</startDate>
-      <gpa>En cours (MA2)</gpa>
-      <summary>Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — encadré par Gauvain Devillez et Hadrien Mélot au Service d'Algorithmique de l'UMONS. Délégué étudiant &amp; buddy TandeMons.</summary>
+      <endDate>2026-09-03</endDate>
+      <gpa>Obtenu</gpa>
+      <summary>Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS. Délégué étudiant &amp; buddy TandeMons.</summary>
       <skills>
         <skill>Python</skill>
         <skill>LaTeX</skill>

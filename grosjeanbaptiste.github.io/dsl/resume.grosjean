@@ -19,27 +19,27 @@ resume "grosjeanbaptiste" {
         profile GitHub "https://github.com/grosjeanbaptiste" username "grosjeanbaptiste"
         profile Npm "https://npm.com/grosjeanbaptiste" username "grosjeanbaptiste"
         summary t{ en: """
-Computer science student finishing my MSc at UMons while building Acteble.
+Computer scientist — MSc from UMons — building Acteble.
 
 Working at the crossroads of AI-era software engineering — Claude Code workflows, autonomous agents, RAG pipelines, mobile development — anchored by Software Craftsmanship: clean code, clean architecture, hexagonal architecture, DDD, TDD.
 """, fr: """
-Étudiant en informatique finissant mon Master à l'UMons tout en construisant Acteble.
+Informaticien — Master en sciences informatiques de l'UMons — construisant Acteble.
 
 Au croisement de l'ingénierie logicielle à l'ère de l'IA — workflows Claude Code, agents autonomes, pipelines RAG, développement mobile — ancré dans le Software Craftsmanship : clean code, clean architecture, architecture hexagonale, DDD, TDD.
 """, nl: """
-Computerwetenschappen-student, master aan UMons afrondend terwijl ik Acteble bouw.
+Informaticus — master in de computerwetenschappen aan UMons — Acteble bouwend.
 
 Op het kruispunt van softwareontwikkeling in het AI-tijdperk — Claude Code-workflows, autonome agents, RAG-pipelines, mobiele ontwikkeling — verankerd in Software Craftsmanship: clean code, clean architecture, hexagonale architectuur, DDD, TDD.
 """, es: """
-Estudiante de informática terminando mi máster en UMons mientras construyo Acteble.
+Informático — máster en ciencias informáticas por UMons — construyendo Acteble.
 
 En la encrucijada de la ingeniería del software en la era de la IA — flujos Claude Code, agentes autónomos, pipelines RAG, desarrollo móvil — anclado en el Software Craftsmanship: clean code, clean architecture, arquitectura hexagonal, DDD, TDD.
 """, de: """
-Informatikstudent an der UMons, meinen Master abschließend während ich Acteble baue.
+Informatiker — Master in Informatik der UMons — Acteble bauend.
 
 An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Workflows, autonome Agenten, RAG-Pipelines, Mobile Development — verankert im Software Craftsmanship: Clean Code, Clean Architecture, hexagonale Architektur, DDD, TDD.
 """, zh: """
-在蒙斯大学 (UMons) 完成计算机科学硕士学位，同时构建 Acteble。
+计算机科学家 —— 蒙斯大学 (UMons) 计算机科学硕士 —— 正在构建 Acteble。
 
 工作聚焦于 AI 时代的软件工程交汇点 —— Claude Code 工作流、自主智能体、RAG 管道、移动开发 —— 以软件工艺为根基：整洁代码、整洁架构、六边形架构、领域驱动设计（DDD）、测试驱动开发（TDD）。
 """ }
@@ -53,7 +53,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
             url "https://www.acteble.com"
             location t{ en: "Brussels, Belgium", fr: "Bruxelles, Belgique", nl: "Brussel, België", es: "Bruselas, Bélgica", de: "Brüssel, Belgien", zh: "布鲁塞尔，比利时" }
             period 2025-07-01..present
-            summary t{ en: "Sole founder, architect and developer. Rust backend + Flutter mobile. The R&D layer doubles as the dissertation for my MSc in Computer Science at UMons.", fr: "Fondateur unique, architecte et développeur. Backend Rust + mobile Flutter. La couche R&D tient lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons.", nl: "Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&D-laag dient als mijn masterthesis voor de master in de computerwetenschappen aan UMons.", es: "Fundador único, arquitecto y desarrollador. Backend en Rust + móvil en Flutter. La capa de I+D sirve como memoria de fin de máster en el marco de mi máster en ciencias informáticas en UMons.", de: "Alleiniger Gründer, Architekt und Entwickler. Rust-Backend + Flutter-Mobile. Die F&E-Schicht dient gleichzeitig als Masterarbeit für meinen MSc in Informatik an der UMons.", zh: "唯一的创始人、架构师和开发者。Rust 后端 + Flutter 移动端。研发层同时作为蒙斯大学 (UMons) 计算机科学硕士论文的研究内容。" }
+            summary t{ en: "Sole founder, architect and developer. Rust backend + Flutter mobile. The R&D layer also served as the dissertation for my MSc in Computer Science at UMons.", fr: "Fondateur unique, architecte et développeur. Backend Rust + mobile Flutter. La couche R&D a tenu lieu de mémoire dans le cadre de mon Master en sciences informatiques à l'UMons.", nl: "Enige oprichter, architect en ontwikkelaar. Rust-backend + Flutter-mobile. De R&D-laag diende als mijn masterthesis voor de master in de computerwetenschappen aan UMons.", es: "Fundador único, arquitecto y desarrollador. Backend en Rust + móvil en Flutter. La capa de I+D sirvió como memoria de fin de máster en el marco de mi máster en ciencias informáticas en UMons.", de: "Alleiniger Gründer, Architekt und Entwickler. Rust-Backend + Flutter-Mobile. Die F&E-Schicht diente zugleich als Masterarbeit für meinen MSc in Informatik an der UMons.", zh: "唯一的创始人、架构师和开发者。Rust 后端 + Flutter 移动端。研发层同时作为蒙斯大学 (UMons) 计算机科学硕士论文的研究内容。" }
             uses [Rust, Flutter, Dart, Tokio, Docker, DDD, CleanArchitecture]
             projects [ref Acteble]
         }
@@ -199,10 +199,13 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
         UMons {
             institution "UMons"
             studyType t{ en: "Master of Science - MS", fr: "Master en Sciences", nl: "Master of Science", es: "Máster en Ciencias", de: "Master of Science", zh: "理学硕士" }
-            area t{ en: "Computer Science (work-study program) (120 ECTS)", fr: "Informatique (en alternance) (120 ECTS)", nl: "Computerwetenschappen (duaal leren) (120 ECTS)", es: "Informática (alternancia) (120 ECTS)", de: "Informatik (duales Studium) (120 ECTS)", zh: "计算机科学 (校企合作项目) (120 ECTS)" }
-            period 2022-10-15..present
-            score t{ en: "In progress (MA2)", fr: "En cours (MA2)", nl: "In uitvoering (MA2)", es: "En curso (MA2)", de: "Laufend (MA2)", zh: "进行中 (MA2)" }
-            note t{ en: "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — supervised by Gauvain Devillez and Hadrien Mélot at the UMONS Service d'Algorithmique. Student representative & buddy TandeMons.", fr: "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — encadré par Gauvain Devillez et Hadrien Mélot au Service d'Algorithmique de l'UMONS. Délégué étudiant & buddy TandeMons.", nl: "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — onder begeleiding van Gauvain Devillez en Hadrien Mélot in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger & buddy TandeMons.", es: "Memoria de fin de máster: «Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes» — supervisada por Gauvain Devillez y Hadrien Mélot en el Service d'Algorithmique de UMONS. Delegado de estudiantes y buddy TandeMons.", de: "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — betreut von Gauvain Devillez und Hadrien Mélot am Service d'Algorithmique der UMONS. Studierendenvertreter & Buddy TandeMons.", zh: "硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 由蒙斯大学 (UMONS) 算法服务部的 Gauvain Devillez 和 Hadrien Mélot 指导。学生代表 & Buddy TandeMons。" }
+            area t{ en: "Computer Science (work-study program) — specialised professional focus (120 ECTS)", fr: "Sciences informatiques (en alternance) à finalité spécialisée professionnelle (120 ECTS)", nl: "Computerwetenschappen (duaal leren) — gespecialiseerde professionele afstudeerrichting (120 ECTS)", es: "Ciencias informáticas (alternancia) — orientación especializada profesional (120 ECTS)", de: "Informatik (duales Studium) — spezialisierte berufliche Fachrichtung (120 ECTS)", zh: "计算机科学 (校企合作项目) — 专业化专精方向 (120 ECTS)" }
+            period 2022-10-15..2026-09-03
+            score t{ en: "Obtained", fr: "Obtenu", nl: "Behaald", es: "Obtenido", de: "Erhalten", zh: "已获得" }
+            // Thesis supervisor names removed on request (2026-09-03) — kept here for recovery:
+            //   en: supervised by Gauvain Devillez and Hadrien Mélot at the UMONS Service d'Algorithmique
+            //   fr: encadré par Gauvain Devillez et Hadrien Mélot au Service d'Algorithmique de l'UMONS
+            note t{ en: "MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. Student representative & buddy TandeMons.", fr: "Mémoire de fin de master : « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — réalisé au Service d'Algorithmique de l'UMONS. Délégué étudiant & buddy TandeMons.", nl: "Masterthesis: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — uitgevoerd in de Service d'Algorithmique van UMONS. Studentenvertegenwoordiger & buddy TandeMons.", es: "Memoria de fin de máster: «Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes» — realizada en el Service d'Algorithmique de UMONS. Delegado de estudiantes y buddy TandeMons.", de: "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Studierendenvertreter & Buddy TandeMons.", zh: "硕士论文：《Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes》— 在蒙斯大学 (UMONS) 算法服务部完成。学生代表 & Buddy TandeMons。" }
             uses [Python, LaTeX, DDD, CleanArchitecture]
             projects [ref Acteble]
         }

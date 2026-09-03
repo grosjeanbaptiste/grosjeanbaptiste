@@ -91,8 +91,7 @@
     </sidebarOrder>
     <lang>en</lang>
     <degrees>
-      <inProgress>Master of Science - MS in Computer Science (work-study program) (120 ECTS)</inProgress>
-      <obtained>Professional Bachelor's degree in Information Systems Management</obtained>
+      <obtained>Master of Science - MS in Computer Science (work-study program) — specialised professional focus (120 ECTS)</obtained>
     </degrees>
   </meta>
   <basics>
@@ -102,7 +101,7 @@
     <email>grosjeanbaptiste@outlook.com</email>
     <phone>+32 496 28 97 05</phone>
     <url>https://www.grosjeanbaptiste.com</url>
-    <summary>Computer science student finishing my MSc at UMons while building Acteble.
+    <summary>Computer scientist — MSc from UMons — building Acteble.
 
 Working at the crossroads of AI-era software engineering — Claude Code workflows, autonomous agents, RAG pipelines, mobile development — anchored by Software Craftsmanship: clean code, clean architecture, hexagonal architecture, DDD, TDD.</summary>
     <location>
@@ -137,7 +136,7 @@ Working at the crossroads of AI-era software engineering — Claude Code workflo
       <url>https://www.acteble.com</url>
       <location>Brussels, Belgium</location>
       <startDate>2025-07-01</startDate>
-      <summary>Sole founder, architect and developer. Rust backend + Flutter mobile. The R&amp;D layer doubles as the dissertation for my MSc in Computer Science at UMons.</summary>
+      <summary>Sole founder, architect and developer. Rust backend + Flutter mobile. The R&amp;D layer also served as the dissertation for my MSc in Computer Science at UMons.</summary>
       <skills>
         <skill>Rust</skill>
         <skill>Flutter</skill>
@@ -339,10 +338,11 @@ This comprehensive training covered various areas including SQL Server, Node.js,
     <school>
       <institution>UMons</institution>
       <studyType>Master of Science - MS</studyType>
-      <area>Computer Science (work-study program) (120 ECTS)</area>
+      <area>Computer Science (work-study program) — specialised professional focus (120 ECTS)</area>
       <startDate>2022-10-15</startDate>
-      <gpa>In progress (MA2)</gpa>
-      <summary>MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — supervised by Gauvain Devillez and Hadrien Mélot at the UMONS Service d'Algorithmique. Student representative &amp; buddy TandeMons.</summary>
+      <endDate>2026-09-03</endDate>
+      <gpa>Obtained</gpa>
+      <summary>MSc dissertation: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — carried out at the UMONS Service d'Algorithmique. Student representative &amp; buddy TandeMons.</summary>
       <skills>
         <skill>Python</skill>
         <skill>LaTeX</skill>

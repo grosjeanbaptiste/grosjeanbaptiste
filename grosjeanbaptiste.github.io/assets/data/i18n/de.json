@@ -1,7 +1,7 @@
 {
   "basics": {
     "label": "Informatiker",
-    "summary": "Informatikstudent an der UMons, meinen Master abschließend während ich Acteble baue.\n\nAn der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Workflows, autonome Agenten, RAG-Pipelines, Mobile Development — verankert im Software Craftsmanship: Clean Code, Clean Architecture, hexagonale Architektur, DDD, TDD.",
+    "summary": "Informatiker — Master in Informatik der UMons — Acteble bauend.\n\nAn der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Workflows, autonome Agenten, RAG-Pipelines, Mobile Development — verankert im Software Craftsmanship: Clean Code, Clean Architecture, hexagonale Architektur, DDD, TDD.",
     "location": {
       "region": "Belgien"
     }
@@ -10,7 +10,7 @@
     {
       "position": "Gründer",
       "location": "Brüssel, Belgien",
-      "summary": "Alleiniger Gründer, Architekt und Entwickler. Rust-Backend + Flutter-Mobile. Die F&E-Schicht dient gleichzeitig als Masterarbeit für meinen MSc in Informatik an der UMons."
+      "summary": "Alleiniger Gründer, Architekt und Entwickler. Rust-Backend + Flutter-Mobile. Die F&E-Schicht diente zugleich als Masterarbeit für meinen MSc in Informatik an der UMons."
     },
     {
       "position": "KI-Forschungswissenschaftler",
@@ -72,9 +72,9 @@
   "education": [
     {
       "studyType": "Master of Science",
-      "area": "Informatik (duales Studium) (120 ECTS)",
-      "gpa": "Laufend (MA2)",
-      "summary": "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — betreut von Gauvain Devillez und Hadrien Mélot am Service d'Algorithmique der UMONS. Studierendenvertreter & Buddy TandeMons."
+      "area": "Informatik (duales Studium) — spezialisierte berufliche Fachrichtung (120 ECTS)",
+      "gpa": "Erhalten",
+      "summary": "Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Studierendenvertreter & Buddy TandeMons."
     },
     {
       "studyType": "Professioneller Bachelor",

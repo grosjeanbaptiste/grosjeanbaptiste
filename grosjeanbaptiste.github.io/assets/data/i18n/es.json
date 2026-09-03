@@ -1,7 +1,7 @@
 {
   "basics": {
     "label": "Informático",
-    "summary": "Estudiante de informática terminando mi máster en UMons mientras construyo Acteble.\n\nEn la encrucijada de la ingeniería del software en la era de la IA — flujos Claude Code, agentes autónomos, pipelines RAG, desarrollo móvil — anclado en el Software Craftsmanship: clean code, clean architecture, arquitectura hexagonal, DDD, TDD.",
+    "summary": "Informático — máster en ciencias informáticas por UMons — construyendo Acteble.\n\nEn la encrucijada de la ingeniería del software en la era de la IA — flujos Claude Code, agentes autónomos, pipelines RAG, desarrollo móvil — anclado en el Software Craftsmanship: clean code, clean architecture, arquitectura hexagonal, DDD, TDD.",
     "location": {
       "region": "Bélgica"
     }
@@ -10,7 +10,7 @@
     {
       "position": "Fundador",
       "location": "Bruselas, Bélgica",
-      "summary": "Fundador único, arquitecto y desarrollador. Backend en Rust + móvil en Flutter. La capa de I+D sirve como memoria de fin de máster en el marco de mi máster en ciencias informáticas en UMons."
+      "summary": "Fundador único, arquitecto y desarrollador. Backend en Rust + móvil en Flutter. La capa de I+D sirvió como memoria de fin de máster en el marco de mi máster en ciencias informáticas en UMons."
     },
     {
       "position": "Investigador en IA",
@@ -72,9 +72,9 @@
   "education": [
     {
       "studyType": "Máster en Ciencias",
-      "area": "Informática (alternancia) (120 ECTS)",
-      "gpa": "En curso (MA2)",
-      "summary": "Memoria de fin de máster: «Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes» — supervisada por Gauvain Devillez y Hadrien Mélot en el Service d'Algorithmique de UMONS. Delegado de estudiantes y buddy TandeMons."
+      "area": "Ciencias informáticas (alternancia) — orientación especializada profesional (120 ECTS)",
+      "gpa": "Obtenido",
+      "summary": "Memoria de fin de máster: «Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes» — realizada en el Service d'Algorithmique de UMONS. Delegado de estudiantes y buddy TandeMons."
     },
     {
       "studyType": "Bachelor profesional",

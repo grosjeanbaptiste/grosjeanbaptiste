@@ -32,11 +32,14 @@ function highestObtainedDegree(education) {
     if (/CESS|secondaire/i.test(t)) return 1;
     return 0;
   };
-  const inProgress = (education || []).filter(
-    (e) => !e.endDate || e.endDate === 'Present' || e.endDate > today,
-  );
-  const ordered = [...inProgress].sort((a, b) => score(b.studyType) - score(a.studyType));
-  return ordered[0] || null;
+  const isInProgress = (e) => !e.endDate || e.endDate === 'Present' || e.endDate > today;
+  const byScore = (a, b) => score(b.studyType) - score(a.studyType);
+  // Prefer the highest degree currently in progress; once studies are done,
+  // fall back to the highest degree already obtained so the fact never vanishes.
+  const inProgress = (education || []).filter(isInProgress).sort(byScore);
+  if (inProgress[0]) return inProgress[0];
+  const obtained = (education || []).filter((e) => !isInProgress(e)).sort(byScore);
+  return obtained[0] || null;
 }
 
 function replaceBetween(source, marker, replacement) {

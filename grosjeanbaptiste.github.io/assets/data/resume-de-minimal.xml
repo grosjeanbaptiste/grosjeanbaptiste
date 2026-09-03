@@ -91,8 +91,7 @@
     </sidebarOrder>
     <lang>de</lang>
     <degrees>
-      <inProgress>Master of Science — Informatik (duales Studium) (120 ECTS)</inProgress>
-      <obtained>Professioneller Bachelor — Wirtschaftsinformatik</obtained>
+      <obtained>Master of Science — Informatik (duales Studium) — spezialisierte berufliche Fachrichtung (120 ECTS)</obtained>
     </degrees>
   </meta>
   <basics>
@@ -102,7 +101,7 @@
     <email>grosjeanbaptiste@outlook.com</email>
     <phone>+32 496 28 97 05</phone>
     <url>https://www.grosjeanbaptiste.com</url>
-    <summary>Informatikstudent an der UMons, meinen Master abschließend während ich Acteble baue.
+    <summary>Informatiker — Master in Informatik der UMons — Acteble bauend.
 
 An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Workflows, autonome Agenten, RAG-Pipelines, Mobile Development — verankert im Software Craftsmanship: Clean Code, Clean Architecture, hexagonale Architektur, DDD, TDD.</summary>
     <location>
@@ -137,7 +136,7 @@ An der Schnittstelle der Software-Entwicklung im KI-Zeitalter — Claude-Code-Wo
       <url>https://www.acteble.com</url>
       <location>Brüssel, Belgien</location>
       <startDate>2025-07-01</startDate>
-      <summary>Alleiniger Gründer, Architekt und Entwickler. Rust-Backend + Flutter-Mobile. Die F&amp;E-Schicht dient gleichzeitig als Masterarbeit für meinen MSc in Informatik an der UMons.</summary>
+      <summary>Alleiniger Gründer, Architekt und Entwickler. Rust-Backend + Flutter-Mobile. Die F&amp;E-Schicht diente zugleich als Masterarbeit für meinen MSc in Informatik an der UMons.</summary>
       <skills>
         <skill>Rust</skill>
         <skill>Flutter</skill>
@@ -339,10 +338,11 @@ Die Ausbildung umfasste SQL Server, Node.js, Express.js, React und Angular, von 
     <school>
       <institution>UMons</institution>
       <studyType>Master of Science</studyType>
-      <area>Informatik (duales Studium) (120 ECTS)</area>
+      <area>Informatik (duales Studium) — spezialisierte berufliche Fachrichtung (120 ECTS)</area>
       <startDate>2022-10-15</startDate>
-      <gpa>Laufend (MA2)</gpa>
-      <summary>Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — betreut von Gauvain Devillez und Hadrien Mélot am Service d'Algorithmique der UMONS. Studierendenvertreter &amp; Buddy TandeMons.</summary>
+      <endDate>2026-09-03</endDate>
+      <gpa>Erhalten</gpa>
+      <summary>Masterarbeit: « Un cadre computationnel multicritère pour l'exploration de projections spatio-temporelles dans des systèmes sociaux complexes » — durchgeführt am Service d'Algorithmique der UMONS. Studierendenvertreter &amp; Buddy TandeMons.</summary>
       <skills>
         <skill>Python</skill>
         <skill>LaTeX</skill>
