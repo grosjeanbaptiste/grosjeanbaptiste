@@ -624,19 +624,24 @@ Zusammengefasst: Wenn Sie jemanden suchen, der jeder Aufgabe Enthusiasmus, Intel
         <keyword>Whisper</keyword>
         <keyword>SpaCy</keyword>
         <keyword>PyTorch</keyword>
-        <keyword>HuggingFace</keyword>
         <keyword>Transformers</keyword>
+        <keyword>HuggingFace</keyword>
+        <keyword>SentenceTransformers</keyword>
         <keyword>LLMs</keyword>
         <keyword>RAG</keyword>
-        <keyword>PromptEngineering</keyword>
         <keyword>LangChain</keyword>
-        <keyword>MCP</keyword>
         <keyword>OpenAI</keyword>
         <keyword>Claude</keyword>
-        <keyword>Ollama</keyword>
         <keyword>Embeddings</keyword>
-        <keyword>VectorDB</keyword>
-        <keyword>FineTuning</keyword>
+        <keyword>ColBERT</keyword>
+        <keyword>Reranking</keyword>
+        <keyword>FAISS</keyword>
+        <keyword>OpenSearch</keyword>
+        <keyword>RAGAS</keyword>
+        <keyword>PromptEngineering</keyword>
+        <keyword>OCR</keyword>
+        <keyword>Docling</keyword>
+        <keyword>VLM</keyword>
         <keyword>Node.js</keyword>
         <keyword>Express.js</keyword>
         <keyword>Blazor</keyword>
