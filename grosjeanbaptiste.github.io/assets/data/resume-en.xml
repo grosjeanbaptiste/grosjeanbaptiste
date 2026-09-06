@@ -776,6 +776,9 @@ In summary, if you're looking for someone who brings enthusiasm, intelligence, a
       <organizer>Citizens of Wallonia</organizer>
       <summary>EduCraft — solution allowing anyone to craft a personalized path to gain new skills.</summary>
       <url>https://www.cow.be</url>
+      <projects>
+        <project>EduCraft</project>
+      </projects>
     </item>
     <item>
       <key>HackathonCOW2023</key>

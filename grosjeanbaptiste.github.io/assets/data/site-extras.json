@@ -241,7 +241,10 @@
       "date": "2024-03-17",
       "organizer": "Citizens of Wallonia",
       "summary": "EduCraft — solution allowing anyone to craft a personalized path to gain new skills.",
-      "url": "https://www.cow.be"
+      "url": "https://www.cow.be",
+      "projects": [
+        "EduCraft"
+      ]
     },
     {
       "key": "HackathonCOW2023",

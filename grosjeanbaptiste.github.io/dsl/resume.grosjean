@@ -553,6 +553,7 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
             organizer t{ en: "Citizens of Wallonia", fr: "Citizens of Wallonia", nl: "Citizens of Wallonia", es: "Citizens of Wallonia", de: "Citizens of Wallonia", zh: "Citizens of Wallonia" }
             url "https://www.cow.be"
             summary t{ en: "EduCraft — solution allowing anyone to craft a personalized path to gain new skills.", fr: "EduCraft — solution permettant à chacun de tracer son propre parcours personnalisé d'acquisition de compétences.", nl: "EduCraft — oplossing waarmee iedereen een eigen gepersonaliseerd leerpad kan opstellen om nieuwe vaardigheden te verwerven.", es: "EduCraft — solución que permite a cualquiera diseñar su propio itinerario personalizado para adquirir nuevas competencias.", de: "EduCraft — Lösung, mit der jeder seinen eigenen personalisierten Weg zum Erwerb neuer Fähigkeiten gestalten kann.", zh: "EduCraft — 让任何人都能定制个性化路径以获得新技能的解决方案。" }
+            projects [ref EduCraft]
         }
         HackathonCOW2023 {
             title t{ en: "Hackathon Citizens of Wallonia 2023", fr: "Hackathon Citizens of Wallonia 2023", nl: "Hackathon Citizens of Wallonia 2023", es: "Hackathon Citizens of Wallonia 2023", de: "Hackathon Citizens of Wallonia 2023", zh: "Hackathon Citizens of Wallonia 2023" }

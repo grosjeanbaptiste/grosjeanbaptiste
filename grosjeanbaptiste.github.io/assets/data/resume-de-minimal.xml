@@ -776,6 +776,9 @@ Zusammengefasst: Wenn Sie jemanden suchen, der jeder Aufgabe Enthusiasmus, Intel
       <organizer>Citizens of Wallonia</organizer>
       <summary>EduCraft — Lösung, mit der jeder seinen eigenen personalisierten Weg zum Erwerb neuer Fähigkeiten gestalten kann.</summary>
       <url>https://www.cow.be</url>
+      <projects>
+        <project>EduCraft</project>
+      </projects>
     </item>
     <item>
       <key>HackathonCOW2023</key>

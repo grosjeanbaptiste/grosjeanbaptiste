@@ -776,6 +776,9 @@ Baptiste 给他参与的每个项目都带来感染力的能量。他外向、�
       <organizer>Citizens of Wallonia</organizer>
       <summary>EduCraft — 让任何人都能定制个性化路径以获得新技能的解决方案。</summary>
       <url>https://www.cow.be</url>
+      <projects>
+        <project>EduCraft</project>
+      </projects>
     </item>
     <item>
       <key>HackathonCOW2023</key>

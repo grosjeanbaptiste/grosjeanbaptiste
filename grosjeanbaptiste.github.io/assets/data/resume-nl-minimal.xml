@@ -776,6 +776,9 @@ Kortom, als je iemand zoekt die enthousiasme, intelligentie en een vleugje humor
       <organizer>Citizens of Wallonia</organizer>
       <summary>EduCraft — oplossing waarmee iedereen een eigen gepersonaliseerd leerpad kan opstellen om nieuwe vaardigheden te verwerven.</summary>
       <url>https://www.cow.be</url>
+      <projects>
+        <project>EduCraft</project>
+      </projects>
     </item>
     <item>
       <key>HackathonCOW2023</key>
