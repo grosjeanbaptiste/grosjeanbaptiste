@@ -175,7 +175,10 @@ if (brand?.primary) {
     '  }',
     '}',
     '',
-  ].join('\n');
+  ]
+    .join('\n')
+    // Biome's formatter requires lowercase hex; brand values may be uppercase.
+    .replace(/#[0-9a-fA-F]{3,8}\b/g, (hex) => hex.toLowerCase());
   const varsPath = path.join(ROOT, 'css/variables.css');
   if (writeIfChanged(varsPath, varsCss)) wrote += 1;
 }
