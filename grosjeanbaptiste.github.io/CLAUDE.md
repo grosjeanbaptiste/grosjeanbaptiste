@@ -99,7 +99,19 @@ npx http-server
 ```
 
 ### Deployment
-The site is hosted on GitHub Pages. Changes are deployed automatically when pushed to the `master` branch.
+
+**This copy inside the `grosjeanbaptiste` monorepo is NOT deployed.** It is a
+non-canonical duplicate. The live site https://www.grosjeanbaptiste.com is
+served by GitHub Pages from a **separate repository**,
+[`grosjeanbaptiste/grosjeanbaptiste.com`](https://github.com/grosjeanbaptiste/grosjeanbaptiste.com)
+(Pages source: `master`, path `/`). This monorepo has no GitHub Pages site of
+its own, and the workflows under `.github/workflows/` here never run — GitHub
+only executes workflows located at the repository root, not in a subdirectory.
+
+**Edit the site in the `grosjeanbaptiste.com` repo, not here.** Pushing to its
+`master` branch triggers its workflows (DSL compile + regenerate) and deploys
+via GitHub Pages automatically. Changes made only in this monorepo copy will
+never reach the live site.
 
 ## Key Features
 
