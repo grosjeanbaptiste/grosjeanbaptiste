@@ -64,6 +64,34 @@ function renderLanguagesBlock(resume, t) {
   );
 }
 
+// Sidebar projects list — parity with the XSLT `sidebar-projects` template:
+// project name (linked when a url is present) plus its short description.
+function renderProjectsBlock(resume, t) {
+  const items = (resume.projects || [])
+    .map((p) => {
+      const name = `<strong>${escapeHtml(p.name)}</strong>`;
+      const label = p.url
+        ? `<a href="${escapeHtml(p.url)}" target="_blank" rel="noopener">${name}</a>`
+        : name;
+      const desc = p.summary || p.description || '';
+      return `  <p>${label}${desc ? ` — ${escapeHtml(desc)}` : ''}</p>`;
+    })
+    .join('\n');
+  if (!items) return null;
+  return ['<div class="projects">', `  <h2>${escapeHtml(t.projects)}</h2>`, items, '</div>'].join(
+    '\n',
+  );
+}
+
+// Maps a sidebar section name from meta.sidebarOrder to its renderer. dailyLife
+// is intentionally absent — it is a static <canvas> in index.html, not
+// generated here — so it is silently skipped, like unknown names.
+const SIDEBAR_RENDERERS = {
+  languages: renderLanguagesBlock,
+  skills: renderSkillsBlocks,
+  projects: renderProjectsBlock,
+};
+
 function generateSidebar(resume, lang) {
   const t = I18N[lang];
   const b = resume.basics;
@@ -86,13 +114,9 @@ function generateSidebar(resume, lang) {
     );
   }
 
-  return [
-    renderContactInfo(b, t, lang, degreeLines, profileLines),
-    '',
-    renderLanguagesBlock(resume, t),
-    '',
-    renderSkillsBlocks(resume, t),
-  ].join('\n');
+  const order = resume.meta?.sidebarOrder ?? ['languages', 'skills'];
+  const blocks = order.map((name) => SIDEBAR_RENDERERS[name]?.(resume, t)).filter(Boolean);
+  return [renderContactInfo(b, t, lang, degreeLines, profileLines), ...blocks].join('\n\n');
 }
 
 module.exports = { generateSidebar };
