@@ -10,7 +10,8 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 
-const { highestObtainedDegree } = require('./degrees');
+const { highestObtainedDegree, formatDegreeLine } = require('./degrees');
+const I18N = require('./i18n');
 
 // The bachelor deliberately completes AFTER the master, so only correct
 // level-scoring (master > bachelor) — not the endDate tiebreak — can put the
@@ -53,4 +54,26 @@ test('Chinese "硕士" outranks "学士 (BA)"', () => {
 test('French "Master" outranks "Bachelier"', () => {
   const edu = masterAndLaterBachelor('Master en Sciences', 'Bachelier professionnalisant');
   assert.equal(highestObtainedDegree(edu).studyType, 'Master en Sciences');
+});
+
+// The studyType↔area connector ("in" / "—") is a UI string and must live in
+// the i18n dictionaries, not be hardcoded in degrees.js / sections/main.js.
+test('every language defines a non-empty degreeConnector', () => {
+  for (const lang of Object.keys(I18N)) {
+    assert.equal(typeof I18N[lang].degreeConnector, 'string', `${lang} missing degreeConnector`);
+    assert.ok(I18N[lang].degreeConnector.length > 0, `${lang} degreeConnector is empty`);
+  }
+});
+
+test('formatDegreeLine joins studyType and area with the i18n connector', () => {
+  const degree = { studyType: 'Master of Science', area: 'Computer Science' };
+  for (const lang of Object.keys(I18N)) {
+    const expected = degree.studyType + I18N[lang].degreeConnector + degree.area;
+    assert.equal(formatDegreeLine(degree, lang), expected, `wrong connector for ${lang}`);
+  }
+});
+
+test('English degreeConnector is " in ", others use " — "', () => {
+  assert.equal(I18N.en.degreeConnector, ' in ');
+  assert.equal(I18N.fr.degreeConnector, ' — ');
 });

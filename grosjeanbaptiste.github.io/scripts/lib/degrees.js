@@ -1,6 +1,8 @@
 // Ranks education entries by degree level (Master > Bachelor > Attestation >
 // CESS > other), ties broken by most recent endDate (or startDate when no end).
 
+const I18N = require('./i18n');
+
 function degreeScore(studyType) {
   if (!studyType) return 0;
   // Strip diacritics so localized spellings (es "Máster", fr "Maîtrise") match
@@ -42,7 +44,7 @@ function formatDegreeLine(degree, lang) {
   if (!degree) return null;
   const parts = [degree.studyType, degree.area].filter(Boolean);
   if (!parts.length) return null;
-  const sep = lang === 'en' ? ' in ' : ' — ';
+  const sep = (I18N[lang] || I18N.en).degreeConnector;
   return parts.join(sep);
 }
 
