@@ -44,6 +44,11 @@ h1, h2, h3 {
 }
 
 .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; 
+  overflow-y: auto; 
   background-color: var(--background-color);
   color: var(--body-color);
   width: 30%;
@@ -130,9 +135,12 @@ h1, h2, h3 {
 }
 
 .main-content {
+  margin-left: 30%;
   width: 70%;
   padding: 20px;
   box-sizing: border-box;
+  height: 100vh;
+  overflow-y: scroll; 
 }
 
 .main-content section {
@@ -147,6 +155,18 @@ h1, h2, h3 {
 
 .experience-item, .education-item, .project-item, .reference-item {
   margin-bottom: 20px;
+  max-height: 50px; 
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.experience-item:hover, .education-item:hover, .project-item:hover, .reference-item:hover {
+  max-height: 500px; 
+}
+
+.experience-item:hover, .education-item:hover, .project-item:hover, .reference-item:hover {
+  background-color: var(--background-color); 
 }
 
 .experience-item h3, .education-item h3, .project-item h3 {
@@ -481,55 +501,55 @@ This comprehensive training covered various areas including SQL Server, Node.js,
       <section id="education">
         <h2>Éducation</h2>
           <div class="education-item">
-            <h3>Master of Science - MS en Computer Science</h3>
+            <h3>Master of Science - MS in Computer Science (work-study program) — specialised professional focus (120 ECTS)</h3>
             <p class="institution">UMons</p>
-            <p class="date">2022-10-15 - </p>
+            <p class="date">2022-10-15 - 2026-09-04</p>
             <p></p>
           </div>
           <div class="education-item">
-            <h3>Professional Bachelor&#x27;s degree en Information Systems Management</h3>
+            <h3>Professional Bachelor&#x27;s degree in Information Systems Management</h3>
             <p class="institution">Ecole Pratique Hautes Etudes Commerciales (EPHEC-EPS)</p>
             <p class="date">2018-09-30 - 2022-10-15</p>
             <p>Satisfaction </p>
           </div>
           <div class="education-item">
-            <h3>Attestation en 7e Spéciale Mathématiques</h3>
+            <h3>Attestation in 7e Spéciale Mathématiques</h3>
             <p class="institution">Institut Saint-Louis Bruxelles</p>
             <p class="date">2019-09-30 - 2020-06-30</p>
             <p>Attestation</p>
           </div>
           <div class="education-item">
-            <h3>Bachelor of Arts - BA en Political sciences</h3>
+            <h3>Bachelor of Arts - BA in Political sciences</h3>
             <p class="institution">Université Saint-Louis - Bruxelles</p>
             <p class="date">2016-09-30 - 2019-06-30</p>
             <p>29 credits earned in 2016-2017, contact me for more informations.</p>
           </div>
           <div class="education-item">
-            <h3>Bachelor of Science - BSc en Business Engineering</h3>
+            <h3>Bachelor of Science - BSc in Business Engineering</h3>
             <p class="institution">Solvay Brussels School of Economics and Management</p>
             <p class="date">2015-09-30 - 2016-06-30</p>
             <p>Contact me for more informations.</p>
           </div>
           <div class="education-item">
-            <h3>Bachelor of Science - BSc en Business Engineering</h3>
+            <h3>Bachelor of Science - BSc in Business Engineering</h3>
             <p class="institution">Université libre de Bruxelles</p>
             <p class="date">2015-09-30 - 2016-06-30</p>
             <p>Contact me for more informations.</p>
           </div>
           <div class="education-item">
-            <h3>Cours préparatoires en Médecine et dentisterie</h3>
+            <h3>Cours préparatoires in Médecine et dentisterie</h3>
             <p class="institution">UCLouvain - Université catholique de Louvain</p>
             <p class="date">2014-09-30 - 2015-06-30</p>
             <p>Attestation </p>
           </div>
           <div class="education-item">
-            <h3>C.E.S.S. en General Studies Maths &amp; Modern languages</h3>
+            <h3>C.E.S.S. in General Studies Maths &amp; Modern languages</h3>
             <p class="institution">Centre Scolaire Saint-Adrien - Val Duchesse</p>
             <p class="date">2012-09-30 - 2015-06-30</p>
             <p>Satis bene</p>
           </div>
           <div class="education-item">
-            <h3> en General studies Latin &amp; Greec</h3>
+            <h3> in General studies Latin &amp; Greec</h3>
             <p class="institution">Lycée Mater Dei</p>
             <p class="date">2009-09-30 - 2012-06-30</p>
             <p></p>
