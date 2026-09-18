@@ -1,0 +1,10 @@
+{
+  "name": "grosjeanbaptiste-profile",
+  "version": "0.0.0",
+  "private": true,
+  "description": "GitHub profile README for grosjeanbaptiste, generated from the resume published by the site repo.",
+  "scripts": {
+    "readme": "node scripts/generate-readme.js",
+    "test": "node --test"
+  }
+}

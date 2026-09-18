@@ -5,10 +5,13 @@ node_modules/
 .idea/
 .vscode/
 *.pdf
-!grosjeanbaptiste.github.io/assets/cv/*.pdf
 cv.json
 
 # Editor swap/backup files (a stray .xsl.swp once sat untracked in assets/xslt/)
 *.swp
 *.swo
 *~
+
+# Python caches (the removed site copy left some behind)
+__pycache__/
+.pytest_cache/
