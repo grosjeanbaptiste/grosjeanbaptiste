@@ -7,3 +7,8 @@ node_modules/
 *.pdf
 !grosjeanbaptiste.github.io/assets/cv/*.pdf
 cv.json
+
+# Editor swap/backup files (a stray .xsl.swp once sat untracked in assets/xslt/)
+*.swp
+*.swo
+*~
