@@ -1,0 +1,26 @@
+name: Tests
+
+# Runs the suite on every push and pull request.
+#
+# No `paths:` filter: the tests read scripts/ and the README's marker structure,
+# and a filter narrower than that dependency set is how a workflow quietly stops
+# firing. The suite takes a second.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Test suite
+        run: npm test
