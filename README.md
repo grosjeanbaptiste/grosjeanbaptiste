@@ -48,7 +48,7 @@ The pipeline is deterministic and byte-identical: recompiling the same source yi
 ## Contact
 
 <!-- LLM-EMAIL -->
-- Email — [grosjeanbaptiste@outlook.com](mailto:grosjeanbaptiste@outlook.com)
+- Email — [grosjeanbaptiste@outlook.com](mailto:grosjeanbaptiste@outlook.com?subject=%5BGitHub%5D%20) — please start the subject with `[GitHub]`
 <!-- /LLM-EMAIL -->
 - LinkedIn — [linkedin.com/in/grosjeanbaptiste](https://www.linkedin.com/in/grosjeanbaptiste)
 - Website — [grosjeanbaptiste.com](https://www.grosjeanbaptiste.com)

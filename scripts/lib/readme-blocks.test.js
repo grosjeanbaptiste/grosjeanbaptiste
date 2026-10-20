@@ -36,7 +36,7 @@ test('the about block reports location and the highest degree', () => {
 });
 
 test('contact blocks render as links', () => {
-  assert.match(buildEmail(RESUME), /\[someone@example\.com\]\(mailto:someone@example\.com\)/);
+  assert.match(buildEmail(RESUME), /\[someone@example\.com\]\(mailto:someone@example\.com[?)]/);
 });
 
 test('a missing marker pair fails loudly instead of writing a mangled README', () => {
@@ -67,4 +67,14 @@ test('the README never carries the phone number', () => {
   assert.doesNotMatch(applyBlocks(src, RESUME, { work: [] }), /tel:|Phone/);
   const readme = require('node:fs').readFileSync(require('node:path').resolve(__dirname, '../../README.md'), 'utf8');
   assert.doesNotMatch(readme, /tel:|Phone|LLM-PHONE/);
+});
+
+// A mail sent from the profile page says so in its subject, so it can be told
+// apart from the rest of the inbox.
+test('the email link fills the subject with the GitHub tag', () => {
+  assert.match(buildEmail(RESUME), /\(mailto:someone@example\.com\?subject=%5BGitHub%5D%20\)/);
+});
+
+test('the email line asks to start the subject with the GitHub tag', () => {
+  assert.match(buildEmail(RESUME), /subject.*`\[GitHub\]`/i);
 });

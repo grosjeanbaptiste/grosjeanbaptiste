@@ -61,7 +61,9 @@ function buildAboutFacts(r) {
 function buildEmail(r) {
   const email = r.basics?.email;
   if (!email) return '';
-  return `- Email — [${email}](mailto:${email})`;
+  // Mail from the profile page carries a tag in its subject, set for the
+  // reader by the link and asked for in words, for a client that drops it.
+  return `- Email — [${email}](mailto:${email}?subject=%5BGitHub%5D%20) — please start the subject with \`[GitHub]\``;
 }
 
 // The projects of the roles still running. resume.json stays strict JSON
