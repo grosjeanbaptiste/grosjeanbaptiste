@@ -1,5 +1,5 @@
 // The profile README (this repo is grosjeanbaptiste/grosjeanbaptiste, so its
-// README.md is what GitHub shows on the profile page) has three generated
+// README.md is what GitHub shows on the profile page) has four generated
 // blocks. Pulling the block builders out of the script makes them testable
 // without touching the network or the filesystem.
 
@@ -51,9 +51,10 @@ test('a missing marker pair fails loudly instead of writing a mangled README', (
 test('applying the blocks twice changes nothing the second time', () => {
   const src = [
     '<!-- LLM-ABOUT-FACTS -->', '<!-- /LLM-ABOUT-FACTS -->',
+    '<!-- LLM-PROJECTS -->', '<!-- /LLM-PROJECTS -->',
     '<!-- LLM-EMAIL -->', '<!-- /LLM-EMAIL -->',
     '<!-- LLM-PHONE -->', '<!-- /LLM-PHONE -->',
   ].join('\n');
-  const once = applyBlocks(src, RESUME);
-  assert.equal(applyBlocks(once, RESUME), once, 'the generator is not idempotent');
+  const once = applyBlocks(src, RESUME, { work: [] });
+  assert.equal(applyBlocks(once, RESUME, { work: [] }), once, 'the generator is not idempotent');
 });

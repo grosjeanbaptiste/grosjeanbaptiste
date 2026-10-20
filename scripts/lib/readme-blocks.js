@@ -71,9 +71,26 @@ function buildPhone(r) {
   return `- Phone — [${phone}](tel:${digits})`;
 }
 
-/** Fill the three generated blocks of `md` from `resume`. */
-function applyBlocks(md, resume) {
+// The projects of the roles still running. resume.json stays strict JSON
+// Resume, so which project belongs to which role comes from the site's extras,
+// whose `work` array lines up with the resume's by index.
+function buildProjects(r, extras) {
+  const byName = new Map((r.projects || []).map((p) => [p.name, p]));
+  const names = (r.work || []).flatMap((w, i) => (w.endDate ? [] : (extras.work?.[i]?.projects ?? [])));
+  return names
+    .map((name) => {
+      const p = byName.get(name);
+      if (!p) throw new Error(`site extras name a project the resume lacks: ${name}`);
+      const title = p.url ? `[${p.name}](${p.url})` : p.name;
+      return `- **${title}** — ${p.description}`;
+    })
+    .join('\n');
+}
+
+/** Fill the generated blocks of `md` from `resume` and the site's `extras`. */
+function applyBlocks(md, resume, extras) {
   let out = replaceBetween(md, 'LLM-ABOUT-FACTS', buildAboutFacts(resume));
+  out = replaceBetween(out, 'LLM-PROJECTS', buildProjects(resume, extras));
   out = replaceBetween(out, 'LLM-EMAIL', buildEmail(resume));
   return replaceBetween(out, 'LLM-PHONE', buildPhone(resume));
 }
@@ -83,6 +100,7 @@ module.exports = {
   buildAboutFacts,
   buildEmail,
   buildPhone,
+  buildProjects,
   highestObtainedDegree,
   replaceBetween,
 };
