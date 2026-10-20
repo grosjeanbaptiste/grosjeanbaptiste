@@ -3,11 +3,10 @@
  * Regenerate the marker blocks of README.md from the canonical resume data.
  *
  * This repo is grosjeanbaptiste/grosjeanbaptiste, so README.md is what GitHub
- * shows on the profile page. Three blocks are generated from the resume:
+ * shows on the profile page. Two blocks are generated from the resume:
  *
  *   <!-- LLM-ABOUT-FACTS -->  ...  <!-- /LLM-ABOUT-FACTS -->
  *   <!-- LLM-EMAIL -->        ...  <!-- /LLM-EMAIL -->
- *   <!-- LLM-PHONE -->        ...  <!-- /LLM-PHONE -->
  *
  * Everything else in the README (banner, badges, interests, footer) stays
  * hand-authored.
@@ -51,7 +50,7 @@ async function main() {
     return;
   }
   fs.writeFileSync(README, after);
-  console.log('README.md: LLM-ABOUT-FACTS, LLM-EMAIL, LLM-PHONE regenerated');
+  console.log('README.md: LLM-ABOUT-FACTS, LLM-EMAIL regenerated');
 }
 
 main().catch((err) => {
