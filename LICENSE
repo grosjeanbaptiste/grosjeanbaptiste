@@ -14,8 +14,9 @@ with a public repository on GitHub itself (view it and fork it there); that
 grants no right to use any of it elsewhere.
 
 Third-party material keeps its own licence and is not covered by this notice:
-fonts and dependencies remain under the licences of their authors. The
-jsonresume-theme-grosjeanbaptiste/ folder is published on npm under the ISC
-licence its package.json names, and keeps that licence.
+fonts and dependencies remain under the licences of their authors. Versions
+1.0.0 and 1.1.0 of the JSON Resume theme were published on npm under the ISC
+licence and keep it; everything else in jsonresume-theme-grosjeanbaptiste/ is
+covered by this notice.
 
 Contact: grosjeanbaptiste@outlook.com
