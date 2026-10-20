@@ -1,16 +1,16 @@
 // The profile README (this repo is grosjeanbaptiste/grosjeanbaptiste, so its
-// README.md is what GitHub shows on the profile page) has four generated
+// README.md is what GitHub shows on the profile page) has three generated
 // blocks. Pulling the block builders out of the script makes them testable
 // without touching the network or the filesystem.
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { applyBlocks, buildAboutFacts, buildEmail, buildPhone } = require('./readme-blocks');
+const { applyBlocks, buildAboutFacts, buildEmail } = require('./readme-blocks');
 
 const RESUME = {
   basics: {
     email: 'someone@example.com',
-    phone: '+32 496 28 97 05',
+    phone: '+32 400 00 00 00',
     location: { city: 'Kraainem', region: 'Brussels', countryCode: 'BE' },
   },
   education: [
@@ -37,7 +37,6 @@ test('the about block reports location and the highest degree', () => {
 
 test('contact blocks render as links', () => {
   assert.match(buildEmail(RESUME), /\[someone@example\.com\]\(mailto:someone@example\.com\)/);
-  assert.match(buildPhone(RESUME), /\(tel:\+32496289705\)/, 'the tel: href must be digits only');
 });
 
 test('a missing marker pair fails loudly instead of writing a mangled README', () => {
@@ -53,8 +52,19 @@ test('applying the blocks twice changes nothing the second time', () => {
     '<!-- LLM-ABOUT-FACTS -->', '<!-- /LLM-ABOUT-FACTS -->',
     '<!-- LLM-PROJECTS -->', '<!-- /LLM-PROJECTS -->',
     '<!-- LLM-EMAIL -->', '<!-- /LLM-EMAIL -->',
-    '<!-- LLM-PHONE -->', '<!-- /LLM-PHONE -->',
   ].join('\n');
   const once = applyBlocks(src, RESUME, { work: [] });
   assert.equal(applyBlocks(once, RESUME, { work: [] }), once, 'the generator is not idempotent');
+});
+
+// The phone number stays on the CV, off the public profile page.
+test('the README never carries the phone number', () => {
+  const src = [
+    '<!-- LLM-ABOUT-FACTS -->', '<!-- /LLM-ABOUT-FACTS -->',
+    '<!-- LLM-PROJECTS -->', '<!-- /LLM-PROJECTS -->',
+    '<!-- LLM-EMAIL -->', '<!-- /LLM-EMAIL -->',
+  ].join('\n');
+  assert.doesNotMatch(applyBlocks(src, RESUME, { work: [] }), /tel:|Phone/);
+  const readme = require('node:fs').readFileSync(require('node:path').resolve(__dirname, '../../README.md'), 'utf8');
+  assert.doesNotMatch(readme, /tel:|Phone|LLM-PHONE/);
 });

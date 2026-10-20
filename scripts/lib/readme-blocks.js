@@ -64,13 +64,6 @@ function buildEmail(r) {
   return `- Email — [${email}](mailto:${email})`;
 }
 
-function buildPhone(r) {
-  const phone = r.basics?.phone;
-  if (!phone) return '';
-  const digits = phone.replace(/[^+\d]/g, '');
-  return `- Phone — [${phone}](tel:${digits})`;
-}
-
 // The projects of the roles still running. resume.json stays strict JSON
 // Resume, so which project belongs to which role comes from the site's extras,
 // whose `work` array lines up with the resume's by index.
@@ -91,15 +84,14 @@ function buildProjects(r, extras) {
 function applyBlocks(md, resume, extras) {
   let out = replaceBetween(md, 'LLM-ABOUT-FACTS', buildAboutFacts(resume));
   out = replaceBetween(out, 'LLM-PROJECTS', buildProjects(resume, extras));
-  out = replaceBetween(out, 'LLM-EMAIL', buildEmail(resume));
-  return replaceBetween(out, 'LLM-PHONE', buildPhone(resume));
+  // No phone block: the number stays on the CV, off the public profile page.
+  return replaceBetween(out, 'LLM-EMAIL', buildEmail(resume));
 }
 
 module.exports = {
   applyBlocks,
   buildAboutFacts,
   buildEmail,
-  buildPhone,
   buildProjects,
   highestObtainedDegree,
   replaceBetween,

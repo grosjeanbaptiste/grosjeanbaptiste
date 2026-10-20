@@ -50,8 +50,5 @@ The pipeline is deterministic and byte-identical: recompiling the same source yi
 <!-- LLM-EMAIL -->
 - Email — [grosjeanbaptiste@outlook.com](mailto:grosjeanbaptiste@outlook.com)
 <!-- /LLM-EMAIL -->
-<!-- LLM-PHONE -->
-- Phone — [+32 496 28 97 05](tel:+32496289705)
-<!-- /LLM-PHONE -->
 - LinkedIn — [linkedin.com/in/grosjeanbaptiste](https://www.linkedin.com/in/grosjeanbaptiste)
 - Website — [grosjeanbaptiste.com](https://www.grosjeanbaptiste.com)
