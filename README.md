@@ -25,9 +25,9 @@ Building [Acteble](https://www.acteble.com) — a geo-located social platform �
 - **[Actrack](https://github.com/grosjeanbaptiste/actrack)** `[Python • Sports DB • Modeling]` — Multi-sport database and predictive modeling platform evaluating match outcomes across leagues and tournaments through ensemble rating strategies.
 
 ### Systems, Infrastructure & Cloud
-- **[Servai](https://github.com/grosjeanbaptiste/servai)** `[Rust • 100% Pure TDD • Hexagonal • Axum]` — Universal orchestrator for full server and cloud administration (DNS zones, TLS Let's Encrypt certificates, WireGuard VPNs, OpenTofu, Ansible) with a reactive REST API powering Bioxus UI.
+- **[Servai](https://github.com/grosjeanbaptiste/servai)** `[Rust • 100% Pure TDD • Hexagonal • Axum]` — Universal orchestrator for full server and cloud administration (DNS zones, TLS Let's Encrypt certificates, WireGuard VPNs, OpenTofu, Ansible) with a reactive REST API powering Biorcrux UI.
 - **[ss](https://github.com/grosjeanbaptiste/ss)** `[Rust • Dioxus • Systems Programming]` — Modular system supervisor and diagnostic suite (processes, memory, storage volumes, network telemetry, power) driving CLI and Dioxus desktop interfaces.
-- **[Bioxus](https://github.com/grosjeanbaptiste/bioxus)** `[Rust • Dioxus]` — Modular library providing declarative UI components, persistence, charting, and internationalization for multiplatform desktop applications.
+- **[Biorcrux](https://github.com/grosjeanbaptiste/biorcrux)** `[Rust • Dioxus]` — Modular library providing declarative UI components, persistence, charting, and internationalization for multiplatform desktop applications.
 - **[Repo](https://github.com/grosjeanbaptiste/repo)** *(with Actname, Actit, Actautoma)* `[Rust • CLI]` — CLI tooling suite for semantic naming, collision detection, and declarative scaffolding of Git / GitHub repositories.
 
 ### AI, RAG & Agents
